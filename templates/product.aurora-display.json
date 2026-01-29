@@ -1,0 +1,220 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "collapse_content": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "inventory_Byhqmw": {
+          "type": "inventory",
+          "settings": {
+            "low_inventory_threshold": 0
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#ffb543",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "#803cee",
+            "payment_button_text_color": "#ffffff"
+          }
+        },
+        "associated_products_PCEVUJ": {
+          "type": "associated_products",
+          "disabled": true,
+          "settings": {
+            "title": "Buy it with",
+            "stack_products": true,
+            "products_count": 2,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "collapsible_text_Gx7jYA": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Description",
+            "content": "<p>The Aurora Display provides a clear and intuitive interface, keeping you informed about speed, battery life, and ride mode at a glance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_z73mnq": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Returns",
+            "content": "<p>For information on our return policy, including eligibility and instructions, please visit our <a href=\"/policies/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_FLndD4": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Shipping",
+            "content": "<p><strong>Free Shipping on All Orders</strong><br/>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders</strong>, no matter the total. </p><p>No hidden costs or fees—just straightforward service to get you moving.</p><p><strong>Free Click & Collect + E-Scooter Setup (Victoria Only)</strong><br/>Victorian customers can enjoy our free Click & Collect service, which includes complimentary e-scooter setup. Pick up your order and hit the road right away with your fully assembled e-scooter!</p><p><strong>Fast Dispatch</strong><br/>We aim for speedy dispatch on all orders. Orders placed by 12 PM AEST are typically dispatched the same day, with 98% of orders leaving our Boronia, Victoria warehouse either same-day or next day. Orders placed on weekends or public holidays will ship on the next business day.</p><p><strong>Quick Delivery</strong><br/>We deliver across Australia, with typical delivery times of 1 to 5 business days. However, please note that delivery times may vary based on your location.</p><p><strong>Important Lithium Battery Shipping Info</strong><br/>Due to lithium battery regulations, air freight is not available, which may slightly extend delivery times. We appreciate your patience as we ensure the safe delivery of your e-scooter.</p><p>For any questions or assistance, feel free to contact our support team. We're here to help!</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "badges",
+        "price",
+        "rating",
+        "payment_terms",
+        "separator",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "inventory_Byhqmw",
+        "buy_buttons",
+        "associated_products_PCEVUJ",
+        "collapsible_text_Gx7jYA",
+        "collapsible_text_z73mnq",
+        "collapsible_text_FLndD4"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 50,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "mobile_media_size": "contained",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "rgba(0,0,0,0)",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "1731924206e17b48f2": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_Pm6iFf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_Pm6iFf"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "recommendations_count": 3,
+        "products": [
+          "e-scooter-sport-vent-helmet",
+          "bike-lock",
+          "simple-care"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1731924206e17b48f2",
+    "related-products"
+  ]
+}

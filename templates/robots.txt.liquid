@@ -1,0 +1,29 @@
+User-agent: *
+# Block cart and checkout flows (no need to index)
+Disallow: /cart
+Disallow: /checkout
+Disallow: /orders
+Disallow: /account
+
+# Block admin/back-office endpoints
+Disallow: /admin
+Disallow: /apps
+
+# Prevent crawling of URL parameters (e.g. your ?key= variants)
+Disallow: /*?key=
+Disallow: /*?*preview_theme_id=
+Disallow: /*?vendors?q=
+Disallow: /*?community
+
+# Block internal search results
+Disallow: /search
+
+# Allow everything else
+Allow: /
+
+# Point to your sitemap
+Sitemap: https://thesimplecommute.com.au/sitemap.xml
+Host: thesimplecommute.com.au
+
+# AI crawler policy
+# AI: https://cdn.shopify.com/s/files/1/0861/7603/9194/files/llms.txt

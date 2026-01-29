@@ -1,0 +1,794 @@
+{% comment %}
+Store Locator — unified list + map + filters
+
+Metafields (Shop → Custom data → Shop):
+
+1) State-based physical locations (Multi-line text):
+   - Namespace/key examples:
+       custom.stockist_victoria_locations
+       custom.stockist_nsw_locations
+       custom.stockist_queensland_locations
+       custom.stockist_wa_locations
+       custom.stockist_sa_locations
+       custom.stockist_tasmania_locations
+   - Each line (or | separated):
+       Name;Address;EMBED_URL;tags
+     Examples:
+       TinyWheels;14 Rosie Pl, Altona VIC 3018;https://...;repairer
+       The Simple Commute;Boronia, VIC;https://...;stockist
+
+   tags: comma separated, any of:
+     stockist, repairer  (you can add others, they’ll still work as free text)
+
+2) National / online stockists (Multi-line text):
+   - Namespace/key:
+       custom.stockist_national_locations
+   - Each line:
+       Name;Website URL;tags
+     Example:
+       Harvey Norman;https://www.harveynorman.com.au;stockist,online
+{% endcomment %}
+
+{% assign S = section.settings %}
+
+<section class="tsc-locator js-tsc-locator"
+  style="
+    --tsc-bg: {{ S.background_color }};
+    --tsc-fg: {{ S.text_color }};
+    --tsc-link: {{ S.link_color }};
+    --tsc-pad: {{ S.padding }}px;
+    --tsc-radius: {{ S.border_radius }}px;
+    --map-bg: {{ S.map_bg_color }};
+    --map-br: {{ S.map_border_radius }}px;
+    --map-bd: {{ S.map_border_color }};
+    --map-h: {{ S.map_height }}px;
+    --card-bg: {{ S.location_card_bg }};
+    --card-bd: {{ S.location_card_border }};
+    --card-br: {{ S.location_card_radius }}px;
+  "
+>
+  <div class="tsc-wrap">
+    {% if S.title != blank or S.subtitle != blank %}
+      <header class="tsc-header">
+        {% if S.title != blank %}
+          <h2 class="tsc-title" style="font-size: {{ S.title_size }}px">{{ S.title }}</h2>
+        {% endif %}
+        {% if S.subtitle != blank %}
+          <p class="tsc-subtitle" style="font-size: {{ S.subtitle_size }}px">{{ S.subtitle }}</p>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    {%- comment -%} Grab all metafields {%- endcomment -%}
+    {% assign vic_raw  = shop.metafields.custom.stockist_victoria_locations   | default: '' %}
+    {% assign nsw_raw  = shop.metafields.custom.stockist_nsw_locations       | default: '' %}
+    {% assign qld_raw  = shop.metafields.custom.stockist_queensland_locations| default: '' %}
+    {% assign wa_raw   = shop.metafields.custom.stockist_wa_locations        | default: '' %}
+    {% assign sa_raw   = shop.metafields.custom.stockist_sa_locations        | default: '' %}
+    {% assign tas_raw  = shop.metafields.custom.stockist_tasmania_locations  | default: '' %}
+    {% assign nat_raw  = shop.metafields.custom.stockist_national_locations  | default: '' %}
+
+    {% assign first_map = '' %}
+    {% assign rendered_count = 0 %}
+
+    <div class="tsc-grid">
+      <aside class="tsc-sidebar">
+        <div class="tsc-search-row">
+          <div class="tsc-search">
+            <input type="search" class="tsc-search-input" placeholder="Search locations…">
+          </div>
+          <div class="tsc-filters">
+            <select class="tsc-filter-region">
+              <option value="all">All regions</option>
+              <option value="vic">Victoria</option>
+              <option value="nsw">New South Wales</option>
+              <option value="qld">Queensland</option>
+              <option value="wa">Western Australia</option>
+              <option value="sa">South Australia</option>
+              <option value="tas">Tasmania</option>
+              <option value="national">National / Online</option>
+            </select>
+            <select class="tsc-filter-type">
+              <option value="all">All types</option>
+              <option value="stockist">Stockists</option>
+              <option value="repairer">Authorised repairers</option>
+              <option value="online">Online retailers</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tsc-list" role="list">
+          {%- comment -%}
+            Helper to normalise multi-line metafield values into a '|' separated string:
+            - Converts <br> to |
+            - Trims spaces around pipes
+          {%- endcomment -%}
+
+          {%- comment -%} VICTORIA {%- endcomment -%}
+          {% if vic_raw != '' %}
+            {% assign norm_vic = vic_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign vic_locs = norm_vic | split: '|' %}
+            {% for l in vic_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign addr    = p[1] | strip %}
+              {% assign map_url = '' %}
+              {% if p.size >= 3 %}{% assign map_url = p[2] | strip %}{% endif %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 4 %}{% assign tags_raw = p[3] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% if first_map == '' and map_url != '' %}
+                {% assign first_map = map_url %}
+              {% endif %}
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map="{{ map_url | escape }}"
+                data-name="{{ name | escape }}"
+                data-address="{{ addr | escape }}"
+                data-region="vic"
+                data-tags="{{ tags_raw | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">{{ addr }}</span>
+
+                {% if tags_raw != '' %}
+                  <span class="tsc-badges">
+                    {% if tags contains 'stockist' %}
+                      <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                    {% endif %}
+                    {% if tags contains 'repairer' %}
+                      <span class="tsc-badge tsc-badge--repairer" aria-label="Authorised repairer">Authorised repairer</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+
+                {% if map_url != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">View on map ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {%- comment -%} NSW {%- endcomment -%}
+          {% if nsw_raw != '' %}
+            {% assign norm_nsw = nsw_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign nsw_locs = norm_nsw | split: '|' %}
+            {% for l in nsw_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign addr    = p[1] | strip %}
+              {% assign map_url = '' %}
+              {% if p.size >= 3 %}{% assign map_url = p[2] | strip %}{% endif %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 4 %}{% assign tags_raw = p[3] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% if first_map == '' and map_url != '' %}
+                {% assign first_map = map_url %}
+              {% endif %}
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map="{{ map_url | escape }}"
+                data-name="{{ name | escape }}"
+                data-address="{{ addr | escape }}"
+                data-region="nsw"
+                data-tags="{{ tags_raw | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">{{ addr }}</span>
+
+                {% if tags_raw != '' %}
+                  <span class="tsc-badges">
+                    {% if tags contains 'stockist' %}
+                      <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                    {% endif %}
+                    {% if tags contains 'repairer' %}
+                      <span class="tsc-badge tsc-badge--repairer" aria-label="Authorised repairer">Authorised repairer</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+
+                {% if map_url != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">View on map ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {%- comment -%} QLD {%- endcomment -%}
+          {% if qld_raw != '' %}
+            {% assign norm_qld = qld_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign qld_locs = norm_qld | split: '|' %}
+            {% for l in qld_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign addr    = p[1] | strip %}
+              {% assign map_url = '' %}
+              {% if p.size >= 3 %}{% assign map_url = p[2] | strip %}{% endif %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 4 %}{% assign tags_raw = p[3] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% if first_map == '' and map_url != '' %}
+                {% assign first_map = map_url %}
+              {% endif %}
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map="{{ map_url | escape }}"
+                data-name="{{ name | escape }}"
+                data-address="{{ addr | escape }}"
+                data-region="qld"
+                data-tags="{{ tags_raw | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">{{ addr }}</span>
+
+                {% if tags_raw != '' %}
+                  <span class="tsc-badges">
+                    {% if tags contains 'stockist' %}
+                      <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                    {% endif %}
+                    {% if tags contains 'repairer' %}
+                      <span class="tsc-badge tsc-badge--repairer" aria-label="Authorised repairer">Authorised repairer</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+
+                {% if map_url != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">View on map ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {%- comment -%} WA {%- endcomment -%}
+          {% if wa_raw != '' %}
+            {% assign norm_wa = wa_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign wa_locs = norm_wa | split: '|' %}
+            {% for l in wa_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign addr    = p[1] | strip %}
+              {% assign map_url = '' %}
+              {% if p.size >= 3 %}{% assign map_url = p[2] | strip %}{% endif %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 4 %}{% assign tags_raw = p[3] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% if first_map == '' and map_url != '' %}
+                {% assign first_map = map_url %}
+              {% endif %}
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map="{{ map_url | escape }}"
+                data-name="{{ name | escape }}"
+                data-address="{{ addr | escape }}"
+                data-region="wa"
+                data-tags="{{ tags_raw | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">{{ addr }}</span>
+
+                {% if tags_raw != '' %}
+                  <span class="tsc-badges">
+                    {% if tags contains 'stockist' %}
+                      <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                    {% endif %}
+                    {% if tags contains 'repairer' %}
+                      <span class="tsc-badge tsc-badge--repairer" aria-label="Authorised repairer">Authorised repairer</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+
+                {% if map_url != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">View on map ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {%- comment -%} SA {%- endcomment -%}
+          {% if sa_raw != '' %}
+            {% assign norm_sa = sa_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign sa_locs = norm_sa | split: '|' %}
+            {% for l in sa_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign addr    = p[1] | strip %}
+              {% assign map_url = '' %}
+              {% if p.size >= 3 %}{% assign map_url = p[2] | strip %}{% endif %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 4 %}{% assign tags_raw = p[3] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% if first_map == '' and map_url != '' %}
+                {% assign first_map = map_url %}
+              {% endif %}
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map="{{ map_url | escape }}"
+                data-name="{{ name | escape }}"
+                data-address="{{ addr | escape }}"
+                data-region="sa"
+                data-tags="{{ tags_raw | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">{{ addr }}</span>
+
+                {% if tags_raw != '' %}
+                  <span class="tsc-badges">
+                    {% if tags contains 'stockist' %}
+                      <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                    {% endif %}
+                    {% if tags contains 'repairer' %}
+                      <span class="tsc-badge tsc-badge--repairer" aria-label="Authorised repairer">Authorised repairer</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+
+                {% if map_url != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">View on map ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {%- comment -%} TAS {%- endcomment -%}
+          {% if tas_raw != '' %}
+            {% assign norm_tas = tas_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign tas_locs = norm_tas | split: '|' %}
+            {% for l in tas_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign addr    = p[1] | strip %}
+              {% assign map_url = '' %}
+              {% if p.size >= 3 %}{% assign map_url = p[2] | strip %}{% endif %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 4 %}{% assign tags_raw = p[3] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% if first_map == '' and map_url != '' %}
+                {% assign first_map = map_url %}
+              {% endif %}
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map="{{ map_url | escape }}"
+                data-name="{{ name | escape }}"
+                data-address="{{ addr | escape }}"
+                data-region="tas"
+                data-tags="{{ tags_raw | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">{{ addr }}</span>
+
+                {% if tags_raw != '' %}
+                  <span class="tsc-badges">
+                    {% if tags contains 'stockist' %}
+                      <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                    {% endif %}
+                    {% if tags contains 'repairer' %}
+                      <span class="tsc-badge tsc-badge--repairer" aria-label="Authorised repairer">Authorised repairer</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+
+                {% if map_url != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">View on map ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {%- comment -%} National / online stockists (no map iframe) {%- endcomment -%}
+          {% if nat_raw != '' %}
+            {% assign norm_nat = nat_raw
+              | newline_to_br
+              | replace: '<br />', '|'
+              | replace: '<br/>',  '|'
+              | replace: '<br>',   '|'
+              | replace: ' | ',    '|'
+              | replace: ' |',     '|'
+              | replace: '| ',     '|'
+              | replace: '||',     '|'
+              | strip
+            %}
+            {% assign nat_locs = norm_nat | split: '|' %}
+
+            {% for l in nat_locs %}
+              {% assign l2 = l | strip %}
+              {% if l2 == '' %}{% continue %}{% endif %}
+              {% assign p = l2 | split: ';' %}
+              {% if p.size < 2 %}{% continue %}{% endif %}
+
+              {% assign name    = p[0] | strip %}
+              {% assign website = p[1] | strip %}
+              {% assign tags_raw = '' %}
+              {% if p.size >= 3 %}{% assign tags_raw = p[2] | strip | downcase %}{% endif %}
+              {% assign tags = tags_raw | replace: ' ', '' | split: ',' %}
+
+              {% assign rendered_count = rendered_count | plus: 1 %}
+
+              <button
+                class="tsc-item{% if rendered_count == 1 %} is-selected{% endif %}"
+                type="button"
+                role="listitem"
+                data-map=""
+                data-name="{{ name | escape }}"
+                data-address="Online only · Australia-wide"
+                data-region="national"
+                data-tags="{{ tags_raw | escape }}"
+                data-website="{{ website | escape }}"
+              >
+                <span class="tsc-item-name">{{ name }}</span>
+                <span class="tsc-item-addr">Online only · Australia-wide</span>
+
+                <span class="tsc-badges">
+                  {% if tags contains 'stockist' %}
+                    <span class="tsc-badge tsc-badge--stockist" aria-label="Stockist">Stockist</span>
+                  {% endif %}
+                  {% if tags contains 'online' %}
+                    <span class="tsc-badge tsc-badge--online" aria-label="Online retailer">Online retailer</span>
+                  {% endif %}
+                </span>
+
+                {% if website != blank %}
+                  <span class="tsc-item-link" aria-hidden="true">Visit website ↗</span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          {% endif %}
+
+          {% if rendered_count == 0 %}
+            <div class="tsc-empty">No locations configured yet.</div>
+          {% endif %}
+          <div class="tsc-no-results" hidden>No matching locations.</div>
+        </div>
+      </aside>
+
+      <div class="tsc-map">
+        {% if first_map != blank %}
+          <iframe class="tsc-map-frame"
+                  src="{{ first_map }}"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Location map"></iframe>
+        {% else %}
+          <div class="tsc-map-placeholder">Select a location to view the map.</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% style %}
+/* Layout wrapper */
+.tsc-locator{
+  background:var(--tsc-bg);
+  color:var(--tsc-fg);
+  border-radius:var(--tsc-radius);
+  padding:var(--tsc-pad);
+  overflow:hidden;              /* stop mobile horizontal overflow */
+}
+.tsc-wrap{
+  max-width:1200px;
+  margin:0 auto;
+  box-sizing:border-box;
+}
+.tsc-header{text-align:center;margin-bottom:20px}
+.tsc-title{margin:0 0 8px;font-weight:700}
+.tsc-subtitle{margin:0;opacity:.8}
+
+/* Grid */
+.tsc-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,340px) minmax(0,1fr);
+  grid-template-areas:"sidebar map";
+  gap:20px;
+  align-items:stretch;
+}
+
+/* Sidebar + filters */
+.tsc-sidebar{
+  grid-area:sidebar;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+.tsc-search-row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:10px;
+  align-items:stretch;
+}
+.tsc-search{flex:0 0 auto}
+.tsc-search-input{
+  width:100%;
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid var(--card-bd);
+  font-size:.9rem;
+  box-sizing:border-box;
+}
+.tsc-filters{
+  display:flex;
+  gap:8px;
+}
+.tsc-filters select{
+  flex:1 1 0;
+  width:100%;                  /* match search width */
+  padding:6px 10px;
+  font-size:.85rem;
+  border-radius:8px;
+  border:1px solid var(--card-bd);
+  background:#fff;
+  box-sizing:border-box;
+}
+
+/* List */
+.tsc-list{
+  background:var(--card-bg);
+  border:1px solid var(--card-bd);
+  border-radius:var(--card-br);
+  padding:8px;
+  overflow:auto;
+  flex:1;
+  min-height:0;
+  max-height:420px;            /* keeps sidebar height in check vs map */
+}
+.tsc-item{
+  display:block;
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:1px solid transparent;
+  border-radius:10px;
+  padding:10px;
+  cursor:pointer;
+  margin:4px 0;
+  transition:background .15s ease,border-color .15s ease;
+}
+.tsc-item:hover{
+  background:rgba(0,0,0,.02);
+  border-color:var(--card-bd);
+}
+.tsc-item.is-selected{
+  border-color:var(--tsc-link);
+  background:rgba(0,0,0,.02);
+}
+.tsc-item-name{display:block;font-weight:600;font-size:.95rem}
+.tsc-item-addr{display:block;opacity:.8;font-size:.82rem;margin-top:2px}
+.tsc-item-link{display:block;margin-top:6px;color:var(--tsc-link);font-size:.8rem}
+.tsc-empty,.tsc-no-results{padding:12px;opacity:.7;font-style:italic}
+
+/* Badges */
+.tsc-badges{
+  display:flex;
+  gap:6px;
+  margin-top:6px;
+  flex-wrap:wrap;
+}
+.tsc-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 8px;
+  font-size:.7rem;
+  font-weight:600;
+  line-height:1;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.08);
+}
+.tsc-badge--stockist{background:#e8f7ee;border-color:#bfe7cf;color:#0b6b3b}
+.tsc-badge--repairer{background:#eef3ff;border-color:#c9d6ff;color:#1a2e6e}
+.tsc-badge--online{background:#fff3e6;border-color:#ffd7a8;color:#8a4a02}
+
+/* Map */
+.tsc-map{
+  grid-area:map;
+  background:var(--map-bg);
+  border:2px solid var(--map-bd);
+  border-radius:var(--map-br);
+  display:flex;
+  align-items:stretch;
+  justify-content:stretch;
+  min-height:var(--map-h);      /* ensure map column is tall */
+}
+.tsc-map-frame{
+  width:100%;
+  height:100%;                 /* fill the whole column */
+  min-height:var(--map-h);
+  border:0;
+  border-radius:var(--map-br);
+}
+.tsc-map-placeholder{
+  opacity:.6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+
+/* Mobile */
+@media (max-width: 999px){
+  .tsc-locator{
+    padding:16px 0;            /* no horizontal padding so map can't overflow */
+  }
+  .tsc-wrap{
+    max-width:100%;
+    margin:0 auto;
+    padding:0 12px;            /* inner padding instead */
+  }
+  .tsc-grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "map"
+      "sidebar";
+  }
+  .tsc-map{
+    order:0;
+    margin-bottom:14px;
+    min-height:240px;
+  }
+  .tsc-map-frame{
+    height:240px;
+  }
+  .tsc-sidebar{
+    order:1;
+  }
+  .tsc-search-row{
+    flex-direction:column;
+    gap:6px;
+  }
+  .tsc-filters{
+    width:100%;
+  }
+  .tsc-list{
+    max-height:320px;
+  }
+}
+{% endstyle %}
+
+<script src="{{ 'tsc-locator.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Store locator",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Title", "default": "Our Locations" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Find us across Australia" },
+
+    { "type": "header", "content": "Locations" },
+    { "type": "paragraph", "content": "This section reads from Shop metafields. Update them in: Settings → Custom data → Shop\n\nSeparate multiple entries with a pipe | or new lines." },
+
+    { "type": "header", "content": "Style" },
+    { "type": "color", "id": "background_color", "label": "Background color", "default": "#ffffff" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#1a1a1a" },
+    { "type": "color", "id": "link_color", "label": "Link color", "default": "#1a1a1a" },
+    { "type": "range", "id": "title_size", "label": "Title size", "min": 20, "max": 60, "step": 2, "unit": "px", "default": 32 },
+    { "type": "range", "id": "subtitle_size", "label": "Subtitle size", "min": 14, "max": 24, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "padding", "label": "Section padding", "min": 20, "max": 80, "step": 5, "unit": "px", "default": 40 },
+    { "type": "range", "id": "border_radius", "label": "Border radius", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 24 },
+
+    { "type": "header", "content": "Map area" },
+    { "type": "color", "id": "map_bg_color", "label": "Map background", "default": "#f9f9f9" },
+    { "type": "color", "id": "map_border_color", "label": "Map border", "default": "#e0e0e0" },
+    { "type": "range", "id": "map_height", "label": "Map area height", "min": 300, "max": 600, "step": 20, "unit": "px", "default": 420 },
+    { "type": "range", "id": "map_border_radius", "label": "Map border radius", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 16 },
+
+    { "type": "header", "content": "Location cards" },
+    { "type": "color", "id": "location_card_bg", "label": "Card background", "default": "#ffffff" },
+    { "type": "color", "id": "location_card_border", "label": "Card border", "default": "#e0e0e0" },
+    { "type": "range", "id": "location_card_radius", "label": "Card border radius", "min": 0, "max": 20, "step": 2, "unit": "px", "default": 8 }
+  ],
+  "presets": [{ "name": "Store locator" }]
+}
+{% endschema %}

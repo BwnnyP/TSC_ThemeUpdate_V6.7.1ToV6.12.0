@@ -1,0 +1,387 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "collapse_content": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "inventory_Byhqmw": {
+          "type": "inventory",
+          "settings": {
+            "low_inventory_threshold": 0
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "#ffb543",
+            "atc_button_text_color": "#ffffff",
+            "payment_button_background": "#803cee",
+            "payment_button_text_color": "#ffffff"
+          }
+        },
+        "associated_products_PCEVUJ": {
+          "type": "associated_products",
+          "disabled": true,
+          "settings": {
+            "title": "Buy it with",
+            "stack_products": true,
+            "products_count": 2,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "offer_hkgWXP": {
+          "type": "offer",
+          "settings": {
+            "text_alignment": "start",
+            "icon_position": "aligned",
+            "icon": "picto-gift",
+            "icon_width": 20,
+            "title": "Free Helmet",
+            "content": "<p>Get a Free Helmet valued at $70 with any E-Scooter Purchase</p>",
+            "background": "#eaf2ed",
+            "text_color": "#00a341"
+          }
+        },
+        "collapsible_text_Gx7jYA": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Description",
+            "content": "<h6><span style=\"text-decoration:underline\"><strong>Embrace Simplicity and Performance</strong></span></h6><p>At The Simple Commute, we believe in blending simplicity with high performance, delivering products that not only meet your needs but exceed your expectations. Our flagship model, the Aurora Electric Scooter, embodies these values with its sleek design, advanced features, and unparalleled reliability. Whether you're navigating urban streets or exploring new terrains, the Aurora Electric Scooter is your perfect companion for a seamless commute.</p><p><em><strong>Disclaimer:</strong></em> <em>Max speed is </em><em><strong>capped at 25 km/h </strong></em><em>when sold in Australia in compliance with local laws and regulations. The top speeds of 25 km/h (Astro), 40 km/h (Aurora), and 50 km/h (Kaiju) can only be unlocked for use on private land. Please contact us for the steps involved to unlock the speed </em><em><strong>after purchase</strong></em><em>.</em></p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_mGWVXd": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Key Features",
+            "content": "<p><strong>Lightweight and Portable</strong>: Weighing only 23kg, the Aurora is easy to carry and transport, making it ideal for daily commutes and weekend adventures.</p><p><strong>Easy Changeable Battery</strong>: Enjoy the convenience of a changeable battery, allowing you to charge and replace it effortlessly where there is a power point</p><p><strong>Lithium Battery Pack</strong>: Power your ride with a robust lithium battery pack, offering two range options – up to 65km and an extended, up to 100km for the Long Range model</p><p><strong>Powerful Motor</strong>: Equipped with a 500W rated power output and an 850W maximum output, the Aurora model delivers impressive acceleration and speed.</p><p><strong>25-Degree Climbing Angle</strong>: Conquer hills with ease. The Aurora's powerful motor supports a climbing angle of up to 25 degrees, making uphill rides smooth and effortless</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_z73mnq": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Returns",
+            "content": "<p>For information on our return policy, including eligibility and instructions, please visit our <a href=\"/policies/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_FLndD4": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Shipping",
+            "content": "<p><strong>Free Shipping on All Orders over $500</strong><br/>At The Simple Commute, we keep things simple with free shipping on all orders over $500 — no hidden fees or surprises.</p><p><strong>Free Click & Collect + E-Scooter Setup (Victoria Only)</strong><br/>Victorian customers can enjoy our free Click & Collect service, which includes complimentary e-scooter setup. Pick up your order and hit the road right away with your fully assembled e-scooter!</p><p><strong>Fast Dispatch</strong><br/>We aim for speedy dispatch on all orders. Orders placed by 12 PM AEST are typically dispatched the same day, with 98% of orders leaving our Boronia, Victoria warehouse either same-day or next day. Orders placed on weekends or public holidays will ship on the next business day.</p><p><strong>Quick Delivery</strong><br/>We deliver across Australia, with typical delivery times of 1 to 5 business days. However, please note that delivery times may vary based on your location.</p><p><strong>Important Lithium Battery Shipping Info</strong><br/>Due to lithium battery regulations, air freight is not available, which may slightly extend delivery times. We appreciate your patience as we ensure the safe delivery of your e-scooter.</p><p>For any questions or assistance, feel free to contact our support team. We're here to help!</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "badges",
+        "price",
+        "rating",
+        "payment_terms",
+        "separator",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "inventory_Byhqmw",
+        "buy_buttons",
+        "associated_products_PCEVUJ",
+        "offer_hkgWXP",
+        "collapsible_text_Gx7jYA",
+        "collapsible_text_mGWVXd",
+        "collapsible_text_z73mnq",
+        "collapsible_text_FLndD4"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 50,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "mobile_media_size": "contained",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "rgba(0,0,0,0)",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "specification_table_BrRW4A": {
+      "type": "specification-table",
+      "blocks": {
+        "row_nc7Xax": {
+          "type": "row",
+          "settings": {
+            "heading": "Model",
+            "value": "<p>Aurora</p>"
+          }
+        },
+        "row_ENWJEk": {
+          "type": "row",
+          "settings": {
+            "heading": "Max. Speed",
+            "value": "<p>40 km/h</p>"
+          }
+        },
+        "row_4jXACH": {
+          "type": "row",
+          "settings": {
+            "heading": "Max. Range",
+            "value": "<p>100 km</p>"
+          }
+        },
+        "row_YMHnpU": {
+          "type": "row",
+          "settings": {
+            "heading": "Max. Power",
+            "value": "<p>1100 W</p>"
+          }
+        },
+        "row_GCBbTM": {
+          "type": "row",
+          "settings": {
+            "heading": "Max. Load",
+            "value": "<p>100 kg</p>"
+          }
+        },
+        "row_rRn8tE": {
+          "type": "row",
+          "settings": {
+            "heading": "Dimensions",
+            "value": "<p>1110mm x 500mm x 1230mm</p>"
+          }
+        }
+      },
+      "block_order": [
+        "row_nc7Xax",
+        "row_ENWJEk",
+        "row_4jXACH",
+        "row_YMHnpU",
+        "row_GCBbTM",
+        "row_rRn8tE"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "About the Aurora",
+        "title": "Redefining Your Commute with Simplicity and Performance",
+        "content": "<p>Sleek, powerful, and built for exploration, the Aurora is your go-to e-scooter for every journey</p>",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "max_rows": 5,
+        "view_all_text": "View all",
+        "view_less_text": "View less",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "#03156d",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "chart_background": "",
+        "chart_text_color": "",
+        "chart_true_false_color": ""
+      }
+    },
+    "tabs_XnAkMG": {
+      "type": "tabs",
+      "blocks": {
+        "tab_fyTQHc": {
+          "type": "tab",
+          "settings": {
+            "title": "DESIGN",
+            "content": "<h3><strong>DESIGN</strong></h3><h6><strong>Open Size </strong></h6><p>1110mm x 500mm x 1230mm</p><h6><strong>Fold Size</strong></h6><p>1100mm x 500mm x 540mm</p><h6>Pedal Width</h6><p>183mm</p><h6><strong>Net Weight</strong></h6><p>23kg</p><h6><strong>Frame Material</strong></h6><p>Aluminum Grade Alloy</p><h6><strong>Headlight</strong></h6><p>LED high-brightness</p><h6><strong>Taillight</strong></h6><p>Rear LED</p><h6><strong>Tire Size</strong></h6><p>10 inch front and rear</p><h6><strong>Tire Type</strong></h6><p>Self-healing tubeless tire</p><h6><strong>Max Load</strong></h6><p>100kg</p><h6><strong>IP Resistance Rating</strong></h6><p>IP54</p><h6></h6>",
+            "page": ""
+          }
+        },
+        "tab_MehWVA": {
+          "type": "tab",
+          "settings": {
+            "title": "BATTERY",
+            "content": "<h3>BATTERY</h3><h6>Battery Type</h6><p>36V/15.6Ah (Standard Aurora)</p><p>48V/20.8Ah (Aurora Long-Range)</p><h6>Charging Time</h6><p>8-9 hours</p><h6>Battery Removal Method</h6><p>Portable and Removable</p><h6>Charger Parameters</h6><p>DC42V/2A (Standard Aurora)</p><p>DC54.6V/2A (Aurora Long-Range)</p><h6>BMS</h6><ul><li>short circuit protection</li><li>overcurrent protection</li><li>double protection from overcharging</li><li>temperature resistance</li><li>undervoltage auto-sleep protection</li><li>double over discharged protection</li></ul>",
+            "page": ""
+          }
+        },
+        "tab_8tePjy": {
+          "type": "tab",
+          "settings": {
+            "title": "POWER",
+            "content": "<h3>POWER</h3><h6>Peak Motor Rated Power</h6><p>850W</p><h6>Standard Motor Power</h6><p>500W </p><h6>Motor Type</h6><p>Rear-wheel Drive</p><p></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fyTQHc",
+        "tab_MehWVA",
+        "tab_8tePjy"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "",
+        "title": "FULL SPECIFICATIONS",
+        "text_alignment": "left",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "1731924206e17b48f2": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_Pm6iFf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_Pm6iFf"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "recommendations_count": 3,
+        "products": [
+          "e-scooter-sport-vent-helmet",
+          "bike-lock",
+          "simple-care"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "image_with_text_overlay_j6L8Pd": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/30_off_Mobile_Banner_3.svg",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_j6L8Pd",
+    "main",
+    "specification_table_BrRW4A",
+    "tabs_XnAkMG",
+    "1731924206e17b48f2",
+    "related-products"
+  ]
+}
