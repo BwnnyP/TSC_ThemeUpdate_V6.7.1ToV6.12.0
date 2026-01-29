@@ -1,1 +1,828 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"vendor","settings":{}},"title":{"type":"title","settings":{"heading_tag":"h1"}},"judge_me_reviews_preview_badge_nzwnA4":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"badges":{"type":"badges","settings":{}},"price":{"type":"price","settings":{"show_taxes_notice":false}},"afterpay_on_site_messaging_payments_messaging_GDUL7N":{"type":"shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8","settings":{"text_align":"inherit","margin_top":0,"margin_bottom":0,"color":"","size":"md","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"badge","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{ product }}"}},"judge_me_reviews_review_snippet_widget_TaBUY4":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_snippet_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"inventory_47eKYj":{"type":"inventory","settings":{"low_inventory_threshold":0}},"buy_buttons":{"type":"buy_buttons","settings":{"show_payment_button":false,"show_gift_card_recipient":true,"atc_button_background":"#ffb543","atc_button_text_color":"#ffffff","payment_button_background":"#803cee","payment_button_text_color":"#ffffff"}},"separator":{"type":"separator","settings":{}},"essential_trust_badges_app_block_cx7qHB":{"type":"shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b","settings":{"banner_display":"single","banner_id":"3058bafb-baf9-47e1-a58f-dda720b6aa33"}},"liquid_WC8dm9":{"type":"liquid","settings":{"liquid":"<div class=\"product-info__button\">\n  <a class=\"button button--sm button--outline w-full\" href=\"#\" onclick=\"event.preventDefault(); document.querySelector('[id*=\\'tabs_XnAkMG\\']').scrollIntoView({ behavior: 'smooth', block: 'start' });\">\n    View full specs\n  <\/a>\n<\/div>\n<style>\nhtml { scroll-behavior: smooth; }\n[id*=\"tabs_XnAkMG\"] { scroll-margin-top: 100px; }\n<\/style>"}},"collapsible_text_Gx7jYA":{"type":"collapsible_text","settings":{"icon":"picto-document","icon_width":20,"title":"Description","content":"<p><strong>The E-Scooter That Just Makes Sense<\/strong><\/p><p>Stop overpaying for features you'll never use. Astro is the scooter that gives you exactly what city commuting actually needs—nothing more, nothing less.<br\/><br\/><strong>IP55 Rating<\/strong> - With IP55 waterproof rating, the Astro is built for real riding,  handles rain and puddles with ease.<br\/><br\/><strong>No Compromises<\/strong> – Fast enough for your schedule, tough enough for your streets, smart enough for modern life.<br\/><br\/><strong>Connected When It Counts<\/strong> – Smart app control for the things that actually matter. Nothing else.<br\/><br\/><strong>Built for Real Use<\/strong> – Morning commutes, evening errands, weekend adventures. One ride handles it all.<br\/><br\/><strong>Truly Portable<\/strong> – Light enough to carry upstairs, compact enough for crowded trains. This actually fits real life.<br\/><br\/><strong>One smart decision. Years of better mornings.<\/strong><\/p><p><strong>What's in the Box<\/strong><br\/>Astro, charger, tool kit & owner's manual.<\/p>","page":""}},"collapsible_text_mGWVXd":{"type":"collapsible_text","disabled":true,"settings":{"icon":"none","custom_icon":"shopify:\/\/shop_images\/Untitled_design.svg","icon_width":26,"title":"Key Features","content":"<p><strong>Lightweight and Portable<\/strong>: Weighing only 23kg, the Aurora is easy to carry and transport, making it ideal for daily commutes and weekend adventures.<\/p><p><strong>Easy Changeable Battery<\/strong>: Enjoy the convenience of a changeable battery, allowing you to charge and replace it effortlessly where there is a power point<\/p><p><strong>Lithium Battery Pack<\/strong>: Power your ride with a robust lithium battery pack, offering up to 100km of range.<\/p><p><strong>Powerful Motor<\/strong>: Equipped with a 550W rated power output and an 1100W maximum output, the Aurora model delivers impressive acceleration and speed.<\/p><p><strong>30-Degree Climbing Angle<\/strong>: Conquer hills with ease. The Aurora's powerful motor supports a climbing angle of up to 30 degrees, making uphill rides smooth and effortless<\/p><p><strong>Cruise Control (Unlockable):<\/strong> Experience effortless riding with the Aurora’s cruise control feature. Enjoy longer rides with less strain while maintaining a consistent speed.<\/p>","page":""}},"collapsible_text_FLndD4":{"type":"collapsible_text","settings":{"icon":"picto-box","icon_width":20,"title":"Shipping","content":"<p><strong>Delivery<\/strong><br\/><strong>Free shipping<\/strong> Australia-wide.<br\/><br\/>Orders ship within <strong>1-2 business days.<\/strong><br\/><br\/>Standard Delivery typically takes<strong> 2-8 business days.<\/strong><\/p><p><strong>Pick-Up (Victoria Only)<\/strong><br\/>Easy collection from our Boronia warehouse.<br\/><br\/>We'll assemble your scooter on the spot.<\/p>","page":""}},"collapsible_text_84cLQx":{"type":"collapsible_text","settings":{"icon":"picto-shield","icon_width":20,"title":"Warranty & Returns","content":"<p><strong>Warranty<\/strong><br\/>All of our scooters come with limited warranty. For details, see our <a href=\"\/pages\/warranty\" title=\"Warranty\">warranty<\/a> page.<\/p><p><strong>Returns<\/strong><br\/>For information on our return policy, including eligibility and instructions, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy<\/a>.<\/p>","page":""}},"collapsible_text_Ri9tUh":{"type":"collapsible_text","settings":{"icon":"none","custom_icon":"shopify:\/\/shop_images\/Untitled_design_34.png","icon_width":26,"title":"Certifications","content":"<p>Our E-Scooters (including batteries) are tested to meet the following standards:<\/p><ul><li>UL2272<\/li><li>EN17128<\/li><li>IEC 62133-2<\/li><li>IEC 60335-1<\/li><li>EN IEC 55014-1<\/li><li>EN IEC 55014-1<\/li><li>CE EMC<\/li><li>ROHS<\/li><\/ul>","page":""}}},"block_order":["vendor","title","judge_me_reviews_preview_badge_nzwnA4","badges","price","afterpay_on_site_messaging_payments_messaging_GDUL7N","judge_me_reviews_review_snippet_widget_TaBUY4","inventory_47eKYj","buy_buttons","separator","essential_trust_badges_app_block_cx7qHB","liquid_WC8dm9","collapsible_text_Gx7jYA","collapsible_text_mGWVXd","collapsible_text_FLndD4","collapsible_text_84cLQx","collapsible_text_Ri9tUh"],"custom_css":[".h1 {font-size: clamp(22px, 5vw, 50px); margin: 0; font-family: sans-serif; font-weight: 800;}",".product-info {--product-info-block-spacing: var(--spacing-2) !important;}"],"settings":{"full_width":true,"show_fixed_add_to_cart":true,"desktop_media_width":50,"desktop_media_layout":"grid_highlight","mobile_media_size":"contained","mobile_carousel_control":"dots","enable_video_autoplay":false,"enable_video_looping":true,"enable_image_zoom":true,"max_image_zoom_level":3,"background":"#ffffff","background_gradient":"","text_color":"rgba(0,0,0,0)","input_background":"rgba(0,0,0,0)","input_text_color":""}},"featured_collection_fTpTay":{"type":"featured-collection","name":"Featured collection","settings":{"collection":"the-simple-commute-aurora-bundles-premium-best-value-1","products":[],"full_width":true,"stack_products":false,"show_progress_bar":true,"products_count":6,"products_per_row_mobile":"1","products_per_row_desktop":2,"subheading":"","title":"BUNDLE UP AND SAVE BIG","content":"","link_url":"","link_text":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"video_ar8N9E":{"type":"video","blocks":{"heading_wUYaYC":{"type":"heading","settings":{"text":"YOUR PERFECT DAILY RIDE","heading_tag":"h2"}}},"block_order":["heading_wUYaYC"],"custom_css":["video-media {max-height: 50vh !important;}","video {max-height: 50vh !important; object-fit: cover; margin: 0 !important; padding: 0 !important;}","@media (max-width: 749px) {video-media {min-height: 450px !important; } video {min-height: 450px !important; object-fit: cover; } .h4 {font-size: 1.8rem !important; }}"],"name":"Video","settings":{"full_width":true,"allow_transparent_header":false,"autoplay":true,"video_size":"auto","video":"shopify:\/\/files\/videos\/Astro Montage 43.mp4","mobile_video":"shopify:\/\/files\/videos\/1020 (1).mp4","external_video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"multi_column_mndMbh":{"type":"multi-column","blocks":{"item_iTkbWM":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/UWU03879_1_1.webp","show_controls":false,"column_size":"4","title":"Smart Riding Without the Complexity","heading_tag":"h4","content":"<p>Lock when your Astro is parked, see how far you've gone, adjust your speed on the fly. The Green Drive™ app gives you the control that matters without drowning you in features you'll never use.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_pMdLyd":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/UWU03904_1.webp","show_controls":false,"column_size":"4","title":"Smooth Out the Chaos","heading_tag":"h4","content":"<p>Front suspension absorbs the potholes, cracks, and rough patches that make streets a nightmare. Your wrists and back will thank you.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_eeKMEE":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/UWU03900_1.webp","show_controls":false,"column_size":"4","title":"Always Seen, Always Safe","heading_tag":"h4","content":"<p>Permanent taillight keeps you lit up from start to finish. Integrated turn signals mean cars actually know where you're going. Because the best accident is the one that never happens.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_aMK6dj":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/UWU03896.webp","show_controls":false,"column_size":"4","title":"Information When It Matters","heading_tag":"h4","content":"<p>Smart LED display delivers the essentials—how fast you're going, how much charge you've got, what mode you're in. <\/p>","link_url":"","link_text":"","link_style":"link"}}},"block_order":["item_iTkbWM","item_pMdLyd","item_eeKMEE","item_aMK6dj"],"custom_css":[".multi-column {margin: 0 !important; padding: 0 !important;}"],"name":"Multi-column","settings":{"full_width":true,"stack_on_mobile":false,"gap":"small","text_alignment":"start","subheading":"","title":"FOUR REASONS TO LOVE THE ASTRO","content":"","background":"","background_gradient":"","text_color":""}},"rich_text_DipjE4":{"type":"rich-text","blocks":{"heading_LiRWbY":{"type":"heading","settings":{"text":"Why Choose the Astro Electric Scooter","heading_tag":"h2","text_color":"","gradient":""}}},"block_order":["heading_LiRWbY"],"custom_css":["h2 {font-size: 50px; margin-top: 900; margin-bottom: 0;}","@media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 900; margin-bottom: 0; }}"],"name":"Rich text","settings":{"full_width":false,"content_width":"large","text_position":"center","background":"","background_gradient":"","text_color":""}},"media_with_text_Y4atWA":{"type":"media-with-text","blocks":{"video_HR4rGP":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Astro Suspension Clip.mp4","external_video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","autoplay":true,"media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":24,"subheading":"","title":"MORE CAPABLE THAN YOU'D EXPECT","content":"<p>Front suspension absorbs the potholes, cracks, and rough patches that make our streets challenging. Need to cross grass, ride gravel paths, or take a park shortcut? The Astro handles moderate terrain with confidence. <\/p>","link_text":"","link_url":"","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}}},"block_order":["video_HR4rGP"],"custom_css":[".media-with-text {margin: 0 !important; padding: 0;}",".video-media {margin: 0 !important; padding: 0;}"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"media_with_text_9h7WGN":{"type":"media-with-text","blocks":{"video_e6P6HU":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Astro - Tailight Clip.mp4","external_video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","autoplay":true,"media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":24,"subheading":"","title":"INDICATE WITHOUT LETTING GO","content":"<p>Rear-mounted turn signals communicate your intentions clearly to traffic behind you. No need to release the handlebars for hand signals. Stay in control, stay visible, stay safe on every ride.<\/p>","link_text":"","link_url":"","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}}},"block_order":["video_e6P6HU"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"media_with_text_bHDqRK":{"type":"media-with-text","blocks":{"video_CJrN4P":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Astro Folding.mp4","external_video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","autoplay":true,"media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":24,"subheading":"","title":"JUST FOLD AND GO","content":"<p>3-second folding mechanism means no wrestling with complicated latches. One smooth motion and you're ready to go.<\/p>","link_text":"","link_url":"","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}}},"block_order":["video_CJrN4P"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"media_with_text_mpJHAA":{"type":"media-with-text","blocks":{"video_Gqbw9q":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Astro Battery.mp4","external_video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","autoplay":true,"media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":24,"subheading":"","title":"SAFETY BY DESIGN","content":"<p>Explosion-proof metal housing surrounds your battery at all times. It's the kind of safety feature you hope you never need, but you'll be glad it's there. <\/p>","link_text":"","link_url":"","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}}},"block_order":["video_Gqbw9q"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"video_KCcwcH":{"type":"video","blocks":{"play_GaPtKq":{"type":"play","settings":{}},"heading_Rh84Nq":{"type":"heading","settings":{"text":"","heading_tag":"h3"}}},"block_order":["play_GaPtKq","heading_Rh84Nq"],"settings":{"full_width":false,"allow_transparent_header":false,"autoplay":false,"video_size":"auto","external_video_url":"https:\/\/youtu.be\/1MuRU_CGPmU","poster":"shopify:\/\/shop_images\/Screenshot_2025-10-21_214842_1.webp","text_color":"#1a1a1a","overlay_color":"#1a1a1a","overlay_opacity":12}},"multiple_images_with_text_mrErmr":{"type":"multiple-images-with-text","blocks":{"item_pbw4hR":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Firefly_Generate_a_battery_management_system_for_a_lithium_battery._The_image_must_show_a_chip_with_1.jpg","image_rotation_degrees":0,"subheading":"","title":"Smart Battery Management System","content":"<ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>","button_url":"","button_text":""}}},"block_order":["item_pbw4hR"],"disabled":true,"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","button_background":"","button_text_color":""}},"tabs_XnAkMG":{"type":"tabs","blocks":{"tab_fyTQHc":{"type":"tab","settings":{"title":"DESIGN","content":"<h3><strong>DESIGN<\/strong><\/h3><h6><strong>Open Size <\/strong><\/h6><p>1110mm x 455mm x 1170mm<\/p><h6><strong>Fold Size<\/strong><\/h6><p>1110mm x 455mm x 625mm<br\/><br\/><strong>Deck Width\/Length<\/strong><\/p><p>180mm\/600mm<\/p><h6><strong>Ground Clearance<\/strong><\/h6><p>120mm<\/p><h6>Display<\/h6><p>LED display<\/p><h6>Throttle Type <\/h6><p>Thumb throttle<\/p><h6>Folding Method<\/h6><p>3-second quick fold<\/p><h6>Brake Type<\/h6><p>Front drum brake and rear E-ABS<\/p><h6><strong>Net Weight<\/strong><\/h6><p>18kg<\/p><h6>Max Payload<\/h6><p>120kg<\/p><h6><strong>Frame Material<\/strong><\/h6><p>Aluminum grade alloy<\/p><h6><strong>Suspension<\/strong><\/h6><p>Front shock absorbers <\/p><h6><strong>Headlight<\/strong><\/h6><p>Super bright LED<\/p><h6><strong>Tail Light<\/strong><\/h6><p>Dual LED<\/p><h6><strong>Indicators<\/strong><\/h6><p>Rear left and right<\/p><h6>Brake Light<\/h6><p>Yes<\/p><h6><strong>Tyre Size<\/strong><\/h6><p>10 inch front and rear<\/p><h6>Tyre<strong> Type<\/strong><\/h6><p>Front tubeless tyre and rear solid rubber tyre<\/p><h6><strong>Waterproof Rating<\/strong><\/h6><p>IP55 Body<\/p><p>IP57 Core Compoents<\/p><p><strong>Disclaimer: Top speed, hill climb and range figures are based on tests with an 80 kg rider under optimal and economical conditions. Actual performance may vary significantly<\/strong> <strong>depending on rider weight, terrain, weather, and riding style.<\/strong><\/p><p><\/p>","page":""}},"tab_NEtppX":{"type":"tab","settings":{"title":"APP DETAILS","content":"<h3><strong>APP DETAILS<\/strong><\/h3><h6><strong>App Name<\/strong><\/h6><p>Green Drive™<\/p><h6><strong>Availability<\/strong><\/h6><p>App Store (Apple) | Play Store (Google)<\/p><h6><strong>Speed Control<\/strong><\/h6><p>Switch between riding modes<br\/><\/p><h6><strong>Battery Monitor<\/strong><\/h6><p>Check Battery Level<\/p><h6><strong>Remote Lock<\/strong><\/h6><p>Lock your scooter<\/p><h6><strong>Trip Tracking<\/strong><\/h6><p>View total distance<\/p>","page":""}},"tab_MehWVA":{"type":"tab","settings":{"title":"BATTERY","content":"<h3>BATTERY<\/h3><h6>Battery Type<\/h6><p>DMEGC 36V | 468 Wh<\/p><h6><strong>Certifications<\/strong><\/h6><ul><li>UL2272<\/li><li>EN17128<\/li><\/ul><h6>Charging Time<\/h6><p>6.5 hours<\/p><h6>Charger Parameters<\/h6><p>DC42V\/2A<\/p><h6>Battery Management System<\/h6><ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul><p><em><strong>*Range Testing:<\/strong><\/em><em> In flat surface testing <\/em>under economical conditions<em> (Full Battery, 13 kph, windless), the Astro achieved 65 km under standard mode with a 80 kg load. <\/em><\/p><p><em>Real <\/em>world range on<em> varied Australian terrain (Full Battery), using a mix of standard and sport modes at an average speed of 20kph, the Astro delivered approx. 35 km with a 80 kg load. <\/em><\/p><p><strong>Disclaimer: Top speed, hill climb and range<\/strong> <strong>figures are based on tests with an 80 kg rider under optimal and economical conditions. Actual performance may vary significantly<\/strong> <strong>depending on rider weight, terrain, weather, and riding style.<\/strong><\/p>","page":""}},"tab_8tePjy":{"type":"tab","settings":{"title":"POWER","content":"<h3>POWER<\/h3><h6>Top Speed<\/h6><p>32 km\/h (capped at 25 km\/h to comply with laws and regulations. Contact us after purchase to unlock for private property use)<\/p><h6>Max. Range<\/h6><p>65 km (tested on flat ground under optimal, economical riding conditions)<\/p><h6>Rated Motor Power<\/h6><p>500W <\/p><h6>Peak Motor  Power<\/h6><p>800W<\/p><h6>Motor Type<\/h6><p>Brushless rear motor <\/p><h6><strong>Controller Type<\/strong><\/h6><p>Sinewave controller<\/p><h6>Max. Hill Climb Rating<\/h6><p>25°<\/p><p><strong>Disclaimer: Top speed, hill climb and range figures are based on tests with an 80 kg rider under optimal and economical conditions. Actual performance may vary significantly<\/strong> <strong>depending on rider weight, terrain, weather, and riding style.<\/strong><\/p><p><\/p><p><\/p>","page":""}}},"block_order":["tab_fyTQHc","tab_NEtppX","tab_MehWVA","tab_8tePjy"],"settings":{"full_width":true,"content_size":"medium","subheading":"","title":"FULL SPECIFICATIONS","text_alignment":"left","first_tab_open":false,"background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":""}},"faq_9jJb4t":{"type":"faq","blocks":{"item_VbGhx3":{"type":"item","settings":{"title":"Is TSC Aussie owned and operated?","content":"<p>Yes. The Simple Commute aka TSC was founded in March 2024 and officially launched in September 2024 by Hamlet and Ben here in Melbourne. <\/p><p>It’s now proudly owned and run by 3 young Aussies - Hamlet, Ben and Puneet. All our operations, from customer service to logistics and repairs, are handled right here in Melbourne. Head to our <a href=\"https:\/\/thesimplecommute.com.au\/pages\/about-us\">About Us<\/a> page to learn more about the team and our story.<\/p>"}},"item_a4iPDV":{"type":"item","settings":{"title":"Why should I choose TSC over other brands?","content":"<p>Because we actually care about you, not just the sale. At TSC, you get <strong>local Aussie support<\/strong>, <strong>fair pricing<\/strong>, and scooters that are <strong>built and tested for Australian roads<\/strong>. We only work with <strong>highly reputable manufacturers<\/strong>, and every model we release goes through strict <strong>global-standard testing<\/strong> — our scooters and batteries hold some of the <strong>highest safety certifications in the industry<\/strong>.<\/p><p>Most importantly, <strong>we value customer relationships more than sales<\/strong>. Whether you’re just browsing or ready to buy, you’ll always get honest advice and genuine support. That’s what sets us apart.<\/p>"}},"item_JUeEKN":{"type":"item","settings":{"title":"Is the Astro electric scooter legal to ride in public?","content":"<p>Yes. All our electric scooters are capped at 25 km\/h to comply with Australian regulations, making them legal to ride in public. For private property or off-road use, you can unlock the higher speeds and easily switch back to 25 km\/h when riding in public. Please contact us<strong> after purchase <\/strong>if you’d like the unlock instructions.<\/p>"}},"item_CjAqge":{"type":"item","settings":{"title":"Does the 250w rule apply to TSC e-scooters?","content":"<p>No. The 250w rule applies only to e-bikes, not e-scooters. Our electric scooters are classified as Personal Mobility Devices (PMDs) in Australia. The key regulation for PMDs is that they must be capped at 25 km\/h for public use, regardless of motor wattage.<\/p>"}},"item_yAXYee":{"type":"item","settings":{"title":"What makes Astro different from other electric scooters?","content":"<p>Other brands either overcharge for features you don't need or underdeliver on the ones you do.  Astro doesn't pretend to be something it's not. It's built for people who want reliable city commuting without paying for features they'll never use. <br\/><br\/>   <\/p>"}},"item_GBJQbP":{"type":"item","settings":{"title":"How can I properly secure my Astro electric scooter?","content":"<p>GPS tracking sounds handy but can be bypassed.<\/p><p>The best way is to take it with you whenever possible. If you can’t, use a strong lock, or even better, multiple locks, to make thieves think twice. <\/p><p>TSC offers tough, high-quality security options like disc brake locks, key locks, heavy-duty chains and alarm locks. Check out our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/e-scooter-accessories\"><strong>accessories page<\/strong><\/a><strong> <\/strong>to keep your Aurora safe.<\/p>"}},"item_tKPpf7":{"type":"item","settings":{"title":"How can I unlock the speed?","content":"<p>You can unlock the speed for private use by emailing our team directly <strong>after purchase <\/strong>with your order number ready.<\/p><p>Email our customer support to learn more about the unlock process.<\/p>"}},"item_jPMpr4":{"type":"item","settings":{"title":"Is the Astro portable?","content":"<p>Yes, the Astro is portable. It weighs 18kg and has a 3-second folding mechanism, so you can easily carry it or store it in your car.<\/p>"}},"item_QWjKm4":{"type":"item","settings":{"title":"Where can I ride my electric scooter?","content":"<p>In Australia, the regulatory landscape for electric scooters is a patchwork of diverse legislation, with each state and territory crafting its own unique set of guidelines. These region-specific rules govern various aspects of e-scooter usage, including rider eligibility, permissible operating areas, and speed limitations.<\/p><p>Before investing in an electric scooter, it's crucial for potential owners to familiarise themselves with the local regulations that will impact their riding experience. Navigating this complex web of laws can be challenging, so make sure you do your research. <\/p><p>Please visit the links below for the regulations in your state:<\/p><h6><a href=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\" target=\"_blank\" title=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\">📍 VIC<\/a><\/h6><h6><a href=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\">📍 SA<\/a><\/h6><h6><a href=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\">📍 QLD<\/a><\/h6><p><a href=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\" target=\"_blank\" title=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\"><strong>📍 WA<\/strong><\/a><\/p><p><a href=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\"><strong>📍 ACT<\/strong><\/a><\/p><h6><a href=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\" target=\"_blank\" title=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\"><strong>📍 TAS<\/strong><\/a><\/h6><h6><a href=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\">📍 NSW <\/a><\/h6><p><a href=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\" target=\"_blank\" title=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\"><strong>📍 NT<\/strong><\/a><\/p>"}},"item_CMei4c":{"type":"item","settings":{"title":"Are your batteries safe?","content":"<p>Yes, our batteries are extremely safe. They meet the highest global safety certifications, including UL2272 certification - one of the most rigorous battery safety standards in the world. Additionally, our smart Battery Management System (BMS) features six layers of protection including short circuit protection, overcurrent protection, and temperature resistance.<\/p>"}},"item_Gbhqtx":{"type":"item","settings":{"title":"Are there any financing options?","content":"<p>Yes, we offer flexible financing options. You can choose from:<\/p><p><strong>Zip Pay<\/strong> - Split your purchase into interest-free installments<br\/><strong>Afterpay<\/strong> - Buy now, pay later in 4 easy payments<\/p><p>Both options are available at checkout.<\/p>"}}},"block_order":["item_VbGhx3","item_a4iPDV","item_JUeEKN","item_CjAqge","item_yAXYee","item_GBJQbP","item_tKPpf7","item_jPMpr4","item_QWjKm4","item_CMei4c","item_Gbhqtx"],"settings":{"full_width":true,"subheading":"","title":"FAQ","content":"","team_avatar_width":160,"support_hours":"Our customer support is available 7 days a week: 10am-5pm AEST.","answer_time":"Average answer time: 40 minutes","button_text":"","button_url":"","text_position":"center","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}},"related_products_zgW4Rq":{"type":"related-products","name":"Related products","settings":{"recommendations_count":6,"products":["sport-sunglasses","metromask","combination-chain-lock","disc-brake-lock-1","waterproof-phone-mount","e-scooter-rearview-mirrors","aurora-battery","wireless-air-compressor-inflator","waterproof-airtag-holder","simple-care"],"full_width":false,"stack_products":false,"show_progress_bar":true,"products_per_row_mobile":"1","products_per_row_desktop":3,"subheading":"","title":"Everyone’s favourites","content":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"1731924206e17b48f2":{"type":"apps","blocks":{"judge_me_reviews_review_widget_Pm6iFf":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"review_data":"sample_data","max_width":1200,"show_shop_reviews":false,"empty_state":"empty_widget"}}},"block_order":["judge_me_reviews_review_widget_Pm6iFf"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}}},"order":["main","featured_collection_fTpTay","video_ar8N9E","multi_column_mndMbh","rich_text_DipjE4","media_with_text_Y4atWA","media_with_text_9h7WGN","media_with_text_bHDqRK","media_with_text_mpJHAA","video_KCcwcH","multiple_images_with_text_mrErmr","tabs_XnAkMG","faq_9jJb4t","related_products_zgW4Rq","1731924206e17b48f2"]}
+{
+    "sections": {
+        "main": {
+            "type": "main-product",
+            "blocks": {
+                "vendor": {
+                    "type": "vendor",
+                    "settings": {}
+                },
+                "title": {
+                    "type": "title",
+                    "settings": {
+                        "heading_tag": "h1"
+                    }
+                },
+                "judge_me_reviews_preview_badge_nzwnA4": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                },
+                "badges": {
+                    "type": "badges",
+                    "settings": {}
+                },
+                "price": {
+                    "type": "price",
+                    "settings": {
+                        "show_taxes_notice": false
+                    }
+                },
+                "afterpay_on_site_messaging_payments_messaging_GDUL7N": {
+                    "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+                    "settings": {
+                        "text_align": "inherit",
+                        "margin_top": 0,
+                        "margin_bottom": 0,
+                        "color": "",
+                        "size": "md",
+                        "intro_text": "or",
+                        "show_interest_free": true,
+                        "payment_amount_is_bold": true,
+                        "show_with": true,
+                        "logo_type": "badge",
+                        "logo_theme": "black-on-mint",
+                        "modal_link_style": "circled-info-icon",
+                        "modal_theme": "mint",
+                        "breakpoint": 749,
+                        "text_align_mobile": "inherit",
+                        "margin_top_mobile": 16,
+                        "margin_bottom_mobile": 16,
+                        "show_lower_limit": true,
+                        "show_upper_limit": true,
+                        "show_if_outside_limits": true,
+                        "product": "{{ product }}"
+                    }
+                },
+                "judge_me_reviews_review_snippet_widget_TaBUY4": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_snippet_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                },
+                "inventory_47eKYj": {
+                    "type": "inventory",
+                    "settings": {
+                        "low_inventory_threshold": 0
+                    }
+                },
+                "buy_buttons": {
+                    "type": "buy_buttons",
+                    "settings": {
+                        "show_payment_button": false,
+                        "show_gift_card_recipient": true,
+                        "atc_button_background": "#ffb543",
+                        "atc_button_text_color": "#ffffff",
+                        "payment_button_background": "#803cee",
+                        "payment_button_text_color": "#ffffff"
+                    }
+                },
+                "separator": {
+                    "type": "separator",
+                    "settings": {}
+                },
+                "essential_trust_badges_app_block_cx7qHB": {
+                    "type": "shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+                    "settings": {
+                        "banner_display": "single",
+                        "banner_id": "3058bafb-baf9-47e1-a58f-dda720b6aa33"
+                    }
+                },
+                "liquid_WC8dm9": {
+                    "type": "liquid",
+                    "settings": {
+                        "liquid": "<div class=\"product-info__button\">\n  <a class=\"button button--sm button--outline w-full\" href=\"#\" onclick=\"event.preventDefault(); document.querySelector('[id*=\\'tabs_XnAkMG\\']').scrollIntoView({ behavior: 'smooth', block: 'start' });\">\n    View full specs\n  <\/a>\n<\/div>\n<style>\nhtml { scroll-behavior: smooth; }\n[id*=\"tabs_XnAkMG\"] { scroll-margin-top: 100px; }\n<\/style>"
+                    }
+                },
+                "collapsible_text_Gx7jYA": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-document",
+                        "icon_width": 20,
+                        "title": "Description",
+                        "content": "<p><strong>The E-Scooter That Just Makes Sense<\/strong><\/p><p>Stop overpaying for features you'll never use. Astro is the scooter that gives you exactly what city commuting actually needs—nothing more, nothing less.<br\/><br\/><strong>IP55 Rating<\/strong> - With IP55 waterproof rating, the Astro is built for real riding,  handles rain and puddles with ease.<br\/><br\/><strong>No Compromises<\/strong> – Fast enough for your schedule, tough enough for your streets, smart enough for modern life.<br\/><br\/><strong>Connected When It Counts<\/strong> – Smart app control for the things that actually matter. Nothing else.<br\/><br\/><strong>Built for Real Use<\/strong> – Morning commutes, evening errands, weekend adventures. One ride handles it all.<br\/><br\/><strong>Truly Portable<\/strong> – Light enough to carry upstairs, compact enough for crowded trains. This actually fits real life.<br\/><br\/><strong>One smart decision. Years of better mornings.<\/strong><\/p><p><strong>What's in the Box<\/strong><br\/>Astro, charger, tool kit & owner's manual.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_mGWVXd": {
+                    "type": "collapsible_text",
+                    "disabled": true,
+                    "settings": {
+                        "icon": "none",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design.svg",
+                        "icon_width": 26,
+                        "title": "Key Features",
+                        "content": "<p><strong>Lightweight and Portable<\/strong>: Weighing only 23kg, the Aurora is easy to carry and transport, making it ideal for daily commutes and weekend adventures.<\/p><p><strong>Easy Changeable Battery<\/strong>: Enjoy the convenience of a changeable battery, allowing you to charge and replace it effortlessly where there is a power point<\/p><p><strong>Lithium Battery Pack<\/strong>: Power your ride with a robust lithium battery pack, offering up to 100km of range.<\/p><p><strong>Powerful Motor<\/strong>: Equipped with a 550W rated power output and an 1100W maximum output, the Aurora model delivers impressive acceleration and speed.<\/p><p><strong>30-Degree Climbing Angle<\/strong>: Conquer hills with ease. The Aurora's powerful motor supports a climbing angle of up to 30 degrees, making uphill rides smooth and effortless<\/p><p><strong>Cruise Control (Unlockable):<\/strong> Experience effortless riding with the Aurora’s cruise control feature. Enjoy longer rides with less strain while maintaining a consistent speed.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_FLndD4": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-box",
+                        "icon_width": 20,
+                        "title": "Shipping",
+                        "content": "<p><strong>Delivery<\/strong><br\/><strong>Free shipping<\/strong> Australia-wide.<br\/><br\/>Orders ship within <strong>1-2 business days.<\/strong><br\/><br\/>Standard Delivery typically takes<strong> 2-8 business days.<\/strong><\/p><p><strong>Pick-Up (Victoria Only)<\/strong><br\/>Easy collection from our Boronia warehouse.<br\/><br\/>We'll assemble your scooter on the spot.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_84cLQx": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-shield",
+                        "icon_width": 20,
+                        "title": "Warranty & Returns",
+                        "content": "<p><strong>Warranty<\/strong><br\/>All of our scooters come with limited warranty. For details, see our <a href=\"\/pages\/warranty\" title=\"Warranty\">warranty<\/a> page.<\/p><p><strong>Returns<\/strong><br\/>For information on our return policy, including eligibility and instructions, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy<\/a>.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_Ri9tUh": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design_34.png",
+                        "icon_width": 26,
+                        "title": "Certifications",
+                        "content": "<p>Our E-Scooters (including batteries) are tested to meet the following standards:<\/p><ul><li>UL2272<\/li><li>EN17128<\/li><li>IEC 62133-2<\/li><li>IEC 60335-1<\/li><li>EN IEC 55014-1<\/li><li>EN IEC 55014-1<\/li><li>CE EMC<\/li><li>ROHS<\/li><\/ul>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "vendor",
+                "title",
+                "judge_me_reviews_preview_badge_nzwnA4",
+                "badges",
+                "price",
+                "afterpay_on_site_messaging_payments_messaging_GDUL7N",
+                "judge_me_reviews_review_snippet_widget_TaBUY4",
+                "inventory_47eKYj",
+                "buy_buttons",
+                "separator",
+                "essential_trust_badges_app_block_cx7qHB",
+                "liquid_WC8dm9",
+                "collapsible_text_Gx7jYA",
+                "collapsible_text_mGWVXd",
+                "collapsible_text_FLndD4",
+                "collapsible_text_84cLQx",
+                "collapsible_text_Ri9tUh"
+            ],
+            "custom_css": [
+                ".h1 {font-size: clamp(22px, 5vw, 50px); margin: 0; font-family: sans-serif; font-weight: 800;}",
+                ".product-info {--product-info-block-spacing: var(--spacing-2) !important;}"
+            ],
+            "settings": {
+                "full_width": true,
+                "show_fixed_add_to_cart": true,
+                "desktop_media_width": 50,
+                "desktop_media_layout": "grid_highlight",
+                "mobile_media_size": "contained",
+                "mobile_carousel_control": "dots",
+                "enable_video_autoplay": false,
+                "enable_video_looping": true,
+                "enable_image_zoom": true,
+                "max_image_zoom_level": 3,
+                "background": "#ffffff",
+                "background_gradient": "",
+                "text_color": "rgba(0,0,0,0)",
+                "input_background": "rgba(0,0,0,0)",
+                "input_text_color": ""
+            }
+        },
+        "featured_collection_fTpTay": {
+            "type": "featured-collection",
+            "name": "Featured collection",
+            "settings": {
+                "collection": "the-simple-commute-aurora-bundles-premium-best-value-1",
+                "products": [],
+                "full_width": true,
+                "stack_products": false,
+                "show_progress_bar": true,
+                "products_count": 6,
+                "products_per_row_mobile": "1",
+                "products_per_row_desktop": 2,
+                "subheading": "",
+                "title": "BUNDLE UP AND SAVE BIG",
+                "content": "",
+                "link_url": "",
+                "link_text": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "product_card_background": "",
+                "product_card_text_color": ""
+            }
+        },
+        "video_ar8N9E": {
+            "type": "video",
+            "blocks": {
+                "heading_wUYaYC": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "YOUR PERFECT DAILY RIDE",
+                        "heading_tag": "h2"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_wUYaYC"
+            ],
+            "custom_css": [
+                "video-media {max-height: 50vh !important;}",
+                "video {max-height: 50vh !important; object-fit: cover; margin: 0 !important; padding: 0 !important;}",
+                "@media (max-width: 749px) {video-media {min-height: 450px !important; } video {min-height: 450px !important; object-fit: cover; } .h4 {font-size: 1.8rem !important; }}"
+            ],
+            "name": "Video",
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "autoplay": true,
+                "video_size": "auto",
+                "video": "shopify:\/\/files\/videos\/Astro Montage 43.mp4",
+                "mobile_video": "shopify:\/\/files\/videos\/1020 (1).mp4",
+                "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+            }
+        },
+        "multi_column_mndMbh": {
+            "type": "multi-column",
+            "blocks": {
+                "item_iTkbWM": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/UWU03879_1_1.webp",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Smart Riding Without the Complexity",
+                        "heading_tag": "h4",
+                        "content": "<p>Lock when your Astro is parked, see how far you've gone, adjust your speed on the fly. The Green Drive™ app gives you the control that matters without drowning you in features you'll never use.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_pMdLyd": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/UWU03904_1.webp",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Smooth Out the Chaos",
+                        "heading_tag": "h4",
+                        "content": "<p>Front suspension absorbs the potholes, cracks, and rough patches that make streets a nightmare. Your wrists and back will thank you.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_eeKMEE": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/UWU03900_1.webp",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Always Seen, Always Safe",
+                        "heading_tag": "h4",
+                        "content": "<p>Permanent taillight keeps you lit up from start to finish. Integrated turn signals mean cars actually know where you're going. Because the best accident is the one that never happens.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_aMK6dj": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/UWU03896.webp",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Information When It Matters",
+                        "heading_tag": "h4",
+                        "content": "<p>Smart LED display delivers the essentials—how fast you're going, how much charge you've got, what mode you're in. <\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                }
+            },
+            "block_order": [
+                "item_iTkbWM",
+                "item_pMdLyd",
+                "item_eeKMEE",
+                "item_aMK6dj"
+            ],
+            "custom_css": [
+                ".multi-column {margin: 0 !important; padding: 0 !important;}"
+            ],
+            "name": "Multi-column",
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": false,
+                "gap": "small",
+                "text_alignment": "start",
+                "subheading": "",
+                "title": "FOUR REASONS TO LOVE THE ASTRO",
+                "content": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "rich_text_DipjE4": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_LiRWbY": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Why Choose the Astro Electric Scooter",
+                        "heading_tag": "h2",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "heading_LiRWbY"
+            ],
+            "custom_css": [
+                "h2 {font-size: 50px; margin-top: 900; margin-bottom: 0;}",
+                "@media screen and (max-width: 749px) {h2 {font-size: 30px; margin-top: 900; margin-bottom: 0; }}"
+            ],
+            "name": "Rich text",
+            "settings": {
+                "full_width": false,
+                "content_width": "large",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "media_with_text_Y4atWA": {
+            "type": "media-with-text",
+            "blocks": {
+                "video_HR4rGP": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Astro Suspension Clip.mp4",
+                        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 24,
+                        "subheading": "",
+                        "title": "MORE CAPABLE THAN YOU'D EXPECT",
+                        "content": "<p>Front suspension absorbs the potholes, cracks, and rough patches that make our streets challenging. Need to cross grass, ride gravel paths, or take a park shortcut? The Astro handles moderate terrain with confidence. <\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "rgba(0,0,0,0)",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_HR4rGP"
+            ],
+            "custom_css": [
+                ".media-with-text {margin: 0 !important; padding: 0;}",
+                ".video-media {margin: 0 !important; padding: 0;}"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "media_with_text_9h7WGN": {
+            "type": "media-with-text",
+            "blocks": {
+                "video_e6P6HU": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Astro - Tailight Clip.mp4",
+                        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 24,
+                        "subheading": "",
+                        "title": "INDICATE WITHOUT LETTING GO",
+                        "content": "<p>Rear-mounted turn signals communicate your intentions clearly to traffic behind you. No need to release the handlebars for hand signals. Stay in control, stay visible, stay safe on every ride.<\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "rgba(0,0,0,0)",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_e6P6HU"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "media_with_text_bHDqRK": {
+            "type": "media-with-text",
+            "blocks": {
+                "video_CJrN4P": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Astro Folding.mp4",
+                        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 24,
+                        "subheading": "",
+                        "title": "JUST FOLD AND GO",
+                        "content": "<p>3-second folding mechanism means no wrestling with complicated latches. One smooth motion and you're ready to go.<\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "rgba(0,0,0,0)",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_CJrN4P"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "media_with_text_mpJHAA": {
+            "type": "media-with-text",
+            "blocks": {
+                "video_Gqbw9q": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Astro Battery.mp4",
+                        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 24,
+                        "subheading": "",
+                        "title": "SAFETY BY DESIGN",
+                        "content": "<p>Explosion-proof metal housing surrounds your battery at all times. It's the kind of safety feature you hope you never need, but you'll be glad it's there. <\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "rgba(0,0,0,0)",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_Gqbw9q"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "video_KCcwcH": {
+            "type": "video",
+            "blocks": {
+                "play_GaPtKq": {
+                    "type": "play",
+                    "settings": {}
+                },
+                "heading_Rh84Nq": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "",
+                        "heading_tag": "h3"
+                    }
+                }
+            },
+            "block_order": [
+                "play_GaPtKq",
+                "heading_Rh84Nq"
+            ],
+            "settings": {
+                "full_width": false,
+                "allow_transparent_header": false,
+                "autoplay": false,
+                "video_size": "auto",
+                "external_video_url": "https:\/\/youtu.be\/1MuRU_CGPmU",
+                "poster": "shopify:\/\/shop_images\/Screenshot_2025-10-21_214842_1.webp",
+                "text_color": "#1a1a1a",
+                "overlay_color": "#1a1a1a",
+                "overlay_opacity": 12
+            }
+        },
+        "multiple_images_with_text_mrErmr": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_pbw4hR": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Firefly_Generate_a_battery_management_system_for_a_lithium_battery._The_image_must_show_a_chip_with_1.jpg",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "Smart Battery Management System",
+                        "content": "<ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_pbw4hR"
+            ],
+            "disabled": true,
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "rgba(0,0,0,0)",
+                "background_gradient": "",
+                "text_color": "#000000",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "tabs_XnAkMG": {
+            "type": "tabs",
+            "blocks": {
+                "tab_fyTQHc": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "DESIGN",
+                        "content": "<h3><strong>DESIGN<\/strong><\/h3><h6><strong>Open Size <\/strong><\/h6><p>1110mm x 455mm x 1170mm<\/p><h6><strong>Fold Size<\/strong><\/h6><p>1110mm x 455mm x 625mm<br\/><br\/><strong>Deck Width\/Length<\/strong><\/p><p>180mm\/600mm<\/p><h6><strong>Ground Clearance<\/strong><\/h6><p>120mm<\/p><h6>Display<\/h6><p>LED display<\/p><h6>Throttle Type <\/h6><p>Thumb throttle<\/p><h6>Folding Method<\/h6><p>3-second quick fold<\/p><h6>Brake Type<\/h6><p>Front drum brake and rear E-ABS<\/p><h6><strong>Net Weight<\/strong><\/h6><p>18kg<\/p><h6>Max Payload<\/h6><p>120kg<\/p><h6><strong>Frame Material<\/strong><\/h6><p>Aluminum grade alloy<\/p><h6><strong>Suspension<\/strong><\/h6><p>Front shock absorbers <\/p><h6><strong>Headlight<\/strong><\/h6><p>Super bright LED<\/p><h6><strong>Tail Light<\/strong><\/h6><p>Dual LED<\/p><h6><strong>Indicators<\/strong><\/h6><p>Rear left and right<\/p><h6>Brake Light<\/h6><p>Yes<\/p><h6><strong>Tyre Size<\/strong><\/h6><p>10 inch front and rear<\/p><h6>Tyre<strong> Type<\/strong><\/h6><p>Front tubeless tyre and rear solid rubber tyre<\/p><h6><strong>Waterproof Rating<\/strong><\/h6><p>IP55 Body<\/p><p>IP57 Core Compoents<\/p><p><strong>Disclaimer: Top speed, hill climb and range figures are based on tests with an 80 kg rider under optimal and economical conditions. Actual performance may vary significantly<\/strong> <strong>depending on rider weight, terrain, weather, and riding style.<\/strong><\/p><p><\/p>",
+                        "page": ""
+                    }
+                },
+                "tab_NEtppX": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "APP DETAILS",
+                        "content": "<h3><strong>APP DETAILS<\/strong><\/h3><h6><strong>App Name<\/strong><\/h6><p>Green Drive™<\/p><h6><strong>Availability<\/strong><\/h6><p>App Store (Apple) | Play Store (Google)<\/p><h6><strong>Speed Control<\/strong><\/h6><p>Switch between riding modes<br\/><\/p><h6><strong>Battery Monitor<\/strong><\/h6><p>Check Battery Level<\/p><h6><strong>Remote Lock<\/strong><\/h6><p>Lock your scooter<\/p><h6><strong>Trip Tracking<\/strong><\/h6><p>View total distance<\/p>",
+                        "page": ""
+                    }
+                },
+                "tab_MehWVA": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "BATTERY",
+                        "content": "<h3>BATTERY<\/h3><h6>Battery Type<\/h6><p>DMEGC 36V | 468 Wh<\/p><h6><strong>Certifications<\/strong><\/h6><ul><li>UL2272<\/li><li>EN17128<\/li><\/ul><h6>Charging Time<\/h6><p>6.5 hours<\/p><h6>Charger Parameters<\/h6><p>DC42V\/2A<\/p><h6>Battery Management System<\/h6><ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul><p><em><strong>*Range Testing:<\/strong><\/em><em> In flat surface testing <\/em>under economical conditions<em> (Full Battery, 13 kph, windless), the Astro achieved 65 km under standard mode with a 80 kg load. <\/em><\/p><p><em>Real <\/em>world range on<em> varied Australian terrain (Full Battery), using a mix of standard and sport modes at an average speed of 20kph, the Astro delivered approx. 35 km with a 80 kg load. <\/em><\/p><p><strong>Disclaimer: Top speed, hill climb and range<\/strong> <strong>figures are based on tests with an 80 kg rider under optimal and economical conditions. Actual performance may vary significantly<\/strong> <strong>depending on rider weight, terrain, weather, and riding style.<\/strong><\/p>",
+                        "page": ""
+                    }
+                },
+                "tab_8tePjy": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "POWER",
+                        "content": "<h3>POWER<\/h3><h6>Top Speed<\/h6><p>32 km\/h (capped at 25 km\/h to comply with laws and regulations. Contact us after purchase to unlock for private property use)<\/p><h6>Max. Range<\/h6><p>65 km (tested on flat ground under optimal, economical riding conditions)<\/p><h6>Rated Motor Power<\/h6><p>500W <\/p><h6>Peak Motor  Power<\/h6><p>800W<\/p><h6>Motor Type<\/h6><p>Brushless rear motor <\/p><h6><strong>Controller Type<\/strong><\/h6><p>Sinewave controller<\/p><h6>Max. Hill Climb Rating<\/h6><p>25°<\/p><p><strong>Disclaimer: Top speed, hill climb and range figures are based on tests with an 80 kg rider under optimal and economical conditions. Actual performance may vary significantly<\/strong> <strong>depending on rider weight, terrain, weather, and riding style.<\/strong><\/p><p><\/p><p><\/p>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "tab_fyTQHc",
+                "tab_NEtppX",
+                "tab_MehWVA",
+                "tab_8tePjy"
+            ],
+            "settings": {
+                "full_width": true,
+                "content_size": "medium",
+                "subheading": "",
+                "title": "FULL SPECIFICATIONS",
+                "text_alignment": "left",
+                "first_tab_open": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": ""
+            }
+        },
+        "faq_9jJb4t": {
+            "type": "faq",
+            "blocks": {
+                "item_VbGhx3": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Is TSC Aussie owned and operated?",
+                        "content": "<p>Yes. The Simple Commute aka TSC was founded in March 2024 and officially launched in September 2024 by Hamlet and Ben here in Melbourne. <\/p><p>It’s now proudly owned and run by 3 young Aussies - Hamlet, Ben and Puneet. All our operations, from customer service to logistics and repairs, are handled right here in Melbourne. Head to our <a href=\"https:\/\/thesimplecommute.com.au\/pages\/about-us\">About Us<\/a> page to learn more about the team and our story.<\/p>"
+                    }
+                },
+                "item_a4iPDV": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Why should I choose TSC over other brands?",
+                        "content": "<p>Because we actually care about you, not just the sale. At TSC, you get <strong>local Aussie support<\/strong>, <strong>fair pricing<\/strong>, and scooters that are <strong>built and tested for Australian roads<\/strong>. We only work with <strong>highly reputable manufacturers<\/strong>, and every model we release goes through strict <strong>global-standard testing<\/strong> — our scooters and batteries hold some of the <strong>highest safety certifications in the industry<\/strong>.<\/p><p>Most importantly, <strong>we value customer relationships more than sales<\/strong>. Whether you’re just browsing or ready to buy, you’ll always get honest advice and genuine support. That’s what sets us apart.<\/p>"
+                    }
+                },
+                "item_JUeEKN": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Is the Astro electric scooter legal to ride in public?",
+                        "content": "<p>Yes. All our electric scooters are capped at 25 km\/h to comply with Australian regulations, making them legal to ride in public. For private property or off-road use, you can unlock the higher speeds and easily switch back to 25 km\/h when riding in public. Please contact us<strong> after purchase <\/strong>if you’d like the unlock instructions.<\/p>"
+                    }
+                },
+                "item_CjAqge": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Does the 250w rule apply to TSC e-scooters?",
+                        "content": "<p>No. The 250w rule applies only to e-bikes, not e-scooters. Our electric scooters are classified as Personal Mobility Devices (PMDs) in Australia. The key regulation for PMDs is that they must be capped at 25 km\/h for public use, regardless of motor wattage.<\/p>"
+                    }
+                },
+                "item_yAXYee": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What makes Astro different from other electric scooters?",
+                        "content": "<p>Other brands either overcharge for features you don't need or underdeliver on the ones you do.  Astro doesn't pretend to be something it's not. It's built for people who want reliable city commuting without paying for features they'll never use. <br\/><br\/>   <\/p>"
+                    }
+                },
+                "item_GBJQbP": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How can I properly secure my Astro electric scooter?",
+                        "content": "<p>GPS tracking sounds handy but can be bypassed.<\/p><p>The best way is to take it with you whenever possible. If you can’t, use a strong lock, or even better, multiple locks, to make thieves think twice. <\/p><p>TSC offers tough, high-quality security options like disc brake locks, key locks, heavy-duty chains and alarm locks. Check out our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/e-scooter-accessories\"><strong>accessories page<\/strong><\/a><strong> <\/strong>to keep your Aurora safe.<\/p>"
+                    }
+                },
+                "item_tKPpf7": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How can I unlock the speed?",
+                        "content": "<p>You can unlock the speed for private use by emailing our team directly <strong>after purchase <\/strong>with your order number ready.<\/p><p>Email our customer support to learn more about the unlock process.<\/p>"
+                    }
+                },
+                "item_jPMpr4": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Is the Astro portable?",
+                        "content": "<p>Yes, the Astro is portable. It weighs 18kg and has a 3-second folding mechanism, so you can easily carry it or store it in your car.<\/p>"
+                    }
+                },
+                "item_QWjKm4": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Where can I ride my electric scooter?",
+                        "content": "<p>In Australia, the regulatory landscape for electric scooters is a patchwork of diverse legislation, with each state and territory crafting its own unique set of guidelines. These region-specific rules govern various aspects of e-scooter usage, including rider eligibility, permissible operating areas, and speed limitations.<\/p><p>Before investing in an electric scooter, it's crucial for potential owners to familiarise themselves with the local regulations that will impact their riding experience. Navigating this complex web of laws can be challenging, so make sure you do your research. <\/p><p>Please visit the links below for the regulations in your state:<\/p><h6><a href=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\" target=\"_blank\" title=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\">📍 VIC<\/a><\/h6><h6><a href=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\">📍 SA<\/a><\/h6><h6><a href=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\">📍 QLD<\/a><\/h6><p><a href=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\" target=\"_blank\" title=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\"><strong>📍 WA<\/strong><\/a><\/p><p><a href=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\"><strong>📍 ACT<\/strong><\/a><\/p><h6><a href=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\" target=\"_blank\" title=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\"><strong>📍 TAS<\/strong><\/a><\/h6><h6><a href=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\">📍 NSW <\/a><\/h6><p><a href=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\" target=\"_blank\" title=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\"><strong>📍 NT<\/strong><\/a><\/p>"
+                    }
+                },
+                "item_CMei4c": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are your batteries safe?",
+                        "content": "<p>Yes, our batteries are extremely safe. They meet the highest global safety certifications, including UL2272 certification - one of the most rigorous battery safety standards in the world. Additionally, our smart Battery Management System (BMS) features six layers of protection including short circuit protection, overcurrent protection, and temperature resistance.<\/p>"
+                    }
+                },
+                "item_Gbhqtx": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are there any financing options?",
+                        "content": "<p>Yes, we offer flexible financing options. You can choose from:<\/p><p><strong>Zip Pay<\/strong> - Split your purchase into interest-free installments<br\/><strong>Afterpay<\/strong> - Buy now, pay later in 4 easy payments<\/p><p>Both options are available at checkout.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_VbGhx3",
+                "item_a4iPDV",
+                "item_JUeEKN",
+                "item_CjAqge",
+                "item_yAXYee",
+                "item_GBJQbP",
+                "item_tKPpf7",
+                "item_jPMpr4",
+                "item_QWjKm4",
+                "item_CMei4c",
+                "item_Gbhqtx"
+            ],
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available 7 days a week: 10am-5pm AEST.",
+                "answer_time": "Average answer time: 40 minutes",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        },
+        "related_products_zgW4Rq": {
+            "type": "related-products",
+            "name": "Related products",
+            "settings": {
+                "recommendations_count": 6,
+                "products": [
+                    "sport-sunglasses",
+                    "metromask",
+                    "combination-chain-lock",
+                    "disc-brake-lock-1",
+                    "waterproof-phone-mount",
+                    "e-scooter-rearview-mirrors",
+                    "aurora-battery",
+                    "wireless-air-compressor-inflator",
+                    "waterproof-airtag-holder",
+                    "simple-care"
+                ],
+                "full_width": false,
+                "stack_products": false,
+                "show_progress_bar": true,
+                "products_per_row_mobile": "1",
+                "products_per_row_desktop": 3,
+                "subheading": "",
+                "title": "Everyone’s favourites",
+                "content": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "product_card_background": "",
+                "product_card_text_color": ""
+            }
+        },
+        "1731924206e17b48f2": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_review_widget_Pm6iFf": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {
+                        "review_data": "sample_data",
+                        "max_width": 1200,
+                        "show_shop_reviews": false,
+                        "empty_state": "empty_widget"
+                    }
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_review_widget_Pm6iFf"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        }
+    },
+    "order": [
+        "main",
+        "featured_collection_fTpTay",
+        "video_ar8N9E",
+        "multi_column_mndMbh",
+        "rich_text_DipjE4",
+        "media_with_text_Y4atWA",
+        "media_with_text_9h7WGN",
+        "media_with_text_bHDqRK",
+        "media_with_text_mpJHAA",
+        "video_KCcwcH",
+        "multiple_images_with_text_mrErmr",
+        "tabs_XnAkMG",
+        "faq_9jJb4t",
+        "related_products_zgW4Rq",
+        "1731924206e17b48f2"
+    ]
+}

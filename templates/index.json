@@ -1,1 +1,442 @@
-{"sections":{"slideshow":{"type":"slideshow","blocks":{"slide-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/edgerunner_kaiju_hero.webp","mobile_image":"shopify:\/\/shop_images\/edgerunner_kaiju_mobile_hero.webp","content_max_width":780,"mobile_text_position":"place-self-start-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"","title":"AUSTRALIA'S MOST TRUSTED ELECTRIC SCOOTER BRAND","heading_tag":"h1","button_text":"SHOP NOW","button_link":"shopify:\/\/collections\/scooters","text_color":"#ffffff","button_background":"#ffffff","button_text_color":"#000000","overlay_color":"#000000","overlay_opacity":15,"background":"","background_gradient":""}}},"block_order":["slide-1"],"custom_css":[".h1 {font-size: 70px; margin-top: 900; margin-bottom: 0;}","@media screen and (max-width: 749px) {.h1 {font-size: 35px; margin-top: 900; margin-bottom: 0; }}"],"settings":{"full_width":true,"allow_transparent_header":true,"show_initial_transition":false,"image_size":"auto","controls_type":"numbers","transition_type":"fade_with_text","autoplay":true,"cycle_speed":6,"background":"#f2f2f2","background_gradient":"linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"}},"text_with_icons_4bLiBQ":{"type":"text-with-icons","blocks":{"item_FAMbTr":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/Australia_Logo.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Australian Owned","content":"<p>By 3 Young Aussie Mates<\/p>"}},"item_r4RGTj":{"type":"item","settings":{"icon":"picto-shield","custom_icon":"shopify:\/\/shop_images\/24-Month_Warranty_Logo.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"24-Month Warranty","content":"<p>Industry-leading coverage<\/p>"}},"item_EGQfqd":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/Australian_terrain_tough_logo.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Built For Aussies","content":"<p>Engineered and tested for Australian roads<\/p>"}},"item_aUnjxD":{"type":"item","settings":{"icon":"picto-box","custom_icon":"shopify:\/\/shop_images\/Free_Shipping_Box_Logo.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Free Shipping","content":"<p>Free shipping Australia-wide, including rural and remote areas<\/p>"}}},"block_order":["item_FAMbTr","item_r4RGTj","item_EGQfqd","item_aUnjxD"],"name":"Text with icons","settings":{"full_width":false,"stack_on_mobile":false,"title":"","heading_tag":"h5","text_alignment":"center","icon_spacing":"small","background":"rgba(0,0,0,0)","background_gradient":"","text_color":""}},"featured_collection_4NHzmf":{"type":"featured-collection","name":"Featured collection","settings":{"collection":"all","products":["edgerunner","astro","kaiju","aurora","sova"],"full_width":false,"stack_products":false,"show_progress_bar":false,"products_count":6,"products_per_row_mobile":"1","products_per_row_desktop":2,"subheading":"Loved by 2,000+ Happy Riders!","title":"Premium Electric Scooters","content":"","link_url":"","link_text":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"17535389134d0ac4db":{"type":"apps","blocks":{"judge_me_reviews_medals_WqJFwg":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"judge_me_reviews_featured_carousel_zbBKMB":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"maxwidth":1080}}},"block_order":["judge_me_reviews_medals_WqJFwg","judge_me_reviews_featured_carousel_zbBKMB"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}},"image_with_text_overlay_hLjnjM":{"type":"image-with-text-overlay","blocks":{"subheading_efhd63":{"type":"subheading","settings":{"text":"For Riders Who Demand More"}},"heading_RpBFRa":{"type":"heading","settings":{"text":"KAIJU","heading_tag":"h2"}},"button_aJz7WY":{"type":"button","settings":{"style":"fill","size":"xl","text":"Order Now","url":"shopify:\/\/products\/kaiju","background":"","text_color":""}}},"block_order":["subheading_efhd63","heading_RpBFRa","button_aJz7WY"],"custom_css":[".h2 {font-size: 70px; margin-top: 900; margin-bottom: 0;}","@media screen and (max-width: 749px) {.h2 {font-size: 35px; margin-top: 900; margin-bottom: 0; }}"],"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"auto","image":"shopify:\/\/shop_images\/UWU02251_-_Mobile.webp","mobile_image":"shopify:\/\/shop_images\/UWU02251.webp","mobile_text_position":"place-self-end-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":10}},"image-with-text-overlay":{"type":"image-with-text-overlay","blocks":{"1664424230c4756b0e-0":{"type":"subheading","settings":{"text":"The Best Long Range Commuter Electric Scooter"}},"1664424230c4756b0e-1":{"type":"heading","settings":{"text":"AURORA","heading_tag":"h2"}},"button_aFwKLw":{"type":"button","settings":{"style":"fill","size":"xl","text":"Order Now","url":"shopify:\/\/products\/aurora","background":"","text_color":""}}},"block_order":["1664424230c4756b0e-0","1664424230c4756b0e-1","button_aFwKLw"],"custom_css":[".h2 {font-size: 70px; margin-top: 900; margin-bottom: 0;}","@media screen and (max-width: 749px) {.h2 {font-size: 35px; margin-top: 900; margin-bottom: 0; }}"],"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"auto","image":"shopify:\/\/shop_images\/UWU02476_1.webp","mobile_image":"shopify:\/\/shop_images\/UWU02476_1_-_Mobile.webp","mobile_text_position":"place-self-end-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":15}},"slideshow_kCTm3j":{"type":"slideshow","blocks":{"video_kfGWha":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1020 (1).mp4","mobile_video":"shopify:\/\/files\/videos\/Astro Montage - Mobile.mp4","content_max_width":700,"mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"The Everyday Commuter Electric Scooter","title":"ASTRO","heading_tag":"h2","button_text":"Order Now","button_link":"shopify:\/\/products\/astro","text_color":"#ffffff","button_background":"#ffffff","button_text_color":"#000000","overlay_color":"#000000","overlay_opacity":0,"background":"","background_gradient":""}}},"block_order":["video_kfGWha"],"settings":{"full_width":true,"allow_transparent_header":true,"show_initial_transition":false,"image_size":"lg","controls_type":"numbers","transition_type":"fade_with_text","autoplay":true,"cycle_speed":6,"background":"#f2f2f2","background_gradient":"linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"}},"faq":{"type":"faq","blocks":{"item_cQxk86":{"type":"item","settings":{"title":"Is TSC Aussie owned and operated?","content":"<p>Yes. TSC was founded in March 2024 and officially launched in September 2024 by Hamlet and Ben here in Melbourne.<\/p><p> It’s now proudly owned and run by 3 young Aussies - Hamlet, Ben and Puneet. All our operations, from customer service to logistics and repairs, are handled right here in Melbourne. Head to our <a href=\"https:\/\/thesimplecommute.com.au\/pages\/about-us\">About Us<\/a> page to learn more about the team and our story.<\/p>"}},"item_TzLRB8":{"type":"item","settings":{"title":"Why should I choose TSC over other brands?","content":"<p>Because we actually care about you, not just the sale. At TSC, you get <strong>local Aussie support<\/strong>, <strong>fair pricing<\/strong>, and scooters that are <strong>built and tested for Australian roads<\/strong>. We only work with <strong>highly reputable manufacturers<\/strong>, and every model we release goes through strict <strong>global-standard testing<\/strong> — our scooters and batteries hold some of the <strong>highest safety certifications in the industry<\/strong>.<br\/><\/p><p>Most importantly, <strong>we value customer relationships more than sales<\/strong>. Whether you’re just browsing or ready to buy, you’ll always get honest advice and genuine support. That’s what sets us apart.<\/p>"}},"item_FALXEY":{"type":"item","settings":{"title":"Are TSC electric scooters legal to ride in public?","content":"<p>Yes. All our electric scooters are capped at 25 km\/h to comply with Australian regulations.<\/p>"}},"166442457738b23caf-0":{"type":"item","settings":{"title":"What is an Electric Scooter?","content":"<p>The electric scooter represents a revolutionary advancement in personal transportation, melding the simplicity of manual push scooters with cutting-edge battery-powered propulsion. These sleek, compact vehicles typically feature a streamlined design with two wheels, accommodating a single rider atop a narrow platform.<\/p><p><br\/>The genesis of modern e-scooters can be traced back to 1996 when the French automotive giant Peugeot unveiled the groundbreaking Scoot'Elec, setting the stage for a new era of urban mobility. In the decades since, these nimble devices have surged in popularity across demographics, captivating both youthful enthusiasts and practical-minded adults.<\/p><p><br\/>E-scooters have earned their place in the urban landscape thanks to their user-friendly operation, eco-conscious design, and unparalleled ability to weave through congested city streets. Beyond mere transportation, they embody a lifestyle choice that prioritizes efficiency and environmental stewardship. As cities grapple with pollution and gridlock, electric scooters offer a compelling solution that marries personal freedom with ecological responsibility.<\/p>"}},"166442457738b23caf-1":{"type":"item","settings":{"title":"How much is an electric scooter?","content":"<p>Discover unbeatable prices on e-scooters, with our entry model adult e-scooters starting at just $859. Whether you're looking for an easy way to commute or just want to zip around town, e-scooters are the ultimate solution. Not only are they convenient, but they also help you save on parking, public transport, and the expenses of maintaining a car or motorbike. <\/p><p>Plus, e-scooters like our Kaiju, Astro, and Aurora models are among the most eco-friendly and cost-efficient ways to get around. Explore our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters?_ab=0&key=1726885902412\"><span style=\"text-decoration:underline\">premium collection of e-scooters<\/span><\/a>, and contribute to a greener future.<\/p>"}},"166442457738b23caf-2":{"type":"item","settings":{"title":"How does an electric scooter work?","content":"<p>Electric scooters harness the power of stored electrical energy to drive their wheels, offering a seamless blend of technology and mobility. At the heart of these devices lies a rechargeable battery pack, acting as a portable powerhouse that fuels the scooter's electric motor.<\/p><p>Initiating your journey is remarkably straightforward. Most models feature a control mechanism on the handlebars - typically a twistable grip or a thumb-operated lever. Engaging this throttle sends a signal to the scooter's brain, prompting it to unleash a stream of electrons from the battery to the motor. This surge of electricity activates the motor, which in turn sets the wheels in motion, propelling you forward with surprising ease.<\/p><p>Safety is paramount in e-scooter design. Hand-operated brake levers provide riders with precise control over their speed and stopping power. When engaged, these brakes swiftly decelerate or halt the scooter's movement, ensuring rider confidence in various traffic conditions.<\/p><p>Maintaining your e-scooter's energy reserves is a breeze. Unlike their fossil-fuel counterparts, these eco-friendly vehicles simply require access to a standard electrical outlet for recharging. However, to ensure consistent performance and longevity, it's crucial to establish a regular charging routine. By keeping your scooter's battery topped up, you'll always be ready for your next urban adventure, gliding silently and efficiently through city streets.<\/p>"}},"item_w9bxt9":{"type":"item","settings":{"title":"How to properly secure my electric scooter?","content":"<p>GPS tracking sounds handy but can be bypassed.<\/p><p>The best way is to take it with you whenever possible. If you can’t, use a strong lock, or even better, multiple locks, to make thieves think twice. <br\/><\/p><p>TSC offers tough, high-quality security options like disc brake locks, key locks, heavy-duty chains and alarm locks. Check out our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/e-scooter-accessories\"><strong>accessories page<\/strong><\/a><strong> <\/strong>to keep your scooter safe.<\/p>"}},"item_n73pDC":{"type":"item","settings":{"title":"Where can I ride my electric scooter?","content":"<p>In Australia, the regulatory landscape for electric scooters is a patchwork of diverse legislation, with each state and territory crafting its own unique set of guidelines. These region-specific rules govern various aspects of e-scooter usage, including rider eligibility, permissible operating areas, and speed limitations.<\/p><p>Before investing in an electric scooter, it's crucial for potential owners to familiarise themselves with the local regulations that will impact their riding experience. Navigating this complex web of laws can be challenging, so make sure you do your research. <\/p><p>Please visit the links below for the regulations in your state:<\/p><h6><a href=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\" target=\"_blank\" title=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\">📍 VIC<\/a><\/h6><h6><a href=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\">📍 SA<\/a><\/h6><h6><a href=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\">📍 QLD<\/a><\/h6><p><a href=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\" target=\"_blank\" title=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\"><strong>📍 WA<\/strong><\/a><\/p><p><a href=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\"><strong>📍 ACT<\/strong><\/a><\/p><h6><a href=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\" target=\"_blank\" title=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\"><strong>📍 TAS<\/strong><\/a><\/h6><h6><a href=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\">📍 NSW <\/a><\/h6><p><a href=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\" target=\"_blank\" title=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\"><strong>📍 NT<\/strong><\/a><\/p>"}},"item_M48zVi":{"type":"item","settings":{"title":"Which electric scooter is best for me?","content":"<p>Take our quick and easy quiz to find the perfect match for your lifestyle! Whether you're commuting to work, tackling off-road adventures, or looking for something versatile, our quiz will guide you to the scooter that's right for you.<br\/><\/p><p>Take the quiz <a href=\"https:\/\/thesimplecommute.com.au\/pages\/find-your-ride\" title=\"Find your ride\">here<\/a>!<\/p>"}}},"block_order":["item_cQxk86","item_TzLRB8","item_FALXEY","166442457738b23caf-0","166442457738b23caf-1","166442457738b23caf-2","item_w9bxt9","item_n73pDC","item_M48zVi"],"settings":{"full_width":false,"subheading":"","title":"FAQ","content":"","team_avatar_width":160,"support_hours":"Our customer support is available 7 days a week: 10am-5pm AEST.","answer_time":"Average answer time: 40 minutes","button_text":"","button_url":"","text_position":"start","background":"#ffffff","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}}},"order":["slideshow","text_with_icons_4bLiBQ","featured_collection_4NHzmf","17535389134d0ac4db","image_with_text_overlay_hLjnjM","image-with-text-overlay","slideshow_kCTm3j","faq"]}
+{
+    "sections": {
+        "slideshow": {
+            "type": "slideshow",
+            "blocks": {
+                "slide-1": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/edgerunner_kaiju_hero.webp",
+                        "mobile_image": "shopify:\/\/shop_images\/edgerunner_kaiju_mobile_hero.webp",
+                        "content_max_width": 780,
+                        "mobile_text_position": "place-self-start-center text-center",
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "subheading": "",
+                        "title": "AUSTRALIA'S MOST TRUSTED ELECTRIC SCOOTER BRAND",
+                        "heading_tag": "h1",
+                        "button_text": "SHOP NOW",
+                        "button_link": "shopify:\/\/collections\/scooters",
+                        "text_color": "#ffffff",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 15,
+                        "background": "",
+                        "background_gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "slide-1"
+            ],
+            "custom_css": [
+                ".h1 {font-size: 70px; margin-top: 900; margin-bottom: 0;}",
+                "@media screen and (max-width: 749px) {.h1 {font-size: 35px; margin-top: 900; margin-bottom: 0; }}"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": true,
+                "show_initial_transition": false,
+                "image_size": "auto",
+                "controls_type": "numbers",
+                "transition_type": "fade_with_text",
+                "autoplay": true,
+                "cycle_speed": 6,
+                "background": "#f2f2f2",
+                "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
+            }
+        },
+        "text_with_icons_4bLiBQ": {
+            "type": "text-with-icons",
+            "blocks": {
+                "item_FAMbTr": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/Australia_Logo.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Australian Owned",
+                        "content": "<p>By 3 Young Aussie Mates<\/p>"
+                    }
+                },
+                "item_r4RGTj": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-shield",
+                        "custom_icon": "shopify:\/\/shop_images\/24-Month_Warranty_Logo.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "24-Month Warranty",
+                        "content": "<p>Industry-leading coverage<\/p>"
+                    }
+                },
+                "item_EGQfqd": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/Australian_terrain_tough_logo.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Built For Aussies",
+                        "content": "<p>Engineered and tested for Australian roads<\/p>"
+                    }
+                },
+                "item_aUnjxD": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-box",
+                        "custom_icon": "shopify:\/\/shop_images\/Free_Shipping_Box_Logo.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Free Shipping",
+                        "content": "<p>Free shipping Australia-wide, including rural and remote areas<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_FAMbTr",
+                "item_r4RGTj",
+                "item_EGQfqd",
+                "item_aUnjxD"
+            ],
+            "name": "Text with icons",
+            "settings": {
+                "full_width": false,
+                "stack_on_mobile": false,
+                "title": "",
+                "heading_tag": "h5",
+                "text_alignment": "center",
+                "icon_spacing": "small",
+                "background": "rgba(0,0,0,0)",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "featured_collection_4NHzmf": {
+            "type": "featured-collection",
+            "name": "Featured collection",
+            "settings": {
+                "collection": "all",
+                "products": [
+                    "edgerunner",
+                    "astro",
+                    "kaiju",
+                    "aurora",
+                    "sova"
+                ],
+                "full_width": false,
+                "stack_products": false,
+                "show_progress_bar": false,
+                "products_count": 6,
+                "products_per_row_mobile": "1",
+                "products_per_row_desktop": 2,
+                "subheading": "Loved by 2,000+ Happy Riders!",
+                "title": "Premium Electric Scooters",
+                "content": "",
+                "link_url": "",
+                "link_text": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "product_card_background": "",
+                "product_card_text_color": ""
+            }
+        },
+        "17535389134d0ac4db": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_medals_WqJFwg": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                },
+                "judge_me_reviews_featured_carousel_zbBKMB": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {
+                        "maxwidth": 1080
+                    }
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_medals_WqJFwg",
+                "judge_me_reviews_featured_carousel_zbBKMB"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "image_with_text_overlay_hLjnjM": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "subheading_efhd63": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "For Riders Who Demand More"
+                    }
+                },
+                "heading_RpBFRa": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "KAIJU",
+                        "heading_tag": "h2"
+                    }
+                },
+                "button_aJz7WY": {
+                    "type": "button",
+                    "settings": {
+                        "style": "fill",
+                        "size": "xl",
+                        "text": "Order Now",
+                        "url": "shopify:\/\/products\/kaiju",
+                        "background": "",
+                        "text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_efhd63",
+                "heading_RpBFRa",
+                "button_aJz7WY"
+            ],
+            "custom_css": [
+                ".h2 {font-size: 70px; margin-top: 900; margin-bottom: 0;}",
+                "@media screen and (max-width: 749px) {.h2 {font-size: 35px; margin-top: 900; margin-bottom: 0; }}"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": false,
+                "image_size": "auto",
+                "image": "shopify:\/\/shop_images\/UWU02251_-_Mobile.webp",
+                "mobile_image": "shopify:\/\/shop_images\/UWU02251.webp",
+                "mobile_text_position": "place-self-end-center text-center",
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+            }
+        },
+        "image-with-text-overlay": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "1664424230c4756b0e-0": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "The Best Long Range Commuter Electric Scooter"
+                    }
+                },
+                "1664424230c4756b0e-1": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "AURORA",
+                        "heading_tag": "h2"
+                    }
+                },
+                "button_aFwKLw": {
+                    "type": "button",
+                    "settings": {
+                        "style": "fill",
+                        "size": "xl",
+                        "text": "Order Now",
+                        "url": "shopify:\/\/products\/aurora",
+                        "background": "",
+                        "text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "1664424230c4756b0e-0",
+                "1664424230c4756b0e-1",
+                "button_aFwKLw"
+            ],
+            "custom_css": [
+                ".h2 {font-size: 70px; margin-top: 900; margin-bottom: 0;}",
+                "@media screen and (max-width: 749px) {.h2 {font-size: 35px; margin-top: 900; margin-bottom: 0; }}"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": false,
+                "image_size": "auto",
+                "image": "shopify:\/\/shop_images\/UWU02476_1.webp",
+                "mobile_image": "shopify:\/\/shop_images\/UWU02476_1_-_Mobile.webp",
+                "mobile_text_position": "place-self-end-center text-center",
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 15
+            }
+        },
+        "slideshow_kCTm3j": {
+            "type": "slideshow",
+            "blocks": {
+                "video_kfGWha": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1020 (1).mp4",
+                        "mobile_video": "shopify:\/\/files\/videos\/Astro Montage - Mobile.mp4",
+                        "content_max_width": 700,
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "subheading": "The Everyday Commuter Electric Scooter",
+                        "title": "ASTRO",
+                        "heading_tag": "h2",
+                        "button_text": "Order Now",
+                        "button_link": "shopify:\/\/products\/astro",
+                        "text_color": "#ffffff",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0,
+                        "background": "",
+                        "background_gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_kfGWha"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": true,
+                "show_initial_transition": false,
+                "image_size": "lg",
+                "controls_type": "numbers",
+                "transition_type": "fade_with_text",
+                "autoplay": true,
+                "cycle_speed": 6,
+                "background": "#f2f2f2",
+                "background_gradient": "linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"
+            }
+        },
+        "faq": {
+            "type": "faq",
+            "blocks": {
+                "item_cQxk86": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Is TSC Aussie owned and operated?",
+                        "content": "<p>Yes. TSC was founded in March 2024 and officially launched in September 2024 by Hamlet and Ben here in Melbourne.<\/p><p> It’s now proudly owned and run by 3 young Aussies - Hamlet, Ben and Puneet. All our operations, from customer service to logistics and repairs, are handled right here in Melbourne. Head to our <a href=\"https:\/\/thesimplecommute.com.au\/pages\/about-us\">About Us<\/a> page to learn more about the team and our story.<\/p>"
+                    }
+                },
+                "item_TzLRB8": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Why should I choose TSC over other brands?",
+                        "content": "<p>Because we actually care about you, not just the sale. At TSC, you get <strong>local Aussie support<\/strong>, <strong>fair pricing<\/strong>, and scooters that are <strong>built and tested for Australian roads<\/strong>. We only work with <strong>highly reputable manufacturers<\/strong>, and every model we release goes through strict <strong>global-standard testing<\/strong> — our scooters and batteries hold some of the <strong>highest safety certifications in the industry<\/strong>.<br\/><\/p><p>Most importantly, <strong>we value customer relationships more than sales<\/strong>. Whether you’re just browsing or ready to buy, you’ll always get honest advice and genuine support. That’s what sets us apart.<\/p>"
+                    }
+                },
+                "item_FALXEY": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are TSC electric scooters legal to ride in public?",
+                        "content": "<p>Yes. All our electric scooters are capped at 25 km\/h to comply with Australian regulations.<\/p>"
+                    }
+                },
+                "166442457738b23caf-0": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What is an Electric Scooter?",
+                        "content": "<p>The electric scooter represents a revolutionary advancement in personal transportation, melding the simplicity of manual push scooters with cutting-edge battery-powered propulsion. These sleek, compact vehicles typically feature a streamlined design with two wheels, accommodating a single rider atop a narrow platform.<\/p><p><br\/>The genesis of modern e-scooters can be traced back to 1996 when the French automotive giant Peugeot unveiled the groundbreaking Scoot'Elec, setting the stage for a new era of urban mobility. In the decades since, these nimble devices have surged in popularity across demographics, captivating both youthful enthusiasts and practical-minded adults.<\/p><p><br\/>E-scooters have earned their place in the urban landscape thanks to their user-friendly operation, eco-conscious design, and unparalleled ability to weave through congested city streets. Beyond mere transportation, they embody a lifestyle choice that prioritizes efficiency and environmental stewardship. As cities grapple with pollution and gridlock, electric scooters offer a compelling solution that marries personal freedom with ecological responsibility.<\/p>"
+                    }
+                },
+                "166442457738b23caf-1": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How much is an electric scooter?",
+                        "content": "<p>Discover unbeatable prices on e-scooters, with our entry model adult e-scooters starting at just $859. Whether you're looking for an easy way to commute or just want to zip around town, e-scooters are the ultimate solution. Not only are they convenient, but they also help you save on parking, public transport, and the expenses of maintaining a car or motorbike. <\/p><p>Plus, e-scooters like our Kaiju, Astro, and Aurora models are among the most eco-friendly and cost-efficient ways to get around. Explore our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters?_ab=0&key=1726885902412\"><span style=\"text-decoration:underline\">premium collection of e-scooters<\/span><\/a>, and contribute to a greener future.<\/p>"
+                    }
+                },
+                "166442457738b23caf-2": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How does an electric scooter work?",
+                        "content": "<p>Electric scooters harness the power of stored electrical energy to drive their wheels, offering a seamless blend of technology and mobility. At the heart of these devices lies a rechargeable battery pack, acting as a portable powerhouse that fuels the scooter's electric motor.<\/p><p>Initiating your journey is remarkably straightforward. Most models feature a control mechanism on the handlebars - typically a twistable grip or a thumb-operated lever. Engaging this throttle sends a signal to the scooter's brain, prompting it to unleash a stream of electrons from the battery to the motor. This surge of electricity activates the motor, which in turn sets the wheels in motion, propelling you forward with surprising ease.<\/p><p>Safety is paramount in e-scooter design. Hand-operated brake levers provide riders with precise control over their speed and stopping power. When engaged, these brakes swiftly decelerate or halt the scooter's movement, ensuring rider confidence in various traffic conditions.<\/p><p>Maintaining your e-scooter's energy reserves is a breeze. Unlike their fossil-fuel counterparts, these eco-friendly vehicles simply require access to a standard electrical outlet for recharging. However, to ensure consistent performance and longevity, it's crucial to establish a regular charging routine. By keeping your scooter's battery topped up, you'll always be ready for your next urban adventure, gliding silently and efficiently through city streets.<\/p>"
+                    }
+                },
+                "item_w9bxt9": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How to properly secure my electric scooter?",
+                        "content": "<p>GPS tracking sounds handy but can be bypassed.<\/p><p>The best way is to take it with you whenever possible. If you can’t, use a strong lock, or even better, multiple locks, to make thieves think twice. <br\/><\/p><p>TSC offers tough, high-quality security options like disc brake locks, key locks, heavy-duty chains and alarm locks. Check out our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/e-scooter-accessories\"><strong>accessories page<\/strong><\/a><strong> <\/strong>to keep your scooter safe.<\/p>"
+                    }
+                },
+                "item_n73pDC": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Where can I ride my electric scooter?",
+                        "content": "<p>In Australia, the regulatory landscape for electric scooters is a patchwork of diverse legislation, with each state and territory crafting its own unique set of guidelines. These region-specific rules govern various aspects of e-scooter usage, including rider eligibility, permissible operating areas, and speed limitations.<\/p><p>Before investing in an electric scooter, it's crucial for potential owners to familiarise themselves with the local regulations that will impact their riding experience. Navigating this complex web of laws can be challenging, so make sure you do your research. <\/p><p>Please visit the links below for the regulations in your state:<\/p><h6><a href=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\" target=\"_blank\" title=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\">📍 VIC<\/a><\/h6><h6><a href=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\">📍 SA<\/a><\/h6><h6><a href=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\">📍 QLD<\/a><\/h6><p><a href=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\" target=\"_blank\" title=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\"><strong>📍 WA<\/strong><\/a><\/p><p><a href=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\"><strong>📍 ACT<\/strong><\/a><\/p><h6><a href=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\" target=\"_blank\" title=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\"><strong>📍 TAS<\/strong><\/a><\/h6><h6><a href=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\">📍 NSW <\/a><\/h6><p><a href=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\" target=\"_blank\" title=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\"><strong>📍 NT<\/strong><\/a><\/p>"
+                    }
+                },
+                "item_M48zVi": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Which electric scooter is best for me?",
+                        "content": "<p>Take our quick and easy quiz to find the perfect match for your lifestyle! Whether you're commuting to work, tackling off-road adventures, or looking for something versatile, our quiz will guide you to the scooter that's right for you.<br\/><\/p><p>Take the quiz <a href=\"https:\/\/thesimplecommute.com.au\/pages\/find-your-ride\" title=\"Find your ride\">here<\/a>!<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_cQxk86",
+                "item_TzLRB8",
+                "item_FALXEY",
+                "166442457738b23caf-0",
+                "166442457738b23caf-1",
+                "166442457738b23caf-2",
+                "item_w9bxt9",
+                "item_n73pDC",
+                "item_M48zVi"
+            ],
+            "settings": {
+                "full_width": false,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available 7 days a week: 10am-5pm AEST.",
+                "answer_time": "Average answer time: 40 minutes",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "start",
+                "background": "#ffffff",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        }
+    },
+    "order": [
+        "slideshow",
+        "text_with_icons_4bLiBQ",
+        "featured_collection_4NHzmf",
+        "17535389134d0ac4db",
+        "image_with_text_overlay_hLjnjM",
+        "image-with-text-overlay",
+        "slideshow_kCTm3j",
+        "faq"
+    ]
+}

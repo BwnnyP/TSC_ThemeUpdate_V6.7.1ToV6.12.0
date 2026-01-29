@@ -1,1 +1,53 @@
-{"type":"footer","name":"Footer group","sections":{"footer":{"type":"footer","blocks":{"newsletter":{"type":"newsletter","settings":{"image_width":150,"heading_size":"h3","title":"Join The Simple Commute Family!","content":"<p>Sign up for exclusive e-scooter deals and updates on product launches.<\/p>"}},"links":{"type":"links","settings":{"menu":"footer","show_menu_title":true,"menu_title":""}},"text":{"type":"text","settings":{"title":"The Simple Commute","content":"<p><strong>ABN: 77 675 670 176<\/strong><\/p><p>*Please note that visits to our company are strictly by appointment only. You can book a test ride or an appointment by contacting us using the details below:<\/p><p>For sales enquiry: <br\/>📞: 0482 053 220 | 10am-5pm AEST<\/p><p><a href=\"#whatsapp\">WhatsApp available<\/a><\/p><p>All other enquiries:<br\/>📧: <a href=\"mailto:contact@thesimplecommute.com.au\" title=\"mailto:contact@thesimplecommute.com.au\">contact@thesimplecommute.com.au<\/a><\/p><p><br\/>📍 Boronia VIC 3155<\/p><p>After Hours & Weekends appointments also available. <\/p>","enable_follow_on_shop":true}}},"block_order":["newsletter","links","text"],"settings":{"show_social_media":true,"show_payment_icons":true,"show_policy_links":true,"show_country_selector":false,"show_country_flag":false,"show_country_name":false,"show_locale_selector":true}}},"order":["footer"]}
+{
+    "type": "footer",
+    "name": "Footer group",
+    "sections": {
+        "footer": {
+            "type": "footer",
+            "blocks": {
+                "newsletter": {
+                    "type": "newsletter",
+                    "settings": {
+                        "image_width": 150,
+                        "heading_size": "h3",
+                        "title": "Join The Simple Commute Family!",
+                        "content": "<p>Sign up for exclusive e-scooter deals and updates on product launches.<\/p>"
+                    }
+                },
+                "links": {
+                    "type": "links",
+                    "settings": {
+                        "menu": "footer",
+                        "show_menu_title": true,
+                        "menu_title": ""
+                    }
+                },
+                "text": {
+                    "type": "text",
+                    "settings": {
+                        "title": "The Simple Commute",
+                        "content": "<p><strong>ABN: 77 675 670 176<\/strong><\/p><p>*Please note that visits to our company are strictly by appointment only. You can book a test ride or an appointment by contacting us using the details below:<\/p><p>For sales enquiry: <br\/>📞: 0482 053 220 | 10am-5pm AEST<\/p><p><a href=\"#whatsapp\">WhatsApp available<\/a><\/p><p>All other enquiries:<br\/>📧: <a href=\"mailto:contact@thesimplecommute.com.au\" title=\"mailto:contact@thesimplecommute.com.au\">contact@thesimplecommute.com.au<\/a><\/p><p><br\/>📍 Boronia VIC 3155<\/p><p>After Hours & Weekends appointments also available. <\/p>",
+                        "enable_follow_on_shop": true
+                    }
+                }
+            },
+            "block_order": [
+                "newsletter",
+                "links",
+                "text"
+            ],
+            "settings": {
+                "show_social_media": true,
+                "show_payment_icons": true,
+                "show_policy_links": true,
+                "show_country_selector": false,
+                "show_country_flag": false,
+                "show_country_name": false,
+                "show_locale_selector": true
+            }
+        }
+    },
+    "order": [
+        "footer"
+    ]
+}

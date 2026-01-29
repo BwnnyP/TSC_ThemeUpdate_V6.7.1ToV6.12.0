@@ -1,1 +1,568 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"vendor","settings":{}},"title":{"type":"title","settings":{"heading_tag":"h1"}},"badges":{"type":"badges","settings":{}},"price":{"type":"price","settings":{"show_taxes_notice":false}},"judge_me_reviews_preview_badge_DKUtfq":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"afterpay_on_site_messaging_payments_messaging_hCH9FM":{"type":"shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8","settings":{"text_align":"inherit","margin_top":16,"margin_bottom":16,"color":"","size":"md","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"badge","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{product}}"}},"rating":{"type":"rating","disabled":true,"settings":{"show_empty":false}},"payment_terms":{"type":"payment_terms","settings":{}},"separator":{"type":"separator","settings":{}},"essential_trust_badges_app_block_kEtTAh":{"type":"shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b","settings":{"banner_display":"all","banner_id":"202b6eb8-09ae-49de-a953-be7514a2e828"}},"variant_picker":{"type":"variant_picker","settings":{"hide_sold_out_variants":false,"stack_blocks":true,"selector_style":"block","swatch_selector_style":"swatch","variant_image_options":"","size_chart_page":""}},"essential_trust_badges_app_block_3PUHLH":{"type":"shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b","settings":{"banner_display":"single","banner_id":"d6038593-c933-4036-a6bc-e39983a20c04"}},"offer_Bmn6tN":{"type":"offer","disabled":true,"settings":{"text_alignment":"start","icon_position":"aligned","icon":"picto-gift","custom_icon":"shopify:\/\/shop_images\/959eccf8-9e72-4f63-b2d7-9fea4da944a2.webp","icon_width":48,"title":"Free Helmet","content":"<p><strong>Free Helmet<\/strong> valued at $70 included with any E-Scooter Purchase<\/p>","background":"#f0f0f0","text_color":"#00a341"}},"offer_9FRr97":{"type":"offer","disabled":true,"settings":{"text_alignment":"start","icon_position":"aligned","icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/Pencil_copy.png","icon_width":20,"title":"Free Back-To-School mystery gift","content":"<p>Get a FREE <strong>mystery gift<\/strong> with every E-Scooter purchase!<\/p>","background":"#f0f0f0","text_color":"#1a1a1a"}},"inventory_Byhqmw":{"type":"inventory","settings":{"low_inventory_threshold":0}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_payment_button":false,"show_gift_card_recipient":true,"atc_button_background":"#ffb74a","atc_button_text_color":"#ffffff","payment_button_background":"","payment_button_text_color":""}},"afterpay_on_site_messaging_payments_messaging_zfDeVB":{"type":"shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8","settings":{"text_align":"inherit","margin_top":16,"margin_bottom":16,"color":"","size":"md","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"badge","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{product}}"}},"collapsible_text_Gx7jYA":{"type":"collapsible_text","settings":{"icon":"none","icon_width":20,"title":"Description","content":"<p>Spark your child’s sense of adventure with the Sova, our vibrant electric scooter crafted for young riders ages 5 and up. Designed with our passion for innovation, safety, and sustainability, the Sova empowers kids to explore their world with confidence, style, and eco-friendly excitement.<\/p>","page":""}},"collapsible_text_mGWVXd":{"type":"collapsible_text","settings":{"icon":"none","icon_width":20,"title":"Key Features","content":"<p><strong>Kid-Safe Power<\/strong>: A 200W motor delivers smooth, controlled acceleration, perfect for young explorers.<\/p><p><strong>Built to Last<\/strong>: Aerospace-grade steel frame ensures durability while keeping the scooter lightweight for easy handling.<\/p><p><strong>Grip & Go<\/strong>: 8-inch tires provide excellent traction for smooth rides on sidewalks or light park trails.<\/p><p><strong>All-Day Fun<\/strong>: A 15km range lets kids zip around the neighborhood, sparking endless adventures.<\/p><p><strong>Safe Stopping<\/strong>: Responsive hand brakes offer precise control, giving kids and parents peace of mind.<\/p><p><strong>Portable Play<\/strong>: Lightweight and foldable design makes it a breeze to carry or store, ideal for active families.<\/p><p><strong>Just-Right Speed<\/strong>: Reaches a safe 15km\/h, blending excitement with parent-approved caution.<\/p>","page":""}},"collapsible_text_z73mnq":{"type":"collapsible_text","settings":{"icon":"none","icon_width":20,"title":"Returns","content":"<p>For information on our return policy, including eligibility and instructions, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy<\/a>.<\/p>","page":""}},"collapsible_text_FLndD4":{"type":"collapsible_text","settings":{"icon":"none","icon_width":20,"title":"Shipping","content":"<p><strong>Free Shipping on All Orders<\/strong><br\/>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders<\/strong>, no matter the total. <\/p><p>No hidden costs or fees—just straightforward service to get you moving.<\/p><p><strong>Free Click & Collect + E-Scooter Setup (Victoria Only)<\/strong><br\/>Victorian customers can enjoy our free Click & Collect service, which includes complimentary e-scooter setup. Pick up your order and hit the road right away with your fully assembled e-scooter!<\/p><p><strong>Fast Dispatch<\/strong><br\/>We aim for speedy dispatch on all orders. Orders placed by 12 PM AEST are typically dispatched the same day, with 98% of orders leaving our Boronia, Victoria warehouse either same-day or next day. Orders placed on weekends or public holidays will ship on the next business day.<\/p><p><strong>Quick Delivery<\/strong><br\/>We deliver across Australia, with typical delivery times of 1 to 5 business days. However, please note that delivery times may vary based on your location.<\/p><p><strong>Important Lithium Battery Shipping Info<\/strong><br\/>Due to lithium battery regulations, air freight is not available, which may slightly extend delivery times. We appreciate your patience as we ensure the safe delivery of your e-scooter.<\/p><p>For any questions or assistance, feel free to contact our support team. We're here to help!<\/p>","page":""}},"collapsible_text_tNmHjH":{"type":"collapsible_text","settings":{"icon":"none","icon_width":20,"title":"Warranty","content":"<p>All of our scooters come with limited warranty. For details, see our <a href=\"\/pages\/warranty\" title=\"Warranty\">warranty<\/a> page<\/p>","page":""}},"collapsible_text_3jFLpm":{"type":"collapsible_text","settings":{"icon":"none","icon_width":20,"title":"Certification","content":"<p>Our E-Scooters (including batteries) are tested to meet the following standards:<\/p><ul><li>UL2272<\/li><li>EN17128<\/li><li>IEC 62133-2<\/li><li>IEC 60335-1<\/li><li>EN IEC 55014-1<\/li><li>EN IEC 55014-1<\/li><li>CE EMC<\/li><li>ROHS<\/li><\/ul>","page":""}}},"block_order":["vendor","title","badges","price","judge_me_reviews_preview_badge_DKUtfq","afterpay_on_site_messaging_payments_messaging_hCH9FM","rating","payment_terms","separator","essential_trust_badges_app_block_kEtTAh","variant_picker","essential_trust_badges_app_block_3PUHLH","offer_Bmn6tN","offer_9FRr97","inventory_Byhqmw","quantity_selector","buy_buttons","afterpay_on_site_messaging_payments_messaging_zfDeVB","collapsible_text_Gx7jYA","collapsible_text_mGWVXd","collapsible_text_z73mnq","collapsible_text_FLndD4","collapsible_text_tNmHjH","collapsible_text_3jFLpm"],"custom_css":[".h1 {font-size: clamp(25px, 5vw, 50px); margin: 0; font-family: sans-serif; font-weight: 800;}"],"settings":{"full_width":false,"show_fixed_add_to_cart":true,"desktop_media_width":50,"desktop_media_layout":"carousel_thumbnails_bottom","mobile_media_size":"contained","mobile_carousel_control":"thumbnails","enable_video_autoplay":false,"enable_video_looping":true,"enable_image_zoom":true,"max_image_zoom_level":3,"background":"#ffffff","background_gradient":"","text_color":"rgba(0,0,0,0)","input_background":"rgba(0,0,0,0)","input_text_color":""}},"multiple_images_with_text_dtE9T7":{"type":"multiple-images-with-text","blocks":{"item_UwKhjG":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_800_x_800_px_6.webp","image_rotation_degrees":-2,"subheading":"","title":"15km of Fun","content":"<h4><strong>Power up for hours of adventure with a reliable 5000mAh battery<\/strong><\/h4>","button_url":"","button_text":""}}},"block_order":["item_UwKhjG"],"name":"Multiple images with text","settings":{"full_width":true,"images_layout":"collage","collage_images_alignment":"middle","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_AMwdLe":{"type":"multiple-images-with-text","blocks":{"item_EfyJFY":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_800_x_800_px_8.webp","image_rotation_degrees":-2,"subheading":"","title":"Vibrant LED Underglow","content":"<h4><strong>Light up every ride with a colorful glow<\/strong><\/h4>","button_url":"","button_text":""}}},"block_order":["item_EfyJFY"],"name":"Multiple images with text","settings":{"full_width":true,"images_layout":"collage","collage_images_alignment":"middle","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_G7MQVm":{"type":"multiple-images-with-text","blocks":{"item_xHYDY8":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_800_x_800_px_10.webp","image_rotation_degrees":-2,"subheading":"","title":"Bluetooth Speaker Onboard","content":"<h4><strong>Bring your favorite tunes along for the ride<\/strong><\/h4>","button_url":"","button_text":""}}},"block_order":["item_xHYDY8"],"name":"Multiple images with text","settings":{"full_width":true,"images_layout":"collage","collage_images_alignment":"middle","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_HXAEJz":{"type":"multiple-images-with-text","blocks":{"item_BJ7iVV":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Untitled_800_x_800_px_7.webp","image_rotation_degrees":-2,"subheading":"","title":"IP54 Waterproof Protection","content":"<h4><strong>Keeps the fun going, even on damp days!<\/strong><\/h4>","button_url":"","button_text":""}}},"block_order":["item_BJ7iVV"],"name":"Multiple images with text","settings":{"full_width":true,"images_layout":"collage","collage_images_alignment":"middle","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"tabs_XnAkMG":{"type":"tabs","blocks":{"tab_fyTQHc":{"type":"tab","settings":{"title":"DESIGN","content":"<h3><strong>DESIGN<\/strong><\/h3><h6><strong>Open Size <\/strong><\/h6><p>940mm x 475mm x 1030mm<\/p><h6><strong>Fold Size<\/strong><\/h6><p>940mm x 475mm x 450mm<\/p><h6>Pedal Width<\/h6><p>150mm<\/p><h6><strong>Net Weight<\/strong><\/h6><p>10kg<\/p><h6><strong>Frame Material<\/strong><\/h6><p>Aerospace Grade Steel<\/p><h6><strong>Tire Size<\/strong><\/h6><p>8 inch front and rear<\/p><h6><strong>Tire Type<\/strong><\/h6><p>Solid Rubber Tire<\/p><h6><strong>Max Load<\/strong><\/h6><p>100kg<\/p><h6><strong>IP Resistance Rating<\/strong><\/h6><p>IP54<\/p>","page":""}},"tab_MehWVA":{"type":"tab","settings":{"title":"BATTERY","content":"<h3>BATTERY<\/h3><h6>Battery Type<\/h6><p>5Ah Lithium Battery<\/p><h6>Charging Time<\/h6><p>5-6 hours<\/p><h6>Charger Parameters<\/h6><p>DC25.2V\/1A<\/p><h6>BMS<\/h6><ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>","page":""}},"tab_8tePjy":{"type":"tab","settings":{"title":"POWER","content":"<h3>POWER<\/h3><h6>Standard Motor Power<\/h6><p>200W <\/p><h6>Motor Type<\/h6><p>Front-wheel Drive<\/p><p><\/p>","page":""}}},"block_order":["tab_fyTQHc","tab_MehWVA","tab_8tePjy"],"settings":{"full_width":true,"content_size":"medium","subheading":"","title":"FULL SPECIFICATIONS","text_alignment":"left","first_tab_open":false,"background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":""}},"1731924206e17b48f2":{"type":"apps","blocks":{"judge_me_reviews_review_widget_Pm6iFf":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"review_data":"sample_data","max_width":1200,"show_shop_reviews":false,"empty_state":"empty_widget"}}},"block_order":["judge_me_reviews_review_widget_Pm6iFf"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}},"faq_6fccp4":{"type":"faq","blocks":{"item_JAqw6b":{"type":"item","settings":{"title":"Do you ship overseas?","content":"<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"}},"item_J4WHUj":{"type":"item","settings":{"title":"How long will it take to get my orders?","content":"<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"}},"item_CgYzPC":{"type":"item","settings":{"title":"Any question?","content":"<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"}}},"block_order":["item_JAqw6b","item_J4WHUj","item_CgYzPC"],"disabled":true,"settings":{"full_width":true,"subheading":"","title":"FAQ","content":"<p>Use this text to share information about your product or shipping policies.<\/p>","team_avatar_width":160,"support_hours":"Our customer support is available  24\/7 All Day, Every Day.","answer_time":"Average answer time: 1h","button_text":"","button_url":"","text_position":"center","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}},"related-products":{"type":"related-products","settings":{"recommendations_count":3,"products":["e-scooter-sport-vent-helmet","bike-lock","simple-care"],"full_width":true,"stack_products":true,"show_progress_bar":false,"products_per_row_mobile":"1","products_per_row_desktop":3,"subheading":"","title":"You may also like","content":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}}},"order":["main","multiple_images_with_text_dtE9T7","multiple_images_with_text_AMwdLe","multiple_images_with_text_G7MQVm","multiple_images_with_text_HXAEJz","tabs_XnAkMG","1731924206e17b48f2","faq_6fccp4","related-products"]}
+{
+    "sections": {
+        "main": {
+            "type": "main-product",
+            "blocks": {
+                "vendor": {
+                    "type": "vendor",
+                    "settings": {}
+                },
+                "title": {
+                    "type": "title",
+                    "settings": {
+                        "heading_tag": "h1"
+                    }
+                },
+                "badges": {
+                    "type": "badges",
+                    "settings": {}
+                },
+                "price": {
+                    "type": "price",
+                    "settings": {
+                        "show_taxes_notice": false
+                    }
+                },
+                "judge_me_reviews_preview_badge_DKUtfq": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                },
+                "afterpay_on_site_messaging_payments_messaging_hCH9FM": {
+                    "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+                    "settings": {
+                        "text_align": "inherit",
+                        "margin_top": 16,
+                        "margin_bottom": 16,
+                        "color": "",
+                        "size": "md",
+                        "intro_text": "or",
+                        "show_interest_free": true,
+                        "payment_amount_is_bold": true,
+                        "show_with": true,
+                        "logo_type": "badge",
+                        "logo_theme": "black-on-mint",
+                        "modal_link_style": "circled-info-icon",
+                        "modal_theme": "mint",
+                        "breakpoint": 749,
+                        "text_align_mobile": "inherit",
+                        "margin_top_mobile": 16,
+                        "margin_bottom_mobile": 16,
+                        "show_lower_limit": true,
+                        "show_upper_limit": true,
+                        "show_if_outside_limits": true,
+                        "product": "{{product}}"
+                    }
+                },
+                "rating": {
+                    "type": "rating",
+                    "disabled": true,
+                    "settings": {
+                        "show_empty": false
+                    }
+                },
+                "payment_terms": {
+                    "type": "payment_terms",
+                    "settings": {}
+                },
+                "separator": {
+                    "type": "separator",
+                    "settings": {}
+                },
+                "essential_trust_badges_app_block_kEtTAh": {
+                    "type": "shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+                    "settings": {
+                        "banner_display": "all",
+                        "banner_id": "202b6eb8-09ae-49de-a953-be7514a2e828"
+                    }
+                },
+                "variant_picker": {
+                    "type": "variant_picker",
+                    "settings": {
+                        "hide_sold_out_variants": false,
+                        "stack_blocks": true,
+                        "selector_style": "block",
+                        "swatch_selector_style": "swatch",
+                        "variant_image_options": "",
+                        "size_chart_page": ""
+                    }
+                },
+                "essential_trust_badges_app_block_3PUHLH": {
+                    "type": "shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+                    "settings": {
+                        "banner_display": "single",
+                        "banner_id": "d6038593-c933-4036-a6bc-e39983a20c04"
+                    }
+                },
+                "offer_Bmn6tN": {
+                    "type": "offer",
+                    "disabled": true,
+                    "settings": {
+                        "text_alignment": "start",
+                        "icon_position": "aligned",
+                        "icon": "picto-gift",
+                        "custom_icon": "shopify:\/\/shop_images\/959eccf8-9e72-4f63-b2d7-9fea4da944a2.webp",
+                        "icon_width": 48,
+                        "title": "Free Helmet",
+                        "content": "<p><strong>Free Helmet<\/strong> valued at $70 included with any E-Scooter Purchase<\/p>",
+                        "background": "#f0f0f0",
+                        "text_color": "#00a341"
+                    }
+                },
+                "offer_9FRr97": {
+                    "type": "offer",
+                    "disabled": true,
+                    "settings": {
+                        "text_alignment": "start",
+                        "icon_position": "aligned",
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/Pencil_copy.png",
+                        "icon_width": 20,
+                        "title": "Free Back-To-School mystery gift",
+                        "content": "<p>Get a FREE <strong>mystery gift<\/strong> with every E-Scooter purchase!<\/p>",
+                        "background": "#f0f0f0",
+                        "text_color": "#1a1a1a"
+                    }
+                },
+                "inventory_Byhqmw": {
+                    "type": "inventory",
+                    "settings": {
+                        "low_inventory_threshold": 0
+                    }
+                },
+                "quantity_selector": {
+                    "type": "quantity_selector",
+                    "settings": {}
+                },
+                "buy_buttons": {
+                    "type": "buy_buttons",
+                    "settings": {
+                        "show_payment_button": false,
+                        "show_gift_card_recipient": true,
+                        "atc_button_background": "#ffb74a",
+                        "atc_button_text_color": "#ffffff",
+                        "payment_button_background": "",
+                        "payment_button_text_color": ""
+                    }
+                },
+                "afterpay_on_site_messaging_payments_messaging_zfDeVB": {
+                    "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+                    "settings": {
+                        "text_align": "inherit",
+                        "margin_top": 16,
+                        "margin_bottom": 16,
+                        "color": "",
+                        "size": "md",
+                        "intro_text": "or",
+                        "show_interest_free": true,
+                        "payment_amount_is_bold": true,
+                        "show_with": true,
+                        "logo_type": "badge",
+                        "logo_theme": "black-on-mint",
+                        "modal_link_style": "circled-info-icon",
+                        "modal_theme": "mint",
+                        "breakpoint": 749,
+                        "text_align_mobile": "inherit",
+                        "margin_top_mobile": 16,
+                        "margin_bottom_mobile": 16,
+                        "show_lower_limit": true,
+                        "show_upper_limit": true,
+                        "show_if_outside_limits": true,
+                        "product": "{{product}}"
+                    }
+                },
+                "collapsible_text_Gx7jYA": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "icon_width": 20,
+                        "title": "Description",
+                        "content": "<p>Spark your child’s sense of adventure with the Sova, our vibrant electric scooter crafted for young riders ages 5 and up. Designed with our passion for innovation, safety, and sustainability, the Sova empowers kids to explore their world with confidence, style, and eco-friendly excitement.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_mGWVXd": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "icon_width": 20,
+                        "title": "Key Features",
+                        "content": "<p><strong>Kid-Safe Power<\/strong>: A 200W motor delivers smooth, controlled acceleration, perfect for young explorers.<\/p><p><strong>Built to Last<\/strong>: Aerospace-grade steel frame ensures durability while keeping the scooter lightweight for easy handling.<\/p><p><strong>Grip & Go<\/strong>: 8-inch tires provide excellent traction for smooth rides on sidewalks or light park trails.<\/p><p><strong>All-Day Fun<\/strong>: A 15km range lets kids zip around the neighborhood, sparking endless adventures.<\/p><p><strong>Safe Stopping<\/strong>: Responsive hand brakes offer precise control, giving kids and parents peace of mind.<\/p><p><strong>Portable Play<\/strong>: Lightweight and foldable design makes it a breeze to carry or store, ideal for active families.<\/p><p><strong>Just-Right Speed<\/strong>: Reaches a safe 15km\/h, blending excitement with parent-approved caution.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_z73mnq": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "icon_width": 20,
+                        "title": "Returns",
+                        "content": "<p>For information on our return policy, including eligibility and instructions, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy<\/a>.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_FLndD4": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "icon_width": 20,
+                        "title": "Shipping",
+                        "content": "<p><strong>Free Shipping on All Orders<\/strong><br\/>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders<\/strong>, no matter the total. <\/p><p>No hidden costs or fees—just straightforward service to get you moving.<\/p><p><strong>Free Click & Collect + E-Scooter Setup (Victoria Only)<\/strong><br\/>Victorian customers can enjoy our free Click & Collect service, which includes complimentary e-scooter setup. Pick up your order and hit the road right away with your fully assembled e-scooter!<\/p><p><strong>Fast Dispatch<\/strong><br\/>We aim for speedy dispatch on all orders. Orders placed by 12 PM AEST are typically dispatched the same day, with 98% of orders leaving our Boronia, Victoria warehouse either same-day or next day. Orders placed on weekends or public holidays will ship on the next business day.<\/p><p><strong>Quick Delivery<\/strong><br\/>We deliver across Australia, with typical delivery times of 1 to 5 business days. However, please note that delivery times may vary based on your location.<\/p><p><strong>Important Lithium Battery Shipping Info<\/strong><br\/>Due to lithium battery regulations, air freight is not available, which may slightly extend delivery times. We appreciate your patience as we ensure the safe delivery of your e-scooter.<\/p><p>For any questions or assistance, feel free to contact our support team. We're here to help!<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_tNmHjH": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "icon_width": 20,
+                        "title": "Warranty",
+                        "content": "<p>All of our scooters come with limited warranty. For details, see our <a href=\"\/pages\/warranty\" title=\"Warranty\">warranty<\/a> page<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_3jFLpm": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "icon_width": 20,
+                        "title": "Certification",
+                        "content": "<p>Our E-Scooters (including batteries) are tested to meet the following standards:<\/p><ul><li>UL2272<\/li><li>EN17128<\/li><li>IEC 62133-2<\/li><li>IEC 60335-1<\/li><li>EN IEC 55014-1<\/li><li>EN IEC 55014-1<\/li><li>CE EMC<\/li><li>ROHS<\/li><\/ul>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "vendor",
+                "title",
+                "badges",
+                "price",
+                "judge_me_reviews_preview_badge_DKUtfq",
+                "afterpay_on_site_messaging_payments_messaging_hCH9FM",
+                "rating",
+                "payment_terms",
+                "separator",
+                "essential_trust_badges_app_block_kEtTAh",
+                "variant_picker",
+                "essential_trust_badges_app_block_3PUHLH",
+                "offer_Bmn6tN",
+                "offer_9FRr97",
+                "inventory_Byhqmw",
+                "quantity_selector",
+                "buy_buttons",
+                "afterpay_on_site_messaging_payments_messaging_zfDeVB",
+                "collapsible_text_Gx7jYA",
+                "collapsible_text_mGWVXd",
+                "collapsible_text_z73mnq",
+                "collapsible_text_FLndD4",
+                "collapsible_text_tNmHjH",
+                "collapsible_text_3jFLpm"
+            ],
+            "custom_css": [
+                ".h1 {font-size: clamp(25px, 5vw, 50px); margin: 0; font-family: sans-serif; font-weight: 800;}"
+            ],
+            "settings": {
+                "full_width": false,
+                "show_fixed_add_to_cart": true,
+                "desktop_media_width": 50,
+                "desktop_media_layout": "carousel_thumbnails_bottom",
+                "mobile_media_size": "contained",
+                "mobile_carousel_control": "thumbnails",
+                "enable_video_autoplay": false,
+                "enable_video_looping": true,
+                "enable_image_zoom": true,
+                "max_image_zoom_level": 3,
+                "background": "#ffffff",
+                "background_gradient": "",
+                "text_color": "rgba(0,0,0,0)",
+                "input_background": "rgba(0,0,0,0)",
+                "input_text_color": ""
+            }
+        },
+        "multiple_images_with_text_dtE9T7": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_UwKhjG": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Untitled_800_x_800_px_6.webp",
+                        "image_rotation_degrees": -2,
+                        "subheading": "",
+                        "title": "15km of Fun",
+                        "content": "<h4><strong>Power up for hours of adventure with a reliable 5000mAh battery<\/strong><\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_UwKhjG"
+            ],
+            "name": "Multiple images with text",
+            "settings": {
+                "full_width": true,
+                "images_layout": "collage",
+                "collage_images_alignment": "middle",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_AMwdLe": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_EfyJFY": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Untitled_800_x_800_px_8.webp",
+                        "image_rotation_degrees": -2,
+                        "subheading": "",
+                        "title": "Vibrant LED Underglow",
+                        "content": "<h4><strong>Light up every ride with a colorful glow<\/strong><\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_EfyJFY"
+            ],
+            "name": "Multiple images with text",
+            "settings": {
+                "full_width": true,
+                "images_layout": "collage",
+                "collage_images_alignment": "middle",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_G7MQVm": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_xHYDY8": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Untitled_800_x_800_px_10.webp",
+                        "image_rotation_degrees": -2,
+                        "subheading": "",
+                        "title": "Bluetooth Speaker Onboard",
+                        "content": "<h4><strong>Bring your favorite tunes along for the ride<\/strong><\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_xHYDY8"
+            ],
+            "name": "Multiple images with text",
+            "settings": {
+                "full_width": true,
+                "images_layout": "collage",
+                "collage_images_alignment": "middle",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_HXAEJz": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_BJ7iVV": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Untitled_800_x_800_px_7.webp",
+                        "image_rotation_degrees": -2,
+                        "subheading": "",
+                        "title": "IP54 Waterproof Protection",
+                        "content": "<h4><strong>Keeps the fun going, even on damp days!<\/strong><\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_BJ7iVV"
+            ],
+            "name": "Multiple images with text",
+            "settings": {
+                "full_width": true,
+                "images_layout": "collage",
+                "collage_images_alignment": "middle",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "tabs_XnAkMG": {
+            "type": "tabs",
+            "blocks": {
+                "tab_fyTQHc": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "DESIGN",
+                        "content": "<h3><strong>DESIGN<\/strong><\/h3><h6><strong>Open Size <\/strong><\/h6><p>940mm x 475mm x 1030mm<\/p><h6><strong>Fold Size<\/strong><\/h6><p>940mm x 475mm x 450mm<\/p><h6>Pedal Width<\/h6><p>150mm<\/p><h6><strong>Net Weight<\/strong><\/h6><p>10kg<\/p><h6><strong>Frame Material<\/strong><\/h6><p>Aerospace Grade Steel<\/p><h6><strong>Tire Size<\/strong><\/h6><p>8 inch front and rear<\/p><h6><strong>Tire Type<\/strong><\/h6><p>Solid Rubber Tire<\/p><h6><strong>Max Load<\/strong><\/h6><p>100kg<\/p><h6><strong>IP Resistance Rating<\/strong><\/h6><p>IP54<\/p>",
+                        "page": ""
+                    }
+                },
+                "tab_MehWVA": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "BATTERY",
+                        "content": "<h3>BATTERY<\/h3><h6>Battery Type<\/h6><p>5Ah Lithium Battery<\/p><h6>Charging Time<\/h6><p>5-6 hours<\/p><h6>Charger Parameters<\/h6><p>DC25.2V\/1A<\/p><h6>BMS<\/h6><ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>",
+                        "page": ""
+                    }
+                },
+                "tab_8tePjy": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "POWER",
+                        "content": "<h3>POWER<\/h3><h6>Standard Motor Power<\/h6><p>200W <\/p><h6>Motor Type<\/h6><p>Front-wheel Drive<\/p><p><\/p>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "tab_fyTQHc",
+                "tab_MehWVA",
+                "tab_8tePjy"
+            ],
+            "settings": {
+                "full_width": true,
+                "content_size": "medium",
+                "subheading": "",
+                "title": "FULL SPECIFICATIONS",
+                "text_alignment": "left",
+                "first_tab_open": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": ""
+            }
+        },
+        "1731924206e17b48f2": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_review_widget_Pm6iFf": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {
+                        "review_data": "sample_data",
+                        "max_width": 1200,
+                        "show_shop_reviews": false,
+                        "empty_state": "empty_widget"
+                    }
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_review_widget_Pm6iFf"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "faq_6fccp4": {
+            "type": "faq",
+            "blocks": {
+                "item_JAqw6b": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Do you ship overseas?",
+                        "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+                    }
+                },
+                "item_J4WHUj": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How long will it take to get my orders?",
+                        "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+                    }
+                },
+                "item_CgYzPC": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Any question?",
+                        "content": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_JAqw6b",
+                "item_J4WHUj",
+                "item_CgYzPC"
+            ],
+            "disabled": true,
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "<p>Use this text to share information about your product or shipping policies.<\/p>",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available  24\/7 All Day, Every Day.",
+                "answer_time": "Average answer time: 1h",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        },
+        "related-products": {
+            "type": "related-products",
+            "settings": {
+                "recommendations_count": 3,
+                "products": [
+                    "e-scooter-sport-vent-helmet",
+                    "bike-lock",
+                    "simple-care"
+                ],
+                "full_width": true,
+                "stack_products": true,
+                "show_progress_bar": false,
+                "products_per_row_mobile": "1",
+                "products_per_row_desktop": 3,
+                "subheading": "",
+                "title": "You may also like",
+                "content": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "product_card_background": "",
+                "product_card_text_color": ""
+            }
+        }
+    },
+    "order": [
+        "main",
+        "multiple_images_with_text_dtE9T7",
+        "multiple_images_with_text_AMwdLe",
+        "multiple_images_with_text_G7MQVm",
+        "multiple_images_with_text_HXAEJz",
+        "tabs_XnAkMG",
+        "1731924206e17b48f2",
+        "faq_6fccp4",
+        "related-products"
+    ]
+}
