@@ -1,1 +1,344 @@
-{"sections":{"image_with_text_overlay_EE8c7P":{"type":"image-with-text-overlay","disabled":true,"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"auto","image":"shopify:\/\/shop_images\/Christmas_banner_quality.png","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"impact_text_JqaF7B":{"type":"impact-text","blocks":{"item_hDQNTa":{"type":"item","settings":{"title":"Everything You Need to Ride with Confidence","subheading":"","content":"","button_text":"","button_url":"","animate_impact_text":false,"animate_impact_text_duration":2}}},"block_order":["item_hDQNTa"],"disabled":true,"settings":{"full_width":false,"stack_mobile":true,"text_alignment":"center","impact_text_style":"fill","text_divider":"none","impact_text_size_ratio":0.5,"background":"","background_gradient":"","heading_text_color":"","heading_gradient":"linear-gradient(46deg, rgba(58, 59, 61, 1) 100%, rgba(170, 248, 219, 1) 100%)","text_color":"","button_background":"","button_text_color":""}},"image_with_text_overlay_GW79kQ":{"type":"image-with-text-overlay","blocks":{"subheading_NPtgW6":{"type":"subheading","settings":{"text":"Everything You Need to Ride with Confidence"}},"heading_YW3JgW":{"type":"heading","settings":{"text":"Electric Scooter Parts & Accessories","heading_tag":"h1"}},"richtext_4tW9fc":{"type":"richtext","settings":{"content":"<p>Discover locks, chargers, bags, and spare parts — everything crafted to elevate your ride and keep you moving effortlessly.<\/p>"}}},"block_order":["subheading_NPtgW6","heading_YW3JgW","richtext_4tW9fc"],"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"sm","image":"shopify:\/\/shop_images\/Ben-Action-Shot.jpg","mobile_text_position":"place-self-start-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"1748520197864d4f8d":{"type":"apps","blocks":{"judge_me_reviews_medals_WwFdnb":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["judge_me_reviews_medals_WwFdnb"],"custom_css":[".section-full {padding-block-start: 0; padding-block-end: 0;}"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}},"featured_collection_MeMCnw":{"type":"featured-collection","disabled":true,"settings":{"collection":"parts-accessories","products":[],"full_width":true,"stack_products":true,"show_progress_bar":false,"products_count":20,"products_per_row_mobile":"2","products_per_row_desktop":3,"subheading":"","title":"E-Scooter Parts & Accessories","content":"","link_url":"","link_text":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"rich_text_n3YBcK":{"type":"rich-text","blocks":{"heading_3UFD6b":{"type":"heading","settings":{"text":"E-Scooter Parts & Accessories","heading_tag":"h1","text_color":"","gradient":""}}},"block_order":["heading_3UFD6b"],"disabled":true,"custom_css":[".section-blends {padding-block: 20px !important; --rich-text-max-width: 1000px !important;}"],"settings":{"full_width":true,"content_width":"small","text_position":"start","background":"","background_gradient":"","text_color":""}},"main":{"type":"main-collection","custom_css":[],"settings":{"products_per_page":50,"products_per_row_mobile":"1","products_per_row_desktop":3,"filter_layout":"drawer","show_sort_by":false,"show_filters":true,"show_filter_group_name":false,"show_filter_values_count":true,"open_first_filter_group":false}},"banner":{"type":"collection-banner","disabled":true,"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":true,"show_collection_title":true,"show_collection_description":true,"show_collection_image":true,"collection_title_size":"h1","image_size":"md","mobile_text_position":"place-self-start-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","featured_product":"","featured_product_heading":"Featured product","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"image_with_text_overlay_3Q6RJ6":{"type":"image-with-text-overlay","blocks":{"subheading_pdPqkN":{"type":"subheading","settings":{"text":""}},"heading_NcicpB":{"type":"heading","settings":{"text":"Premium Electric Scooters","heading_tag":"h1"}},"richtext_KCxxYk":{"type":"richtext","settings":{"content":"<p>Experience unmatched performance and style with our e-scooters, designed for every journey<\/p>"}},"button_BijKQ6":{"type":"button","settings":{"style":"fill","size":"xl","text":"Shop E-Scooters","url":"shopify:\/\/collections\/parts-accessories","background":"","text_color":""}}},"block_order":["subheading_pdPqkN","heading_NcicpB","richtext_KCxxYk","button_BijKQ6"],"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"lg","image":"shopify:\/\/shop_images\/The-Simple-Commute-Lineup-Standard.jpg","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"faq_JqU6wb":{"type":"faq","blocks":{"item_FXVwjH":{"type":"item","settings":{"title":"What are the benefits of using an electric scooter for adult commuting in Australia?","content":"<p>Using an electric scooter for adult commuting in Australia offers numerous benefits. At <strong>The Simple Commute<\/strong>, we provide advanced e-scooters designed for convenience, affordability, and sustainability.<\/p><ul><li><strong>Cost-Effective<\/strong>: E-scooters are cheaper to maintain and charge compared to fuel or public transport, offering long-term savings.<\/li><li><strong>Eco-Friendly<\/strong>: Our scooters produce zero emissions, helping reduce your carbon footprint while supporting a greener future.<\/li><li><strong>Faster Commutes<\/strong>: E-scooters can navigate through traffic and avoid long waits, making city commutes quicker and more efficient.<\/li><li><strong>Portable and Convenient<\/strong>: Lightweight and foldable, our scooters are easy to store, ideal for combining with public transport or quick trips.<\/li><li><strong>Health Benefits<\/strong>: Riding an e-scooter engages balance and core muscles, providing light exercise during your commute.<\/li><\/ul><p>By choosing <strong>The Simple Commute<\/strong>, you embrace a smarter, greener way to get around.<\/p>"}},"item_T4yXFx":{"type":"item","settings":{"title":"How do I choose the right electric scooter for my needs?","content":"<p>Choosing the right electric scooter depends on your specific needs and preferences. At <strong>The Simple Commute<\/strong>, we offer a range of models designed to cater to different riders.<\/p><ul><li><strong>Commuting Distance<\/strong>: If you need a scooter for long daily commutes, choose a model with extended battery life and range, like our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/astro\"><span style=\"text-decoration:underline\"><strong>Aurora<\/strong><\/span><\/a> or <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/kaiju\"><span style=\"text-decoration:underline\"><strong>Kaiju<\/strong><\/span><\/a> models.<\/li><li><strong>Speed and Power<\/strong>: For faster rides or uphill terrain, opt for a scooter with higher wattage and top speed, such as the <strong>Kaiju<\/strong>.<\/li><li><strong>Portability<\/strong>: If portability is key, select a lightweight, foldable model that’s easy to carry and store.<\/li><li><strong>Terrain<\/strong>: Consider the type of roads or paths you’ll ride on. For rougher surfaces, a scooter with larger wheels and better suspension, like the <strong>Aurora<\/strong>, would be ideal.<\/li><li><strong>Budget<\/strong>: Think about your price range, and balance features like power, range, and design to get the best value. For example, our <strong>Astro<\/strong> model is a perfect entry level e-scooter.<\/li><\/ul><p>By understanding your commuting habits and personal preferences, you can find the perfect e-scooter to fit your lifestyle at <strong>The Simple Commute<\/strong>.<\/p>"}},"item_bHtc67":{"type":"item","settings":{"title":"Are your e-scooters legal to ride in Australia?","content":"<p>The legality of riding e-scooters in Australia varies by state and territory. In some places, e-scooters are permitted on roads and bike paths, while other areas may restrict their use to private property. At <strong>The Simple Commute<\/strong>, we recommend checking your local laws to ensure compliance with speed limits, helmet requirements, and road access rules.<\/p><p>Our e-scooters are designed to meet safety standards, making them suitable for regions where they are legal to ride. We always encourage responsible riding and staying informed about the latest regulations in your area.<\/p>"}},"item_hKFhah":{"type":"item","settings":{"title":"How long does the battery of an electric scooter typically last?","content":"<p>The battery life of an electric scooter typically depends on several factors, including the model, battery capacity, and usage conditions. On average:<\/p><ul><li><strong>Range<\/strong>: Most electric scooters offer a range of 20 to 40 kilometers (12 to 25 miles) on a full charge. Higher-end models with larger batteries can exceed this range.<\/li><li><strong>Usage<\/strong>: Frequent acceleration, high speeds, and hilly terrain can reduce battery life. Riding in optimal conditions (smooth terrain and moderate speeds) helps maximize range.<\/li><li><strong>Battery Maintenance<\/strong>: Proper care, such as avoiding full discharges and keeping the battery charged, can extend its lifespan.<\/li><\/ul><p>For detailed information on battery life specific to our models, like the <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/astro\"><span style=\"text-decoration:underline\"><strong>Astro<\/strong><\/span><\/a>, <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/aurora\"><span style=\"text-decoration:underline\"><strong>Aurora<\/strong><\/span><\/a>, or <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/kaiju\"><span style=\"text-decoration:underline\"><strong>Kaiju<\/strong><\/span><\/a>, please check our product specifications or contact our customer support. At <strong>The Simple Commute<\/strong>, we design our scooters to ensure you get the most out of every ride.<\/p>"}},"item_yN8NGw":{"type":"item","settings":{"title":"Question","content":"<p>Write content to answer to common questions your customers may have about your products, shipping policies..<\/p>"}}},"block_order":["item_FXVwjH","item_T4yXFx","item_bHtc67","item_hKFhah","item_yN8NGw"],"settings":{"full_width":true,"subheading":"","title":"FAQ","content":"","team_avatar_width":160,"support_hours":"Our customer support is available Monday to Friday: 8am-8:30pm.","answer_time":"Average answer time: 1h","button_text":"","button_url":"","text_position":"center","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}}},"order":["image_with_text_overlay_EE8c7P","impact_text_JqaF7B","image_with_text_overlay_GW79kQ","1748520197864d4f8d","featured_collection_MeMCnw","rich_text_n3YBcK","main","banner","image_with_text_overlay_3Q6RJ6","faq_JqU6wb"]}
+{
+    "sections": {
+        "image_with_text_overlay_EE8c7P": {
+            "type": "image-with-text-overlay",
+            "disabled": true,
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": false,
+                "image_size": "auto",
+                "image": "shopify:\/\/shop_images\/Christmas_banner_quality.png",
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+            }
+        },
+        "impact_text_JqaF7B": {
+            "type": "impact-text",
+            "blocks": {
+                "item_hDQNTa": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Everything You Need to Ride with Confidence",
+                        "subheading": "",
+                        "content": "",
+                        "button_text": "",
+                        "button_url": "",
+                        "animate_impact_text": false,
+                        "animate_impact_text_duration": 2
+                    }
+                }
+            },
+            "block_order": [
+                "item_hDQNTa"
+            ],
+            "disabled": true,
+            "settings": {
+                "full_width": false,
+                "stack_mobile": true,
+                "text_alignment": "center",
+                "impact_text_style": "fill",
+                "text_divider": "none",
+                "impact_text_size_ratio": 0.5,
+                "background": "",
+                "background_gradient": "",
+                "heading_text_color": "",
+                "heading_gradient": "linear-gradient(46deg, rgba(58, 59, 61, 1) 100%, rgba(170, 248, 219, 1) 100%)",
+                "text_color": "",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "image_with_text_overlay_GW79kQ": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "subheading_NPtgW6": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "Everything You Need to Ride with Confidence"
+                    }
+                },
+                "heading_YW3JgW": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Electric Scooter Parts & Accessories",
+                        "heading_tag": "h1"
+                    }
+                },
+                "richtext_4tW9fc": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p>Discover locks, chargers, bags, and spare parts — everything crafted to elevate your ride and keep you moving effortlessly.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_NPtgW6",
+                "heading_YW3JgW",
+                "richtext_4tW9fc"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": false,
+                "image_size": "sm",
+                "image": "shopify:\/\/shop_images\/Ben-Action-Shot.jpg",
+                "mobile_text_position": "place-self-start-center text-center",
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 30
+            }
+        },
+        "1748520197864d4f8d": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_medals_WwFdnb": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_medals_WwFdnb"
+            ],
+            "custom_css": [
+                ".section-full {padding-block-start: 0; padding-block-end: 0;}"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "featured_collection_MeMCnw": {
+            "type": "featured-collection",
+            "disabled": true,
+            "settings": {
+                "collection": "parts-accessories",
+                "products": [],
+                "full_width": true,
+                "stack_products": true,
+                "show_progress_bar": false,
+                "products_count": 20,
+                "products_per_row_mobile": "2",
+                "products_per_row_desktop": 3,
+                "subheading": "",
+                "title": "E-Scooter Parts & Accessories",
+                "content": "",
+                "link_url": "",
+                "link_text": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "product_card_background": "",
+                "product_card_text_color": ""
+            }
+        },
+        "rich_text_n3YBcK": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_3UFD6b": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "E-Scooter Parts & Accessories",
+                        "heading_tag": "h1",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "heading_3UFD6b"
+            ],
+            "disabled": true,
+            "custom_css": [
+                ".section-blends {padding-block: 20px !important; --rich-text-max-width: 1000px !important;}"
+            ],
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "start",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "main": {
+            "type": "main-collection",
+            "custom_css": [],
+            "settings": {
+                "products_per_page": 50,
+                "products_per_row_mobile": "1",
+                "products_per_row_desktop": 3,
+                "filter_layout": "drawer",
+                "show_sort_by": false,
+                "show_filters": true,
+                "show_filter_group_name": false,
+                "show_filter_values_count": true,
+                "open_first_filter_group": false
+            }
+        },
+        "banner": {
+            "type": "collection-banner",
+            "disabled": true,
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": true,
+                "show_collection_title": true,
+                "show_collection_description": true,
+                "show_collection_image": true,
+                "collection_title_size": "h1",
+                "image_size": "md",
+                "mobile_text_position": "place-self-start-center text-center",
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "featured_product": "",
+                "featured_product_heading": "Featured product",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 30
+            }
+        },
+        "image_with_text_overlay_3Q6RJ6": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "subheading_pdPqkN": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": ""
+                    }
+                },
+                "heading_NcicpB": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Premium Electric Scooters",
+                        "heading_tag": "h1"
+                    }
+                },
+                "richtext_KCxxYk": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p>Experience unmatched performance and style with our e-scooters, designed for every journey<\/p>"
+                    }
+                },
+                "button_BijKQ6": {
+                    "type": "button",
+                    "settings": {
+                        "style": "fill",
+                        "size": "xl",
+                        "text": "Shop E-Scooters",
+                        "url": "shopify:\/\/collections\/parts-accessories",
+                        "background": "",
+                        "text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_pdPqkN",
+                "heading_NcicpB",
+                "richtext_KCxxYk",
+                "button_BijKQ6"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": false,
+                "image_size": "lg",
+                "image": "shopify:\/\/shop_images\/The-Simple-Commute-Lineup-Standard.jpg",
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 30
+            }
+        },
+        "faq_JqU6wb": {
+            "type": "faq",
+            "blocks": {
+                "item_FXVwjH": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What are the benefits of using an electric scooter for adult commuting in Australia?",
+                        "content": "<p>Using an electric scooter for adult commuting in Australia offers numerous benefits. At <strong>The Simple Commute<\/strong>, we provide advanced e-scooters designed for convenience, affordability, and sustainability.<\/p><ul><li><strong>Cost-Effective<\/strong>: E-scooters are cheaper to maintain and charge compared to fuel or public transport, offering long-term savings.<\/li><li><strong>Eco-Friendly<\/strong>: Our scooters produce zero emissions, helping reduce your carbon footprint while supporting a greener future.<\/li><li><strong>Faster Commutes<\/strong>: E-scooters can navigate through traffic and avoid long waits, making city commutes quicker and more efficient.<\/li><li><strong>Portable and Convenient<\/strong>: Lightweight and foldable, our scooters are easy to store, ideal for combining with public transport or quick trips.<\/li><li><strong>Health Benefits<\/strong>: Riding an e-scooter engages balance and core muscles, providing light exercise during your commute.<\/li><\/ul><p>By choosing <strong>The Simple Commute<\/strong>, you embrace a smarter, greener way to get around.<\/p>"
+                    }
+                },
+                "item_T4yXFx": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How do I choose the right electric scooter for my needs?",
+                        "content": "<p>Choosing the right electric scooter depends on your specific needs and preferences. At <strong>The Simple Commute<\/strong>, we offer a range of models designed to cater to different riders.<\/p><ul><li><strong>Commuting Distance<\/strong>: If you need a scooter for long daily commutes, choose a model with extended battery life and range, like our <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/astro\"><span style=\"text-decoration:underline\"><strong>Aurora<\/strong><\/span><\/a> or <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/kaiju\"><span style=\"text-decoration:underline\"><strong>Kaiju<\/strong><\/span><\/a> models.<\/li><li><strong>Speed and Power<\/strong>: For faster rides or uphill terrain, opt for a scooter with higher wattage and top speed, such as the <strong>Kaiju<\/strong>.<\/li><li><strong>Portability<\/strong>: If portability is key, select a lightweight, foldable model that’s easy to carry and store.<\/li><li><strong>Terrain<\/strong>: Consider the type of roads or paths you’ll ride on. For rougher surfaces, a scooter with larger wheels and better suspension, like the <strong>Aurora<\/strong>, would be ideal.<\/li><li><strong>Budget<\/strong>: Think about your price range, and balance features like power, range, and design to get the best value. For example, our <strong>Astro<\/strong> model is a perfect entry level e-scooter.<\/li><\/ul><p>By understanding your commuting habits and personal preferences, you can find the perfect e-scooter to fit your lifestyle at <strong>The Simple Commute<\/strong>.<\/p>"
+                    }
+                },
+                "item_bHtc67": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are your e-scooters legal to ride in Australia?",
+                        "content": "<p>The legality of riding e-scooters in Australia varies by state and territory. In some places, e-scooters are permitted on roads and bike paths, while other areas may restrict their use to private property. At <strong>The Simple Commute<\/strong>, we recommend checking your local laws to ensure compliance with speed limits, helmet requirements, and road access rules.<\/p><p>Our e-scooters are designed to meet safety standards, making them suitable for regions where they are legal to ride. We always encourage responsible riding and staying informed about the latest regulations in your area.<\/p>"
+                    }
+                },
+                "item_hKFhah": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How long does the battery of an electric scooter typically last?",
+                        "content": "<p>The battery life of an electric scooter typically depends on several factors, including the model, battery capacity, and usage conditions. On average:<\/p><ul><li><strong>Range<\/strong>: Most electric scooters offer a range of 20 to 40 kilometers (12 to 25 miles) on a full charge. Higher-end models with larger batteries can exceed this range.<\/li><li><strong>Usage<\/strong>: Frequent acceleration, high speeds, and hilly terrain can reduce battery life. Riding in optimal conditions (smooth terrain and moderate speeds) helps maximize range.<\/li><li><strong>Battery Maintenance<\/strong>: Proper care, such as avoiding full discharges and keeping the battery charged, can extend its lifespan.<\/li><\/ul><p>For detailed information on battery life specific to our models, like the <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/astro\"><span style=\"text-decoration:underline\"><strong>Astro<\/strong><\/span><\/a>, <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/aurora\"><span style=\"text-decoration:underline\"><strong>Aurora<\/strong><\/span><\/a>, or <a href=\"https:\/\/thesimplecommute.com.au\/collections\/scooters\/products\/kaiju\"><span style=\"text-decoration:underline\"><strong>Kaiju<\/strong><\/span><\/a>, please check our product specifications or contact our customer support. At <strong>The Simple Commute<\/strong>, we design our scooters to ensure you get the most out of every ride.<\/p>"
+                    }
+                },
+                "item_yN8NGw": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Question",
+                        "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_FXVwjH",
+                "item_T4yXFx",
+                "item_bHtc67",
+                "item_hKFhah",
+                "item_yN8NGw"
+            ],
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+                "answer_time": "Average answer time: 1h",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        }
+    },
+    "order": [
+        "image_with_text_overlay_EE8c7P",
+        "impact_text_JqaF7B",
+        "image_with_text_overlay_GW79kQ",
+        "1748520197864d4f8d",
+        "featured_collection_MeMCnw",
+        "rich_text_n3YBcK",
+        "main",
+        "banner",
+        "image_with_text_overlay_3Q6RJ6",
+        "faq_JqU6wb"
+    ]
+}

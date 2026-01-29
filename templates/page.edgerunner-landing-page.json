@@ -1,1 +1,994 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"content_width":"80ch"}},"slideshow_Jhy4YD":{"type":"slideshow","blocks":{"video_cnHkFj":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1217(2).mp4","content_max_width":780,"mobile_text_position":"place-self-end-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"★★★★★ 4.9\/5 from 700+ reviews","title":"Made for Serious Riders","heading_tag":"h1","button_text":"Shop Edgerunner","button_link":"shopify:\/\/products\/edgerunner","text_color":"#f7d411","button_background":"#1a1a1a","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":27,"background":"","background_gradient":""}}},"block_order":["video_cnHkFj"],"settings":{"full_width":true,"allow_transparent_header":true,"show_initial_transition":false,"image_size":"md","controls_type":"dots","transition_type":"fade_with_text","autoplay":false,"cycle_speed":6,"background":"#f2f2f2","background_gradient":""}},"featured_product_bzLGfT":{"type":"featured-product","blocks":{"vendor_N4Ucyh":{"type":"vendor","settings":{}},"title_fHCQQL":{"type":"title","settings":{"heading_tag":"h4"}},"badges_y6cgpa":{"type":"badges","settings":{}},"price_UtbVDJ":{"type":"price","settings":{"show_taxes_notice":false}},"rating_6V67bn":{"type":"rating","settings":{"show_empty":false}},"separator_Kj3YAV":{"type":"separator","settings":{}},"afterpay_on_site_messaging_payments_messaging_7Yn4TE":{"type":"shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8","settings":{"text_align":"inherit","margin_top":16,"margin_bottom":16,"color":"","size":"md","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"badge","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{section.settings.product}}"}},"buy_buttons_tthtdD":{"type":"buy_buttons","settings":{"show_payment_button":true,"show_gift_card_recipient":true,"atc_button_background":"","atc_button_text_color":"","payment_button_background":"","payment_button_text_color":""}}},"block_order":["vendor_N4Ucyh","title_fHCQQL","badges_y6cgpa","price_UtbVDJ","rating_6V67bn","separator_Kj3YAV","afterpay_on_site_messaging_payments_messaging_7Yn4TE","buy_buttons_tthtdD"],"name":"Featured product","settings":{"full_width":true,"product":"edgerunner","desktop_media_width":55,"desktop_media_layout":"carousel_thumbnails_left","mobile_media_size":"contained","mobile_carousel_control":"thumbnails","enable_video_autoplay":true,"enable_video_looping":false,"enable_image_zoom":true,"max_image_zoom_level":3,"background":"","background_gradient":"","text_color":"#1a1a1a","input_background":"rgba(0,0,0,0)","input_text_color":""}},"scrolling_text_i9ihid":{"type":"scrolling-text","name":"Scrolling text","settings":{"full_width":true,"text":"AUSTRALIAN QUALITY CONTROL • NFC ACTIVATION • NUTT HYDRAULIC BRAKES • 4200W PEAK POWER","text_size":"xsmall","text_style":"fill","scrolling_mode":"auto","scrolling_speed":7,"background":"","background_gradient":"","text_color":"#ffd700","text_gradient":"linear-gradient(180deg, rgba(255, 215, 0, 1) 18%, rgba(0, 0, 0, 1) 100%)"}},"rich_text_KBxdTm":{"type":"rich-text","blocks":{"heading_FYCaYU":{"type":"heading","settings":{"text":"The Professional Standard. Premium Components. Precision-Tuned.","heading_tag":"h3","text_color":"","gradient":""}}},"block_order":["heading_FYCaYU"],"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"","background_gradient":"","text_color":"#bfa40e"}},"media_grid_UCTXei":{"type":"media-grid","blocks":{"image_taVkr6":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/85_KMH_4_1.png","title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":2,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"image_wakAii":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_8_1.png","title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":1,"desktop_text_position":"sm:place-self-start sm:text-start","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"image_8AhdBf":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_750_x_1500_px_1.png","title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":2,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"image_nwFmhR":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_6.png","title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"image_FM9qMx":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_7_1.png","title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"image_WBin6r":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_5_1.png","title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}}},"block_order":["image_taVkr6","image_wakAii","image_8AhdBf","image_nwFmhR","image_FM9qMx","image_WBin6r"],"name":"Media grid","settings":{"full_width":false,"reduce_width":true,"desktop_row_height":290,"mobile_row_height":150,"background":"","background_gradient":""}},"rich_text_cqkeTd":{"type":"rich-text","blocks":{"heading_hRmrUw":{"type":"heading","settings":{"text":"Engineered for Reality. Not Specs.","heading_tag":"h3","text_color":"","gradient":""}},"subheading_yGaLFf":{"type":"subheading","settings":{"text":"Designed for the way you actually ride."}},"button_CaEetP":{"type":"button","settings":{"style":"fill","size":"xl","text":"See Full Specs","url":"shopify:\/\/products\/edgerunner","background":"","text_color":""}}},"block_order":["heading_hRmrUw","subheading_yGaLFf","button_CaEetP"],"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"","background_gradient":"","text_color":"#bfa40e"}},"multi_column_yAdbpW":{"type":"multi-column","blocks":{"item_tWC7Dn":{"type":"item","settings":{"video":"shopify:\/\/files\/videos\/1217(5).mp4","show_controls":false,"column_size":"2","title":"3-Second Fold","heading_tag":"h3","content":"<p>The Edgerunner collapses in three seconds and locks completely rigid. No flex, no rattle — just a machine that stores as solidly as it rides.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_fPXL4p":{"type":"item","settings":{"video":"shopify:\/\/files\/videos\/1217(4).mp4","show_controls":false,"column_size":"2","title":"Visible From Every Angle","heading_tag":"h3","content":"<p>High-visibility turn indicators are integrated front and rear, ensuring your intentions are visible to surrounding traffic from every angle.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_6nDcY7":{"type":"item","settings":{"video":"shopify:\/\/files\/videos\/1217(6).mp4","show_controls":false,"column_size":"2","title":"Keyless Ignition","heading_tag":"h3","content":"<p>NFC ignition replaces the traditional key system entirely. A single tap on your secure card authenticates and unlocks the powertrain instantly.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_ztWbfq":{"type":"item","settings":{"video":"shopify:\/\/files\/videos\/1217(7).mp4","show_controls":false,"column_size":"2","title":"Zero Speed Wobble","heading_tag":"h3","content":"<p>A hydraulic steering stabiliser absorbs high-speed oscillations  eliminating the 'death wobble' that plagues unstable machines.<\/p>","link_url":"","link_text":"","link_style":"link"}}},"block_order":["item_tWC7Dn","item_fPXL4p","item_6nDcY7","item_ztWbfq"],"name":"Multi-column","settings":{"full_width":true,"stack_on_mobile":false,"gap":"small","text_alignment":"center","subheading":"","title":"","content":"","background":"","background_gradient":"","text_color":"#000000"}},"media_with_text_4Hir6m":{"type":"media-with-text","blocks":{"video_ykQgzX":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1217(8).mp4","external_video_url":"","autoplay":true,"media_width":50,"media_position":"start","text_position":"place-self-start text-start","icon":"none","custom_icon":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_1.svg","icon_width":120,"subheading":"","title":"Built for Real Conditions.","content":"<p>Sealed electronics, protected battery housing, and weather-resistant componentry throughout. The Edgerunner doesn't ask you to check the forecast before you ride.<\/p>","link_text":"Explore Now","link_url":"shopify:\/\/products\/edgerunner","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}},"video_7QVFxM":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1217(9).mp4","external_video_url":"","autoplay":true,"media_width":50,"media_position":"end","text_position":"place-self-start text-start","icon":"none","custom_icon":"shopify:\/\/shop_images\/NUTT_HYDRALUCIS_3.svg","icon_width":120,"subheading":"","title":"See and Be Seen.","content":"<p>A high-output LED headlight with 100-metre visibility — enough range to illuminate the road ahead and enough presence to make you unmistakable to oncoming traffic.<\/p>","link_text":"","link_url":"","background":"rgba(0,0,0,0)","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}}},"block_order":["video_ykQgzX","video_7QVFxM"],"custom_css":[".media-with-text {margin: 0 !important; padding: 0;}",".video-media {margin: 0 !important; padding: 0;}"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"comparison_table_fHdNJ3":{"type":"comparison-table","blocks":{"headings_n6UMeH":{"type":"headings","settings":{"heading_1":"Electric Scooter","heading_2":"Price","heading_3":"Motor Type","heading_4":"Max. Range","heading_5":"Max. Speed","heading_6":"Steering Damper","heading_7":"Max. Load","heading_8":"IP Rating","heading_9":"Warranty","heading_10":"","heading_11":"","heading_12":"","heading_13":"","heading_14":"","heading_15":"","heading_16":"","heading_17":"","heading_18":"","heading_19":"","heading_20":""}},"values_TExcmC":{"type":"values","settings":{"product":"","value_1":"<h4>Kaabo Mantis King GT<\/h4>","value_2":"<p>$4699<\/p>","value_3":"<p>Dual 1100W<\/p>","value_4":"<p>90km*<\/p>","value_5":"<p>70km\/h*<\/p>","value_6":"<p>No<\/p>","value_7":"<p><strong>150kg<\/strong><\/p>","value_8":"<p>IPX5<\/p>","value_9":"<p>12-Month<\/p>","value_10":"","value_11":"","value_12":"","value_13":"","value_14":"","value_15":"","value_16":"","value_17":"","value_18":"","value_19":"","value_20":"","view_button_background":"","view_button_text_color":""}},"values_NXDHzk":{"type":"values","settings":{"product":"","value_1":"<h4><strong>Edgerunner<\/strong><\/h4>","value_2":"<p><strong>$2999<\/strong><\/p>","value_3":"<p><strong>Dual 1400W<\/strong><\/p>","value_4":"<p><strong>110km*<\/strong><\/p>","value_5":"<p><strong>85km\/h* <\/strong><\/p>","value_6":"<p><strong>Yes<\/strong><\/p>","value_7":"<p><strong>150kg<\/strong><\/p>","value_8":"<p><strong>IPX6<\/strong><\/p>","value_9":"<p><strong>24-Month<\/strong><\/p>","value_10":"","value_11":"","value_12":"","value_13":"","value_14":"","value_15":"","value_16":"","value_17":"","value_18":"","value_19":"","value_20":"","view_button_background":"","view_button_text_color":""}},"values_dcQXFE":{"type":"values","settings":{"product":"","value_1":"<h4><strong>VSETT 10 Apex<\/strong><\/h4>","value_2":"<p>$4599<\/p>","value_3":"<p><strong>Dual 1400W<\/strong><\/p>","value_4":"<p>90km*<\/p>","value_5":"<p>80km\/h*<\/p>","value_6":"<p>No<\/p>","value_7":"<p>130kg<\/p>","value_8":"<p>IPX5<\/p>","value_9":"<p>12-Month<\/p>","value_10":"","value_11":"","value_12":"","value_13":"","value_14":"","value_15":"","value_16":"","value_17":"","value_18":"","value_19":"","value_20":"","view_button_background":"","view_button_text_color":""}}},"block_order":["headings_n6UMeH","values_TExcmC","values_NXDHzk","values_dcQXFE"],"name":"Comparison table","settings":{"full_width":true,"subheading":"","title":"Edgerunner vs. The Competition","content":"","button_text":"","button_url":"","text_position":"center","max_rows":5,"view_all_text":"View all","view_less_text":"View less","view_product":"View","show_product_info":false,"show_product_image":false,"show_product_swatch":false,"viewing_product":"","background":"","background_gradient":"","text_color":"#bfa40e","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","chart_background":"","chart_text_color":"#000000","chart_true_false_color":""}},"rich_text_zV7eKq":{"type":"rich-text","blocks":{"heading_kWtTYr":{"type":"heading","settings":{"text":"The Details That Matter.","heading_tag":"h3","text_color":"","gradient":""}},"richtext_CrUtBH":{"type":"richtext","settings":{"content":"<p>Stability at speed, comfort over distance, and a frame that doesn't assume you're built like a mannequin.<\/p>"}}},"block_order":["heading_kWtTYr","richtext_CrUtBH"],"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"","background_gradient":"","text_color":"#bfa40e"}},"multi_column_XcPXqB":{"type":"multi-column","blocks":{"item_j8hiza":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/150KG_4.svg","show_controls":false,"column_size":"4","title":"Max. Load","heading_tag":"h4","content":"<p>A frame and deck engineered to handle adult riders without flex or strain.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_Nm6fej":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/150KG_3.svg","show_controls":false,"column_size":"4","title":"Ground Clearance","heading_tag":"h4","content":"<p>Enough clearance to handle gutters, speed bumps, and uneven roads without scraping.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_AK7xdG":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/150KG_5.svg","show_controls":false,"column_size":"4","title":"Tyre Size","heading_tag":"h4","content":"<p>10 inches of tubeless, high-performance rubber. Fewer failure points. More grip. Better ride.<\/p>","link_url":"","link_text":"","link_style":"link"}},"item_fAAezK":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/150KG_6.svg","show_controls":false,"column_size":"4","title":"Recommended Height","heading_tag":"h4","content":"<p>A deck height and handlebar position calibrated for riders from 5'5\" - 6'5\".<\/p>","link_url":"","link_text":"","link_style":"link"}}},"block_order":["item_j8hiza","item_Nm6fej","item_AK7xdG","item_fAAezK"],"name":"Multi-column","settings":{"full_width":true,"stack_on_mobile":true,"gap":"small","text_alignment":"center","subheading":"","title":"","content":"","background":"","background_gradient":"","text_color":"#1a1a1a"}},"video_mMLYjc":{"type":"video","blocks":{"heading_bP3LQQ":{"type":"heading","settings":{"text":"The Full Breakdown","heading_tag":"h3"}},"play_PYXkUk":{"type":"play","settings":{}}},"block_order":["heading_bP3LQQ","play_PYXkUk"],"name":"Video","settings":{"full_width":false,"allow_transparent_header":false,"autoplay":false,"video_size":"auto","external_video_url":"https:\/\/youtu.be\/pHwVD5O13fY","poster":"shopify:\/\/shop_images\/DSC00138.webp","text_color":"#bfa40e","overlay_color":"#000000","overlay_opacity":40}},"faq_dxbhFr":{"type":"faq","blocks":{"item_JDdnKR":{"type":"item","settings":{"title":"Is TSC Aussie owned and operated?","content":"<p>Yes. The Simple Commute aka TSC was founded in March 2024 and officially launched in September 2024 by Hamlet and Ben here in Melbourne. <\/p><p>It’s now proudly owned and run by 3 young Aussies - Hamlet, Ben and Puneet. All our operations, from customer service to logistics and repairs, are handled right here in Melbourne. Head to our <a href=\"https:\/\/thesimplecommute.com.au\/pages\/about-us\">About Us<\/a> page to learn more about the team and our story.<\/p>"}},"item_GJDhGh":{"type":"item","settings":{"title":"Why should I choose TSC over other brands?","content":"<p>Because we actually care about you, not just the sale. At TSC, you get <strong>local Aussie support<\/strong>, <strong>fair pricing<\/strong>, and scooters that are <strong>built and tested for Australian roads<\/strong>. We only work with <strong>highly reputable manufacturers<\/strong>, and every model we release goes through strict <strong>global-standard testing<\/strong> — our scooters and batteries hold some of the <strong>highest safety certifications in the industry<\/strong>.<\/p><p>Most importantly, <strong>we value customer relationships more than sales<\/strong>. Whether you’re just browsing or ready to buy, you’ll always get honest advice and genuine support. That’s what sets us apart.<\/p>"}},"item_LGdYBL":{"type":"item","settings":{"title":"Is the Edgerunner electric scooter legal to ride in public?","content":"<p>Yes. All our electric scooters are capped at 25 km\/h to comply with Australian regulations, making them legal to ride in public. <\/p>"}},"item_GFmhme":{"type":"item","settings":{"title":"Does the 250w rule apply to TSC electric scooters?","content":"<p>No. The 250w rule applies only to e-bikes, not e-scooters. Our electric scooters are classified as Personal Mobility Devices (PMDs) in Australia. The key regulation for PMDs is that they must be capped at 25 km\/h for public use, regardless of motor wattage.<\/p>"}},"item_8k6FQb":{"type":"item","settings":{"title":"Does the Edgerunner ride well on the road?","content":"<p>Yes. it rides very smoothly on the road thanks to its large 10-inch high performance tyre setup. It handles city streets with ease and doesn’t make much noise while cruising.<\/p>"}},"item_daankJ":{"type":"item","settings":{"title":"What makes Edgerunner different from other electric scooters?","content":"<p>The Edgerunner was engineered for riders who expect equipment, not experiments. Where most high-performance scooters prioritise raw speed over refinement, the Edgerunner pairs genuine capability — 4,200W, 85km\/h, 30-degree climb — with a throttle map tuned for linear, predictable acceleration, a hydraulic steering damper that eliminates high-speed wobble, and sealed IP56 componentry built for real weather. <\/p><p>It's backed by Australian support, pre-ride inspection, and the kind of spec transparency that most brands avoid. This isn't a toy with a top-speed sticker. It's a machine designed to perform reliably, every ride, without drama.<\/p>"}},"item_RebULn":{"type":"item","settings":{"title":"How can I properly secure my Edgerunner electric scooter?","content":"<p>GPS tracking sounds handy but can be bypassed. <\/p><p>The best way is to take it with you whenever possible. If you can’t, use a strong lock, or even better, multiple locks, to make thieves think twice.<\/p><p>TSC offers tough, high-quality security options like disc brake locks, key locks, heavy-duty chains and alarm locks. Check out our<strong> <\/strong><a href=\"https:\/\/thesimplecommute.com.au\/collections\/e-scooter-accessories\"><strong>accessories page<\/strong><\/a><strong> <\/strong>to keep your Edgerunner safe.<\/p>"}},"item_QHiwfX":{"type":"item","settings":{"title":"How can I unlock the speed?","content":"<p>You can unlock the speed for private use by emailing our team directly <strong>after purchase <\/strong>with your order number ready.<\/p><p>Email our customer support to learn more about the unlock process.<\/p>"}},"item_JHTf7r":{"type":"item","settings":{"title":"Where can I ride my electric scooter?","content":"<p>In Australia, the regulatory landscape for electric scooters is a patchwork of diverse legislation, with each state and territory crafting its own unique set of guidelines. These region-specific rules govern various aspects of e-scooter usage, including rider eligibility, permissible operating areas, and speed limitations.<\/p><p>Before investing in an electric scooter, it's crucial for potential owners to familiarise themselves with the local regulations that will impact their riding experience. Navigating this complex web of laws can be challenging, so make sure you do your research. <\/p><p>Please visit the links below for the regulations in your state:<\/p><h6><a href=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\" target=\"_blank\" title=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\">📍 VIC<\/a><\/h6><h6><a href=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\">📍 SA<\/a><\/h6><h6><a href=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\">📍 QLD<\/a><\/h6><p><a href=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\" target=\"_blank\" title=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\"><strong>📍 WA<\/strong><\/a><\/p><p><a href=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\"><strong>📍 ACT<\/strong><\/a><\/p><h6><a href=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\" target=\"_blank\" title=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\"><strong>📍 TAS<\/strong><\/a><\/h6><h6><a href=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\">📍 NSW <\/a><\/h6><p><a href=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\" target=\"_blank\" title=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\"><strong>📍 NT<\/strong><\/a><\/p>"}},"item_UPNYHT":{"type":"item","settings":{"title":"Are your batteries safe?","content":"<p>Yes, our batteries are extremely safe. They meet the highest global safety certifications - one of the most rigorous battery safety standards in the world. Additionally, our smart Battery Management System (BMS) features six layers of protection including short circuit protection, overcurrent protection, and temperature resistance.<\/p>"}},"item_he3xRq":{"type":"item","settings":{"title":"Are there any financing options?","content":"<p>Yes, we offer flexible financing options. You can choose from:<\/p><p><strong>Zip Pay<\/strong> - Split your purchase into interest-free installments<br\/><strong>Afterpay<\/strong> - Buy now, pay later in 4 easy payments<\/p><p>Both options are available at checkout.<\/p>"}}},"block_order":["item_JDdnKR","item_GJDhGh","item_LGdYBL","item_GFmhme","item_8k6FQb","item_daankJ","item_RebULn","item_QHiwfX","item_JHTf7r","item_UPNYHT","item_he3xRq"],"settings":{"full_width":true,"subheading":"","title":"FAQ","content":"","team_avatar_width":160,"support_hours":"Our customer support is available 7 days a week: 10am-5pm AEST.","answer_time":"Average answer time: 40 minutes","button_text":"","button_url":"","text_position":"center","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}},"1766659249729fb65e":{"type":"apps","blocks":{"judge_me_reviews_all_reviews_page_QCVr9M":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"max_width":1200,"review_source":"all","show_tabs":false,"show_first":"product","empty_state":"empty_widget"}}},"block_order":["judge_me_reviews_all_reviews_page_QCVr9M"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}}},"order":["main","slideshow_Jhy4YD","featured_product_bzLGfT","scrolling_text_i9ihid","rich_text_KBxdTm","media_grid_UCTXei","rich_text_cqkeTd","multi_column_yAdbpW","media_with_text_4Hir6m","comparison_table_fHdNJ3","rich_text_zV7eKq","multi_column_XcPXqB","video_mMLYjc","faq_dxbhFr","1766659249729fb65e"]}
+{
+    "sections": {
+        "main": {
+            "type": "main-page",
+            "disabled": true,
+            "settings": {
+                "content_width": "80ch"
+            }
+        },
+        "slideshow_Jhy4YD": {
+            "type": "slideshow",
+            "blocks": {
+                "video_cnHkFj": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(2).mp4",
+                        "content_max_width": 780,
+                        "mobile_text_position": "place-self-end-center text-center",
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "subheading": "★★★★★ 4.9\/5 from 700+ reviews",
+                        "title": "Made for Serious Riders",
+                        "heading_tag": "h1",
+                        "button_text": "Shop Edgerunner",
+                        "button_link": "shopify:\/\/products\/edgerunner",
+                        "text_color": "#f7d411",
+                        "button_background": "#1a1a1a",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 27,
+                        "background": "",
+                        "background_gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_cnHkFj"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": true,
+                "show_initial_transition": false,
+                "image_size": "md",
+                "controls_type": "dots",
+                "transition_type": "fade_with_text",
+                "autoplay": false,
+                "cycle_speed": 6,
+                "background": "#f2f2f2",
+                "background_gradient": ""
+            }
+        },
+        "featured_product_bzLGfT": {
+            "type": "featured-product",
+            "blocks": {
+                "vendor_N4Ucyh": {
+                    "type": "vendor",
+                    "settings": {}
+                },
+                "title_fHCQQL": {
+                    "type": "title",
+                    "settings": {
+                        "heading_tag": "h4"
+                    }
+                },
+                "badges_y6cgpa": {
+                    "type": "badges",
+                    "settings": {}
+                },
+                "price_UtbVDJ": {
+                    "type": "price",
+                    "settings": {
+                        "show_taxes_notice": false
+                    }
+                },
+                "rating_6V67bn": {
+                    "type": "rating",
+                    "settings": {
+                        "show_empty": false
+                    }
+                },
+                "separator_Kj3YAV": {
+                    "type": "separator",
+                    "settings": {}
+                },
+                "afterpay_on_site_messaging_payments_messaging_7Yn4TE": {
+                    "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+                    "settings": {
+                        "text_align": "inherit",
+                        "margin_top": 16,
+                        "margin_bottom": 16,
+                        "color": "",
+                        "size": "md",
+                        "intro_text": "or",
+                        "show_interest_free": true,
+                        "payment_amount_is_bold": true,
+                        "show_with": true,
+                        "logo_type": "badge",
+                        "logo_theme": "black-on-mint",
+                        "modal_link_style": "circled-info-icon",
+                        "modal_theme": "mint",
+                        "breakpoint": 749,
+                        "text_align_mobile": "inherit",
+                        "margin_top_mobile": 16,
+                        "margin_bottom_mobile": 16,
+                        "show_lower_limit": true,
+                        "show_upper_limit": true,
+                        "show_if_outside_limits": true,
+                        "product": "{{section.settings.product}}"
+                    }
+                },
+                "buy_buttons_tthtdD": {
+                    "type": "buy_buttons",
+                    "settings": {
+                        "show_payment_button": true,
+                        "show_gift_card_recipient": true,
+                        "atc_button_background": "",
+                        "atc_button_text_color": "",
+                        "payment_button_background": "",
+                        "payment_button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "vendor_N4Ucyh",
+                "title_fHCQQL",
+                "badges_y6cgpa",
+                "price_UtbVDJ",
+                "rating_6V67bn",
+                "separator_Kj3YAV",
+                "afterpay_on_site_messaging_payments_messaging_7Yn4TE",
+                "buy_buttons_tthtdD"
+            ],
+            "name": "Featured product",
+            "settings": {
+                "full_width": true,
+                "product": "edgerunner",
+                "desktop_media_width": 55,
+                "desktop_media_layout": "carousel_thumbnails_left",
+                "mobile_media_size": "contained",
+                "mobile_carousel_control": "thumbnails",
+                "enable_video_autoplay": true,
+                "enable_video_looping": false,
+                "enable_image_zoom": true,
+                "max_image_zoom_level": 3,
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#1a1a1a",
+                "input_background": "rgba(0,0,0,0)",
+                "input_text_color": ""
+            }
+        },
+        "scrolling_text_i9ihid": {
+            "type": "scrolling-text",
+            "name": "Scrolling text",
+            "settings": {
+                "full_width": true,
+                "text": "AUSTRALIAN QUALITY CONTROL • NFC ACTIVATION • NUTT HYDRAULIC BRAKES • 4200W PEAK POWER",
+                "text_size": "xsmall",
+                "text_style": "fill",
+                "scrolling_mode": "auto",
+                "scrolling_speed": 7,
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#ffd700",
+                "text_gradient": "linear-gradient(180deg, rgba(255, 215, 0, 1) 18%, rgba(0, 0, 0, 1) 100%)"
+            }
+        },
+        "rich_text_KBxdTm": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_FYCaYU": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "The Professional Standard. Premium Components. Precision-Tuned.",
+                        "heading_tag": "h3",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "heading_FYCaYU"
+            ],
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#bfa40e"
+            }
+        },
+        "media_grid_UCTXei": {
+            "type": "media-grid",
+            "blocks": {
+                "image_taVkr6": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/85_KMH_4_1.png",
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 2,
+                        "desktop_row_span": 1,
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_wakAii": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_8_1.png",
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 1,
+                        "desktop_row_span": 1,
+                        "desktop_text_position": "sm:place-self-start sm:text-start",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_8AhdBf": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_750_x_1500_px_1.png",
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 1,
+                        "desktop_row_span": 2,
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_nwFmhR": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_6.png",
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 1,
+                        "desktop_row_span": 1,
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_FM9qMx": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_7_1.png",
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 1,
+                        "desktop_row_span": 1,
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_WBin6r": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_5_1.png",
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 1,
+                        "desktop_row_span": 1,
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                }
+            },
+            "block_order": [
+                "image_taVkr6",
+                "image_wakAii",
+                "image_8AhdBf",
+                "image_nwFmhR",
+                "image_FM9qMx",
+                "image_WBin6r"
+            ],
+            "name": "Media grid",
+            "settings": {
+                "full_width": false,
+                "reduce_width": true,
+                "desktop_row_height": 290,
+                "mobile_row_height": 150,
+                "background": "",
+                "background_gradient": ""
+            }
+        },
+        "rich_text_cqkeTd": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_hRmrUw": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Engineered for Reality. Not Specs.",
+                        "heading_tag": "h3",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                },
+                "subheading_yGaLFf": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "Designed for the way you actually ride."
+                    }
+                },
+                "button_CaEetP": {
+                    "type": "button",
+                    "settings": {
+                        "style": "fill",
+                        "size": "xl",
+                        "text": "See Full Specs",
+                        "url": "shopify:\/\/products\/edgerunner",
+                        "background": "",
+                        "text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "heading_hRmrUw",
+                "subheading_yGaLFf",
+                "button_CaEetP"
+            ],
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#bfa40e"
+            }
+        },
+        "multi_column_yAdbpW": {
+            "type": "multi-column",
+            "blocks": {
+                "item_tWC7Dn": {
+                    "type": "item",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(5).mp4",
+                        "show_controls": false,
+                        "column_size": "2",
+                        "title": "3-Second Fold",
+                        "heading_tag": "h3",
+                        "content": "<p>The Edgerunner collapses in three seconds and locks completely rigid. No flex, no rattle — just a machine that stores as solidly as it rides.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_fPXL4p": {
+                    "type": "item",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(4).mp4",
+                        "show_controls": false,
+                        "column_size": "2",
+                        "title": "Visible From Every Angle",
+                        "heading_tag": "h3",
+                        "content": "<p>High-visibility turn indicators are integrated front and rear, ensuring your intentions are visible to surrounding traffic from every angle.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_6nDcY7": {
+                    "type": "item",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(6).mp4",
+                        "show_controls": false,
+                        "column_size": "2",
+                        "title": "Keyless Ignition",
+                        "heading_tag": "h3",
+                        "content": "<p>NFC ignition replaces the traditional key system entirely. A single tap on your secure card authenticates and unlocks the powertrain instantly.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_ztWbfq": {
+                    "type": "item",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(7).mp4",
+                        "show_controls": false,
+                        "column_size": "2",
+                        "title": "Zero Speed Wobble",
+                        "heading_tag": "h3",
+                        "content": "<p>A hydraulic steering stabiliser absorbs high-speed oscillations  eliminating the 'death wobble' that plagues unstable machines.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                }
+            },
+            "block_order": [
+                "item_tWC7Dn",
+                "item_fPXL4p",
+                "item_6nDcY7",
+                "item_ztWbfq"
+            ],
+            "name": "Multi-column",
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": false,
+                "gap": "small",
+                "text_alignment": "center",
+                "subheading": "",
+                "title": "",
+                "content": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#000000"
+            }
+        },
+        "media_with_text_4Hir6m": {
+            "type": "media-with-text",
+            "blocks": {
+                "video_ykQgzX": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(8).mp4",
+                        "external_video_url": "",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-start text-start",
+                        "icon": "none",
+                        "custom_icon": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_1.svg",
+                        "icon_width": 120,
+                        "subheading": "",
+                        "title": "Built for Real Conditions.",
+                        "content": "<p>Sealed electronics, protected battery housing, and weather-resistant componentry throughout. The Edgerunner doesn't ask you to check the forecast before you ride.<\/p>",
+                        "link_text": "Explore Now",
+                        "link_url": "shopify:\/\/products\/edgerunner",
+                        "background": "rgba(0,0,0,0)",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                },
+                "video_7QVFxM": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/1217(9).mp4",
+                        "external_video_url": "",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "end",
+                        "text_position": "place-self-start text-start",
+                        "icon": "none",
+                        "custom_icon": "shopify:\/\/shop_images\/NUTT_HYDRALUCIS_3.svg",
+                        "icon_width": 120,
+                        "subheading": "",
+                        "title": "See and Be Seen.",
+                        "content": "<p>A high-output LED headlight with 100-metre visibility — enough range to illuminate the road ahead and enough presence to make you unmistakable to oncoming traffic.<\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "rgba(0,0,0,0)",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_ykQgzX",
+                "video_7QVFxM"
+            ],
+            "custom_css": [
+                ".media-with-text {margin: 0 !important; padding: 0;}",
+                ".video-media {margin: 0 !important; padding: 0;}"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "comparison_table_fHdNJ3": {
+            "type": "comparison-table",
+            "blocks": {
+                "headings_n6UMeH": {
+                    "type": "headings",
+                    "settings": {
+                        "heading_1": "Electric Scooter",
+                        "heading_2": "Price",
+                        "heading_3": "Motor Type",
+                        "heading_4": "Max. Range",
+                        "heading_5": "Max. Speed",
+                        "heading_6": "Steering Damper",
+                        "heading_7": "Max. Load",
+                        "heading_8": "IP Rating",
+                        "heading_9": "Warranty",
+                        "heading_10": "",
+                        "heading_11": "",
+                        "heading_12": "",
+                        "heading_13": "",
+                        "heading_14": "",
+                        "heading_15": "",
+                        "heading_16": "",
+                        "heading_17": "",
+                        "heading_18": "",
+                        "heading_19": "",
+                        "heading_20": ""
+                    }
+                },
+                "values_TExcmC": {
+                    "type": "values",
+                    "settings": {
+                        "product": "",
+                        "value_1": "<h4>Kaabo Mantis King GT<\/h4>",
+                        "value_2": "<p>$4699<\/p>",
+                        "value_3": "<p>Dual 1100W<\/p>",
+                        "value_4": "<p>90km*<\/p>",
+                        "value_5": "<p>70km\/h*<\/p>",
+                        "value_6": "<p>No<\/p>",
+                        "value_7": "<p><strong>150kg<\/strong><\/p>",
+                        "value_8": "<p>IPX5<\/p>",
+                        "value_9": "<p>12-Month<\/p>",
+                        "value_10": "",
+                        "value_11": "",
+                        "value_12": "",
+                        "value_13": "",
+                        "value_14": "",
+                        "value_15": "",
+                        "value_16": "",
+                        "value_17": "",
+                        "value_18": "",
+                        "value_19": "",
+                        "value_20": "",
+                        "view_button_background": "",
+                        "view_button_text_color": ""
+                    }
+                },
+                "values_NXDHzk": {
+                    "type": "values",
+                    "settings": {
+                        "product": "",
+                        "value_1": "<h4><strong>Edgerunner<\/strong><\/h4>",
+                        "value_2": "<p><strong>$2999<\/strong><\/p>",
+                        "value_3": "<p><strong>Dual 1400W<\/strong><\/p>",
+                        "value_4": "<p><strong>110km*<\/strong><\/p>",
+                        "value_5": "<p><strong>85km\/h* <\/strong><\/p>",
+                        "value_6": "<p><strong>Yes<\/strong><\/p>",
+                        "value_7": "<p><strong>150kg<\/strong><\/p>",
+                        "value_8": "<p><strong>IPX6<\/strong><\/p>",
+                        "value_9": "<p><strong>24-Month<\/strong><\/p>",
+                        "value_10": "",
+                        "value_11": "",
+                        "value_12": "",
+                        "value_13": "",
+                        "value_14": "",
+                        "value_15": "",
+                        "value_16": "",
+                        "value_17": "",
+                        "value_18": "",
+                        "value_19": "",
+                        "value_20": "",
+                        "view_button_background": "",
+                        "view_button_text_color": ""
+                    }
+                },
+                "values_dcQXFE": {
+                    "type": "values",
+                    "settings": {
+                        "product": "",
+                        "value_1": "<h4><strong>VSETT 10 Apex<\/strong><\/h4>",
+                        "value_2": "<p>$4599<\/p>",
+                        "value_3": "<p><strong>Dual 1400W<\/strong><\/p>",
+                        "value_4": "<p>90km*<\/p>",
+                        "value_5": "<p>80km\/h*<\/p>",
+                        "value_6": "<p>No<\/p>",
+                        "value_7": "<p>130kg<\/p>",
+                        "value_8": "<p>IPX5<\/p>",
+                        "value_9": "<p>12-Month<\/p>",
+                        "value_10": "",
+                        "value_11": "",
+                        "value_12": "",
+                        "value_13": "",
+                        "value_14": "",
+                        "value_15": "",
+                        "value_16": "",
+                        "value_17": "",
+                        "value_18": "",
+                        "value_19": "",
+                        "value_20": "",
+                        "view_button_background": "",
+                        "view_button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "headings_n6UMeH",
+                "values_TExcmC",
+                "values_NXDHzk",
+                "values_dcQXFE"
+            ],
+            "name": "Comparison table",
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "Edgerunner vs. The Competition",
+                "content": "",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "max_rows": 5,
+                "view_all_text": "View all",
+                "view_less_text": "View less",
+                "view_product": "View",
+                "show_product_info": false,
+                "show_product_image": false,
+                "show_product_swatch": false,
+                "viewing_product": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#bfa40e",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "chart_background": "",
+                "chart_text_color": "#000000",
+                "chart_true_false_color": ""
+            }
+        },
+        "rich_text_zV7eKq": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_kWtTYr": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "The Details That Matter.",
+                        "heading_tag": "h3",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                },
+                "richtext_CrUtBH": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p>Stability at speed, comfort over distance, and a frame that doesn't assume you're built like a mannequin.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_kWtTYr",
+                "richtext_CrUtBH"
+            ],
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#bfa40e"
+            }
+        },
+        "multi_column_XcPXqB": {
+            "type": "multi-column",
+            "blocks": {
+                "item_j8hiza": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/150KG_4.svg",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Max. Load",
+                        "heading_tag": "h4",
+                        "content": "<p>A frame and deck engineered to handle adult riders without flex or strain.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_Nm6fej": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/150KG_3.svg",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Ground Clearance",
+                        "heading_tag": "h4",
+                        "content": "<p>Enough clearance to handle gutters, speed bumps, and uneven roads without scraping.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_AK7xdG": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/150KG_5.svg",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Tyre Size",
+                        "heading_tag": "h4",
+                        "content": "<p>10 inches of tubeless, high-performance rubber. Fewer failure points. More grip. Better ride.<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                },
+                "item_fAAezK": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/150KG_6.svg",
+                        "show_controls": false,
+                        "column_size": "4",
+                        "title": "Recommended Height",
+                        "heading_tag": "h4",
+                        "content": "<p>A deck height and handlebar position calibrated for riders from 5'5\" - 6'5\".<\/p>",
+                        "link_url": "",
+                        "link_text": "",
+                        "link_style": "link"
+                    }
+                }
+            },
+            "block_order": [
+                "item_j8hiza",
+                "item_Nm6fej",
+                "item_AK7xdG",
+                "item_fAAezK"
+            ],
+            "name": "Multi-column",
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": true,
+                "gap": "small",
+                "text_alignment": "center",
+                "subheading": "",
+                "title": "",
+                "content": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#1a1a1a"
+            }
+        },
+        "video_mMLYjc": {
+            "type": "video",
+            "blocks": {
+                "heading_bP3LQQ": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "The Full Breakdown",
+                        "heading_tag": "h3"
+                    }
+                },
+                "play_PYXkUk": {
+                    "type": "play",
+                    "settings": {}
+                }
+            },
+            "block_order": [
+                "heading_bP3LQQ",
+                "play_PYXkUk"
+            ],
+            "name": "Video",
+            "settings": {
+                "full_width": false,
+                "allow_transparent_header": false,
+                "autoplay": false,
+                "video_size": "auto",
+                "external_video_url": "https:\/\/youtu.be\/pHwVD5O13fY",
+                "poster": "shopify:\/\/shop_images\/DSC00138.webp",
+                "text_color": "#bfa40e",
+                "overlay_color": "#000000",
+                "overlay_opacity": 40
+            }
+        },
+        "faq_dxbhFr": {
+            "type": "faq",
+            "blocks": {
+                "item_JDdnKR": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Is TSC Aussie owned and operated?",
+                        "content": "<p>Yes. The Simple Commute aka TSC was founded in March 2024 and officially launched in September 2024 by Hamlet and Ben here in Melbourne. <\/p><p>It’s now proudly owned and run by 3 young Aussies - Hamlet, Ben and Puneet. All our operations, from customer service to logistics and repairs, are handled right here in Melbourne. Head to our <a href=\"https:\/\/thesimplecommute.com.au\/pages\/about-us\">About Us<\/a> page to learn more about the team and our story.<\/p>"
+                    }
+                },
+                "item_GJDhGh": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Why should I choose TSC over other brands?",
+                        "content": "<p>Because we actually care about you, not just the sale. At TSC, you get <strong>local Aussie support<\/strong>, <strong>fair pricing<\/strong>, and scooters that are <strong>built and tested for Australian roads<\/strong>. We only work with <strong>highly reputable manufacturers<\/strong>, and every model we release goes through strict <strong>global-standard testing<\/strong> — our scooters and batteries hold some of the <strong>highest safety certifications in the industry<\/strong>.<\/p><p>Most importantly, <strong>we value customer relationships more than sales<\/strong>. Whether you’re just browsing or ready to buy, you’ll always get honest advice and genuine support. That’s what sets us apart.<\/p>"
+                    }
+                },
+                "item_LGdYBL": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Is the Edgerunner electric scooter legal to ride in public?",
+                        "content": "<p>Yes. All our electric scooters are capped at 25 km\/h to comply with Australian regulations, making them legal to ride in public. <\/p>"
+                    }
+                },
+                "item_GFmhme": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Does the 250w rule apply to TSC electric scooters?",
+                        "content": "<p>No. The 250w rule applies only to e-bikes, not e-scooters. Our electric scooters are classified as Personal Mobility Devices (PMDs) in Australia. The key regulation for PMDs is that they must be capped at 25 km\/h for public use, regardless of motor wattage.<\/p>"
+                    }
+                },
+                "item_8k6FQb": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Does the Edgerunner ride well on the road?",
+                        "content": "<p>Yes. it rides very smoothly on the road thanks to its large 10-inch high performance tyre setup. It handles city streets with ease and doesn’t make much noise while cruising.<\/p>"
+                    }
+                },
+                "item_daankJ": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What makes Edgerunner different from other electric scooters?",
+                        "content": "<p>The Edgerunner was engineered for riders who expect equipment, not experiments. Where most high-performance scooters prioritise raw speed over refinement, the Edgerunner pairs genuine capability — 4,200W, 85km\/h, 30-degree climb — with a throttle map tuned for linear, predictable acceleration, a hydraulic steering damper that eliminates high-speed wobble, and sealed IP56 componentry built for real weather. <\/p><p>It's backed by Australian support, pre-ride inspection, and the kind of spec transparency that most brands avoid. This isn't a toy with a top-speed sticker. It's a machine designed to perform reliably, every ride, without drama.<\/p>"
+                    }
+                },
+                "item_RebULn": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How can I properly secure my Edgerunner electric scooter?",
+                        "content": "<p>GPS tracking sounds handy but can be bypassed. <\/p><p>The best way is to take it with you whenever possible. If you can’t, use a strong lock, or even better, multiple locks, to make thieves think twice.<\/p><p>TSC offers tough, high-quality security options like disc brake locks, key locks, heavy-duty chains and alarm locks. Check out our<strong> <\/strong><a href=\"https:\/\/thesimplecommute.com.au\/collections\/e-scooter-accessories\"><strong>accessories page<\/strong><\/a><strong> <\/strong>to keep your Edgerunner safe.<\/p>"
+                    }
+                },
+                "item_QHiwfX": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How can I unlock the speed?",
+                        "content": "<p>You can unlock the speed for private use by emailing our team directly <strong>after purchase <\/strong>with your order number ready.<\/p><p>Email our customer support to learn more about the unlock process.<\/p>"
+                    }
+                },
+                "item_JHTf7r": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Where can I ride my electric scooter?",
+                        "content": "<p>In Australia, the regulatory landscape for electric scooters is a patchwork of diverse legislation, with each state and territory crafting its own unique set of guidelines. These region-specific rules govern various aspects of e-scooter usage, including rider eligibility, permissible operating areas, and speed limitations.<\/p><p>Before investing in an electric scooter, it's crucial for potential owners to familiarise themselves with the local regulations that will impact their riding experience. Navigating this complex web of laws can be challenging, so make sure you do your research. <\/p><p>Please visit the links below for the regulations in your state:<\/p><h6><a href=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\" target=\"_blank\" title=\"https:\/\/www.police.vic.gov.au\/electric-powered-scooters-e-scooters\">📍 VIC<\/a><\/h6><h6><a href=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/mylicence.sa.gov.au\/road-rules\/personal-mobility-devices\">📍 SA<\/a><\/h6><h6><a href=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\" target=\"_blank\" title=\"https:\/\/www.qld.gov.au\/transport\/safety\/rules\/wheeled-devices\/personal-mobility-devices\">📍 QLD<\/a><\/h6><p><a href=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\" target=\"_blank\" title=\"https:\/\/www.wa.gov.au\/organisation\/road-safety-commission\/erideables\"><strong>📍 WA<\/strong><\/a><\/p><p><a href=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.act.gov.au\/travel-options\/e-scooters\"><strong>📍 ACT<\/strong><\/a><\/p><h6><a href=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\" target=\"_blank\" title=\"https:\/\/www.transport.tas.gov.au\/road_safety_and_rules\/personal_mobility_devices\"><strong>📍 TAS<\/strong><\/a><\/h6><h6><a href=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\" target=\"_blank\" title=\"https:\/\/www.transport.nsw.gov.au\/roadsafety\/road-users\/e-scooters\">📍 NSW <\/a><\/h6><p><a href=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\" target=\"_blank\" title=\"https:\/\/nt.gov.au\/driving\/safety\/electric-scooters-and-bikes\"><strong>📍 NT<\/strong><\/a><\/p>"
+                    }
+                },
+                "item_UPNYHT": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are your batteries safe?",
+                        "content": "<p>Yes, our batteries are extremely safe. They meet the highest global safety certifications - one of the most rigorous battery safety standards in the world. Additionally, our smart Battery Management System (BMS) features six layers of protection including short circuit protection, overcurrent protection, and temperature resistance.<\/p>"
+                    }
+                },
+                "item_he3xRq": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are there any financing options?",
+                        "content": "<p>Yes, we offer flexible financing options. You can choose from:<\/p><p><strong>Zip Pay<\/strong> - Split your purchase into interest-free installments<br\/><strong>Afterpay<\/strong> - Buy now, pay later in 4 easy payments<\/p><p>Both options are available at checkout.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_JDdnKR",
+                "item_GJDhGh",
+                "item_LGdYBL",
+                "item_GFmhme",
+                "item_8k6FQb",
+                "item_daankJ",
+                "item_RebULn",
+                "item_QHiwfX",
+                "item_JHTf7r",
+                "item_UPNYHT",
+                "item_he3xRq"
+            ],
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available 7 days a week: 10am-5pm AEST.",
+                "answer_time": "Average answer time: 40 minutes",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        },
+        "1766659249729fb65e": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_all_reviews_page_QCVr9M": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_page\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {
+                        "max_width": 1200,
+                        "review_source": "all",
+                        "show_tabs": false,
+                        "show_first": "product",
+                        "empty_state": "empty_widget"
+                    }
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_all_reviews_page_QCVr9M"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        }
+    },
+    "order": [
+        "main",
+        "slideshow_Jhy4YD",
+        "featured_product_bzLGfT",
+        "scrolling_text_i9ihid",
+        "rich_text_KBxdTm",
+        "media_grid_UCTXei",
+        "rich_text_cqkeTd",
+        "multi_column_yAdbpW",
+        "media_with_text_4Hir6m",
+        "comparison_table_fHdNJ3",
+        "rich_text_zV7eKq",
+        "multi_column_XcPXqB",
+        "video_mMLYjc",
+        "faq_dxbhFr",
+        "1766659249729fb65e"
+    ]
+}

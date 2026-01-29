@@ -315,7 +315,11 @@
           }
         }
       },
-      "block_order": ["heading_3z8qAx", "heading_UpYbJg", "richtext_RqgDn4"],
+      "block_order": [
+        "heading_3z8qAx",
+        "heading_UpYbJg",
+        "richtext_RqgDn4"
+      ],
       "settings": {
         "full_width": true,
         "content_width": "small",
@@ -351,7 +355,9 @@
           }
         }
       },
-      "block_order": ["video_UW4Mtf"],
+      "block_order": [
+        "video_UW4Mtf"
+      ],
       "settings": {
         "full_width": true,
         "allow_transparent_header": true,
@@ -646,7 +652,11 @@
           }
         }
       },
-      "block_order": ["tab_fyTQHc", "tab_MehWVA", "tab_8tePjy"],
+      "block_order": [
+        "tab_fyTQHc",
+        "tab_MehWVA",
+        "tab_8tePjy"
+      ],
       "settings": {
         "full_width": true,
         "content_size": "medium",
@@ -669,7 +679,9 @@
           "settings": {}
         }
       },
-      "block_order": ["judge_me_reviews_review_widget_Pm6iFf"],
+      "block_order": [
+        "judge_me_reviews_review_widget_Pm6iFf"
+      ],
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": false,
@@ -704,7 +716,11 @@
           }
         }
       },
-      "block_order": ["item_JAqw6b", "item_J4WHUj", "item_CgYzPC"],
+      "block_order": [
+        "item_JAqw6b",
+        "item_J4WHUj",
+        "item_CgYzPC"
+      ],
       "disabled": true,
       "settings": {
         "full_width": true,
@@ -732,7 +748,11 @@
       "type": "related-products",
       "settings": {
         "recommendations_count": 3,
-        "products": ["e-scooter-sport-vent-helmet", "bike-lock", "simple-care"],
+        "products": [
+          "e-scooter-sport-vent-helmet",
+          "bike-lock",
+          "simple-care"
+        ],
         "full_width": true,
         "stack_products": true,
         "show_progress_bar": false,

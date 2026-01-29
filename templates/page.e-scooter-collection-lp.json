@@ -1,1 +1,911 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"content_width":"80ch"}},"slideshow_Jhy4YD":{"type":"slideshow","blocks":{"video_cnHkFj":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Kaiju Cut.mp4","mobile_video":"shopify:\/\/files\/videos\/E-Scooter TSC COLLECTION CAR AD -- - Made with Clipchamp.mp4","content_max_width":660,"mobile_text_position":"place-self-end-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"Loved by 2,000+ Aussie Riders","title":"Australia's Most Trusted Electric Scooter Brand","heading_tag":"h1","button_text":"Learn More","button_link":"shopify:\/\/collections\/scooters","text_color":"#ffffff","button_background":"#ffffff","button_text_color":"#000000","overlay_color":"#000000","overlay_opacity":16,"background":"","background_gradient":""}}},"block_order":["video_cnHkFj"],"settings":{"full_width":true,"allow_transparent_header":true,"show_initial_transition":false,"image_size":"md","controls_type":"dots","transition_type":"fade_with_text","autoplay":false,"cycle_speed":6,"background":"#f2f2f2","background_gradient":""}},"scrolling_text_GBxCnQ":{"type":"scrolling-text","custom_css":[],"settings":{"full_width":true,"text":"Proven. Trusted. Australian-Backed.","text_size":"medium","text_style":"fill","scrolling_mode":"auto","scrolling_speed":10,"background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"linear-gradient(180deg, rgba(255, 129, 129, 1), rgba(254, 91, 124, 1) 49%, rgba(255, 140, 162, 1) 100%)"}},"image_link_blocks_4MnwDC":{"type":"image-link-blocks","blocks":{"item_x64Wzn":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/DSC05755.webp","stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item_F837eP":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/DSC05713.webp","stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item_DVftg6":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/DSC05593.webp","stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item_pTTEkY":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/DSC04646_3.webp","stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item_6NXCpp":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/kaiju-rear-tire-setup.webp","stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item_CEViXC":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/DSC05740.webp","stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}}},"block_order":["item_x64Wzn","item_F837eP","item_DVftg6","item_pTTEkY","item_6NXCpp","item_CEViXC"],"settings":{"full_width":true,"block_size":"medium","subheading":"","title":"","content":"","link_url":"","link_text":"","background":"#000000","background_gradient":"","text_color":"#ffffff","heading_color":"","heading_gradient":""}},"rich_text_hM6Tnm":{"type":"rich-text","blocks":{"heading_PRtcpq":{"type":"heading","settings":{"text":"See Why Aussie Riders Choose Us","heading_tag":"h1","text_color":"#ffffff","gradient":"linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)"}},"richtext_bpGRTt":{"type":"richtext","settings":{"content":"<h6><strong>Rated 5\/5 on Google and Facebook, and 4.9\/5 on Judge.me by Riders Across Australia<\/strong><\/h6>"}},"image_gh4KWk":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Add_a_heading_8.png","width_mode":"custom","max_width":220,"mobile_max_width":120}},"page_WeB9jN":{"type":"page","settings":{"page":"e-scooter-collection"}},"button_hHTxFQ":{"type":"button","settings":{"style":"fill","size":"xl","text":"Learn More","url":"shopify:\/\/collections\/scooters","background":"#ffffff","text_color":"#000000"}}},"block_order":["heading_PRtcpq","richtext_bpGRTt","image_gh4KWk","page_WeB9jN","button_hHTxFQ"],"custom_css":[".button,.btn {margin: 0 !important;}"],"settings":{"full_width":true,"content_width":"large","text_position":"center","background":"#000000","background_gradient":"","text_color":"#ffffff"}},"text_with_icons_qeVEy7":{"type":"text-with-icons","blocks":{"item_Bi49dR":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/Untitled_design_73.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Australian Owned","content":"<p>By 3 Young Aussie Mates<\/p>"}},"item_P3ACnc":{"type":"item","settings":{"icon":"picto-shield","custom_icon":"shopify:\/\/shop_images\/Untitled_design_75.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"24-Month Warranty","content":"<p>Industry-leading coverage<\/p>"}},"item_mbN7JG":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/Untitled_design_74.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Built For Aussies","content":"<p>Engineered for Australian roads and weather<\/p>"}},"item_xefEVJ":{"type":"item","settings":{"icon":"picto-box","custom_icon":"shopify:\/\/shop_images\/Untitled_design_76.webp","mobile_icon_width":80,"icon_width":80,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Free Shipping","content":"<p>Free shipping Australia-wide, including rural and remote areas<\/p>"}}},"block_order":["item_Bi49dR","item_P3ACnc","item_mbN7JG","item_xefEVJ"],"name":"Text with icons","settings":{"full_width":true,"stack_on_mobile":true,"title":"","heading_tag":"h5","text_alignment":"center","icon_spacing":"small","background":"#000000","background_gradient":"","text_color":"#ffffff"}},"rich_text_de69yV":{"type":"rich-text","blocks":{"heading_xxkEJY":{"type":"heading","settings":{"text":"Simple  Designs That Just Work.","heading_tag":"h1","text_color":"#ffffff","gradient":""}}},"block_order":["heading_xxkEJY"],"custom_css":[],"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"#000000","background_gradient":"","text_color":""}},"images_with_text_scrolling_7dQdWU":{"type":"images-with-text-scrolling","blocks":{"item_X6jg6j":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/UWU03848.webp","icon":"none","icon_width":48,"title":"Kaiju","content":"<p>The Kaiju combines 3600W of peak power, rugged all-terrain capability, and 100km range—your ultimate companion for any adventure.<br\/><\/p>"}},"item_GrgDxH":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/UWU03932.jpg","icon":"none","icon_width":48,"title":"Aurora","content":"<p>Aurora delivers 1100W of power, 100km range, and a removable battery—making it the perfect commuter e-scooter for riders who want reliability without compromise.<br\/><\/p>"}},"item_LbWgib":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Astro_E-Scooter_Studio_User_Pic.jpg","icon":"none","icon_width":48,"title":"Astro","content":"<p>Astro delivers 800W of power, 65km range, and true portability at 18kg—making it the perfect everyday e-scooter for riders who want smart commuting without overpaying.<br\/><\/p>"}}},"block_order":["item_X6jg6j","item_GrgDxH","item_LbWgib"],"name":"Images and text scrolling","settings":{"full_width":true,"stack_on_mobile":false,"show_counter":true,"desktop_image_effect":"reveal","image_position":"end","background":"#000000","background_gradient":"","text_color":"#ffffff","heading_color":"","heading_gradient":""}},"media_with_text_rF4A7n":{"type":"media-with-text","blocks":{"video_UbqhCJ":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/0706.mp4","external_video_url":"","autoplay":true,"media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":48,"subheading":"","title":"Built for the Australian Terrain","content":"<p>Engineered for Australian terrain and proven in real-world conditions, our e-scooters deliver the durability and reliability you need. From smooth city commutes to rugged adventures, we've got your journey covered.<\/p>","link_text":"Explore","link_url":"shopify:\/\/collections\/scooters","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)","button_background":"#ffffff","button_text_color":"#000000"}}},"block_order":["video_UbqhCJ"],"custom_css":["\/* Mobile - Media with Text Custom Styling *\/.media-with-text {margin-block: 0px; \/* Top and bottom margin *\/ margin-inline: 0px; \/* Left and right margin *\/}",".media-with-text__content {padding: 15px 20px !important; \/* Override existing padding: top\/bottom left\/right *\/}"],"settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"media_with_text_y3dFUH":{"type":"media-with-text","blocks":{"image_DCeJHA":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/The-Simple-Commute-Co-Founders.jpg","media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":48,"subheading":"","title":"Tired of Broken Promises? So Were We.","content":"<p>Founded by three young Aussies, The Simple Commute was started to fill a massive gap in the market for reliable e-scooters with genuine local support. We were tired of seeing riders left stranded by overseas companies with broken promises and non-existent service.<\/p>","link_text":"","link_url":"","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)","button_background":"","button_text_color":""}}},"block_order":["image_DCeJHA"],"custom_css":["\/* Mobile - Media with Text Custom Styling *\/.media-with-text {margin-block: 0px; \/* Top and bottom margin *\/ margin-inline: 0px; \/* Left and right margin *\/}",".media-with-text__content {padding: 15px 20px !important; \/* Override existing padding: top\/bottom left\/right *\/}"],"settings":{"full_width":false,"alternate_media_position":false,"spacing":"none"}},"testimonials_6Ek4t9":{"type":"testimonials","blocks":{"testimonial_aCQ8TH":{"type":"testimonial","settings":{"round_avatar":true,"show_rating":true,"rating":5,"author":"Chris D.","title":"","content":"<p>I reached out to The Simple Commute  regarding the Kaiju Electric Scooter, and despite being located in Adelaide, I received absolutely exceptional customer service. The team was incredibly responsive, thoroughly answered all my questions, and took the time to discuss their products with genuine enthusiasm and expertise. Special thanks to Ben from The Simple Commute Melbourne for his outstanding support with my purchase.<\/p>"}},"testimonial_UNie9B":{"type":"testimonial","settings":{"round_avatar":true,"show_rating":true,"rating":5,"author":"Darren B.","title":"","content":"<p>The Simple Commute delivered an excellent experience that far exceeded my expectations. Lightning-fast responses to every question, outstanding after-sales service, and nothing was ever too much trouble. My Kaiju E-Scooter arrived quickly and in perfect condition. On my first ride, it effortlessly climbed my steep 20-degree driveway in first gear.<\/p>"}},"testimonial_MQWJHr":{"type":"testimonial","settings":{"round_avatar":true,"show_rating":true,"rating":5,"author":"Jed W.","title":"","content":"<p>Ordered my Aurora from The Simple Commute and had it delivered within a week! The assembly was incredibly straightforward with clear, simple instructions that made setup a breeze. Whether I'm cruising down to the shops or just finding any excuse to get out of the house, I honestly haven't gotten off this thing since it arrived. It's become my go-to for everything!<\/p>"}}},"block_order":["testimonial_aCQ8TH","testimonial_UNie9B","testimonial_MQWJHr"],"name":"Testimonials","settings":{"full_width":true,"stack_testimonials":false,"subheading":"","title":"Here's What Our Fans Have To Say","content":"","link_url":"","link_text":"","background":"","background_gradient":"","text_color":"#ffffff","heading_color":"","heading_gradient":"","testimonial_card_background":"","testimonial_card_text_color":""}},"media_with_text_zcxrjf":{"type":"media-with-text","blocks":{"image_HnieRr":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NEW_MODEL_2.webp","media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":48,"subheading":"","title":"The Everyday Commuter E-Scooter","content":"","link_text":"Shop Now","link_url":"shopify:\/\/products\/astro","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#ffffff","button_text_color":"#000000"}},"image_UptPez":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NEW_MODEL_3.webp","media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":48,"subheading":"","title":"The Best Value for Money E-Scooter Under $2,000","content":"","link_text":"Shop Now","link_url":"shopify:\/\/products\/kaiju","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#ffffff","button_text_color":"#000000"}},"image_4XzpNU":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/NEW_MODEL_4.png","media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":48,"subheading":"","title":"The Ultimate Long Range E-Scooter","content":"","link_text":"Shop Now","link_url":"shopify:\/\/products\/aurora","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#ffffff","button_text_color":"#000000"}}},"block_order":["image_HnieRr","image_UptPez","image_4XzpNU"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"small"}},"comparison_table_yRUPmG":{"type":"comparison-table","blocks":{"headings_gynngY":{"type":"headings","settings":{"heading_1":"Made For","heading_2":"Max. Speed","heading_3":"Max. Range","heading_4":"Peak Motor Power","heading_5":"Tyre Type","heading_6":"","heading_7":"","heading_8":"","heading_9":"","heading_10":"","heading_11":"","heading_12":"","heading_13":"","heading_14":"","heading_15":"","heading_16":"","heading_17":"","heading_18":"","heading_19":"","heading_20":""}},"values_jWUkXJ":{"type":"values","settings":{"product":"kaiju","value_1":"<p>Adventure Seekers<\/p>","value_2":"<p>50km\/h*<\/p>","value_3":"<p>100km*<\/p>","value_4":"<p>3600W<\/p>","value_5":"<p>11\" all-terrain tubeless tyre<br\/><br\/><\/p>","value_6":"","value_7":"","value_8":"","value_9":"","value_10":"","value_11":"","value_12":"","value_13":"","value_14":"","value_15":"","value_16":"","value_17":"","value_18":"","value_19":"","value_20":"","view_button_background":"","view_button_text_color":""}},"values_RwEzEh":{"type":"values","settings":{"product":"aurora","value_1":"<p>Long Range Commuters<\/p>","value_2":"<p>40km\/h*<\/p>","value_3":"<p>100km*<\/p>","value_4":"<p>1100W<\/p>","value_5":"<p>10\" self-healing tubeless tyre<\/p>","value_6":"","value_7":"","value_8":"","value_9":"","value_10":"","value_11":"","value_12":"","value_13":"","value_14":"","value_15":"","value_16":"","value_17":"","value_18":"","value_19":"","value_20":"","view_button_background":"","view_button_text_color":""}},"values_N4eFcc":{"type":"values","settings":{"product":"astro","value_1":"<p>Everyday Commuters<\/p>","value_2":"<p>32km\/h*<\/p>","value_3":"<p>65km*<\/p>","value_4":"<p>800W<\/p>","value_5":"<p>10\" tubeless front tyre and tubed rear tyre<\/p>","value_6":"","value_7":"","value_8":"","value_9":"","value_10":"","value_11":"","value_12":"","value_13":"","value_14":"","value_15":"","value_16":"","value_17":"","value_18":"","value_19":"","value_20":"","view_button_background":"","view_button_text_color":""}}},"block_order":["headings_gynngY","values_jWUkXJ","values_RwEzEh","values_N4eFcc"],"name":"Comparison table","settings":{"full_width":true,"subheading":"","title":"Find Your Perfect Ride","content":"<p>Both models feature the same quality, safety, and warranty—choose based on how you ride.<\/p>","button_text":"Explore our Collection","button_url":"shopify:\/\/collections\/scooters","text_position":"start","max_rows":4,"view_all_text":"","view_less_text":"","view_product":"View","show_product_info":true,"show_product_image":true,"show_product_swatch":true,"viewing_product":"","background":"#000000","background_gradient":"","text_color":"#ffffff","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","chart_background":"#1a1a1a","chart_text_color":"#ffffff","chart_true_false_color":""}},"impact_text_WAf9g8":{"type":"impact-text","blocks":{"item_wrHFqP":{"type":"item","settings":{"title":"TSC CREW","subheading":"Join Thousands of Riders Who've Made The Switch","content":"","button_text":"","button_url":"","animate_impact_text":false,"animate_impact_text_duration":2}}},"block_order":["item_wrHFqP"],"custom_css":[".impact-text {margin: 0 !important; padding: 0 !important;}"],"name":"Impact text","settings":{"full_width":true,"stack_mobile":true,"text_alignment":"center","impact_text_style":"fill","text_divider":"none","impact_text_size_ratio":1,"background":"#000000","background_gradient":"","heading_text_color":"#f83a3a","heading_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"17521571085ecb6aaf":{"type":"apps","blocks":{"judge_me_reviews_medals_U7db8d":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"judge_me_reviews_featured_carousel_npbBiD":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"maxwidth":1080}}},"block_order":["judge_me_reviews_medals_U7db8d","judge_me_reviews_featured_carousel_npbBiD"],"settings":{"full_width":true,"remove_vertical_spacing":true,"remove_horizontal_spacing":true,"background":"#000000","background_gradient":"","text_color":"#000000"}},"faq_7ycYLM":{"type":"faq","blocks":{"item_V3THJ7":{"type":"item","settings":{"title":"Are your e-scooters legal to ride in Australia?","content":"<p>The legality of riding e-scooters in Australia varies by state and territory. In some places, e-scooters are permitted on roads and bike paths, while other areas may restrict their use to private property. At <strong>The Simple Commute<\/strong>, we recommend checking your local laws to ensure compliance with speed limits, helmet requirements, and road access rules.<\/p><p>Our e-scooters are designed to meet safety standards, making them suitable for regions where they are legal to ride. We always encourage responsible riding and staying informed about the latest regulations in your area.<\/p>"}},"item_PbQgCA":{"type":"item","settings":{"title":"What is the warranty and how does it work?","content":"<p>We offer a Limited Warranty for 24 months from the date of purchase, covering defects in materials and workmanship. The warranty process involves contacting Customer Support with a description of the defect, proof of purchase, serial number, and relevant photos\/videos. If the defect is covered, they will repair or replace the part at no cost to you. <\/p><p>Shipping costs for returning defective products are covered by us. The warranty does not cover damage caused by accidents, misuse, unauthorized repairs, normal wear and tear, or cosmetic damage. Key parts like the frame is covered for 2 years and battery is covered for 1 year.<\/p>"}},"item_8VACTk":{"type":"item","settings":{"title":"Do you offer servicing?","content":"<p>You can service your e-scooter by bringing it to The Simple Commute's repair center (8\/1001 Mountain Highway, Boronia, Melbourne), any of our repair network partners or you can ship it to us.<\/p><p>Repair turnaround times vary based on the availability of spare parts, ranging from 3-5 days to a minimum of 30 days. For updates, you can reach out to The Simple Commute team.<\/p>"}},"item_c3RV9d":{"type":"item","settings":{"title":"Do you offer in-store pickup and test rides?","content":"<p>Yes, we offer local pickup and test rides at our Melbourne warehouse! Please get in touch with our team to arrange a time that suits you.<\/p>"}}},"block_order":["item_V3THJ7","item_PbQgCA","item_8VACTk","item_c3RV9d"],"settings":{"full_width":true,"subheading":"","title":"FAQ","content":"","team_avatar_width":160,"support_hours":"Our customer support is available Monday to Sunday: 8am-8:30pm.","answer_time":"","button_text":"","button_url":"","text_position":"center","background":"#000000","background_gradient":"","text_color":"#ffffff","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}}},"order":["main","slideshow_Jhy4YD","scrolling_text_GBxCnQ","image_link_blocks_4MnwDC","rich_text_hM6Tnm","text_with_icons_qeVEy7","rich_text_de69yV","images_with_text_scrolling_7dQdWU","media_with_text_rF4A7n","media_with_text_y3dFUH","testimonials_6Ek4t9","media_with_text_zcxrjf","comparison_table_yRUPmG","impact_text_WAf9g8","17521571085ecb6aaf","faq_7ycYLM"]}
+{
+    "sections": {
+        "main": {
+            "type": "main-page",
+            "disabled": true,
+            "settings": {
+                "content_width": "80ch"
+            }
+        },
+        "slideshow_Jhy4YD": {
+            "type": "slideshow",
+            "blocks": {
+                "video_cnHkFj": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Kaiju Cut.mp4",
+                        "mobile_video": "shopify:\/\/files\/videos\/E-Scooter TSC COLLECTION CAR AD -- - Made with Clipchamp.mp4",
+                        "content_max_width": 660,
+                        "mobile_text_position": "place-self-end-center text-center",
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "subheading": "Loved by 2,000+ Aussie Riders",
+                        "title": "Australia's Most Trusted Electric Scooter Brand",
+                        "heading_tag": "h1",
+                        "button_text": "Learn More",
+                        "button_link": "shopify:\/\/collections\/scooters",
+                        "text_color": "#ffffff",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 16,
+                        "background": "",
+                        "background_gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_cnHkFj"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": true,
+                "show_initial_transition": false,
+                "image_size": "md",
+                "controls_type": "dots",
+                "transition_type": "fade_with_text",
+                "autoplay": false,
+                "cycle_speed": 6,
+                "background": "#f2f2f2",
+                "background_gradient": ""
+            }
+        },
+        "scrolling_text_GBxCnQ": {
+            "type": "scrolling-text",
+            "custom_css": [],
+            "settings": {
+                "full_width": true,
+                "text": "Proven. Trusted. Australian-Backed.",
+                "text_size": "medium",
+                "text_style": "fill",
+                "scrolling_mode": "auto",
+                "scrolling_speed": 10,
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "text_gradient": "linear-gradient(180deg, rgba(255, 129, 129, 1), rgba(254, 91, 124, 1) 49%, rgba(255, 140, 162, 1) 100%)"
+            }
+        },
+        "image_link_blocks_4MnwDC": {
+            "type": "image-link-blocks",
+            "blocks": {
+                "item_x64Wzn": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/DSC05755.webp",
+                        "stretch_image": true,
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "item_F837eP": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/DSC05713.webp",
+                        "stretch_image": true,
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "item_DVftg6": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/DSC05593.webp",
+                        "stretch_image": true,
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "item_pTTEkY": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/DSC04646_3.webp",
+                        "stretch_image": true,
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "item_6NXCpp": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/kaiju-rear-tire-setup.webp",
+                        "stretch_image": true,
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "item_CEViXC": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/DSC05740.webp",
+                        "stretch_image": true,
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                }
+            },
+            "block_order": [
+                "item_x64Wzn",
+                "item_F837eP",
+                "item_DVftg6",
+                "item_pTTEkY",
+                "item_6NXCpp",
+                "item_CEViXC"
+            ],
+            "settings": {
+                "full_width": true,
+                "block_size": "medium",
+                "subheading": "",
+                "title": "",
+                "content": "",
+                "link_url": "",
+                "link_text": "",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "heading_color": "",
+                "heading_gradient": ""
+            }
+        },
+        "rich_text_hM6Tnm": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_PRtcpq": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "See Why Aussie Riders Choose Us",
+                        "heading_tag": "h1",
+                        "text_color": "#ffffff",
+                        "gradient": "linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)"
+                    }
+                },
+                "richtext_bpGRTt": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<h6><strong>Rated 5\/5 on Google and Facebook, and 4.9\/5 on Judge.me by Riders Across Australia<\/strong><\/h6>"
+                    }
+                },
+                "image_gh4KWk": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Add_a_heading_8.png",
+                        "width_mode": "custom",
+                        "max_width": 220,
+                        "mobile_max_width": 120
+                    }
+                },
+                "page_WeB9jN": {
+                    "type": "page",
+                    "settings": {
+                        "page": "e-scooter-collection"
+                    }
+                },
+                "button_hHTxFQ": {
+                    "type": "button",
+                    "settings": {
+                        "style": "fill",
+                        "size": "xl",
+                        "text": "Learn More",
+                        "url": "shopify:\/\/collections\/scooters",
+                        "background": "#ffffff",
+                        "text_color": "#000000"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_PRtcpq",
+                "richtext_bpGRTt",
+                "image_gh4KWk",
+                "page_WeB9jN",
+                "button_hHTxFQ"
+            ],
+            "custom_css": [
+                ".button,.btn {margin: 0 !important;}"
+            ],
+            "settings": {
+                "full_width": true,
+                "content_width": "large",
+                "text_position": "center",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff"
+            }
+        },
+        "text_with_icons_qeVEy7": {
+            "type": "text-with-icons",
+            "blocks": {
+                "item_Bi49dR": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design_73.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Australian Owned",
+                        "content": "<p>By 3 Young Aussie Mates<\/p>"
+                    }
+                },
+                "item_P3ACnc": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-shield",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design_75.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "24-Month Warranty",
+                        "content": "<p>Industry-leading coverage<\/p>"
+                    }
+                },
+                "item_mbN7JG": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design_74.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Built For Aussies",
+                        "content": "<p>Engineered for Australian roads and weather<\/p>"
+                    }
+                },
+                "item_xefEVJ": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-box",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design_76.webp",
+                        "mobile_icon_width": 80,
+                        "icon_width": 80,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Free Shipping",
+                        "content": "<p>Free shipping Australia-wide, including rural and remote areas<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_Bi49dR",
+                "item_P3ACnc",
+                "item_mbN7JG",
+                "item_xefEVJ"
+            ],
+            "name": "Text with icons",
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": true,
+                "title": "",
+                "heading_tag": "h5",
+                "text_alignment": "center",
+                "icon_spacing": "small",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff"
+            }
+        },
+        "rich_text_de69yV": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_xxkEJY": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Simple  Designs That Just Work.",
+                        "heading_tag": "h1",
+                        "text_color": "#ffffff",
+                        "gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "heading_xxkEJY"
+            ],
+            "custom_css": [],
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "images_with_text_scrolling_7dQdWU": {
+            "type": "images-with-text-scrolling",
+            "blocks": {
+                "item_X6jg6j": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/UWU03848.webp",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "title": "Kaiju",
+                        "content": "<p>The Kaiju combines 3600W of peak power, rugged all-terrain capability, and 100km range—your ultimate companion for any adventure.<br\/><\/p>"
+                    }
+                },
+                "item_GrgDxH": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/UWU03932.jpg",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "title": "Aurora",
+                        "content": "<p>Aurora delivers 1100W of power, 100km range, and a removable battery—making it the perfect commuter e-scooter for riders who want reliability without compromise.<br\/><\/p>"
+                    }
+                },
+                "item_LbWgib": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Astro_E-Scooter_Studio_User_Pic.jpg",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "title": "Astro",
+                        "content": "<p>Astro delivers 800W of power, 65km range, and true portability at 18kg—making it the perfect everyday e-scooter for riders who want smart commuting without overpaying.<br\/><\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_X6jg6j",
+                "item_GrgDxH",
+                "item_LbWgib"
+            ],
+            "name": "Images and text scrolling",
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": false,
+                "show_counter": true,
+                "desktop_image_effect": "reveal",
+                "image_position": "end",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "heading_color": "",
+                "heading_gradient": ""
+            }
+        },
+        "media_with_text_rF4A7n": {
+            "type": "media-with-text",
+            "blocks": {
+                "video_UbqhCJ": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/0706.mp4",
+                        "external_video_url": "",
+                        "autoplay": true,
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "subheading": "",
+                        "title": "Built for the Australian Terrain",
+                        "content": "<p>Engineered for Australian terrain and proven in real-world conditions, our e-scooters deliver the durability and reliability you need. From smooth city commutes to rugged adventures, we've got your journey covered.<\/p>",
+                        "link_text": "Explore",
+                        "link_url": "shopify:\/\/collections\/scooters",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000"
+                    }
+                }
+            },
+            "block_order": [
+                "video_UbqhCJ"
+            ],
+            "custom_css": [
+                "\/* Mobile - Media with Text Custom Styling *\/.media-with-text {margin-block: 0px; \/* Top and bottom margin *\/ margin-inline: 0px; \/* Left and right margin *\/}",
+                ".media-with-text__content {padding: 15px 20px !important; \/* Override existing padding: top\/bottom left\/right *\/}"
+            ],
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "media_with_text_y3dFUH": {
+            "type": "media-with-text",
+            "blocks": {
+                "image_DCeJHA": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/The-Simple-Commute-Co-Founders.jpg",
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "subheading": "",
+                        "title": "Tired of Broken Promises? So Were We.",
+                        "content": "<p>Founded by three young Aussies, The Simple Commute was started to fill a massive gap in the market for reliable e-scooters with genuine local support. We were tired of seeing riders left stranded by overseas companies with broken promises and non-existent service.<\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "linear-gradient(180deg, rgba(240, 69, 87, 1), rgba(221, 39, 57, 1) 100%)",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "image_DCeJHA"
+            ],
+            "custom_css": [
+                "\/* Mobile - Media with Text Custom Styling *\/.media-with-text {margin-block: 0px; \/* Top and bottom margin *\/ margin-inline: 0px; \/* Left and right margin *\/}",
+                ".media-with-text__content {padding: 15px 20px !important; \/* Override existing padding: top\/bottom left\/right *\/}"
+            ],
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "none"
+            }
+        },
+        "testimonials_6Ek4t9": {
+            "type": "testimonials",
+            "blocks": {
+                "testimonial_aCQ8TH": {
+                    "type": "testimonial",
+                    "settings": {
+                        "round_avatar": true,
+                        "show_rating": true,
+                        "rating": 5,
+                        "author": "Chris D.",
+                        "title": "",
+                        "content": "<p>I reached out to The Simple Commute  regarding the Kaiju Electric Scooter, and despite being located in Adelaide, I received absolutely exceptional customer service. The team was incredibly responsive, thoroughly answered all my questions, and took the time to discuss their products with genuine enthusiasm and expertise. Special thanks to Ben from The Simple Commute Melbourne for his outstanding support with my purchase.<\/p>"
+                    }
+                },
+                "testimonial_UNie9B": {
+                    "type": "testimonial",
+                    "settings": {
+                        "round_avatar": true,
+                        "show_rating": true,
+                        "rating": 5,
+                        "author": "Darren B.",
+                        "title": "",
+                        "content": "<p>The Simple Commute delivered an excellent experience that far exceeded my expectations. Lightning-fast responses to every question, outstanding after-sales service, and nothing was ever too much trouble. My Kaiju E-Scooter arrived quickly and in perfect condition. On my first ride, it effortlessly climbed my steep 20-degree driveway in first gear.<\/p>"
+                    }
+                },
+                "testimonial_MQWJHr": {
+                    "type": "testimonial",
+                    "settings": {
+                        "round_avatar": true,
+                        "show_rating": true,
+                        "rating": 5,
+                        "author": "Jed W.",
+                        "title": "",
+                        "content": "<p>Ordered my Aurora from The Simple Commute and had it delivered within a week! The assembly was incredibly straightforward with clear, simple instructions that made setup a breeze. Whether I'm cruising down to the shops or just finding any excuse to get out of the house, I honestly haven't gotten off this thing since it arrived. It's become my go-to for everything!<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "testimonial_aCQ8TH",
+                "testimonial_UNie9B",
+                "testimonial_MQWJHr"
+            ],
+            "name": "Testimonials",
+            "settings": {
+                "full_width": true,
+                "stack_testimonials": false,
+                "subheading": "",
+                "title": "Here's What Our Fans Have To Say",
+                "content": "",
+                "link_url": "",
+                "link_text": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "heading_color": "",
+                "heading_gradient": "",
+                "testimonial_card_background": "",
+                "testimonial_card_text_color": ""
+            }
+        },
+        "media_with_text_zcxrjf": {
+            "type": "media-with-text",
+            "blocks": {
+                "image_HnieRr": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NEW_MODEL_2.webp",
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "subheading": "",
+                        "title": "The Everyday Commuter E-Scooter",
+                        "content": "",
+                        "link_text": "Shop Now",
+                        "link_url": "shopify:\/\/products\/astro",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000"
+                    }
+                },
+                "image_UptPez": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NEW_MODEL_3.webp",
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "subheading": "",
+                        "title": "The Best Value for Money E-Scooter Under $2,000",
+                        "content": "",
+                        "link_text": "Shop Now",
+                        "link_url": "shopify:\/\/products\/kaiju",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000"
+                    }
+                },
+                "image_4XzpNU": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/NEW_MODEL_4.png",
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "subheading": "",
+                        "title": "The Ultimate Long Range E-Scooter",
+                        "content": "",
+                        "link_text": "Shop Now",
+                        "link_url": "shopify:\/\/products\/aurora",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000"
+                    }
+                }
+            },
+            "block_order": [
+                "image_HnieRr",
+                "image_UptPez",
+                "image_4XzpNU"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "small"
+            }
+        },
+        "comparison_table_yRUPmG": {
+            "type": "comparison-table",
+            "blocks": {
+                "headings_gynngY": {
+                    "type": "headings",
+                    "settings": {
+                        "heading_1": "Made For",
+                        "heading_2": "Max. Speed",
+                        "heading_3": "Max. Range",
+                        "heading_4": "Peak Motor Power",
+                        "heading_5": "Tyre Type",
+                        "heading_6": "",
+                        "heading_7": "",
+                        "heading_8": "",
+                        "heading_9": "",
+                        "heading_10": "",
+                        "heading_11": "",
+                        "heading_12": "",
+                        "heading_13": "",
+                        "heading_14": "",
+                        "heading_15": "",
+                        "heading_16": "",
+                        "heading_17": "",
+                        "heading_18": "",
+                        "heading_19": "",
+                        "heading_20": ""
+                    }
+                },
+                "values_jWUkXJ": {
+                    "type": "values",
+                    "settings": {
+                        "product": "kaiju",
+                        "value_1": "<p>Adventure Seekers<\/p>",
+                        "value_2": "<p>50km\/h*<\/p>",
+                        "value_3": "<p>100km*<\/p>",
+                        "value_4": "<p>3600W<\/p>",
+                        "value_5": "<p>11\" all-terrain tubeless tyre<br\/><br\/><\/p>",
+                        "value_6": "",
+                        "value_7": "",
+                        "value_8": "",
+                        "value_9": "",
+                        "value_10": "",
+                        "value_11": "",
+                        "value_12": "",
+                        "value_13": "",
+                        "value_14": "",
+                        "value_15": "",
+                        "value_16": "",
+                        "value_17": "",
+                        "value_18": "",
+                        "value_19": "",
+                        "value_20": "",
+                        "view_button_background": "",
+                        "view_button_text_color": ""
+                    }
+                },
+                "values_RwEzEh": {
+                    "type": "values",
+                    "settings": {
+                        "product": "aurora",
+                        "value_1": "<p>Long Range Commuters<\/p>",
+                        "value_2": "<p>40km\/h*<\/p>",
+                        "value_3": "<p>100km*<\/p>",
+                        "value_4": "<p>1100W<\/p>",
+                        "value_5": "<p>10\" self-healing tubeless tyre<\/p>",
+                        "value_6": "",
+                        "value_7": "",
+                        "value_8": "",
+                        "value_9": "",
+                        "value_10": "",
+                        "value_11": "",
+                        "value_12": "",
+                        "value_13": "",
+                        "value_14": "",
+                        "value_15": "",
+                        "value_16": "",
+                        "value_17": "",
+                        "value_18": "",
+                        "value_19": "",
+                        "value_20": "",
+                        "view_button_background": "",
+                        "view_button_text_color": ""
+                    }
+                },
+                "values_N4eFcc": {
+                    "type": "values",
+                    "settings": {
+                        "product": "astro",
+                        "value_1": "<p>Everyday Commuters<\/p>",
+                        "value_2": "<p>32km\/h*<\/p>",
+                        "value_3": "<p>65km*<\/p>",
+                        "value_4": "<p>800W<\/p>",
+                        "value_5": "<p>10\" tubeless front tyre and tubed rear tyre<\/p>",
+                        "value_6": "",
+                        "value_7": "",
+                        "value_8": "",
+                        "value_9": "",
+                        "value_10": "",
+                        "value_11": "",
+                        "value_12": "",
+                        "value_13": "",
+                        "value_14": "",
+                        "value_15": "",
+                        "value_16": "",
+                        "value_17": "",
+                        "value_18": "",
+                        "value_19": "",
+                        "value_20": "",
+                        "view_button_background": "",
+                        "view_button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "headings_gynngY",
+                "values_jWUkXJ",
+                "values_RwEzEh",
+                "values_N4eFcc"
+            ],
+            "name": "Comparison table",
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "Find Your Perfect Ride",
+                "content": "<p>Both models feature the same quality, safety, and warranty—choose based on how you ride.<\/p>",
+                "button_text": "Explore our Collection",
+                "button_url": "shopify:\/\/collections\/scooters",
+                "text_position": "start",
+                "max_rows": 4,
+                "view_all_text": "",
+                "view_less_text": "",
+                "view_product": "View",
+                "show_product_info": true,
+                "show_product_image": true,
+                "show_product_swatch": true,
+                "viewing_product": "",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "chart_background": "#1a1a1a",
+                "chart_text_color": "#ffffff",
+                "chart_true_false_color": ""
+            }
+        },
+        "impact_text_WAf9g8": {
+            "type": "impact-text",
+            "blocks": {
+                "item_wrHFqP": {
+                    "type": "item",
+                    "settings": {
+                        "title": "TSC CREW",
+                        "subheading": "Join Thousands of Riders Who've Made The Switch",
+                        "content": "",
+                        "button_text": "",
+                        "button_url": "",
+                        "animate_impact_text": false,
+                        "animate_impact_text_duration": 2
+                    }
+                }
+            },
+            "block_order": [
+                "item_wrHFqP"
+            ],
+            "custom_css": [
+                ".impact-text {margin: 0 !important; padding: 0 !important;}"
+            ],
+            "name": "Impact text",
+            "settings": {
+                "full_width": true,
+                "stack_mobile": true,
+                "text_alignment": "center",
+                "impact_text_style": "fill",
+                "text_divider": "none",
+                "impact_text_size_ratio": 1,
+                "background": "#000000",
+                "background_gradient": "",
+                "heading_text_color": "#f83a3a",
+                "heading_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "17521571085ecb6aaf": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_medals_U7db8d": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/medals\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                },
+                "judge_me_reviews_featured_carousel_npbBiD": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {
+                        "maxwidth": 1080
+                    }
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_medals_U7db8d",
+                "judge_me_reviews_featured_carousel_npbBiD"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": true,
+                "remove_horizontal_spacing": true,
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#000000"
+            }
+        },
+        "faq_7ycYLM": {
+            "type": "faq",
+            "blocks": {
+                "item_V3THJ7": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Are your e-scooters legal to ride in Australia?",
+                        "content": "<p>The legality of riding e-scooters in Australia varies by state and territory. In some places, e-scooters are permitted on roads and bike paths, while other areas may restrict their use to private property. At <strong>The Simple Commute<\/strong>, we recommend checking your local laws to ensure compliance with speed limits, helmet requirements, and road access rules.<\/p><p>Our e-scooters are designed to meet safety standards, making them suitable for regions where they are legal to ride. We always encourage responsible riding and staying informed about the latest regulations in your area.<\/p>"
+                    }
+                },
+                "item_PbQgCA": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What is the warranty and how does it work?",
+                        "content": "<p>We offer a Limited Warranty for 24 months from the date of purchase, covering defects in materials and workmanship. The warranty process involves contacting Customer Support with a description of the defect, proof of purchase, serial number, and relevant photos\/videos. If the defect is covered, they will repair or replace the part at no cost to you. <\/p><p>Shipping costs for returning defective products are covered by us. The warranty does not cover damage caused by accidents, misuse, unauthorized repairs, normal wear and tear, or cosmetic damage. Key parts like the frame is covered for 2 years and battery is covered for 1 year.<\/p>"
+                    }
+                },
+                "item_8VACTk": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Do you offer servicing?",
+                        "content": "<p>You can service your e-scooter by bringing it to The Simple Commute's repair center (8\/1001 Mountain Highway, Boronia, Melbourne), any of our repair network partners or you can ship it to us.<\/p><p>Repair turnaround times vary based on the availability of spare parts, ranging from 3-5 days to a minimum of 30 days. For updates, you can reach out to The Simple Commute team.<\/p>"
+                    }
+                },
+                "item_c3RV9d": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Do you offer in-store pickup and test rides?",
+                        "content": "<p>Yes, we offer local pickup and test rides at our Melbourne warehouse! Please get in touch with our team to arrange a time that suits you.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_V3THJ7",
+                "item_PbQgCA",
+                "item_8VACTk",
+                "item_c3RV9d"
+            ],
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available Monday to Sunday: 8am-8:30pm.",
+                "answer_time": "",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        }
+    },
+    "order": [
+        "main",
+        "slideshow_Jhy4YD",
+        "scrolling_text_GBxCnQ",
+        "image_link_blocks_4MnwDC",
+        "rich_text_hM6Tnm",
+        "text_with_icons_qeVEy7",
+        "rich_text_de69yV",
+        "images_with_text_scrolling_7dQdWU",
+        "media_with_text_rF4A7n",
+        "media_with_text_y3dFUH",
+        "testimonials_6Ek4t9",
+        "media_with_text_zcxrjf",
+        "comparison_table_yRUPmG",
+        "impact_text_WAf9g8",
+        "17521571085ecb6aaf",
+        "faq_7ycYLM"
+    ]
+}

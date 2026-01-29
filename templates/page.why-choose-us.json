@@ -1,1 +1,337 @@
-{"sections":{"175825806927596d05":{"type":"_blocks","blocks":{"ai_gen_block_4bf649b_iqBUPk":{"type":"ai_gen_block_4bf649b","settings":{"hero_image":"shopify:\/\/shop_images\/118C379A-1A67-482B-811A-8C2926C474DB.jpg","section_height":800,"border_radius":24,"gradient_color_start":"#ff0000","gradient_color_end":"rgba(0,0,0,0)","gradient_opacity":35,"heading":"Why Australians Choose TSC","subheading":"Local support. Fair pricing. Built for Aussie roads. And unlike many, we only partner with highly reputable manufacturers — so you get quality you can actually trust.","button_text":"Shop Scooters","button_link":"shopify:\/\/collections\/scooters","text_alignment":"center","content_max_width":800,"stat_1_value":"2,000+","stat_1_label":"happy riders","stat_2_value":"7 day","stat_2_label":"local support","stat_3_value":"24 month","stat_3_label":"limited warranty","text_color":"#ffffff","highlight_color":"#ffffff","button_color":"#ffffff","button_text_color":"#1a1a1a","button_hover_color":"#cc0000","button_hover_text_color":"#ffffff","stat_value_color":"#ffffff","heading_size":48,"subheading_size":18,"button_text_size":16,"button_border_radius":60,"stat_value_size":32,"stat_label_size":14},"blocks":{}}},"block_order":["ai_gen_block_4bf649b_iqBUPk"],"settings":{}},"1758257584991d4cbe":{"type":"_blocks","blocks":{"ai_gen_block_b17f59c_hLhTUH":{"type":"ai_gen_block_b17f59c","disabled":true,"settings":{"hero_image":"shopify:\/\/shop_images\/kaiju-performance.webp","section_height":700,"heading":"Why Australians Choose  The Simple Commute","subheading":"Local support, fair pricing, and scooters built for Aussie roads. Here's why we're different from the rest.","button_text":"Shop Scooters","button_link":"","text_alignment":"center","content_width":800,"stat_1_value":"2,000+ happy riders","stat_1_label":"","stat_2_value":"24\/7 local support","stat_2_label":"","stat_3_value":"24 month warranty","stat_3_label":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":40,"button_color":"#1a1a1a","button_text_color":"#ffffff","button_hover_color":"#333333","button_hover_text_color":"#ffffff","heading_size":52,"subheading_size":18,"button_text_size":16,"stat_value_size":24,"stat_label_size":14},"blocks":{}}},"block_order":["ai_gen_block_b17f59c_hLhTUH"],"settings":{}},"custom_liquid_haMpff":{"type":"custom-liquid","name":"Custom Liquid","settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"liquid":"<style>\n  \/* Base table styling *\/\n  table.compare-table {\n    width: 100%;\n    border-collapse: separate;\n    border-spacing: 0;\n    font-size: 16px;\n    line-height: 1.6;\n    table-layout: fixed; \/* Ensures columns respect % widths *\/\n    min-width: 900px; \/* desktop default *\/\n  }\n\n  table.compare-table th,\n  table.compare-table td {\n    padding: 18px 16px;\n    border-bottom: 1px solid #e6e6e6;\n    text-align: center;\n    vertical-align: middle;\n    word-wrap: break-word;\n  }\n\n  table.compare-table th:first-child,\n  table.compare-table td:first-child {\n    text-align: left;\n    font-weight: 600;\n  }\n\n  \/* Highlight Simple Commute column *\/\n  table.compare-table th.highlight,\n  table.compare-table td.highlight {\n    background: #fff5f5;\n  }\n\n  \/* Mobile adjustments *\/\n  @media (max-width: 768px) {\n    table.compare-table {\n      min-width: 600px; \/* narrower so ~3 columns visible *\/\n    }\n    table.compare-table th,\n    table.compare-table td {\n      padding: 10px 8px;\n      font-size: 14px;\n    }\n  }\n<\/style>\n\n<section style=\"background:#fff; color:#000; padding:24px 12px;\">\n  <div style=\"max-width:1100px; margin:0 auto;\">\n    <div style=\"overflow-x:auto; -webkit-overflow-scrolling:touch;\">\n      <table class=\"compare-table\">\n        <thead>\n          <tr>\n            <th style=\"width:28%;\"><\/th>\n            <th style=\"width:18%;\">Segway<\/th>\n            <th style=\"width:18%;\" class=\"highlight\">TSC<\/th>\n            <th style=\"width:18%;\">Apollo<\/th>\n            <th style=\"width:18%;\">Kaabo<\/th>\n          <\/tr>\n        <\/thead>\n        <tbody>\n          <tr>\n            <th>Pricing approach<\/th>\n            <td>Varies by retailer<\/td>\n            <td class=\"highlight\">Fair upfront pricing<\/td>\n            <td>Varies by retailer<\/td>\n            <td>Varies by retailer<\/td>\n          <\/tr>\n          <tr>\n            <th>Ownership \/ HQ<\/th>\n            <td>Ninebot, Beijing<\/td>\n            <td class=\"highlight\">Australian owned &amp; operated<\/td>\n            <td>Montreal, Canada<\/td>\n            <td>China<\/td>\n          <\/tr>\n          <tr>\n            <th>Primary manufacturing<\/th>\n            <td>China<\/td>\n            <td class=\"highlight\">Vetted partners, tested in Australia<\/td>\n            <td>Shenzhen, China<\/td>\n            <td>China (Kaabo factories)<\/td>\n          <\/tr>\n          <tr>\n            <th>Local Australian support<\/th>\n            <td>Retailer dependent<\/td>\n            <td class=\"highlight\">Yes — 7 days, Aussie team<\/td>\n            <td>Limited \/ via partners<\/td>\n            <td>Retailer dependent<\/td>\n          <\/tr>\n          <tr>\n            <th>Warranty<\/th>\n            <td>6–12 months typical<\/td>\n            <td class=\"highlight\">24-month frame, 12-month electrics<\/td>\n            <td>6–12 months typical<\/td>\n            <td>6–12 months typical<\/td>\n          <\/tr>\n          <tr>\n            <th>Delivery in Australia<\/th>\n            <td>Varies by seller<\/td>\n            <td class=\"highlight\">Free Australia-wide<\/td>\n            <td>Varies by seller<\/td>\n            <td>Varies by seller<\/td>\n          <\/tr>\n        <\/tbody>\n      <\/table>\n    <\/div>\n  <\/div>\n<\/section>","background":"","background_gradient":"","text_color":""}},"custom_liquid_zai6ki":{"type":"custom-liquid","name":"Custom Liquid","settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"liquid":"<section style=\"padding:60px 20px; text-align:center; background:#fff;\">\n  <h2 style=\"font-size:2rem; font-weight:700; margin-bottom:10px;\">The Simple Commute Difference<\/h2>\n  <p style=\"font-size:1.1rem; color:#555; margin-bottom:40px;\">\n    We're not just another scooter company. We're your local Australian partner in sustainable transport.\n  <\/p>\n\n  <div style=\"display:flex; flex-wrap:wrap; justify-content:center; gap:25px; max-width:1100px; margin:0 auto;\">\n    \n    <!-- Box -->\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">👥<\/div>\n      <h3>Real Aussie Support<\/h3>\n      <span class=\"tag\">Local Team<\/span>\n      <p>Talk to real locals, not overseas call centers. Available 7 days a week with fast, friendly help when you need it.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">🛡️<\/div>\n      <h3>24-Month Warranty<\/h3>\n      <span class=\"tag\">Best in Market<\/span>\n      <p>Industry-leading warranty that actually means something. We stand behind our products with real support.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">📍<\/div>\n      <h3>Built for Aussie Roads<\/h3>\n      <span class=\"tag\">Local Tested<\/span>\n      <p>Tested and optimized for Australian conditions. From city streets to coastal paths, we know what works here.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">⏱️<\/div>\n      <h3>Fast Local Delivery<\/h3>\n      <p>Quick dispatch from Australian warehouses. No waiting weeks for overseas shipping.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">⭐<\/div>\n      <h3>Fair Pricing Promise<\/h3>\n      <p>Transparent pricing with no hidden fees. What you see is what you pay – always.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">🏅<\/div>\n      <h3>Trusted by 2,000+<\/h3>\n      <p>Join thousands of satisfied Australian riders who chose quality and reliability.<\/p>\n    <\/div>\n  <\/div>\n<\/section>\n\n<style>\n  .feature-box {\n    flex:1 1 300px;\n    max-width:320px;\n    padding:25px;\n    border:1px solid #e5e5e5;\n    border-radius:12px;\n    box-shadow:0 2px 6px rgba(0,0,0,0.08);\n    transition: all 0.3s ease;\n    background:#fff;\n  }\n  .feature-box:hover {\n    transform: translateY(-8px);\n    box-shadow:0 8px 18px rgba(0,0,0,0.15);\n  }\n  .feature-icon {\n    font-size:2rem;\n    margin-bottom:12px;\n  }\n  .feature-box h3 {\n    font-size:1.25rem;\n    margin:8px 0;\n    color:#222;\n  }\n  .feature-box p {\n    font-size:0.95rem;\n    color:#555;\n    line-height:1.5;\n  }\n  .tag {\n    display:inline-block;\n    font-size:0.8rem;\n    color:#fff;\n    background:#6ecf82;\n    padding:3px 8px;\n    border-radius:12px;\n    margin-bottom:10px;\n  }\n<\/style>","background":"","background_gradient":"","text_color":""}},"media_with_text_TnAd3A":{"type":"media-with-text","blocks":{"image_TLrYyb":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/aurora_background_helmet_foreground.webp","media_width":50,"media_position":"start","text_position":"place-self-center text-center","icon":"none","icon_width":48,"subheading":"","title":"Built Tough for Australian Conditions","content":"<p>Every scooter we sell is tested for over 1,500 km on real Melbourne streets, from cracked city pavements to dusty gravel tracks. No gimmicks, no fragile parts, just a simple, robust design that’s made to last. Whether you’re cruising through the city or tackling rougher terrain, our scooters are built to handle the everyday challenges of Australian roads.<\/p>","link_text":"","link_url":"","background":"#ffffff","background_gradient":"","text_color":"#000000","text_gradient":"","button_background":"","button_text_color":""}}},"block_order":["image_TLrYyb"],"name":"Media with text","settings":{"full_width":false,"alternate_media_position":false,"spacing":"small"}},"rich_text_BxDNMf":{"type":"rich-text","blocks":{"heading_pL6UiG":{"type":"heading","settings":{"text":"Fair and Honest Pricing","heading_tag":"h3","text_color":"","gradient":""}},"richtext_jUHxW4":{"type":"richtext","settings":{"content":"<p>We believe quality should not come with inflated costs or fake discounts. Our scooters are priced fairly from the beginning, with no hidden surprises at checkout. You can trust that the value you get is real, and that every dollar goes toward durability, performance, and local support.<\/p>"}},"liquid_DJnJnX":{"type":"liquid","settings":{"liquid":"<section style=\"padding:40px 20px; text-align:center;\">\n    \n  <div style=\"display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:900px; margin:0 auto;\">\n    \n    <!-- Us -->\n    <div style=\"flex:1; min-width:260px;  border:2px solid #e63946; border-radius:12px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,0.05);\">\n      <h3 style=\"color:#e63946; font-size:22px; margin-bottom:15px;\">Us<\/h3>\n      <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; color:#333; line-height:1.6;\">\n        <li>✔ Transparent pricing<\/li>\n        <li>✔ Real value every day<\/li>\n        <li>✔ No hidden surprises<\/li>\n      <\/ul>\n    <\/div>\n    \n    <!-- Them -->\n    <div style=\"flex:1; min-width:260px; background:#fff; border:2px solid #ccc; border-radius:12px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,0.05);\">\n      <h3 style=\"color:#666; font-size:22px; margin-bottom:15px;\">Them<\/h3>\n      <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; color:#333; line-height:1.6;\">\n        <li>✘ Inflated prices<\/li>\n        <li>✘ Fake discounts<\/li>\n        <li>✘ Hidden fees<\/li>\n      <\/ul>\n    <\/div>\n    \n  <\/div>\n<\/section>"}}},"block_order":["heading_pL6UiG","richtext_jUHxW4","liquid_DJnJnX"],"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"","background_gradient":"","text_color":""}},"text_with_icons_GYJ86h":{"type":"text-with-icons","blocks":{"item_qiJVCW":{"type":"item","settings":{"icon":"picto-truck","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"Fast Dispatch","content":""}},"item_gmyCQW":{"type":"item","settings":{"icon":"picto-mailbox","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"Metro and Rural","content":""}},"item_8Bmn9x":{"type":"item","settings":{"icon":"picto-coupon","mobile_icon_width":24,"icon_width":32,"icon_background_type":"circle","icon_background":"","icon_color":"","title":"No Extra Fees","content":""}}},"block_order":["item_qiJVCW","item_gmyCQW","item_8Bmn9x"],"name":"Text with icons","settings":{"full_width":true,"stack_on_mobile":false,"title":"Free Delivery, Anywhere in Australia","heading_tag":"h5","text_alignment":"center","icon_spacing":"medium","background":"","background_gradient":"","text_color":""}},"rich_text_4QLAHF":{"type":"rich-text","blocks":{"heading_ejA7pG":{"type":"heading","settings":{"text":"Industry-Leading Warranty and Support","heading_tag":"h3","text_color":"","gradient":""}},"richtext_Uy8pAX":{"type":"richtext","settings":{"content":"<p>Every scooter is backed by our comprehensive warranty and local Aussie support. Frames are covered for 24 months. Key electrical components, including the battery, charger, controller and motor, are covered for 12 months. Structural parts like the front fork, folding system, pedals, handlebar and rims are covered for 12 months. Brake components are covered for 6 months, and accessories such as lights, bell, fenders and kickstand are covered for 3 months. If a defect is approved, we’ll repair or replace the part and cover return shipping.<\/p>"}},"liquid_WLdQXz":{"type":"liquid","settings":{"liquid":"<div style=\"display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:30px; max-width:960px; margin:0 auto;\">\n\n  <!-- Us -->\n  <div style=\"flex:1; min-width:280px; border:2px solid #e63946; border-radius:12px; padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:left;\">\n    <h3 style=\"color:#e63946; font-size:18px; margin:0 0 12px; font-weight:600; text-align:center;\">Us<\/h3>\n    <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; line-height:1.6;\">\n      <li>✔ 24-month frame warranty<\/li>\n      <li>✔ 12-month battery, charger, controller, motor<\/li>\n      <li>✔ 12-month structural parts (fork, fold, pedals, bar, rims)<\/li>\n      <li>✔ 6-month brake components<\/li>\n      <li>✔ 3-month accessories (lights, bell, fenders, kickstand)<\/li>\n      <li>✔ Aussie support, shipping covered on approved claims<\/li>\n    <\/ul>\n  <\/div>\n\n  <!-- Them -->\n  <div style=\"flex:1; min-width:280px; border:2px solid #ccc; border-radius:12px; padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:left;\">\n    <h3 style=\"color:#000; font-size:18px; margin:0 0 12px; font-weight:600; text-align:center;\">Them<\/h3>\n    <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; line-height:1.6;\">\n      <li>✘ 6–12 month coverage typical<\/li>\n      <li>✘ Limited parts support<\/li>\n      <li>✘ Slow, offshore claim handling<\/li>\n      <li>✘ Return shipping often at your cost<\/li>\n    <\/ul>\n  <\/div>\n\n<\/div>"}}},"block_order":["heading_ejA7pG","richtext_Uy8pAX","liquid_WLdQXz"],"disabled":true,"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"","background_gradient":"","text_color":""}},"1758260301d976baf7":{"type":"apps","blocks":{"judge_me_reviews_featured_carousel_Hh38zt":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{"maxwidth":1080}}},"block_order":["judge_me_reviews_featured_carousel_Hh38zt"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}},"main":{"type":"main-page","disabled":true,"settings":{"content_width":"80ch"}}},"order":["175825806927596d05","1758257584991d4cbe","custom_liquid_haMpff","custom_liquid_zai6ki","media_with_text_TnAd3A","rich_text_BxDNMf","text_with_icons_GYJ86h","rich_text_4QLAHF","1758260301d976baf7","main"]}
+{
+    "sections": {
+        "175825806927596d05": {
+            "type": "_blocks",
+            "blocks": {
+                "ai_gen_block_4bf649b_iqBUPk": {
+                    "type": "ai_gen_block_4bf649b",
+                    "settings": {
+                        "hero_image": "shopify:\/\/shop_images\/118C379A-1A67-482B-811A-8C2926C474DB.jpg",
+                        "section_height": 800,
+                        "border_radius": 24,
+                        "gradient_color_start": "#ff0000",
+                        "gradient_color_end": "rgba(0,0,0,0)",
+                        "gradient_opacity": 35,
+                        "heading": "Why Australians Choose TSC",
+                        "subheading": "Local support. Fair pricing. Built for Aussie roads. And unlike many, we only partner with highly reputable manufacturers — so you get quality you can actually trust.",
+                        "button_text": "Shop Scooters",
+                        "button_link": "shopify:\/\/collections\/scooters",
+                        "text_alignment": "center",
+                        "content_max_width": 800,
+                        "stat_1_value": "2,000+",
+                        "stat_1_label": "happy riders",
+                        "stat_2_value": "7 day",
+                        "stat_2_label": "local support",
+                        "stat_3_value": "24 month",
+                        "stat_3_label": "limited warranty",
+                        "text_color": "#ffffff",
+                        "highlight_color": "#ffffff",
+                        "button_color": "#ffffff",
+                        "button_text_color": "#1a1a1a",
+                        "button_hover_color": "#cc0000",
+                        "button_hover_text_color": "#ffffff",
+                        "stat_value_color": "#ffffff",
+                        "heading_size": 48,
+                        "subheading_size": 18,
+                        "button_text_size": 16,
+                        "button_border_radius": 60,
+                        "stat_value_size": 32,
+                        "stat_label_size": 14
+                    },
+                    "blocks": {}
+                }
+            },
+            "block_order": [
+                "ai_gen_block_4bf649b_iqBUPk"
+            ],
+            "settings": {}
+        },
+        "1758257584991d4cbe": {
+            "type": "_blocks",
+            "blocks": {
+                "ai_gen_block_b17f59c_hLhTUH": {
+                    "type": "ai_gen_block_b17f59c",
+                    "disabled": true,
+                    "settings": {
+                        "hero_image": "shopify:\/\/shop_images\/kaiju-performance.webp",
+                        "section_height": 700,
+                        "heading": "Why Australians Choose  The Simple Commute",
+                        "subheading": "Local support, fair pricing, and scooters built for Aussie roads. Here's why we're different from the rest.",
+                        "button_text": "Shop Scooters",
+                        "button_link": "",
+                        "text_alignment": "center",
+                        "content_width": 800,
+                        "stat_1_value": "2,000+ happy riders",
+                        "stat_1_label": "",
+                        "stat_2_value": "24\/7 local support",
+                        "stat_2_label": "",
+                        "stat_3_value": "24 month warranty",
+                        "stat_3_label": "",
+                        "text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 40,
+                        "button_color": "#1a1a1a",
+                        "button_text_color": "#ffffff",
+                        "button_hover_color": "#333333",
+                        "button_hover_text_color": "#ffffff",
+                        "heading_size": 52,
+                        "subheading_size": 18,
+                        "button_text_size": 16,
+                        "stat_value_size": 24,
+                        "stat_label_size": 14
+                    },
+                    "blocks": {}
+                }
+            },
+            "block_order": [
+                "ai_gen_block_b17f59c_hLhTUH"
+            ],
+            "settings": {}
+        },
+        "custom_liquid_haMpff": {
+            "type": "custom-liquid",
+            "name": "Custom Liquid",
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "liquid": "<style>\n  \/* Base table styling *\/\n  table.compare-table {\n    width: 100%;\n    border-collapse: separate;\n    border-spacing: 0;\n    font-size: 16px;\n    line-height: 1.6;\n    table-layout: fixed; \/* Ensures columns respect % widths *\/\n    min-width: 900px; \/* desktop default *\/\n  }\n\n  table.compare-table th,\n  table.compare-table td {\n    padding: 18px 16px;\n    border-bottom: 1px solid #e6e6e6;\n    text-align: center;\n    vertical-align: middle;\n    word-wrap: break-word;\n  }\n\n  table.compare-table th:first-child,\n  table.compare-table td:first-child {\n    text-align: left;\n    font-weight: 600;\n  }\n\n  \/* Highlight Simple Commute column *\/\n  table.compare-table th.highlight,\n  table.compare-table td.highlight {\n    background: #fff5f5;\n  }\n\n  \/* Mobile adjustments *\/\n  @media (max-width: 768px) {\n    table.compare-table {\n      min-width: 600px; \/* narrower so ~3 columns visible *\/\n    }\n    table.compare-table th,\n    table.compare-table td {\n      padding: 10px 8px;\n      font-size: 14px;\n    }\n  }\n<\/style>\n\n<section style=\"background:#fff; color:#000; padding:24px 12px;\">\n  <div style=\"max-width:1100px; margin:0 auto;\">\n    <div style=\"overflow-x:auto; -webkit-overflow-scrolling:touch;\">\n      <table class=\"compare-table\">\n        <thead>\n          <tr>\n            <th style=\"width:28%;\"><\/th>\n            <th style=\"width:18%;\">Segway<\/th>\n            <th style=\"width:18%;\" class=\"highlight\">TSC<\/th>\n            <th style=\"width:18%;\">Apollo<\/th>\n            <th style=\"width:18%;\">Kaabo<\/th>\n          <\/tr>\n        <\/thead>\n        <tbody>\n          <tr>\n            <th>Pricing approach<\/th>\n            <td>Varies by retailer<\/td>\n            <td class=\"highlight\">Fair upfront pricing<\/td>\n            <td>Varies by retailer<\/td>\n            <td>Varies by retailer<\/td>\n          <\/tr>\n          <tr>\n            <th>Ownership \/ HQ<\/th>\n            <td>Ninebot, Beijing<\/td>\n            <td class=\"highlight\">Australian owned &amp; operated<\/td>\n            <td>Montreal, Canada<\/td>\n            <td>China<\/td>\n          <\/tr>\n          <tr>\n            <th>Primary manufacturing<\/th>\n            <td>China<\/td>\n            <td class=\"highlight\">Vetted partners, tested in Australia<\/td>\n            <td>Shenzhen, China<\/td>\n            <td>China (Kaabo factories)<\/td>\n          <\/tr>\n          <tr>\n            <th>Local Australian support<\/th>\n            <td>Retailer dependent<\/td>\n            <td class=\"highlight\">Yes — 7 days, Aussie team<\/td>\n            <td>Limited \/ via partners<\/td>\n            <td>Retailer dependent<\/td>\n          <\/tr>\n          <tr>\n            <th>Warranty<\/th>\n            <td>6–12 months typical<\/td>\n            <td class=\"highlight\">24-month frame, 12-month electrics<\/td>\n            <td>6–12 months typical<\/td>\n            <td>6–12 months typical<\/td>\n          <\/tr>\n          <tr>\n            <th>Delivery in Australia<\/th>\n            <td>Varies by seller<\/td>\n            <td class=\"highlight\">Free Australia-wide<\/td>\n            <td>Varies by seller<\/td>\n            <td>Varies by seller<\/td>\n          <\/tr>\n        <\/tbody>\n      <\/table>\n    <\/div>\n  <\/div>\n<\/section>",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "custom_liquid_zai6ki": {
+            "type": "custom-liquid",
+            "name": "Custom Liquid",
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "liquid": "<section style=\"padding:60px 20px; text-align:center; background:#fff;\">\n  <h2 style=\"font-size:2rem; font-weight:700; margin-bottom:10px;\">The Simple Commute Difference<\/h2>\n  <p style=\"font-size:1.1rem; color:#555; margin-bottom:40px;\">\n    We're not just another scooter company. We're your local Australian partner in sustainable transport.\n  <\/p>\n\n  <div style=\"display:flex; flex-wrap:wrap; justify-content:center; gap:25px; max-width:1100px; margin:0 auto;\">\n    \n    <!-- Box -->\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">👥<\/div>\n      <h3>Real Aussie Support<\/h3>\n      <span class=\"tag\">Local Team<\/span>\n      <p>Talk to real locals, not overseas call centers. Available 7 days a week with fast, friendly help when you need it.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">🛡️<\/div>\n      <h3>24-Month Warranty<\/h3>\n      <span class=\"tag\">Best in Market<\/span>\n      <p>Industry-leading warranty that actually means something. We stand behind our products with real support.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">📍<\/div>\n      <h3>Built for Aussie Roads<\/h3>\n      <span class=\"tag\">Local Tested<\/span>\n      <p>Tested and optimized for Australian conditions. From city streets to coastal paths, we know what works here.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">⏱️<\/div>\n      <h3>Fast Local Delivery<\/h3>\n      <p>Quick dispatch from Australian warehouses. No waiting weeks for overseas shipping.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">⭐<\/div>\n      <h3>Fair Pricing Promise<\/h3>\n      <p>Transparent pricing with no hidden fees. What you see is what you pay – always.<\/p>\n    <\/div>\n\n    <div class=\"feature-box\">\n      <div class=\"feature-icon\">🏅<\/div>\n      <h3>Trusted by 2,000+<\/h3>\n      <p>Join thousands of satisfied Australian riders who chose quality and reliability.<\/p>\n    <\/div>\n  <\/div>\n<\/section>\n\n<style>\n  .feature-box {\n    flex:1 1 300px;\n    max-width:320px;\n    padding:25px;\n    border:1px solid #e5e5e5;\n    border-radius:12px;\n    box-shadow:0 2px 6px rgba(0,0,0,0.08);\n    transition: all 0.3s ease;\n    background:#fff;\n  }\n  .feature-box:hover {\n    transform: translateY(-8px);\n    box-shadow:0 8px 18px rgba(0,0,0,0.15);\n  }\n  .feature-icon {\n    font-size:2rem;\n    margin-bottom:12px;\n  }\n  .feature-box h3 {\n    font-size:1.25rem;\n    margin:8px 0;\n    color:#222;\n  }\n  .feature-box p {\n    font-size:0.95rem;\n    color:#555;\n    line-height:1.5;\n  }\n  .tag {\n    display:inline-block;\n    font-size:0.8rem;\n    color:#fff;\n    background:#6ecf82;\n    padding:3px 8px;\n    border-radius:12px;\n    margin-bottom:10px;\n  }\n<\/style>",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "media_with_text_TnAd3A": {
+            "type": "media-with-text",
+            "blocks": {
+                "image_TLrYyb": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/aurora_background_helmet_foreground.webp",
+                        "media_width": 50,
+                        "media_position": "start",
+                        "text_position": "place-self-center text-center",
+                        "icon": "none",
+                        "icon_width": 48,
+                        "subheading": "",
+                        "title": "Built Tough for Australian Conditions",
+                        "content": "<p>Every scooter we sell is tested for over 1,500 km on real Melbourne streets, from cracked city pavements to dusty gravel tracks. No gimmicks, no fragile parts, just a simple, robust design that’s made to last. Whether you’re cruising through the city or tackling rougher terrain, our scooters are built to handle the everyday challenges of Australian roads.<\/p>",
+                        "link_text": "",
+                        "link_url": "",
+                        "background": "#ffffff",
+                        "background_gradient": "",
+                        "text_color": "#000000",
+                        "text_gradient": "",
+                        "button_background": "",
+                        "button_text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "image_TLrYyb"
+            ],
+            "name": "Media with text",
+            "settings": {
+                "full_width": false,
+                "alternate_media_position": false,
+                "spacing": "small"
+            }
+        },
+        "rich_text_BxDNMf": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_pL6UiG": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Fair and Honest Pricing",
+                        "heading_tag": "h3",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                },
+                "richtext_jUHxW4": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p>We believe quality should not come with inflated costs or fake discounts. Our scooters are priced fairly from the beginning, with no hidden surprises at checkout. You can trust that the value you get is real, and that every dollar goes toward durability, performance, and local support.<\/p>"
+                    }
+                },
+                "liquid_DJnJnX": {
+                    "type": "liquid",
+                    "settings": {
+                        "liquid": "<section style=\"padding:40px 20px; text-align:center;\">\n    \n  <div style=\"display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:900px; margin:0 auto;\">\n    \n    <!-- Us -->\n    <div style=\"flex:1; min-width:260px;  border:2px solid #e63946; border-radius:12px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,0.05);\">\n      <h3 style=\"color:#e63946; font-size:22px; margin-bottom:15px;\">Us<\/h3>\n      <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; color:#333; line-height:1.6;\">\n        <li>✔ Transparent pricing<\/li>\n        <li>✔ Real value every day<\/li>\n        <li>✔ No hidden surprises<\/li>\n      <\/ul>\n    <\/div>\n    \n    <!-- Them -->\n    <div style=\"flex:1; min-width:260px; background:#fff; border:2px solid #ccc; border-radius:12px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,0.05);\">\n      <h3 style=\"color:#666; font-size:22px; margin-bottom:15px;\">Them<\/h3>\n      <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; color:#333; line-height:1.6;\">\n        <li>✘ Inflated prices<\/li>\n        <li>✘ Fake discounts<\/li>\n        <li>✘ Hidden fees<\/li>\n      <\/ul>\n    <\/div>\n    \n  <\/div>\n<\/section>"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_pL6UiG",
+                "richtext_jUHxW4",
+                "liquid_DJnJnX"
+            ],
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "text_with_icons_GYJ86h": {
+            "type": "text-with-icons",
+            "blocks": {
+                "item_qiJVCW": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-truck",
+                        "mobile_icon_width": 24,
+                        "icon_width": 32,
+                        "icon_background_type": "circle",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Fast Dispatch",
+                        "content": ""
+                    }
+                },
+                "item_gmyCQW": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-mailbox",
+                        "mobile_icon_width": 24,
+                        "icon_width": 32,
+                        "icon_background_type": "circle",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Metro and Rural",
+                        "content": ""
+                    }
+                },
+                "item_8Bmn9x": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "mobile_icon_width": 24,
+                        "icon_width": 32,
+                        "icon_background_type": "circle",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "No Extra Fees",
+                        "content": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_qiJVCW",
+                "item_gmyCQW",
+                "item_8Bmn9x"
+            ],
+            "name": "Text with icons",
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": false,
+                "title": "Free Delivery, Anywhere in Australia",
+                "heading_tag": "h5",
+                "text_alignment": "center",
+                "icon_spacing": "medium",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "rich_text_4QLAHF": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_ejA7pG": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Industry-Leading Warranty and Support",
+                        "heading_tag": "h3",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                },
+                "richtext_Uy8pAX": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p>Every scooter is backed by our comprehensive warranty and local Aussie support. Frames are covered for 24 months. Key electrical components, including the battery, charger, controller and motor, are covered for 12 months. Structural parts like the front fork, folding system, pedals, handlebar and rims are covered for 12 months. Brake components are covered for 6 months, and accessories such as lights, bell, fenders and kickstand are covered for 3 months. If a defect is approved, we’ll repair or replace the part and cover return shipping.<\/p>"
+                    }
+                },
+                "liquid_WLdQXz": {
+                    "type": "liquid",
+                    "settings": {
+                        "liquid": "<div style=\"display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:30px; max-width:960px; margin:0 auto;\">\n\n  <!-- Us -->\n  <div style=\"flex:1; min-width:280px; border:2px solid #e63946; border-radius:12px; padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:left;\">\n    <h3 style=\"color:#e63946; font-size:18px; margin:0 0 12px; font-weight:600; text-align:center;\">Us<\/h3>\n    <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; line-height:1.6;\">\n      <li>✔ 24-month frame warranty<\/li>\n      <li>✔ 12-month battery, charger, controller, motor<\/li>\n      <li>✔ 12-month structural parts (fork, fold, pedals, bar, rims)<\/li>\n      <li>✔ 6-month brake components<\/li>\n      <li>✔ 3-month accessories (lights, bell, fenders, kickstand)<\/li>\n      <li>✔ Aussie support, shipping covered on approved claims<\/li>\n    <\/ul>\n  <\/div>\n\n  <!-- Them -->\n  <div style=\"flex:1; min-width:280px; border:2px solid #ccc; border-radius:12px; padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:left;\">\n    <h3 style=\"color:#000; font-size:18px; margin:0 0 12px; font-weight:600; text-align:center;\">Them<\/h3>\n    <ul style=\"list-style:none; padding:0; margin:0; font-size:16px; line-height:1.6;\">\n      <li>✘ 6–12 month coverage typical<\/li>\n      <li>✘ Limited parts support<\/li>\n      <li>✘ Slow, offshore claim handling<\/li>\n      <li>✘ Return shipping often at your cost<\/li>\n    <\/ul>\n  <\/div>\n\n<\/div>"
+                    }
+                }
+            },
+            "block_order": [
+                "heading_ejA7pG",
+                "richtext_Uy8pAX",
+                "liquid_WLdQXz"
+            ],
+            "disabled": true,
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "1758260301d976baf7": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_featured_carousel_Hh38zt": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {
+                        "maxwidth": 1080
+                    }
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_featured_carousel_Hh38zt"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "main": {
+            "type": "main-page",
+            "disabled": true,
+            "settings": {
+                "content_width": "80ch"
+            }
+        }
+    },
+    "order": [
+        "175825806927596d05",
+        "1758257584991d4cbe",
+        "custom_liquid_haMpff",
+        "custom_liquid_zai6ki",
+        "media_with_text_TnAd3A",
+        "rich_text_BxDNMf",
+        "text_with_icons_GYJ86h",
+        "rich_text_4QLAHF",
+        "1758260301d976baf7",
+        "main"
+    ]
+}

@@ -1,1 +1,1101 @@
-{"sections":{"image_with_text_overlay_BgQzf7":{"type":"image-with-text-overlay","disabled":true,"custom_css":["@media screen and (min-width: 700px) {button {top: 35px; }}"],"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"auto","image":"shopify:\/\/shop_images\/20_OFF_ENTIRE_ORDER_9.svg","mobile_text_position":"place-self-end-start text-start","desktop_text_position":"sm:place-self-end-start sm:text-start","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"main":{"type":"main-product","blocks":{"vendor":{"type":"vendor","settings":{}},"title":{"type":"title","settings":{"heading_tag":"h2"}},"text_yzEm6B":{"type":"text","settings":{"text":"<p><strong>2025 Enhanced Model<\/strong><\/p>"}},"badges":{"type":"badges","settings":{}},"price":{"type":"price","settings":{"show_taxes_notice":false}},"rating":{"type":"rating","disabled":true,"settings":{"show_empty":false}},"judge_me_reviews_preview_badge_nzwnA4":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}},"separator":{"type":"separator","settings":{}},"essential_trust_badges_app_block_cx7qHB":{"type":"shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b","settings":{"banner_display":"all","banner_id":"cec572d2-a4cc-459e-ac47-36225872d306"}},"offer_9FMV3z":{"type":"offer","settings":{"text_alignment":"start","icon_position":"aligned","icon":"picto-validation","icon_width":20,"title":"Road-Approved","content":"<p><em>Max speed is <\/em><em><strong>capped at 25 km\/h <\/strong><\/em><em>when sold in Australia in compliance with local laws and regulations. Please contact us for the steps involved to unlock the speed <\/em><em><strong>after purchase<\/strong><\/em><em>.<\/em><\/p>","background":"#f0f0f0","text_color":"#000000"}},"separator_pxqCDA":{"type":"separator","settings":{}},"offer_UntCVe":{"type":"offer","disabled":true,"settings":{"text_alignment":"start","icon_position":"aligned","icon":"picto-gift","custom_icon":"shopify:\/\/shop_images\/959eccf8-9e72-4f63-b2d7-9fea4da944a2.webp","icon_width":48,"title":"Free Helmet","content":"<p><strong>Free Helmet<\/strong> valued at $70 included with any E-Scooter Purchase<\/p>","background":"#f0f0f0","text_color":"#00a341"}},"offer_x78eMk":{"type":"offer","disabled":true,"settings":{"text_alignment":"start","icon_position":"aligned","icon":"picto-gift","custom_icon":"shopify:\/\/shop_images\/Pencil_copy.png","icon_width":20,"title":"Free Back-To-School mystery gift","content":"<p>Get a FREE <strong>mystery gift<\/strong> with every E-Scooter purchase!<\/p>","background":"#f0f0f0","text_color":"#1a1a1a"}},"payment_terms":{"type":"payment_terms","settings":{}},"variant_picker":{"type":"variant_picker","disabled":true,"settings":{"hide_sold_out_variants":false,"stack_blocks":true,"selector_style":"block","swatch_selector_style":"swatch","variant_image_options":"","size_chart_page":""}},"inventory_Byhqmw":{"type":"inventory","settings":{"low_inventory_threshold":0}},"quantity_selector":{"type":"quantity_selector","settings":{}},"essential_trust_badges_app_block_93n6LF":{"type":"shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b","settings":{"banner_display":"all","banner_id":"2f9baa58-3bd2-4469-8332-f00bb1883109"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_payment_button":true,"show_gift_card_recipient":true,"atc_button_background":"#1a1a1a","atc_button_text_color":"#ffffff","payment_button_background":"","payment_button_text_color":""}},"afterpay_on_site_messaging_payments_messaging_GDUL7N":{"type":"shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8","settings":{"text_align":"inherit","margin_top":0,"margin_bottom":0,"color":"","size":"md","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"badge","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{ product }}"}},"offer_cYXmLe":{"type":"offer","settings":{"text_alignment":"start","icon_position":"aligned","icon":"picto-customer-support","icon_width":20,"title":"Have any questions?","content":"<h6>Talk to our team on <strong>0482 053 220<\/strong><\/h6>","background":"#f0f0f0","text_color":"#3b6ddd"}},"collapsible_text_Gx7jYA":{"type":"collapsible_text","settings":{"icon":"picto-document","icon_width":20,"title":"Description","content":"<h6><span style=\"text-decoration:underline\"><strong>Embrace Simplicity and Performance<\/strong><\/span><\/h6><p>Meet Aurora, the commuter’s dream e-scooter. A high-powered <strong>1100W motor<\/strong>, <strong>40 km\/h<\/strong> top speed, and <strong>100km<\/strong> maximum range ensure you’ll go farther, faster, and smoother than ever before. Tackling hills is a breeze, thanks to its <strong>30-degree hill climb<\/strong>, while the <strong>removable battery<\/strong> adds convenience for non-stop adventures.<\/p><p>Aurora is the perfect blend of speed, range, and performance—your all-in-one ride for any journey.<br\/><\/p><p><em><strong>Disclaimer:<\/strong><\/em> <em>Max speed is <\/em><em><strong>capped at 25 km\/h <\/strong><\/em><em>when sold in Australia in compliance with local laws and regulations. The top speeds of 25 km\/h (Astro), 40 km\/h (Aurora), and 50 km\/h (Kaiju) can only be unlocked for use on private land. Please contact us for the steps involved to unlock the speed <\/em><em><strong>after purchase<\/strong><\/em><em>.<\/em><\/p>","page":""}},"collapsible_text_mGWVXd":{"type":"collapsible_text","settings":{"icon":"none","custom_icon":"shopify:\/\/shop_images\/Untitled_design.svg","icon_width":26,"title":"Key Features","content":"<p><strong>Lightweight and Portable<\/strong>: Weighing only 23kg, the Aurora is easy to carry and transport, making it ideal for daily commutes and weekend adventures.<\/p><p><strong>Easy Changeable Battery<\/strong>: Enjoy the convenience of a changeable battery, allowing you to charge and replace it effortlessly where there is a power point<\/p><p><strong>Lithium Battery Pack<\/strong>: Power your ride with a robust lithium battery pack, offering up to 100km of range.<\/p><p><strong>Powerful Motor<\/strong>: Equipped with a 550W rated power output and an 1100W maximum output, the Aurora model delivers impressive acceleration and speed.<\/p><p><strong>30-Degree Climbing Angle<\/strong>: Conquer hills with ease. The Aurora's powerful motor supports a climbing angle of up to 30 degrees, making uphill rides smooth and effortless<\/p><p><strong>Cruise Control (Unlockable):<\/strong> Experience effortless riding with the Aurora’s cruise control feature. Enjoy longer rides with less strain while maintaining a consistent speed.<\/p><p><em>To adjust the default settings of your scooter, such as cruise control, you can learn more <\/em><a href=\"\/pages\/customise-your-ride\" title=\"Customising Your Ride\"><em>here<\/em><\/a><em>.<\/em><\/p><p><em><strong>*Range Testing:<\/strong><\/em><em> In flat surface testing (Full Battery, 13 km\/h), the Aurora and Kaiju achieved 100 km, and the Astro reached 45 km, all under standard mode with a 70 kg load. <\/em><\/p><p><em>*Cruise control can be unlocked upon request after purchase by providing proof of purchase.<\/em><\/p><p><em>On varied Australian terrain (Full Battery), using a mix of pedestrian and regular modes, the Aurora and Kaiju delivered 70–80 km, while the Astro achieved 30–35 km.<\/em><\/p>","page":""}},"collapsible_text_z73mnq":{"type":"collapsible_text","settings":{"icon":"picto-return","icon_width":20,"title":"Returns","content":"<p>For information on our return policy, including eligibility and instructions, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy<\/a>.<\/p>","page":""}},"collapsible_text_FLndD4":{"type":"collapsible_text","settings":{"icon":"picto-box","icon_width":20,"title":"Shipping","content":"<p><strong>Free Shipping on All Orders<\/strong><br\/>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders<\/strong>, no matter the total. <\/p><p>No hidden costs or fees—just straightforward service to get you moving.<\/p><p><strong>Free Click & Collect + E-Scooter Setup (Victoria Only)<\/strong><br\/>Victorian customers can enjoy our free Click & Collect service, which includes complimentary e-scooter setup. Pick up your order and hit the road right away with your fully assembled e-scooter!<\/p><p><strong>Fast Dispatch<\/strong><br\/>We aim for speedy dispatch on all orders. Orders placed by 12 PM AEST are typically dispatched the same day, with 98% of orders leaving our Boronia, Victoria warehouse either same-day or next day. Orders placed on weekends or public holidays will ship on the next business day.<\/p><p><strong>Quick Delivery<\/strong><br\/>We deliver across Australia, with typical delivery times of 1 to 5 business days. However, please note that delivery times may vary based on your location.<\/p><p><strong>Important Lithium Battery Shipping Info<\/strong><br\/>Due to lithium battery regulations, air freight is not available, which may slightly extend delivery times. We appreciate your patience as we ensure the safe delivery of your e-scooter.<\/p><p>For any questions or assistance, feel free to contact our support team. We're here to help!<\/p>","page":""}},"collapsible_text_BgAi4r":{"type":"collapsible_text","settings":{"icon":"picto-shield","icon_width":20,"title":"Warranty","content":"<p>All of our scooters come with limited warranty. For details, see our <a href=\"\/pages\/warranty\" title=\"Warranty\">warranty<\/a> page<\/p>","page":""}},"collapsible_text_Ri9tUh":{"type":"collapsible_text","settings":{"icon":"none","custom_icon":"shopify:\/\/shop_images\/Untitled_design_34.png","icon_width":26,"title":"Certifications","content":"<p>Our E-Scooters (including batteries) are tested to meet the following standards:<\/p><ul><li>UL2272<\/li><li>EN17128<\/li><li>IEC 62133-2<\/li><li>IEC 60335-1<\/li><li>EN IEC 55014-1<\/li><li>EN IEC 55014-1<\/li><li>CE EMC<\/li><li>ROHS<\/li><\/ul>","page":""}}},"block_order":["vendor","title","text_yzEm6B","badges","price","rating","judge_me_reviews_preview_badge_nzwnA4","separator","essential_trust_badges_app_block_cx7qHB","offer_9FMV3z","separator_pxqCDA","offer_UntCVe","offer_x78eMk","payment_terms","variant_picker","inventory_Byhqmw","quantity_selector","essential_trust_badges_app_block_93n6LF","buy_buttons","afterpay_on_site_messaging_payments_messaging_GDUL7N","offer_cYXmLe","collapsible_text_Gx7jYA","collapsible_text_mGWVXd","collapsible_text_z73mnq","collapsible_text_FLndD4","collapsible_text_BgAi4r","collapsible_text_Ri9tUh"],"settings":{"full_width":false,"show_fixed_add_to_cart":true,"desktop_media_width":50,"desktop_media_layout":"carousel_thumbnails_bottom","mobile_media_size":"contained","mobile_carousel_control":"thumbnails","enable_video_autoplay":false,"enable_video_looping":true,"enable_image_zoom":true,"max_image_zoom_level":3,"background":"#ffffff","background_gradient":"","text_color":"rgba(0,0,0,0)","input_background":"rgba(0,0,0,0)","input_text_color":""}},"rich_text_yhfXaM":{"type":"rich-text","blocks":{"subheading_VMiJpd":{"type":"subheading","settings":{"text":"About the Aurora"}},"heading_Ejm7Pw":{"type":"heading","settings":{"text":"The Ultimate Commuter E-Scooter","heading_tag":"h1","text_color":"#03156d","gradient":""}},"richtext_6edMxC":{"type":"richtext","settings":{"content":"<p>Sleek, powerful, and built for exploration, the Aurora is your go-to e-scooter for every journey.<\/p>"}}},"block_order":["subheading_VMiJpd","heading_Ejm7Pw","richtext_6edMxC"],"settings":{"full_width":true,"content_width":"large","text_position":"center","background":"","background_gradient":"","text_color":""}},"specification_table_BrRW4A":{"type":"specification-table","blocks":{"row_nc7Xax":{"type":"row","settings":{"heading":"Model","value":"<p>Aurora<\/p>"}},"row_ENWJEk":{"type":"row","settings":{"heading":"Max. Speed","value":"<p>40 km\/h<\/p>"}},"row_4jXACH":{"type":"row","settings":{"heading":"Max. Range","value":"<p>100 km<\/p>"}},"row_YMHnpU":{"type":"row","settings":{"heading":"Max. Power","value":"<p>850 W<\/p>"}},"row_GCBbTM":{"type":"row","settings":{"heading":"Max. Load","value":"<p>100 kg<\/p>"}},"row_HnbkTU":{"type":"row","settings":{"heading":"Max. Climbing Angle","value":"<p>25<em>°<\/em><\/p>"}},"row_rRn8tE":{"type":"row","settings":{"heading":"Dimensions","value":"<p>1110mm x 500mm x 1230mm<\/p>"}}},"block_order":["row_nc7Xax","row_ENWJEk","row_4jXACH","row_YMHnpU","row_GCBbTM","row_HnbkTU","row_rRn8tE"],"disabled":true,"settings":{"full_width":true,"subheading":"About the Aurora","title":"Redefining Your Commute with Simplicity and Performance","content":"<p>Sleek, powerful, and built for exploration, the Aurora is your go-to e-scooter for every journey<\/p>","button_text":"","button_url":"","text_position":"start","max_rows":5,"view_all_text":"View all","view_less_text":"View less","background":"","background_gradient":"","text_color":"","heading_color":"#03156d","heading_gradient":"","button_background":"","button_text_color":"","chart_background":"","chart_text_color":"","chart_true_false_color":""}},"slideshow_RFddBE":{"type":"slideshow","blocks":{"video_UW4Mtf":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Aurora Hero Banner - TSC - Made with Clipchamp.mp4","mobile_video":"shopify:\/\/files\/videos\/Reel 3- Aurora (3).mov","content_max_width":780,"mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"","title":"","heading_tag":"h0","button_text":"","button_link":"","text_color":"#ffffff","button_background":"#ffffff","button_text_color":"#000000","overlay_color":"#000000","overlay_opacity":8,"background":"","background_gradient":""}}},"block_order":["video_UW4Mtf"],"settings":{"full_width":true,"allow_transparent_header":true,"show_initial_transition":false,"image_size":"auto","controls_type":"dots","transition_type":"fade_with_text","autoplay":false,"cycle_speed":6,"background":"#f2f2f2","background_gradient":""}},"text_with_icons_pbNDFK":{"type":"text-with-icons","blocks":{"item_EXGdPa":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/Aurora-Front-View.png","mobile_icon_width":120,"icon_width":120,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Aurora","content":"<p>The Aurora is built for convenience, arriving prepped and ready to go. Just follow the easy setup guide, plug it in, and you're off!<\/p>"}},"item_kRBxrE":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/E-Scooter-Screws.png","mobile_icon_width":120,"icon_width":120,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Toolkit","content":"<p>Includes a comprehensive set of replacement bolts, screws, and Allen key, for seamless maintenance.<\/p>"}},"item_DqCzme":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/E-Scooter-Charger.png","mobile_icon_width":120,"icon_width":120,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Charger","content":"<p>The included charger powers up your Aurora in approximately 8.5 hours, ensuring you're ready to hit the road again without delay.<\/p>"}},"item_KVPPb8":{"type":"item","settings":{"icon":"picto-coupon","custom_icon":"shopify:\/\/shop_images\/E-Scooter-Aurora-Manual.png","mobile_icon_width":120,"icon_width":120,"icon_background_type":"none","icon_background":"","icon_color":"","title":"Owner's Manual","content":"<p>Accompanied by a detailed owner’s manual, providing step-by-step guidance for optimal use and maintenance.<\/p>"}}},"block_order":["item_EXGdPa","item_kRBxrE","item_DqCzme","item_KVPPb8"],"settings":{"full_width":true,"stack_on_mobile":false,"title":"Included in the box","heading_tag":"h5","text_alignment":"center","icon_spacing":"medium","background":"","background_gradient":"","text_color":""}},"hot_spots_9hWWwg":{"type":"hot-spots","blocks":{"item_LBRLRM":{"type":"item","settings":{"horizontal_position":47,"vertical_position":81,"horizontal_position_mobile":40,"vertical_position_mobile":82,"icon_width":32,"title":"10 inch self-healing tubeless tire","content":"<p>Explosion proof front and rear tires ensure a smooth and stable ride on various terrains<\/p>"}},"item_mXyyGL":{"type":"item","settings":{"horizontal_position":46,"vertical_position":27,"horizontal_position_mobile":35,"vertical_position_mobile":23,"icon_width":32,"title":"Enhanced Grip Design","content":"<p>Engineered for comfort and precision, ensuring a secure hold on every ride.<\/p>"}},"item_fCfPxK":{"type":"item","settings":{"horizontal_position":38,"vertical_position":71,"horizontal_position_mobile":63,"vertical_position_mobile":53,"icon_width":32,"title":"Certified Brake System","content":"<p>Triple braking power: disc, electronic, and pedal systems for ultimate safety and control.<\/p>"}},"item_YCXhde":{"type":"item","settings":{"horizontal_position":46,"vertical_position":52,"horizontal_position_mobile":43,"vertical_position_mobile":45,"icon_width":32,"title":"Aluminum Grade Alloy","content":"<p>Lightweight, durable, and built to withstand every adventure<\/p>"}},"item_gFkFRG":{"type":"item","settings":{"horizontal_position":40,"vertical_position":76,"horizontal_position_mobile":49,"vertical_position_mobile":66,"icon_width":32,"title":"Portable and Removable Battery","content":"<p>Effortlessly portable with a removable design, featuring advanced Battery Management System (BMS) for safety and efficiency.<\/p>"}}},"block_order":["item_LBRLRM","item_mXyyGL","item_fCfPxK","item_YCXhde","item_gFkFRG"],"settings":{"full_width":true,"image":"shopify:\/\/shop_images\/aurora-city-backdrop.webp","mobile_image":"shopify:\/\/shop_images\/aurora-long-grass.webp","title":"","content":"","button_text":"","button_url":"","desktop_text_position":"place-self-start text-start","image_background":"","image_background_gradient":"","overlay_color":"#000000","overlay_opacity":0,"overlay_text_color":"#ffffff","overlay_button_background":"","overlay_button_text_color":"","hot_spot_dot_background":"#ffffff","hot_spot_dot_text_color":"#000000","hot_spot_content_background":"#ffffff","hot_spot_content_text_color":"#000000","hot_spot_content_opacity":90,"hot_spot_content_blur_radius":3}},"multiple_images_with_text_WQdRDY":{"type":"multiple-images-with-text","blocks":{"item_rcLprm":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/hoodieseezn_httpss.mj.runUMKcBgcKPa8_A_photorealistic_renderi_0be85a91-5b87-4612-a67e-58593f8bbde1_0.png","image_rotation_degrees":0,"subheading":"","title":"100km of Max. Range","content":"<h4>Ride up to 100km and swap out the removable battery for even longer journeys.<\/h4>","button_url":"","button_text":""}}},"block_order":["item_rcLprm"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_tEMtkq":{"type":"multiple-images-with-text","blocks":{"item_JazXh3":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Astro_Product_Features_1000_x_1000_mm_16.webp","image_rotation_degrees":0,"subheading":"","title":"1100W Motor Performance","content":"<h4>Enough power to climb steep hills without slowing down.<\/h4>","button_url":"","button_text":""}}},"block_order":["item_JazXh3"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_KMVGUz":{"type":"multiple-images-with-text","blocks":{"item_4KNxQL":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Astro_Product_Features_1000_x_1000_mm_22.webp","image_rotation_degrees":0,"subheading":"","title":"Aerospace Grade Aluminium","content":"<h4>Tough enough for the road, light enough for easy handling.<\/h4>","button_url":"","button_text":""}}},"block_order":["item_4KNxQL"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_6G4tG7":{"type":"multiple-images-with-text","blocks":{"item_XmJ463":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/hoodieseezn_httpss.mj.runswgmGIMkeOM_A_close-up_of_the_glowin_9529f002-d2dd-49db-9040-f7e1c09e4f5f_1.png","image_rotation_degrees":0,"subheading":"","title":"10\" Puncture-Proof Tubeless Tires","content":"<h4>Strong, shock-absorbing tires for comfort and durability.<\/h4>","button_url":"","button_text":""}}},"block_order":["item_XmJ463"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_QGAMUr":{"type":"multiple-images-with-text","blocks":{"item_dXVFHW":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Astro_Product_Features_1000_x_1000_mm_13.webp","image_rotation_degrees":0,"subheading":"","title":"Smart LED Display","content":"<h4>Get real-time stats on a clear and easy-to-read display.<\/h4>","button_url":"","button_text":""}}},"block_order":["item_dXVFHW"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_DFpDiG":{"type":"multiple-images-with-text","blocks":{"item_LDUkdL":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/hoodieseezn_httpss.mj.runhD9I6LxBPBk_A_simple_black_deck_of_an__18842dfb-4b49-413a-aa8e-12a7417b055c.png","image_rotation_degrees":0,"subheading":"","title":"24-month Warranty","content":"<h4>Backed by Australia’s leading 24-month warranty, including frame coverage.<\/h4>","button_url":"","button_text":""}}},"block_order":["item_LDUkdL"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"multiple_images_with_text_mrErmr":{"type":"multiple-images-with-text","blocks":{"item_pbw4hR":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Firefly_Generate_a_battery_management_system_for_a_lithium_battery._The_image_must_show_a_chip_with_1.jpg","image_rotation_degrees":0,"subheading":"","title":"Smart Battery Management System","content":"<ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>","button_url":"","button_text":""}}},"block_order":["item_pbw4hR"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"top","background":"#000000","background_gradient":"","text_color":"#ffffff","button_background":"","button_text_color":""}},"media_grid_BzxCfM":{"type":"media-grid","blocks":{"video_fk89XD":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Untitled video - Made with Clipchamp (12).mp4","external_video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","show_video_controls":false,"title":"","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":2,"desktop_row_span":2,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"image_a6r8V3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/black_-_no_background_2x_676efbbf-039e-4cce-82eb-f83498bcec0f.png","title":"","heading_tag":"h3","link_url":"","link_text":"","mobile_text_position":"place-self-end-center text-center","desktop_column_span":2,"desktop_row_span":2,"desktop_text_position":"sm:place-self-end-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#1a1a1a","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}}},"block_order":["video_fk89XD","image_a6r8V3"],"settings":{"full_width":false,"reduce_width":false,"desktop_row_height":300,"mobile_row_height":150,"background":"rgba(0,0,0,0)","background_gradient":""}},"tabs_XnAkMG":{"type":"tabs","blocks":{"tab_fyTQHc":{"type":"tab","settings":{"title":"DESIGN","content":"<h3><strong>DESIGN<\/strong><\/h3><h6><strong>Open Size <\/strong><\/h6><p>1110mm x 500mm x 1230mm<\/p><h6><strong>Fold Size<\/strong><\/h6><p>1100mm x 500mm x 540mm<\/p><h6>Pedal Width<\/h6><p>183mm<\/p><h6><strong>Net Weight<\/strong><\/h6><p>23kg<\/p><h6><strong>Frame Material<\/strong><\/h6><p>Aluminum Grade Alloy<\/p><h6><strong>Headlight<\/strong><\/h6><p>LED high-brightness<\/p><h6><strong>Taillight<\/strong><\/h6><p>Rear LED<\/p><h6><strong>Tire Size<\/strong><\/h6><p>10 inch front and rear<\/p><h6><strong>Tire Type<\/strong><\/h6><p>Self-healing tubeless tire<\/p><h6><strong>Max Load<\/strong><\/h6><p>120kg<\/p><h6><strong>IP Resistance Rating<\/strong><\/h6><p>IP54<\/p><h6><\/h6>","page":""}},"tab_MehWVA":{"type":"tab","settings":{"title":"BATTERY","content":"<h3>BATTERY<\/h3><h6>Battery Type<\/h6><p>48V\/15.6Ah<\/p><h6>Charging Time<\/h6><p>8-9 hours<\/p><h6>Battery Removal Method<\/h6><p>Portable and Removable<\/p><h6>Charger Parameters<\/h6><p>DC54.6V\/2A<\/p><h6>BMS<\/h6><ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>","page":""}},"tab_8tePjy":{"type":"tab","settings":{"title":"POWER","content":"<h3>POWER<\/h3><h6>Peak Motor Rated Power<\/h6><p>1100W<\/p><h6>Standard Motor Power<\/h6><p>550W <\/p><h6>Motor Type<\/h6><p>Rear-wheel Drive<\/p><p><\/p>","page":""}}},"block_order":["tab_fyTQHc","tab_MehWVA","tab_8tePjy"],"settings":{"full_width":true,"content_size":"medium","subheading":"","title":"FULL SPECIFICATIONS","text_alignment":"left","first_tab_open":false,"background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":""}},"1731924206e17b48f2":{"type":"apps","blocks":{"judge_me_reviews_review_widget_Pm6iFf":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","settings":{}}},"block_order":["judge_me_reviews_review_widget_Pm6iFf"],"settings":{"full_width":true,"remove_vertical_spacing":false,"remove_horizontal_spacing":false,"background":"","background_gradient":"","text_color":""}},"faq_6fccp4":{"type":"faq","blocks":{"item_JAqw6b":{"type":"item","settings":{"title":"What is the warranty and how does it work?","content":"<p>We offer a Limited Warranty for 12 months from the date of purchase, covering defects in materials and workmanship. The warranty process involves contacting Customer Support with a description of the defect, proof of purchase, serial number, and relevant photos\/videos. If the defect is covered, they will repair or replace the part at no cost to you. Shipping costs for returning defective products are covered by us. The warranty does not cover damage caused by accidents, misuse, unauthorized repairs, normal wear and tear, or cosmetic damage. Key parts like the frame and battery are covered for 1 year, while the charger, controller, and lights have shorter coverage periods.<\/p>"}},"item_J4WHUj":{"type":"item","settings":{"title":"How can I service the scooter?","content":"<p>You can service your e-scooter by bringing it to The Simple Commute's repair center (8\/1001 Mountain Highway, Boronia, Melbourne), or you can ship it to us. Once the repair is complete, you have two weeks to pick up your scooter or pay the return shipping invoice. After this period, a storage fee of $25 per day applies, up to a maximum of 30 days. Proper packaging is crucial if you need to ship your scooter to the repair center. You can obtain third-party packaging or purchase a box from us (subject to availability). Repair turnaround times vary based on the availability of spare parts, ranging from 3-5 days to a minimum of 30 days. For updates, you can reach out to The Simple Commute team.<\/p>"}},"item_CgYzPC":{"type":"item","settings":{"title":"What is the speed of the scooter?","content":"<p>The speed of the Aurora E-scooter is capable of reaching up to 40 km\/h. However, we have to limit it to 25 km\/h to comply with local regulations. If you'd like to unlock the full speed, you can contact us, but please be aware that you will be fully liable for any consequences that may arise from doing so.<\/p>"}},"item_JtYg7B":{"type":"item","settings":{"title":"What is the range of the scooter?","content":"<p>We offer two variations of our Aurora E-scooter. The standard model has a maximum range of up to 65 km, while the long-range model can go up to 100 km on a full charge, making it ideal for longer commutes or extended rides.<\/p>"}}},"block_order":["item_JAqw6b","item_J4WHUj","item_CgYzPC","item_JtYg7B"],"settings":{"full_width":true,"subheading":"","title":"FAQ","content":"","team_avatar_width":160,"support_hours":"Our customer support is available  24\/7 All Day, Every Day.","answer_time":"Average answer time: 1h","button_text":"","button_url":"","text_position":"center","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}},"related-products":{"type":"related-products","settings":{"recommendations_count":3,"products":["e-scooter-sport-vent-helmet","bike-lock","simple-care"],"full_width":true,"stack_products":true,"show_progress_bar":false,"products_per_row_mobile":"1","products_per_row_desktop":3,"subheading":"","title":"You may also like","content":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}}},"order":["image_with_text_overlay_BgQzf7","main","rich_text_yhfXaM","specification_table_BrRW4A","slideshow_RFddBE","text_with_icons_pbNDFK","hot_spots_9hWWwg","multiple_images_with_text_WQdRDY","multiple_images_with_text_tEMtkq","multiple_images_with_text_KMVGUz","multiple_images_with_text_6G4tG7","multiple_images_with_text_QGAMUr","multiple_images_with_text_DFpDiG","multiple_images_with_text_mrErmr","media_grid_BzxCfM","tabs_XnAkMG","1731924206e17b48f2","faq_6fccp4","related-products"]}
+{
+    "sections": {
+        "image_with_text_overlay_BgQzf7": {
+            "type": "image-with-text-overlay",
+            "disabled": true,
+            "custom_css": [
+                "@media screen and (min-width: 700px) {button {top: 35px; }}"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": false,
+                "enable_parallax": false,
+                "image_size": "auto",
+                "image": "shopify:\/\/shop_images\/20_OFF_ENTIRE_ORDER_9.svg",
+                "mobile_text_position": "place-self-end-start text-start",
+                "desktop_text_position": "sm:place-self-end-start sm:text-start",
+                "text_color": "#ffffff",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+            }
+        },
+        "main": {
+            "type": "main-product",
+            "blocks": {
+                "vendor": {
+                    "type": "vendor",
+                    "settings": {}
+                },
+                "title": {
+                    "type": "title",
+                    "settings": {
+                        "heading_tag": "h2"
+                    }
+                },
+                "text_yzEm6B": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<p><strong>2025 Enhanced Model<\/strong><\/p>"
+                    }
+                },
+                "badges": {
+                    "type": "badges",
+                    "settings": {}
+                },
+                "price": {
+                    "type": "price",
+                    "settings": {
+                        "show_taxes_notice": false
+                    }
+                },
+                "rating": {
+                    "type": "rating",
+                    "disabled": true,
+                    "settings": {
+                        "show_empty": false
+                    }
+                },
+                "judge_me_reviews_preview_badge_nzwnA4": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                },
+                "separator": {
+                    "type": "separator",
+                    "settings": {}
+                },
+                "essential_trust_badges_app_block_cx7qHB": {
+                    "type": "shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+                    "settings": {
+                        "banner_display": "all",
+                        "banner_id": "cec572d2-a4cc-459e-ac47-36225872d306"
+                    }
+                },
+                "offer_9FMV3z": {
+                    "type": "offer",
+                    "settings": {
+                        "text_alignment": "start",
+                        "icon_position": "aligned",
+                        "icon": "picto-validation",
+                        "icon_width": 20,
+                        "title": "Road-Approved",
+                        "content": "<p><em>Max speed is <\/em><em><strong>capped at 25 km\/h <\/strong><\/em><em>when sold in Australia in compliance with local laws and regulations. Please contact us for the steps involved to unlock the speed <\/em><em><strong>after purchase<\/strong><\/em><em>.<\/em><\/p>",
+                        "background": "#f0f0f0",
+                        "text_color": "#000000"
+                    }
+                },
+                "separator_pxqCDA": {
+                    "type": "separator",
+                    "settings": {}
+                },
+                "offer_UntCVe": {
+                    "type": "offer",
+                    "disabled": true,
+                    "settings": {
+                        "text_alignment": "start",
+                        "icon_position": "aligned",
+                        "icon": "picto-gift",
+                        "custom_icon": "shopify:\/\/shop_images\/959eccf8-9e72-4f63-b2d7-9fea4da944a2.webp",
+                        "icon_width": 48,
+                        "title": "Free Helmet",
+                        "content": "<p><strong>Free Helmet<\/strong> valued at $70 included with any E-Scooter Purchase<\/p>",
+                        "background": "#f0f0f0",
+                        "text_color": "#00a341"
+                    }
+                },
+                "offer_x78eMk": {
+                    "type": "offer",
+                    "disabled": true,
+                    "settings": {
+                        "text_alignment": "start",
+                        "icon_position": "aligned",
+                        "icon": "picto-gift",
+                        "custom_icon": "shopify:\/\/shop_images\/Pencil_copy.png",
+                        "icon_width": 20,
+                        "title": "Free Back-To-School mystery gift",
+                        "content": "<p>Get a FREE <strong>mystery gift<\/strong> with every E-Scooter purchase!<\/p>",
+                        "background": "#f0f0f0",
+                        "text_color": "#1a1a1a"
+                    }
+                },
+                "payment_terms": {
+                    "type": "payment_terms",
+                    "settings": {}
+                },
+                "variant_picker": {
+                    "type": "variant_picker",
+                    "disabled": true,
+                    "settings": {
+                        "hide_sold_out_variants": false,
+                        "stack_blocks": true,
+                        "selector_style": "block",
+                        "swatch_selector_style": "swatch",
+                        "variant_image_options": "",
+                        "size_chart_page": ""
+                    }
+                },
+                "inventory_Byhqmw": {
+                    "type": "inventory",
+                    "settings": {
+                        "low_inventory_threshold": 0
+                    }
+                },
+                "quantity_selector": {
+                    "type": "quantity_selector",
+                    "settings": {}
+                },
+                "essential_trust_badges_app_block_93n6LF": {
+                    "type": "shopify:\/\/apps\/essential-trust-badges\/blocks\/app-block\/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+                    "settings": {
+                        "banner_display": "all",
+                        "banner_id": "2f9baa58-3bd2-4469-8332-f00bb1883109"
+                    }
+                },
+                "buy_buttons": {
+                    "type": "buy_buttons",
+                    "settings": {
+                        "show_payment_button": true,
+                        "show_gift_card_recipient": true,
+                        "atc_button_background": "#1a1a1a",
+                        "atc_button_text_color": "#ffffff",
+                        "payment_button_background": "",
+                        "payment_button_text_color": ""
+                    }
+                },
+                "afterpay_on_site_messaging_payments_messaging_GDUL7N": {
+                    "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+                    "settings": {
+                        "text_align": "inherit",
+                        "margin_top": 0,
+                        "margin_bottom": 0,
+                        "color": "",
+                        "size": "md",
+                        "intro_text": "or",
+                        "show_interest_free": true,
+                        "payment_amount_is_bold": true,
+                        "show_with": true,
+                        "logo_type": "badge",
+                        "logo_theme": "black-on-mint",
+                        "modal_link_style": "circled-info-icon",
+                        "modal_theme": "mint",
+                        "breakpoint": 749,
+                        "text_align_mobile": "inherit",
+                        "margin_top_mobile": 16,
+                        "margin_bottom_mobile": 16,
+                        "show_lower_limit": true,
+                        "show_upper_limit": true,
+                        "show_if_outside_limits": true,
+                        "product": "{{ product }}"
+                    }
+                },
+                "offer_cYXmLe": {
+                    "type": "offer",
+                    "settings": {
+                        "text_alignment": "start",
+                        "icon_position": "aligned",
+                        "icon": "picto-customer-support",
+                        "icon_width": 20,
+                        "title": "Have any questions?",
+                        "content": "<h6>Talk to our team on <strong>0482 053 220<\/strong><\/h6>",
+                        "background": "#f0f0f0",
+                        "text_color": "#3b6ddd"
+                    }
+                },
+                "collapsible_text_Gx7jYA": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-document",
+                        "icon_width": 20,
+                        "title": "Description",
+                        "content": "<h6><span style=\"text-decoration:underline\"><strong>Embrace Simplicity and Performance<\/strong><\/span><\/h6><p>Meet Aurora, the commuter’s dream e-scooter. A high-powered <strong>1100W motor<\/strong>, <strong>40 km\/h<\/strong> top speed, and <strong>100km<\/strong> maximum range ensure you’ll go farther, faster, and smoother than ever before. Tackling hills is a breeze, thanks to its <strong>30-degree hill climb<\/strong>, while the <strong>removable battery<\/strong> adds convenience for non-stop adventures.<\/p><p>Aurora is the perfect blend of speed, range, and performance—your all-in-one ride for any journey.<br\/><\/p><p><em><strong>Disclaimer:<\/strong><\/em> <em>Max speed is <\/em><em><strong>capped at 25 km\/h <\/strong><\/em><em>when sold in Australia in compliance with local laws and regulations. The top speeds of 25 km\/h (Astro), 40 km\/h (Aurora), and 50 km\/h (Kaiju) can only be unlocked for use on private land. Please contact us for the steps involved to unlock the speed <\/em><em><strong>after purchase<\/strong><\/em><em>.<\/em><\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_mGWVXd": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design.svg",
+                        "icon_width": 26,
+                        "title": "Key Features",
+                        "content": "<p><strong>Lightweight and Portable<\/strong>: Weighing only 23kg, the Aurora is easy to carry and transport, making it ideal for daily commutes and weekend adventures.<\/p><p><strong>Easy Changeable Battery<\/strong>: Enjoy the convenience of a changeable battery, allowing you to charge and replace it effortlessly where there is a power point<\/p><p><strong>Lithium Battery Pack<\/strong>: Power your ride with a robust lithium battery pack, offering up to 100km of range.<\/p><p><strong>Powerful Motor<\/strong>: Equipped with a 550W rated power output and an 1100W maximum output, the Aurora model delivers impressive acceleration and speed.<\/p><p><strong>30-Degree Climbing Angle<\/strong>: Conquer hills with ease. The Aurora's powerful motor supports a climbing angle of up to 30 degrees, making uphill rides smooth and effortless<\/p><p><strong>Cruise Control (Unlockable):<\/strong> Experience effortless riding with the Aurora’s cruise control feature. Enjoy longer rides with less strain while maintaining a consistent speed.<\/p><p><em>To adjust the default settings of your scooter, such as cruise control, you can learn more <\/em><a href=\"\/pages\/customise-your-ride\" title=\"Customising Your Ride\"><em>here<\/em><\/a><em>.<\/em><\/p><p><em><strong>*Range Testing:<\/strong><\/em><em> In flat surface testing (Full Battery, 13 km\/h), the Aurora and Kaiju achieved 100 km, and the Astro reached 45 km, all under standard mode with a 70 kg load. <\/em><\/p><p><em>*Cruise control can be unlocked upon request after purchase by providing proof of purchase.<\/em><\/p><p><em>On varied Australian terrain (Full Battery), using a mix of pedestrian and regular modes, the Aurora and Kaiju delivered 70–80 km, while the Astro achieved 30–35 km.<\/em><\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_z73mnq": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-return",
+                        "icon_width": 20,
+                        "title": "Returns",
+                        "content": "<p>For information on our return policy, including eligibility and instructions, please visit our <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Returns & Refunds Policy<\/a>.<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_FLndD4": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-box",
+                        "icon_width": 20,
+                        "title": "Shipping",
+                        "content": "<p><strong>Free Shipping on All Orders<\/strong><br\/>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders<\/strong>, no matter the total. <\/p><p>No hidden costs or fees—just straightforward service to get you moving.<\/p><p><strong>Free Click & Collect + E-Scooter Setup (Victoria Only)<\/strong><br\/>Victorian customers can enjoy our free Click & Collect service, which includes complimentary e-scooter setup. Pick up your order and hit the road right away with your fully assembled e-scooter!<\/p><p><strong>Fast Dispatch<\/strong><br\/>We aim for speedy dispatch on all orders. Orders placed by 12 PM AEST are typically dispatched the same day, with 98% of orders leaving our Boronia, Victoria warehouse either same-day or next day. Orders placed on weekends or public holidays will ship on the next business day.<\/p><p><strong>Quick Delivery<\/strong><br\/>We deliver across Australia, with typical delivery times of 1 to 5 business days. However, please note that delivery times may vary based on your location.<\/p><p><strong>Important Lithium Battery Shipping Info<\/strong><br\/>Due to lithium battery regulations, air freight is not available, which may slightly extend delivery times. We appreciate your patience as we ensure the safe delivery of your e-scooter.<\/p><p>For any questions or assistance, feel free to contact our support team. We're here to help!<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_BgAi4r": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "picto-shield",
+                        "icon_width": 20,
+                        "title": "Warranty",
+                        "content": "<p>All of our scooters come with limited warranty. For details, see our <a href=\"\/pages\/warranty\" title=\"Warranty\">warranty<\/a> page<\/p>",
+                        "page": ""
+                    }
+                },
+                "collapsible_text_Ri9tUh": {
+                    "type": "collapsible_text",
+                    "settings": {
+                        "icon": "none",
+                        "custom_icon": "shopify:\/\/shop_images\/Untitled_design_34.png",
+                        "icon_width": 26,
+                        "title": "Certifications",
+                        "content": "<p>Our E-Scooters (including batteries) are tested to meet the following standards:<\/p><ul><li>UL2272<\/li><li>EN17128<\/li><li>IEC 62133-2<\/li><li>IEC 60335-1<\/li><li>EN IEC 55014-1<\/li><li>EN IEC 55014-1<\/li><li>CE EMC<\/li><li>ROHS<\/li><\/ul>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "vendor",
+                "title",
+                "text_yzEm6B",
+                "badges",
+                "price",
+                "rating",
+                "judge_me_reviews_preview_badge_nzwnA4",
+                "separator",
+                "essential_trust_badges_app_block_cx7qHB",
+                "offer_9FMV3z",
+                "separator_pxqCDA",
+                "offer_UntCVe",
+                "offer_x78eMk",
+                "payment_terms",
+                "variant_picker",
+                "inventory_Byhqmw",
+                "quantity_selector",
+                "essential_trust_badges_app_block_93n6LF",
+                "buy_buttons",
+                "afterpay_on_site_messaging_payments_messaging_GDUL7N",
+                "offer_cYXmLe",
+                "collapsible_text_Gx7jYA",
+                "collapsible_text_mGWVXd",
+                "collapsible_text_z73mnq",
+                "collapsible_text_FLndD4",
+                "collapsible_text_BgAi4r",
+                "collapsible_text_Ri9tUh"
+            ],
+            "settings": {
+                "full_width": false,
+                "show_fixed_add_to_cart": true,
+                "desktop_media_width": 50,
+                "desktop_media_layout": "carousel_thumbnails_bottom",
+                "mobile_media_size": "contained",
+                "mobile_carousel_control": "thumbnails",
+                "enable_video_autoplay": false,
+                "enable_video_looping": true,
+                "enable_image_zoom": true,
+                "max_image_zoom_level": 3,
+                "background": "#ffffff",
+                "background_gradient": "",
+                "text_color": "rgba(0,0,0,0)",
+                "input_background": "rgba(0,0,0,0)",
+                "input_text_color": ""
+            }
+        },
+        "rich_text_yhfXaM": {
+            "type": "rich-text",
+            "blocks": {
+                "subheading_VMiJpd": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "About the Aurora"
+                    }
+                },
+                "heading_Ejm7Pw": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "The Ultimate Commuter E-Scooter",
+                        "heading_tag": "h1",
+                        "text_color": "#03156d",
+                        "gradient": ""
+                    }
+                },
+                "richtext_6edMxC": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p>Sleek, powerful, and built for exploration, the Aurora is your go-to e-scooter for every journey.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_VMiJpd",
+                "heading_Ejm7Pw",
+                "richtext_6edMxC"
+            ],
+            "settings": {
+                "full_width": true,
+                "content_width": "large",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "specification_table_BrRW4A": {
+            "type": "specification-table",
+            "blocks": {
+                "row_nc7Xax": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Model",
+                        "value": "<p>Aurora<\/p>"
+                    }
+                },
+                "row_ENWJEk": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Max. Speed",
+                        "value": "<p>40 km\/h<\/p>"
+                    }
+                },
+                "row_4jXACH": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Max. Range",
+                        "value": "<p>100 km<\/p>"
+                    }
+                },
+                "row_YMHnpU": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Max. Power",
+                        "value": "<p>850 W<\/p>"
+                    }
+                },
+                "row_GCBbTM": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Max. Load",
+                        "value": "<p>100 kg<\/p>"
+                    }
+                },
+                "row_HnbkTU": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Max. Climbing Angle",
+                        "value": "<p>25<em>°<\/em><\/p>"
+                    }
+                },
+                "row_rRn8tE": {
+                    "type": "row",
+                    "settings": {
+                        "heading": "Dimensions",
+                        "value": "<p>1110mm x 500mm x 1230mm<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "row_nc7Xax",
+                "row_ENWJEk",
+                "row_4jXACH",
+                "row_YMHnpU",
+                "row_GCBbTM",
+                "row_HnbkTU",
+                "row_rRn8tE"
+            ],
+            "disabled": true,
+            "settings": {
+                "full_width": true,
+                "subheading": "About the Aurora",
+                "title": "Redefining Your Commute with Simplicity and Performance",
+                "content": "<p>Sleek, powerful, and built for exploration, the Aurora is your go-to e-scooter for every journey<\/p>",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "start",
+                "max_rows": 5,
+                "view_all_text": "View all",
+                "view_less_text": "View less",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "#03156d",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "chart_background": "",
+                "chart_text_color": "",
+                "chart_true_false_color": ""
+            }
+        },
+        "slideshow_RFddBE": {
+            "type": "slideshow",
+            "blocks": {
+                "video_UW4Mtf": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Aurora Hero Banner - TSC - Made with Clipchamp.mp4",
+                        "mobile_video": "shopify:\/\/files\/videos\/Reel 3- Aurora (3).mov",
+                        "content_max_width": 780,
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "subheading": "",
+                        "title": "",
+                        "heading_tag": "h0",
+                        "button_text": "",
+                        "button_link": "",
+                        "text_color": "#ffffff",
+                        "button_background": "#ffffff",
+                        "button_text_color": "#000000",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 8,
+                        "background": "",
+                        "background_gradient": ""
+                    }
+                }
+            },
+            "block_order": [
+                "video_UW4Mtf"
+            ],
+            "settings": {
+                "full_width": true,
+                "allow_transparent_header": true,
+                "show_initial_transition": false,
+                "image_size": "auto",
+                "controls_type": "dots",
+                "transition_type": "fade_with_text",
+                "autoplay": false,
+                "cycle_speed": 6,
+                "background": "#f2f2f2",
+                "background_gradient": ""
+            }
+        },
+        "text_with_icons_pbNDFK": {
+            "type": "text-with-icons",
+            "blocks": {
+                "item_EXGdPa": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/Aurora-Front-View.png",
+                        "mobile_icon_width": 120,
+                        "icon_width": 120,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Aurora",
+                        "content": "<p>The Aurora is built for convenience, arriving prepped and ready to go. Just follow the easy setup guide, plug it in, and you're off!<\/p>"
+                    }
+                },
+                "item_kRBxrE": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/E-Scooter-Screws.png",
+                        "mobile_icon_width": 120,
+                        "icon_width": 120,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Toolkit",
+                        "content": "<p>Includes a comprehensive set of replacement bolts, screws, and Allen key, for seamless maintenance.<\/p>"
+                    }
+                },
+                "item_DqCzme": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/E-Scooter-Charger.png",
+                        "mobile_icon_width": 120,
+                        "icon_width": 120,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Charger",
+                        "content": "<p>The included charger powers up your Aurora in approximately 8.5 hours, ensuring you're ready to hit the road again without delay.<\/p>"
+                    }
+                },
+                "item_KVPPb8": {
+                    "type": "item",
+                    "settings": {
+                        "icon": "picto-coupon",
+                        "custom_icon": "shopify:\/\/shop_images\/E-Scooter-Aurora-Manual.png",
+                        "mobile_icon_width": 120,
+                        "icon_width": 120,
+                        "icon_background_type": "none",
+                        "icon_background": "",
+                        "icon_color": "",
+                        "title": "Owner's Manual",
+                        "content": "<p>Accompanied by a detailed owner’s manual, providing step-by-step guidance for optimal use and maintenance.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_EXGdPa",
+                "item_kRBxrE",
+                "item_DqCzme",
+                "item_KVPPb8"
+            ],
+            "settings": {
+                "full_width": true,
+                "stack_on_mobile": false,
+                "title": "Included in the box",
+                "heading_tag": "h5",
+                "text_alignment": "center",
+                "icon_spacing": "medium",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "hot_spots_9hWWwg": {
+            "type": "hot-spots",
+            "blocks": {
+                "item_LBRLRM": {
+                    "type": "item",
+                    "settings": {
+                        "horizontal_position": 47,
+                        "vertical_position": 81,
+                        "horizontal_position_mobile": 40,
+                        "vertical_position_mobile": 82,
+                        "icon_width": 32,
+                        "title": "10 inch self-healing tubeless tire",
+                        "content": "<p>Explosion proof front and rear tires ensure a smooth and stable ride on various terrains<\/p>"
+                    }
+                },
+                "item_mXyyGL": {
+                    "type": "item",
+                    "settings": {
+                        "horizontal_position": 46,
+                        "vertical_position": 27,
+                        "horizontal_position_mobile": 35,
+                        "vertical_position_mobile": 23,
+                        "icon_width": 32,
+                        "title": "Enhanced Grip Design",
+                        "content": "<p>Engineered for comfort and precision, ensuring a secure hold on every ride.<\/p>"
+                    }
+                },
+                "item_fCfPxK": {
+                    "type": "item",
+                    "settings": {
+                        "horizontal_position": 38,
+                        "vertical_position": 71,
+                        "horizontal_position_mobile": 63,
+                        "vertical_position_mobile": 53,
+                        "icon_width": 32,
+                        "title": "Certified Brake System",
+                        "content": "<p>Triple braking power: disc, electronic, and pedal systems for ultimate safety and control.<\/p>"
+                    }
+                },
+                "item_YCXhde": {
+                    "type": "item",
+                    "settings": {
+                        "horizontal_position": 46,
+                        "vertical_position": 52,
+                        "horizontal_position_mobile": 43,
+                        "vertical_position_mobile": 45,
+                        "icon_width": 32,
+                        "title": "Aluminum Grade Alloy",
+                        "content": "<p>Lightweight, durable, and built to withstand every adventure<\/p>"
+                    }
+                },
+                "item_gFkFRG": {
+                    "type": "item",
+                    "settings": {
+                        "horizontal_position": 40,
+                        "vertical_position": 76,
+                        "horizontal_position_mobile": 49,
+                        "vertical_position_mobile": 66,
+                        "icon_width": 32,
+                        "title": "Portable and Removable Battery",
+                        "content": "<p>Effortlessly portable with a removable design, featuring advanced Battery Management System (BMS) for safety and efficiency.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_LBRLRM",
+                "item_mXyyGL",
+                "item_fCfPxK",
+                "item_YCXhde",
+                "item_gFkFRG"
+            ],
+            "settings": {
+                "full_width": true,
+                "image": "shopify:\/\/shop_images\/aurora-city-backdrop.webp",
+                "mobile_image": "shopify:\/\/shop_images\/aurora-long-grass.webp",
+                "title": "",
+                "content": "",
+                "button_text": "",
+                "button_url": "",
+                "desktop_text_position": "place-self-start text-start",
+                "image_background": "",
+                "image_background_gradient": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0,
+                "overlay_text_color": "#ffffff",
+                "overlay_button_background": "",
+                "overlay_button_text_color": "",
+                "hot_spot_dot_background": "#ffffff",
+                "hot_spot_dot_text_color": "#000000",
+                "hot_spot_content_background": "#ffffff",
+                "hot_spot_content_text_color": "#000000",
+                "hot_spot_content_opacity": 90,
+                "hot_spot_content_blur_radius": 3
+            }
+        },
+        "multiple_images_with_text_WQdRDY": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_rcLprm": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/hoodieseezn_httpss.mj.runUMKcBgcKPa8_A_photorealistic_renderi_0be85a91-5b87-4612-a67e-58593f8bbde1_0.png",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "100km of Max. Range",
+                        "content": "<h4>Ride up to 100km and swap out the removable battery for even longer journeys.<\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_rcLprm"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_tEMtkq": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_JazXh3": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Astro_Product_Features_1000_x_1000_mm_16.webp",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "1100W Motor Performance",
+                        "content": "<h4>Enough power to climb steep hills without slowing down.<\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_JazXh3"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_KMVGUz": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_4KNxQL": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Astro_Product_Features_1000_x_1000_mm_22.webp",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "Aerospace Grade Aluminium",
+                        "content": "<h4>Tough enough for the road, light enough for easy handling.<\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_4KNxQL"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_6G4tG7": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_XmJ463": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/hoodieseezn_httpss.mj.runswgmGIMkeOM_A_close-up_of_the_glowin_9529f002-d2dd-49db-9040-f7e1c09e4f5f_1.png",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "10\" Puncture-Proof Tubeless Tires",
+                        "content": "<h4>Strong, shock-absorbing tires for comfort and durability.<\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_XmJ463"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_QGAMUr": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_dXVFHW": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Astro_Product_Features_1000_x_1000_mm_13.webp",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "Smart LED Display",
+                        "content": "<h4>Get real-time stats on a clear and easy-to-read display.<\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_dXVFHW"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_DFpDiG": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_LDUkdL": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/hoodieseezn_httpss.mj.runhD9I6LxBPBk_A_simple_black_deck_of_an__18842dfb-4b49-413a-aa8e-12a7417b055c.png",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "24-month Warranty",
+                        "content": "<h4>Backed by Australia’s leading 24-month warranty, including frame coverage.<\/h4>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_LDUkdL"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "multiple_images_with_text_mrErmr": {
+            "type": "multiple-images-with-text",
+            "blocks": {
+                "item_pbw4hR": {
+                    "type": "item",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Firefly_Generate_a_battery_management_system_for_a_lithium_battery._The_image_must_show_a_chip_with_1.jpg",
+                        "image_rotation_degrees": 0,
+                        "subheading": "",
+                        "title": "Smart Battery Management System",
+                        "content": "<ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>",
+                        "button_url": "",
+                        "button_text": ""
+                    }
+                }
+            },
+            "block_order": [
+                "item_pbw4hR"
+            ],
+            "settings": {
+                "full_width": true,
+                "images_layout": "scattered",
+                "collage_images_alignment": "top",
+                "background": "#000000",
+                "background_gradient": "",
+                "text_color": "#ffffff",
+                "button_background": "",
+                "button_text_color": ""
+            }
+        },
+        "media_grid_BzxCfM": {
+            "type": "media-grid",
+            "blocks": {
+                "video_fk89XD": {
+                    "type": "video",
+                    "settings": {
+                        "video": "shopify:\/\/files\/videos\/Untitled video - Made with Clipchamp (12).mp4",
+                        "external_video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                        "show_video_controls": false,
+                        "title": "",
+                        "heading_tag": "h4",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_column_span": 2,
+                        "desktop_row_span": 2,
+                        "desktop_text_position": "sm:place-self-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#ffffff",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_a6r8V3": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/black_-_no_background_2x_676efbbf-039e-4cce-82eb-f83498bcec0f.png",
+                        "title": "",
+                        "heading_tag": "h3",
+                        "link_url": "",
+                        "link_text": "",
+                        "mobile_text_position": "place-self-end-center text-center",
+                        "desktop_column_span": 2,
+                        "desktop_row_span": 2,
+                        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+                        "background": "#000000",
+                        "background_gradient": "",
+                        "text_color": "#1a1a1a",
+                        "text_gradient": "",
+                        "button_background": "#000000",
+                        "button_text_color": "#ffffff",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                }
+            },
+            "block_order": [
+                "video_fk89XD",
+                "image_a6r8V3"
+            ],
+            "settings": {
+                "full_width": false,
+                "reduce_width": false,
+                "desktop_row_height": 300,
+                "mobile_row_height": 150,
+                "background": "rgba(0,0,0,0)",
+                "background_gradient": ""
+            }
+        },
+        "tabs_XnAkMG": {
+            "type": "tabs",
+            "blocks": {
+                "tab_fyTQHc": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "DESIGN",
+                        "content": "<h3><strong>DESIGN<\/strong><\/h3><h6><strong>Open Size <\/strong><\/h6><p>1110mm x 500mm x 1230mm<\/p><h6><strong>Fold Size<\/strong><\/h6><p>1100mm x 500mm x 540mm<\/p><h6>Pedal Width<\/h6><p>183mm<\/p><h6><strong>Net Weight<\/strong><\/h6><p>23kg<\/p><h6><strong>Frame Material<\/strong><\/h6><p>Aluminum Grade Alloy<\/p><h6><strong>Headlight<\/strong><\/h6><p>LED high-brightness<\/p><h6><strong>Taillight<\/strong><\/h6><p>Rear LED<\/p><h6><strong>Tire Size<\/strong><\/h6><p>10 inch front and rear<\/p><h6><strong>Tire Type<\/strong><\/h6><p>Self-healing tubeless tire<\/p><h6><strong>Max Load<\/strong><\/h6><p>120kg<\/p><h6><strong>IP Resistance Rating<\/strong><\/h6><p>IP54<\/p><h6><\/h6>",
+                        "page": ""
+                    }
+                },
+                "tab_MehWVA": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "BATTERY",
+                        "content": "<h3>BATTERY<\/h3><h6>Battery Type<\/h6><p>48V\/15.6Ah<\/p><h6>Charging Time<\/h6><p>8-9 hours<\/p><h6>Battery Removal Method<\/h6><p>Portable and Removable<\/p><h6>Charger Parameters<\/h6><p>DC54.6V\/2A<\/p><h6>BMS<\/h6><ul><li>short circuit protection<\/li><li>overcurrent protection<\/li><li>double protection from overcharging<\/li><li>temperature resistance<\/li><li>undervoltage auto-sleep protection<\/li><li>double over discharged protection<\/li><\/ul>",
+                        "page": ""
+                    }
+                },
+                "tab_8tePjy": {
+                    "type": "tab",
+                    "settings": {
+                        "title": "POWER",
+                        "content": "<h3>POWER<\/h3><h6>Peak Motor Rated Power<\/h6><p>1100W<\/p><h6>Standard Motor Power<\/h6><p>550W <\/p><h6>Motor Type<\/h6><p>Rear-wheel Drive<\/p><p><\/p>",
+                        "page": ""
+                    }
+                }
+            },
+            "block_order": [
+                "tab_fyTQHc",
+                "tab_MehWVA",
+                "tab_8tePjy"
+            ],
+            "settings": {
+                "full_width": true,
+                "content_size": "medium",
+                "subheading": "",
+                "title": "FULL SPECIFICATIONS",
+                "text_alignment": "left",
+                "first_tab_open": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": ""
+            }
+        },
+        "1731924206e17b48f2": {
+            "type": "apps",
+            "blocks": {
+                "judge_me_reviews_review_widget_Pm6iFf": {
+                    "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+                    "settings": {}
+                }
+            },
+            "block_order": [
+                "judge_me_reviews_review_widget_Pm6iFf"
+            ],
+            "settings": {
+                "full_width": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false,
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "faq_6fccp4": {
+            "type": "faq",
+            "blocks": {
+                "item_JAqw6b": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What is the warranty and how does it work?",
+                        "content": "<p>We offer a Limited Warranty for 12 months from the date of purchase, covering defects in materials and workmanship. The warranty process involves contacting Customer Support with a description of the defect, proof of purchase, serial number, and relevant photos\/videos. If the defect is covered, they will repair or replace the part at no cost to you. Shipping costs for returning defective products are covered by us. The warranty does not cover damage caused by accidents, misuse, unauthorized repairs, normal wear and tear, or cosmetic damage. Key parts like the frame and battery are covered for 1 year, while the charger, controller, and lights have shorter coverage periods.<\/p>"
+                    }
+                },
+                "item_J4WHUj": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How can I service the scooter?",
+                        "content": "<p>You can service your e-scooter by bringing it to The Simple Commute's repair center (8\/1001 Mountain Highway, Boronia, Melbourne), or you can ship it to us. Once the repair is complete, you have two weeks to pick up your scooter or pay the return shipping invoice. After this period, a storage fee of $25 per day applies, up to a maximum of 30 days. Proper packaging is crucial if you need to ship your scooter to the repair center. You can obtain third-party packaging or purchase a box from us (subject to availability). Repair turnaround times vary based on the availability of spare parts, ranging from 3-5 days to a minimum of 30 days. For updates, you can reach out to The Simple Commute team.<\/p>"
+                    }
+                },
+                "item_CgYzPC": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What is the speed of the scooter?",
+                        "content": "<p>The speed of the Aurora E-scooter is capable of reaching up to 40 km\/h. However, we have to limit it to 25 km\/h to comply with local regulations. If you'd like to unlock the full speed, you can contact us, but please be aware that you will be fully liable for any consequences that may arise from doing so.<\/p>"
+                    }
+                },
+                "item_JtYg7B": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What is the range of the scooter?",
+                        "content": "<p>We offer two variations of our Aurora E-scooter. The standard model has a maximum range of up to 65 km, while the long-range model can go up to 100 km on a full charge, making it ideal for longer commutes or extended rides.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_JAqw6b",
+                "item_J4WHUj",
+                "item_CgYzPC",
+                "item_JtYg7B"
+            ],
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "FAQ",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "Our customer support is available  24\/7 All Day, Every Day.",
+                "answer_time": "Average answer time: 1h",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        },
+        "related-products": {
+            "type": "related-products",
+            "settings": {
+                "recommendations_count": 3,
+                "products": [
+                    "e-scooter-sport-vent-helmet",
+                    "bike-lock",
+                    "simple-care"
+                ],
+                "full_width": true,
+                "stack_products": true,
+                "show_progress_bar": false,
+                "products_per_row_mobile": "1",
+                "products_per_row_desktop": 3,
+                "subheading": "",
+                "title": "You may also like",
+                "content": "",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "product_card_background": "",
+                "product_card_text_color": ""
+            }
+        }
+    },
+    "order": [
+        "image_with_text_overlay_BgQzf7",
+        "main",
+        "rich_text_yhfXaM",
+        "specification_table_BrRW4A",
+        "slideshow_RFddBE",
+        "text_with_icons_pbNDFK",
+        "hot_spots_9hWWwg",
+        "multiple_images_with_text_WQdRDY",
+        "multiple_images_with_text_tEMtkq",
+        "multiple_images_with_text_KMVGUz",
+        "multiple_images_with_text_6G4tG7",
+        "multiple_images_with_text_QGAMUr",
+        "multiple_images_with_text_DFpDiG",
+        "multiple_images_with_text_mrErmr",
+        "media_grid_BzxCfM",
+        "tabs_XnAkMG",
+        "1731924206e17b48f2",
+        "faq_6fccp4",
+        "related-products"
+    ]
+}

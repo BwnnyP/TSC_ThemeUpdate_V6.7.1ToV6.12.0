@@ -1,1 +1,125 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"content_width":"80ch"}},"rich_text_UEXjTA":{"type":"rich-text","blocks":{"heading_WbygLK":{"type":"heading","settings":{"text":"Delivery options","heading_tag":"h1","text_color":"","gradient":""}},"subheading_KjDB6b":{"type":"subheading","settings":{"text":"Got questions? We got answers."}}},"block_order":["heading_WbygLK","subheading_KjDB6b"],"name":"Rich text","settings":{"full_width":true,"content_width":"small","text_position":"center","background":"","background_gradient":"","text_color":""}},"faq_WMzbB3":{"type":"faq","blocks":{"item_jXdmFN":{"type":"item","settings":{"title":"What areas do you offer shipping to?","content":"<p>We ship to all areas within Australia. Our operations are strictly focused to the Australian market, ensuring that we can provide efficient and reliable delivery to your location.<\/p>"}},"item_HkFXcY":{"type":"item","settings":{"title":"What is the cost of shipping?","content":"<p><strong>Free Shipping on all orders<\/strong><\/p><p>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders<\/strong>, no matter the total. <\/p><p><\/p><p>No hidden costs or fees—just straightforward service to get you moving.<\/p>"}},"item_kLj4Hm":{"type":"item","settings":{"title":"Do you offer click and collect?","content":"<p><strong>Free Click & Collect with Free E-Scooter Setup in Victoria<\/strong><\/p><p>For our customers in Victoria, we offer a free Click & Collect service, including free e-scooter setup. This convenient option allows you to pick up your order at your convenience, ensuring that your e-scooter is ready to ride as soon as you collect it.<\/p>"}},"item_ecFkC8":{"type":"item","settings":{"title":"What are the dispatch times for orders?","content":"<p><strong>Fast Dispatch<\/strong><\/p><p>We understand the excitement of receiving your new e-scooter, and we strive to get it to you as quickly as possible. We aim to dispatch all orders placed before 12 noon Australian Eastern Standard Time on the same day. Approximately 98% of orders are dispatched either same-day or next day from our warehouse in Boronia, Victoria.<\/p><p><em>Please note that orders placed on a weekend or public holiday will be shipped the next available business day.<\/em><\/p>"}},"item_hwMyEi":{"type":"item","settings":{"title":"What are the typical delivery times for my order?","content":"<p><strong>Quickest Delivery<\/strong><\/p><p>All orders are dispatched from our warehouse in Boronia, Victoria. Our typical delivery times are 1 to 5 business days across most Australian postcodes. However, please note that delivery times can vary depending on the delivery destination.<\/p><p>Due to the inclusion of Lithium Batteries in your order, delivery times may be slightly longer as Air Freight cannot be used. We appreciate your understanding and patience as we ensure the safe delivery of your e-scooter.<\/p><p>We are committed to providing a seamless and efficient delivery process, ensuring that your new ride reaches you in perfect condition and ready to enhance your commute. For any questions or further assistance, please feel free to contact our support team.<\/p>"}},"item_piGjxW":{"type":"item","settings":{"title":"How long do I wait to receive a tracking number?","content":"<p>Tracking numbers are sent within <strong>24-48 hours <\/strong>of your order being fulfilled to your email.<\/p>"}}},"block_order":["item_jXdmFN","item_HkFXcY","item_kLj4Hm","item_ecFkC8","item_hwMyEi","item_piGjxW"],"settings":{"full_width":true,"subheading":"","title":"","content":"","team_avatar_width":160,"support_hours":"","answer_time":"","button_text":"","button_url":"","text_position":"center","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}}},"order":["main","rich_text_UEXjTA","faq_WMzbB3"]}
+{
+    "sections": {
+        "main": {
+            "type": "main-page",
+            "disabled": true,
+            "settings": {
+                "content_width": "80ch"
+            }
+        },
+        "rich_text_UEXjTA": {
+            "type": "rich-text",
+            "blocks": {
+                "heading_WbygLK": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Delivery options",
+                        "heading_tag": "h1",
+                        "text_color": "",
+                        "gradient": ""
+                    }
+                },
+                "subheading_KjDB6b": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "Got questions? We got answers."
+                    }
+                }
+            },
+            "block_order": [
+                "heading_WbygLK",
+                "subheading_KjDB6b"
+            ],
+            "name": "Rich text",
+            "settings": {
+                "full_width": true,
+                "content_width": "small",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": ""
+            }
+        },
+        "faq_WMzbB3": {
+            "type": "faq",
+            "blocks": {
+                "item_jXdmFN": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What areas do you offer shipping to?",
+                        "content": "<p>We ship to all areas within Australia. Our operations are strictly focused to the Australian market, ensuring that we can provide efficient and reliable delivery to your location.<\/p>"
+                    }
+                },
+                "item_HkFXcY": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What is the cost of shipping?",
+                        "content": "<p><strong>Free Shipping on all orders<\/strong><\/p><p>At The Simple Commute, we believe in keeping things simple. That’s why we now offer <strong>free shipping on all orders<\/strong>, no matter the total. <\/p><p><\/p><p>No hidden costs or fees—just straightforward service to get you moving.<\/p>"
+                    }
+                },
+                "item_kLj4Hm": {
+                    "type": "item",
+                    "settings": {
+                        "title": "Do you offer click and collect?",
+                        "content": "<p><strong>Free Click & Collect with Free E-Scooter Setup in Victoria<\/strong><\/p><p>For our customers in Victoria, we offer a free Click & Collect service, including free e-scooter setup. This convenient option allows you to pick up your order at your convenience, ensuring that your e-scooter is ready to ride as soon as you collect it.<\/p>"
+                    }
+                },
+                "item_ecFkC8": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What are the dispatch times for orders?",
+                        "content": "<p><strong>Fast Dispatch<\/strong><\/p><p>We understand the excitement of receiving your new e-scooter, and we strive to get it to you as quickly as possible. We aim to dispatch all orders placed before 12 noon Australian Eastern Standard Time on the same day. Approximately 98% of orders are dispatched either same-day or next day from our warehouse in Boronia, Victoria.<\/p><p><em>Please note that orders placed on a weekend or public holiday will be shipped the next available business day.<\/em><\/p>"
+                    }
+                },
+                "item_hwMyEi": {
+                    "type": "item",
+                    "settings": {
+                        "title": "What are the typical delivery times for my order?",
+                        "content": "<p><strong>Quickest Delivery<\/strong><\/p><p>All orders are dispatched from our warehouse in Boronia, Victoria. Our typical delivery times are 1 to 5 business days across most Australian postcodes. However, please note that delivery times can vary depending on the delivery destination.<\/p><p>Due to the inclusion of Lithium Batteries in your order, delivery times may be slightly longer as Air Freight cannot be used. We appreciate your understanding and patience as we ensure the safe delivery of your e-scooter.<\/p><p>We are committed to providing a seamless and efficient delivery process, ensuring that your new ride reaches you in perfect condition and ready to enhance your commute. For any questions or further assistance, please feel free to contact our support team.<\/p>"
+                    }
+                },
+                "item_piGjxW": {
+                    "type": "item",
+                    "settings": {
+                        "title": "How long do I wait to receive a tracking number?",
+                        "content": "<p>Tracking numbers are sent within <strong>24-48 hours <\/strong>of your order being fulfilled to your email.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "item_jXdmFN",
+                "item_HkFXcY",
+                "item_kLj4Hm",
+                "item_ecFkC8",
+                "item_hwMyEi",
+                "item_piGjxW"
+            ],
+            "settings": {
+                "full_width": true,
+                "subheading": "",
+                "title": "",
+                "content": "",
+                "team_avatar_width": 160,
+                "support_hours": "",
+                "answer_time": "",
+                "button_text": "",
+                "button_url": "",
+                "text_position": "center",
+                "background": "",
+                "background_gradient": "",
+                "text_color": "",
+                "heading_color": "",
+                "heading_gradient": "",
+                "button_background": "",
+                "button_text_color": "",
+                "accordion_background": "",
+                "accordion_text_color": ""
+            }
+        }
+    },
+    "order": [
+        "main",
+        "rich_text_UEXjTA",
+        "faq_WMzbB3"
+    ]
+}
