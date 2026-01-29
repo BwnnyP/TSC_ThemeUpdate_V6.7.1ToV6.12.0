@@ -1,0 +1,209 @@
+{%- comment -%}
+------------------------------------------------------------------------------------------------------------------------
+NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing this theme as much as we did for
+  developing it. We have put a lot of work to make this theme as developer friendly as possible by offering you
+  hooks to integrate into critical parts of the theme. You will find the complete technical documentation (including
+  all events, dependencies...) in the "documentation.txt" file, located in the Assets folder.
+------------------------------------------------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<!doctype html>
+
+<html lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="{{ settings.header_background }}">
+
+    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
+    {%- comment -%}  <title>{% if request.page_type == 'index' %}{{ page_title }}{% elsif page_title == blank %}{{ shop.name }}{% else %}{{ page_title }} | The Simple Commute{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>{%- endcomment -%}
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180 }}">
+    {%- endif -%}
+
+    {%- comment -%}Few prefetch to increase performance on commonly used third-parties{%- endcomment -%}
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+    <link rel="preconnect" href="https://judge.me" crossorigin>
+    <link rel="preconnect" href="https://afterpay.com" crossorigin>
+    <link rel="preconnect" href="https://static.afterpay.com" crossorigin>
+    <link rel="preconnect" href="https://klaviyo.com" crossorigin>
+    <link rel="preconnect" href="https://static.klaviyo.com" crossorigin>
+    <link rel="dns-prefetch" href="https://googletagmanager.com">
+    <link rel="dns-prefetch" href="https://google-analytics.com">
+    <link rel="dns-prefetch" href="https://clarity.ms">
+
+    {%- unless settings.heading_font.system? -%}
+      <link rel="preload" href="{{ settings.heading_font | font_url }}" as="font" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- unless settings.text_font.system? -%}
+      <link rel="preload" href="{{ settings.text_font | font_url }}" as="font" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- render 'social-meta-tags' -%}
+    {%- render 'microdata-schema' -%}
+    {%- render 'css-variables' -%}
+    {%- render 'js-variables' -%}
+
+    <script>
+      if (!(HTMLScriptElement.supports && HTMLScriptElement.supports('importmap'))) {
+        const importMapPolyfill = document.createElement('script');
+        importMapPolyfill.async = true;
+        importMapPolyfill.src = "{{ 'es-module-shims.min.js' | asset_url }}";
+
+        document.head.appendChild(importMapPolyfill);
+      }
+    </script>
+
+    <script type="importmap">
+      {%- comment -%}On Safari 16.3 and lower, a polyfill is used to load importmap{%- endcomment -%}
+      {
+        "imports": {
+          "vendor": "{{ 'vendor.min.js' | asset_url }}",
+          "theme": "{{ 'theme.js' | asset_url }}",
+          "photoswipe": "{{ 'photoswipe.min.js' | asset_url }}"
+        }
+      }
+    </script>
+
+    <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+
+    {{ content_for_header }}
+
+    {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "oc1g9m4vuz");
+</script>
+    <!-- BEGIN MerchantWidget Code -->
+    <script id='merchantWidgetScript'
+          src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
+          defer>
+    </script>
+    <script type="text/javascript">
+      merchantWidgetScript.addEventListener('load', function () {
+        merchantwidget.start({
+          region: 'AU',
+          position: 'LEFT_BOTTOM',
+        });
+      });
+  </script>
+<!-- END MerchantWidget Code -->
+    {%- comment -%} Custom background for e-scooter collection LP {%- endcomment -%}
+    {%- if template contains 'page.e-scooter-collection-lp' or template contains 'page.landing-page' or template contains 'page.kaiju-landing-page'-%}
+      <style>
+        body {
+          background-color: #000000 !important;
+        }
+    
+        main#main {
+          background-color: #000000 !important;
+        }
+    
+        /* Force all sections to respect the black background */
+        .shopify-section {
+          background-color: transparent !important;
+        }
+    
+        /* Override any inline styles */
+        [style*="background-color"] {
+          background-color: transparent !important;
+        }
+    
+        /* Ensure the entire page wrapper is black */
+        html {
+          background-color: #000000 !important;
+        }
+        /* Make footer sections show F0F0F0 background */
+        .shopify-section-group-footer-group .shopify-section,
+        .shopify-section[id*="text-with-icons"],
+        .shopify-section[id*="__footer"] {
+          background-color: #F0F0F0 !important;
+        }
+      </style>
+    {%- endif -%}
+  </head>
+
+  <body class="{% if settings.zoom_image_on_hover %}zoom-image--enabled{% endif %}">
+    {%- render 'shadow-dom-templates' -%}
+
+    <a href="#main" class="skip-to-content sr-only">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    {%- if request.page_type != 'password' -%}
+      {%- sections 'header-group' -%}
+      {%- sections 'overlay-group' -%}
+
+      {%- if settings.cart_type == 'popover' -%}
+        <cart-notification-drawer open-from="bottom" class="quick-buy-drawer drawer"></cart-notification-drawer>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if request.page_type == 'customers/account' or request.page_type == 'customers/order' or request.page_type == 'customers/addresses' -%}
+      {%- section 'account-banner' -%}
+    {%- endif -%}
+
+    <main role="main" id="main" class="anchor">
+      {{ content_for_layout }}
+
+      {%- comment -%}
+      IMPLEMENTATION NOTE: due to the very complex logic of margin/padding collapsing in Impact, the footer group is
+      added into the main element to ensure that dynamic sections added into the footer group are properly laid out.
+      {%- endcomment -%}
+      {%- if request.page_type != 'password' -%}
+        {%- sections 'footer-group' -%}
+      {%- endif -%}
+    </main>
+
+    {%- comment -%}
+      Below is new code to change search to menu 
+    {%- endcomment -%}
+    <script>
+      (() => {
+        let passthrough = false;
+
+        document.addEventListener('click', (e) => {
+          const opener = e.target.closest('[data-open-search-from-nav][aria-controls="search-drawer"]');
+          if (!opener) return;
+
+          // On the second (programmatic) click, let the theme handle opening normally
+          if (passthrough) {
+            passthrough = false;
+            return;
+          }
+
+          // First click: don't let anything else fire yet
+          e.preventDefault();
+          e.stopPropagation();
+
+          // 1) Close any currently-open dialog/drawer (same mechanism as <button is="close-button">)
+          opener.dispatchEvent(new CustomEvent('dialog:force-close', {
+            bubbles: true,
+            cancelable: true,
+            composed: true
+          }));
+
+          // 2) Now let the theme's own aria-controls opener run
+          window.setTimeout(() => {
+            passthrough = true;
+            opener.click();
+          }, 120);
+        }, true);
+      })();
+    </script>
+  </body>
+</html>
