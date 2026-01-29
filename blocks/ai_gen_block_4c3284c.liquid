@@ -1,0 +1,367 @@
+{% doc %}
+  @prompt
+    Valour "Is Valour for you?" comparison section (matches reference).
+    Full-width of parent (no vw tricks). Two cards, left highlighted, right muted + note link.
+{% enddoc %}
+
+{% assign id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+/* =========================
+   Valour Compare (hard spec)
+   ========================= */
+
+/* Use a "root" class + attribute selector style specificity to beat theme defaults */
+comparison-block-{{ id }}.valour-compare-{{ id }}{
+  display:block;
+}
+
+/* Full-bleed relative to parent (no vw). If parent is boxed, it will be boxed. */
+comparison-block-{{ id }}.valour-compare-{{ id }}{
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 84px 20px 92px;
+  background: radial-gradient(ellipse at center,
+    #0b1a24 0%,
+    #05080c 45%,
+    #000000 78%,
+    #000000 100%
+  ) !important;
+  overflow: hidden;
+}
+
+/* subtle vignette */
+comparison-block-{{ id }}.valour-compare-{{ id }}::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at center,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.30) 58%,
+      rgba(0,0,0,0.90) 100%
+    );
+}
+
+/* inner */
+comparison-block-{{ id }} .valour-inner-{{ id }}{
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* header */
+comparison-block-{{ id }} .valour-head-{{ id }}{
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+comparison-block-{{ id }} .valour-title-{{ id }}{
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(34px, 4.6vw, 58px);
+  color: #ffffff;
+}
+
+comparison-block-{{ id }} .valour-title-{{ id }} .accent-{{ id }}{
+  background: linear-gradient(90deg, #29b6ff 0%, #00e6ff 55%, #2d7dff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+comparison-block-{{ id }} .valour-sub-{{ id }}{
+  margin: 12px auto 0;
+  max-width: 720px;
+  color: rgba(255,255,255,0.68);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* grid */
+comparison-block-{{ id }} .valour-grid-{{ id }}{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (min-width: 900px){
+  comparison-block-{{ id }} .valour-grid-{{ id }}{
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+  }
+}
+
+/* cards */
+comparison-block-{{ id }} .valour-card-{{ id }}{
+  border-radius: 16px;
+  padding: 28px 28px 26px;
+  background: rgba(7, 14, 19, 0.70);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 18px 58px rgba(0,0,0,0.55);
+}
+
+comparison-block-{{ id }} .valour-card-{{ id }}.is-active{
+  background: rgba(6, 20, 28, 0.82);
+  border-color: rgba(41,182,255,0.40);
+  box-shadow:
+    0 18px 60px rgba(0,0,0,0.60),
+    0 0 0 1px rgba(41,182,255,0.16) inset,
+    0 0 40px rgba(41,182,255,0.12);
+}
+
+comparison-block-{{ id }} .valour-card-{{ id }}.is-muted{
+  background: rgba(7, 14, 19, 0.50);
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* card header row */
+comparison-block-{{ id }} .card-top-{{ id }}{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+comparison-block-{{ id }} .badge-{{ id }}{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.80);
+}
+
+comparison-block-{{ id }} .valour-card-{{ id }}.is-active .badge-{{ id }}{
+  background: rgba(41,182,255,0.12);
+  border-color: rgba(41,182,255,0.24);
+  color: #29b6ff;
+}
+
+comparison-block-{{ id }} .valour-card-{{ id }}.is-muted .badge-{{ id }}{
+  color: rgba(255,255,255,0.55);
+}
+
+/* titles */
+comparison-block-{{ id }} .card-title-{{ id }}{
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: rgba(255,255,255,0.92);
+}
+
+comparison-block-{{ id }} .valour-card-{{ id }}.is-muted .card-title-{{ id }}{
+  color: rgba(255,255,255,0.65);
+}
+
+/* bullets */
+comparison-block-{{ id }} .bullets-{{ id }}{
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  display:grid;
+  gap: 12px;
+}
+
+comparison-block-{{ id }} .bullet-{{ id }}{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+  color: rgba(255,255,255,0.90);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+comparison-block-{{ id }} .valour-card-{{ id }}.is-muted .bullet-{{ id }}{
+  color: rgba(255,255,255,0.52);
+}
+
+/* bullet icon */
+comparison-block-{{ id }} .bicon-{{ id }}{
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+comparison-block-{{ id }} .bicon-{{ id }}.check{
+  background: rgba(41,182,255,0.12);
+  border-color: rgba(41,182,255,0.28);
+  color: #29b6ff;
+}
+
+comparison-block-{{ id }} .bicon-{{ id }}.x{
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.55);
+}
+
+/* note line under right card */
+comparison-block-{{ id }} .note-{{ id }}{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.55);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+comparison-block-{{ id }} .note-{{ id }} a{
+  color: #29b6ff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(41,182,255,0.35);
+}
+
+comparison-block-{{ id }} .note-{{ id }} a:hover{
+  border-bottom-color: rgba(41,182,255,0.65);
+}
+{% endstyle %}
+
+<comparison-block-{{ id }} class="valour-compare-{{ id }}" {{ block.shopify_attributes }}>
+  <div class="valour-inner-{{ id }}">
+    <div class="valour-head-{{ id }}">
+      <h2 class="valour-title-{{ id }}">
+        {{ block.settings.heading_prefix }}
+        <span class="accent-{{ id }}">{{ block.settings.heading_accent }}</span>
+        {{ block.settings.heading_suffix }}
+      </h2>
+      <div class="valour-sub-{{ id }}">{{ block.settings.subtext }}</div>
+    </div>
+
+    <div class="valour-grid-{{ id }}">
+      <!-- LEFT -->
+      <div class="valour-card-{{ id }} is-active">
+        <div class="card-top-{{ id }}">
+          <span class="badge-{{ id }}" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3 class="card-title-{{ id }}">{{ block.settings.left_title }}</h3>
+        </div>
+
+        <ul class="bullets-{{ id }}">
+          {% assign left = block.settings.left_bullets | newline_to_br | split: '<br />' %}
+          {% for item in left %}
+            {% assign t = item | strip %}
+            {% if t != blank %}
+              <li class="bullet-{{ id }}">
+                <span class="bicon-{{ id }} check" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>{{ t }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="valour-card-{{ id }} is-muted">
+        <div class="card-top-{{ id }}">
+          <span class="badge-{{ id }}" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3 class="card-title-{{ id }}">{{ block.settings.right_title }}</h3>
+        </div>
+
+        <ul class="bullets-{{ id }}">
+          {% assign right = block.settings.right_bullets | newline_to_br | split: '<br />' %}
+          {% for item in right %}
+            {% assign t = item | strip %}
+            {% if t != blank %}
+              <li class="bullet-{{ id }}">
+                <span class="bicon-{{ id }} x" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>{{ t }}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        {% if block.settings.note_link != blank %}
+          <div class="note-{{ id }}">
+            {{ block.settings.note_prefix }}
+            <a href="{{ block.settings.note_link }}">{{ block.settings.note_link_text }}</a>
+            {{ block.settings.note_suffix }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</comparison-block-{{ id }}>
+
+<script>
+  (function () {
+    class ComparisonBlock{{ id }} extends HTMLElement {}
+    customElements.define('comparison-block-{{ id }}', ComparisonBlock{{ id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Compare Tiles",
+  "tag": null,
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "heading_prefix", "label": "Heading (prefix)", "default": "IS " },
+    { "type": "text", "id": "heading_accent", "label": "Heading (accent)", "default": "VALOUR" },
+    { "type": "text", "id": "heading_suffix", "label": "Heading (suffix)", "default": " FOR YOU?" },
+
+    { "type": "richtext", "id": "subtext", "label": "Subtext", "default": "<p>We believe in honesty. Here’s who we built these for.</p>" },
+
+    { "type": "header", "content": "Left card" },
+    { "type": "text", "id": "left_title", "label": "Left title", "default": "THIS IS FOR YOU IF" },
+    {
+      "type": "textarea",
+      "id": "left_bullets",
+      "label": "Left bullets (one per line)",
+      "default": "You want serious power and stability\nYou ride longer distances or higher speeds\nYou care about braking, suspension, and build quality\nYou’re done with \"toy\" scooters"
+    },
+
+    { "type": "header", "content": "Right card" },
+    { "type": "text", "id": "right_title", "label": "Right title", "default": "NOT FOR YOU IF" },
+    {
+      "type": "textarea",
+      "id": "right_bullets",
+      "label": "Right bullets (one per line)",
+      "default": "You want the lightest scooter possible\nYou just need a short, casual ride\nBudget is your main priority"
+    },
+
+    { "type": "header", "content": "Right card note" },
+    { "type": "text", "id": "note_prefix", "label": "Note prefix", "default": "Check out our " },
+    { "type": "text", "id": "note_link_text", "label": "Note link text", "default": "regular lineup" },
+    { "type": "url", "id": "note_link", "label": "Note link URL" },
+    { "type": "text", "id": "note_suffix", "label": "Note suffix", "default": " — built for everyday riders with different priorities." }
+  ],
+  "presets": [
+    { "name": "Valour - Compare tiles (hard spec)" }
+  ]
+}
+{% endschema %}

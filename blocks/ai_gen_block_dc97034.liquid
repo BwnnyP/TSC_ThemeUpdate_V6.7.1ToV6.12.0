@@ -1,0 +1,257 @@
+{% doc %}
+  @prompt
+    Valour comparison list/table:
+    Title + subtitle, two column headers, then paired rows (entry-level vs valour).
+    Built as a THEME BLOCK (no nested blocks).
+{% enddoc %}
+
+{% assign id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+/* =========================
+   Valour Comparison List (Block)
+   ========================= */
+comparison-block-{{ id }}.valour-compare-list-{{ id }}{
+  display:block;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 92px 20px 96px;
+  background: radial-gradient(ellipse at center,
+    #0b1a24 0%,
+    #05080c 45%,
+    #000000 78%,
+    #000000 100%
+  ) !important;
+  overflow:hidden;
+}
+
+comparison-block-{{ id }}.valour-compare-list-{{ id }}::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at center,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.30) 58%,
+      rgba(0,0,0,0.90) 100%
+    );
+}
+
+comparison-block-{{ id }} .vcl-inner-{{ id }}{
+  position:relative;
+  z-index:1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+comparison-block-{{ id }} .vcl-head-{{ id }}{
+  text-align:center;
+  margin-bottom: 40px;
+}
+
+comparison-block-{{ id }} .vcl-title-{{ id }}{
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(34px, 4.8vw, 58px);
+  color: rgba(255,255,255,0.94);
+}
+
+comparison-block-{{ id }} .vcl-title-{{ id }} .accent-{{ id }}{
+  background: linear-gradient(90deg, #29b6ff 0%, #00e6ff 55%, #2d7dff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+comparison-block-{{ id }} .vcl-sub-{{ id }}{
+  margin-top: 14px;
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Column labels */
+comparison-block-{{ id }} .vcl-cols-{{ id }}{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 34px auto 18px;
+}
+
+@media (min-width: 820px){
+  comparison-block-{{ id }} .vcl-cols-{{ id }}{
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+comparison-block-{{ id }} .vcl-coltag-{{ id }}{
+  text-align:center;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+comparison-block-{{ id }} .vcl-coltag-{{ id }}.is-right{
+  color: rgba(41,182,255,0.90);
+}
+
+/* Rows */
+comparison-block-{{ id }} .vcl-rows-{{ id }}{
+  display:grid;
+  gap: 12px;
+}
+
+comparison-block-{{ id }} .vcl-row-{{ id }}{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 820px){
+  comparison-block-{{ id }} .vcl-row-{{ id }}{
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+comparison-block-{{ id }} .vcl-cell-{{ id }}{
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-align:center;
+  font-size: 12.5px;
+  line-height: 1.55;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+comparison-block-{{ id }} .vcl-cell-{{ id }}.is-left{
+  background: rgba(255,255,255,0.02);
+  border-color: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.58);
+}
+
+comparison-block-{{ id }} .vcl-cell-{{ id }}.is-right{
+  background: rgba(10, 40, 56, 0.45);
+  border-color: rgba(41,182,255,0.35);
+  color: rgba(255,255,255,0.90);
+  font-weight: 600;
+  box-shadow:
+    0 0 0 1px rgba(41,182,255,0.12) inset,
+    0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* Footer */
+comparison-block-{{ id }} .vcl-foot-{{ id }}{
+  margin-top: 28px;
+  text-align:center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.02em;
+}
+{% endstyle %}
+
+<comparison-block-{{ id }} class="valour-compare-list-{{ id }}" {{ block.shopify_attributes }}>
+  <div class="vcl-inner-{{ id }}">
+    <div class="vcl-head-{{ id }}">
+      <h2 class="vcl-title-{{ id }}">
+        {{ block.settings.title_prefix }}
+        <span class="accent-{{ id }}">{{ block.settings.title_accent }}</span>
+        {{ block.settings.title_suffix }}
+      </h2>
+      <div class="vcl-sub-{{ id }}">{{ block.settings.subtitle }}</div>
+    </div>
+
+    <div class="vcl-cols-{{ id }}">
+      <div class="vcl-coltag-{{ id }}">{{ block.settings.left_col_label }}</div>
+      <div class="vcl-coltag-{{ id }} is-right">{{ block.settings.right_col_label }}</div>
+    </div>
+
+    <div class="vcl-rows-{{ id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign en_key = 'row_' | append: i | append: '_enabled'
+          assign l_key = 'row_' | append: i | append: '_left'
+          assign r_key = 'row_' | append: i | append: '_right'
+          assign enabled = block.settings[en_key]
+          assign l = block.settings[l_key]
+          assign r = block.settings[r_key]
+        %}
+        {% if enabled and l != blank and r != blank %}
+          <div class="vcl-row-{{ id }}">
+            <div class="vcl-cell-{{ id }} is-left">{{ l }}</div>
+            <div class="vcl-cell-{{ id }} is-right">{{ r }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if block.settings.footnote != blank %}
+      <div class="vcl-foot-{{ id }}">{{ block.settings.footnote }}</div>
+    {% endif %}
+  </div>
+</comparison-block-{{ id }}>
+
+<script>
+  (function () {
+    class ComparisonBlock{{ id }} extends HTMLElement {}
+    customElements.define('comparison-block-{{ id }}', ComparisonBlock{{ id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Valour - Comparison list",
+  "tag": null,
+  "settings": [
+    { "type": "header", "content": "Heading" },
+    { "type": "text", "id": "title_prefix", "label": "Title (prefix)", "default": "WHAT SETS " },
+    { "type": "text", "id": "title_accent", "label": "Title (accent)", "default": "VALOUR" },
+    { "type": "text", "id": "title_suffix", "label": "Title (suffix)", "default": " APART" },
+    { "type": "richtext", "id": "subtitle", "label": "Subtitle", "default": "<p>The difference between entry-level and performance.</p>" },
+
+    { "type": "header", "content": "Column labels" },
+    { "type": "text", "id": "left_col_label", "label": "Left column label", "default": "ENTRY-LEVEL SCOOTERS" },
+    { "type": "text", "id": "right_col_label", "label": "Right column label", "default": "VALOUR SCOOTERS" },
+
+    { "type": "header", "content": "Rows" },
+
+    { "type": "checkbox", "id": "row_1_enabled", "label": "Enable row 1", "default": true },
+    { "type": "text", "id": "row_1_left", "label": "Row 1 (left)", "default": "Lightweight frames for portability" },
+    { "type": "text", "id": "row_1_right", "label": "Row 1 (right)", "default": "Thicker frames, heavier-duty components for stability" },
+
+    { "type": "checkbox", "id": "row_2_enabled", "label": "Enable row 2", "default": true },
+    { "type": "text", "id": "row_2_left", "label": "Row 2 (left)", "default": "Suspension tuned for comfort" },
+    { "type": "text", "id": "row_2_right", "label": "Row 2 (right)", "default": "Dual suspension tuned for control at speed" },
+
+    { "type": "checkbox", "id": "row_3_enabled", "label": "Enable row 3", "default": true },
+    { "type": "text", "id": "row_3_left", "label": "Row 3 (left)", "default": "Standard mechanical braking" },
+    { "type": "text", "id": "row_3_right", "label": "Row 3 (right)", "default": "Braking systems designed for repeated high-speed stops" },
+
+    { "type": "checkbox", "id": "row_4_enabled", "label": "Enable row 4", "default": true },
+    { "type": "text", "id": "row_4_left", "label": "Row 4 (left)", "default": "Power optimized for efficiency" },
+    { "type": "text", "id": "row_4_right", "label": "Row 4 (right)", "default": "Power delivery that’s predictable, not jerky" },
+
+    { "type": "checkbox", "id": "row_5_enabled", "label": "Enable row 5", "default": true },
+    { "type": "text", "id": "row_5_left", "label": "Row 5 (left)", "default": "Entry-level motor configurations" },
+    { "type": "text", "id": "row_5_right", "label": "Row 5 (right)", "default": "High-torque dual motor setups" },
+
+    { "type": "checkbox", "id": "row_6_enabled", "label": "Enable row 6", "default": false },
+    { "type": "text", "id": "row_6_left", "label": "Row 6 (left)", "default": "-" },
+    { "type": "text", "id": "row_6_right", "label": "Row 6 (right)", "default": "-" },
+
+    { "type": "header", "content": "Footer" },
+    { "type": "text", "id": "footnote", "label": "Footnote", "default": "No brand comparisons. No callouts. Just what matters." }
+  ],
+  "presets": [
+    { "name": "Valour - Comparison list" }
+  ]
+}
+{% endschema %}

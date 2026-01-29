@@ -1,0 +1,383 @@
+{% doc %}
+  @prompt
+    Editorial "assessment" section:
+    - Subheading + large heading (left aligned)
+    - Two columns
+    - Each column has a label (tile subheading)
+    - Each column has multiple list items (entered as item|item|item)
+    - Thin divider line then footer text underneath
+{% enddoc %}
+
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-info-tiles-{{ ai_gen_id }}{
+    display:block;
+    width:100%;
+    padding: 80px 20px;
+    background: transparent;
+  }
+
+  .ai-info-tiles__container-{{ ai_gen_id }}{
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  /* Header (editorial) */
+  .ai-info-tiles__header-{{ ai_gen_id }}{
+    text-align: left;
+    margin-bottom: 44px;
+  }
+
+  .ai-info-tiles__subheading-{{ ai_gen_id }}{
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: {{ block.settings.subheading_color }};
+    margin: 0 0 14px 0;
+  }
+
+  .ai-info-tiles__heading-{{ ai_gen_id }}{
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.05;
+  }
+
+  /* 2-column layout */
+  .ai-info-tiles__grid-{{ ai_gen_id }}{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: 750px){
+    .ai-info-tiles__grid-{{ ai_gen_id }}{
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+  }
+
+  /* Remove “card” styling */
+  .ai-info-tiles__tile-{{ ai_gen_id }}{
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    text-align: left;
+  }
+
+  /* Column labels */
+  .ai-info-tiles__tile-subheading-{{ ai_gen_id }}{
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.55);
+    margin: 0 0 18px 0;
+    font-weight: 600;
+  }
+
+  /* Pipe-list -> rows */
+  .ai-info-tiles__list-{{ ai_gen_id }}{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-info-tiles__item-{{ ai_gen_id }}{
+    position: relative;
+    margin: 0 0 14px 0;
+    padding-left: 18px;
+    color: rgba(0,0,0,0.72);
+    font-size: {{ block.settings.tile_text_size }}px;
+    line-height: 1.7;
+  }
+
+  .ai-info-tiles__item-{{ ai_gen_id }}:last-child{
+    margin-bottom: 0;
+  }
+
+  /* the little vertical rule per line item */
+  .ai-info-tiles__item-{{ ai_gen_id }}::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top: 0.35em;
+    bottom: 0.35em;
+    width: 1px;
+    background: rgba(0,0,0,0.16);
+  }
+
+  /* Make column 2 (“Not for you”) feel quieter */
+  .ai-info-tiles__grid-{{ ai_gen_id }} > .ai-info-tiles__tile-{{ ai_gen_id }}:nth-child(2)
+  .ai-info-tiles__item-{{ ai_gen_id }}{
+    color: rgba(0,0,0,0.48);
+  }
+
+  .ai-info-tiles__grid-{{ ai_gen_id }} > .ai-info-tiles__tile-{{ ai_gen_id }}:nth-child(2)
+  .ai-info-tiles__item-{{ ai_gen_id }}::before{
+    background: rgba(0,0,0,0.10);
+  }
+
+  /* Divider line above footer */
+  .ai-info-tiles__divider-{{ ai_gen_id }}{
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin: 34px 0 22px;
+  }
+
+  .ai-info-tiles__footer-text-{{ ai_gen_id }}{
+    font-size: {{ block.settings.footer_text_size }}px;
+    color: rgba(0,0,0,0.62);
+    text-align: left;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 720px;
+  }
+
+  @media (max-width: 749px){
+    .ai-info-tiles-{{ ai_gen_id }}{
+      padding: 56px 18px;
+    }
+    .ai-info-tiles__heading-{{ ai_gen_id }}{
+      font-size: calc({{ block.settings.heading_size }}px * 0.78);
+    }
+  }
+{% endstyle %}
+
+<info-tiles-{{ ai_gen_id }} class="ai-info-tiles-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-info-tiles__container-{{ ai_gen_id }}">
+    <div class="ai-info-tiles__header-{{ ai_gen_id }}">
+      {% if block.settings.subheading != blank %}
+        <div class="ai-info-tiles__subheading-{{ ai_gen_id }}">
+          {{ block.settings.subheading }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-info-tiles__heading-{{ ai_gen_id }}">
+          {{ block.settings.heading }}
+        </h2>
+      {% endif %}
+    </div>
+
+    <div class="ai-info-tiles__grid-{{ ai_gen_id }}">
+      <!-- Tile 1 -->
+      <div class="ai-info-tiles__tile-{{ ai_gen_id }}">
+        {% if block.settings.tile_1_subheading != blank %}
+          <h3 class="ai-info-tiles__tile-subheading-{{ ai_gen_id }}">
+            {{ block.settings.tile_1_subheading }}
+          </h3>
+        {% endif %}
+
+        {% if block.settings.tile_1_items != blank %}
+          {% assign items_1 = block.settings.tile_1_items | split: '|' %}
+          <ul class="ai-info-tiles__list-{{ ai_gen_id }}">
+            {% for item in items_1 %}
+              {% assign clean = item | strip %}
+              {% if clean != blank %}
+                <li class="ai-info-tiles__item-{{ ai_gen_id }}">{{ clean }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% elsif block.settings.tile_1_text != blank %}
+          <!-- Fallback if legacy richtext is still used -->
+          <div class="ai-info-tiles__legacy-{{ ai_gen_id }}">
+            {{ block.settings.tile_1_text }}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- Tile 2 -->
+      <div class="ai-info-tiles__tile-{{ ai_gen_id }}">
+        {% if block.settings.tile_2_subheading != blank %}
+          <h3 class="ai-info-tiles__tile-subheading-{{ ai_gen_id }}">
+            {{ block.settings.tile_2_subheading }}
+          </h3>
+        {% endif %}
+
+        {% if block.settings.tile_2_items != blank %}
+          {% assign items_2 = block.settings.tile_2_items | split: '|' %}
+          <ul class="ai-info-tiles__list-{{ ai_gen_id }}">
+            {% for item in items_2 %}
+              {% assign clean = item | strip %}
+              {% if clean != blank %}
+                <li class="ai-info-tiles__item-{{ ai_gen_id }}">{{ clean }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% elsif block.settings.tile_2_text != blank %}
+          <!-- Fallback if legacy richtext is still used -->
+          <div class="ai-info-tiles__legacy-{{ ai_gen_id }}">
+            {{ block.settings.tile_2_text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if block.settings.footer_text != blank %}
+      <div class="ai-info-tiles__divider-{{ ai_gen_id }}"></div>
+      <div class="ai-info-tiles__footer-text-{{ ai_gen_id }}">
+        {{ block.settings.footer_text }}
+      </div>
+    {% endif %}
+  </div>
+</info-tiles-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class InfoTiles{{ ai_gen_id }} extends HTMLElement {
+      constructor() { super(); }
+    }
+    customElements.define('info-tiles-{{ ai_gen_id }}', InfoTiles{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Valour assessment",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Honest assessment"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Is Valour For You?"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 90,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 64
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#111111"
+    },
+
+    {
+      "type": "header",
+      "content": "Column 1"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "tile_1_subheading",
+      "label": "Label",
+      "default": "This is for you if"
+    },
+    {
+      "type": "textarea",
+      "id": "tile_1_items",
+      "label": "Items (separate with |)",
+      "default": "You want serious power and stability|You ride longer distances or higher speeds|You care about braking, suspension, and build quality|You’ve outgrown entry-level scooters"
+    },
+
+    {
+      "type": "header",
+      "content": "Column 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "tile_2_subheading",
+      "label": "Label",
+      "default": "Not for you if"
+    },
+    {
+      "type": "textarea",
+      "id": "tile_2_items",
+      "label": "Items (separate with |)",
+      "default": "You prioritise portability above all else|Your rides are short and casual|Budget is the primary constraint"
+    },
+
+    {
+      "type": "header",
+      "content": "Footer"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_text",
+      "label": "Footer text",
+      "default": "<p>Both are valid choices. We just chose to build for the first group.</p>"
+    },
+    {
+      "type": "range",
+      "id": "footer_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Footer text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "tile_text_size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Item text size",
+      "default": 14
+    },
+
+    {
+      "type": "header",
+      "content": "Legacy fields (optional fallback)"
+    },
+    {
+      "type": "richtext",
+      "id": "tile_1_text",
+      "label": "Tile 1 rich text (legacy)",
+      "default": "<p></p>"
+    },
+    {
+      "type": "richtext",
+      "id": "tile_2_text",
+      "label": "Tile 2 rich text (legacy)",
+      "default": "<p></p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Valour assessment (2 columns)"
+    }
+  ]
+}
+{% endschema %}

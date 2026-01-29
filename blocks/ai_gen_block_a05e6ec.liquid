@@ -1,0 +1,466 @@
+{% doc %}
+  @prompt
+    Valour feature tiles section.
+    Centered heading + subheading, followed by 3–6 tiles.
+    Dark, performance-focused styling.
+{% enddoc %}
+
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-feature-tiles-wrap-{{ ai_gen_id }}{
+    {% if block.settings.color_scheme == 'dark' %}
+      --ft-bg: #000;
+      --ft-text: #fff;
+      --ft-muted: rgba(255,255,255,.65);
+
+      --ft-card: rgba(255,255,255,.03);
+      --ft-card-hover: rgba(255,255,255,.05);
+      --ft-card-border: rgba(255,255,255,.08);
+      --ft-card-border-hover: rgba(46,167,255,.35);
+
+      --ft-icon: {{ block.settings.accent_color }};
+      --ft-badge-bg: rgba(46,167,255,.08);
+      --ft-badge-border: rgba(46,167,255,.18);
+    {% else %}
+      --ft-bg: {{ block.settings.section_bg }};
+      --ft-text: {{ block.settings.text_color }};
+      --ft-muted: rgba(0,0,0,.65);
+
+      --ft-card: {{ block.settings.tile_background }};
+      --ft-card-hover: {{ block.settings.tile_background_hover }};
+      --ft-card-border: {{ block.settings.tile_border }};
+      --ft-card-border-hover: {{ block.settings.tile_border_hover }};
+
+      --ft-icon: {{ block.settings.icon_color }};
+      --ft-badge-bg: {{ block.settings.icon_badge_bg }};
+      --ft-badge-border: {{ block.settings.icon_badge_border }};
+    {% endif %}
+  }
+
+  .ai-feature-tiles-wrap-{{ ai_gen_id }}{
+    background: var(--ft-bg);
+    padding: {{ block.settings.section_padding_y }}px 0;
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+  }
+
+  .ai-feature-tiles-inner-{{ ai_gen_id }}{
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-feature-tiles-header-{{ ai_gen_id }}{
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .ai-feature-tiles-heading-{{ ai_gen_id }}{
+    margin: 0 0 12px;
+    font-size: {{ block.settings.heading_size }}px;
+    color: var(--ft-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    line-height: 1.05;
+  }
+
+  .ai-feature-tiles-heading-{{ ai_gen_id }} .accent{
+    color: {{ block.settings.accent_color }};
+  }
+
+  .ai-feature-tiles-subheading-{{ ai_gen_id }}{
+    margin: 0 auto;
+    max-width: 720px;
+    font-size: {{ block.settings.subheading_size }}px;
+    color: var(--ft-text);
+    color: var(--ft-muted);
+    opacity: 1;
+    line-height: 1.6;
+  }
+
+  .ai-feature-tiles-grid-{{ ai_gen_id }}{
+    display: grid;
+    gap: {{ block.settings.grid_gap }}px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-feature-tiles-grid-{{ ai_gen_id }}.is-four-{{ ai_gen_id }} > .ai-feature-tile-{{ ai_gen_id }}:nth-child(4){
+    grid-column: 2 / span 1;
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}{
+    background: var(--ft-card);
+    border: 1px solid var(--ft-card-border);
+    border-radius: {{ block.settings.tile_border_radius }}px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 180px;
+    box-shadow: 0 12px 32px rgba(0,0,0, {{ block.settings.tile_shadow_opacity }});
+    transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}::before{
+    content:"";
+    position:absolute;
+    inset:-1px;
+    pointer-events:none;
+    opacity:0;
+    transition: opacity 180ms ease;
+    background: radial-gradient(
+      600px circle at 22% 18%,
+      rgba(46,167,255,0.18),
+      rgba(46,167,255,0.06) 38%,
+      transparent 68%
+    );
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}:hover,
+  .ai-feature-tile-{{ ai_gen_id }}:focus-within{
+    border-color: rgba(46,167,255,0.55);
+    box-shadow:
+      0 0 0 1px rgba(46,167,255,0.22),
+      0 18px 60px rgba(0,0,0,0.55),
+      0 0 34px rgba(46,167,255,0.20);
+    transform: translateY(-2px);
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}:hover::before,
+  .ai-feature-tile-{{ ai_gen_id }}:focus-within::before{
+    opacity: 1;
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}:hover .ai-feature-tile-icon-wrap-{{ ai_gen_id }},
+  .ai-feature-tile-{{ ai_gen_id }}:focus-within .ai-feature-tile-icon-wrap-{{ ai_gen_id }}{
+    border-color: rgba(46,167,255,0.35);
+    background: rgba(46,167,255,0.12);
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}:active{
+    box-shadow:
+      0 0 0 1px rgba(46,167,255,0.28),
+      0 12px 40px rgba(0,0,0,0.55),
+      0 0 40px rgba(46,167,255,0.22);
+  }
+
+  .ai-feature-tile-{{ ai_gen_id }}:hover{
+    transform: translateY(-2px);
+    border-color: var(--ft-card-border-hover);
+    background: var(--ft-card-hover);
+  }
+
+  .ai-feature-tile-icon-wrap-{{ ai_gen_id }}{
+    width: {{ block.settings.icon_badge_size }}px;
+    height: {{ block.settings.icon_badge_size }}px;
+    border-radius: {{ block.settings.icon_badge_radius }}px;
+    background: var(--ft-badge-bg);
+    border: 1px solid var(--ft-badge-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-feature-tile-icon-{{ ai_gen_id }}{
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-feature-tile-icon-{{ ai_gen_id }} svg{
+    width: 100%;
+    height: 100%;
+    stroke: var(--ft-icon);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .ai-feature-tile-heading-{{ ai_gen_id }}{
+    margin: 0;
+    font-size: {{ block.settings.tile_heading_size }}px;
+    color: var(--ft-text);
+    font-weight: 600;
+  }
+
+  .ai-feature-tile-text-{{ ai_gen_id }}{
+    margin: 0;
+    font-size: {{ block.settings.tile_text_size }}px;
+    color: var(--ft-text);
+    opacity: 0.7;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 989px){
+    .ai-feature-tiles-grid-{{ ai_gen_id }}{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 749px){
+    .ai-feature-tiles-inner-{{ ai_gen_id }}{
+      padding: 0 16px;
+    }
+
+    .ai-feature-tiles-grid-{{ ai_gen_id }}{
+      display: flex;
+      gap: {{ block.settings.grid_gap }}px;
+      overflow-x: auto;
+
+      /* avoid double-padding because inner already has 16px */
+      padding: 0 0 10px;
+
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding-left: 16px;
+
+      /* key fix: when a tile is focused/tapped and browser scrolls, don't tuck under the top UI */
+      scroll-padding-top: 96px;
+
+      /* kill grid behaviour */
+      grid-template-columns: none;
+    }
+
+    .ai-feature-tiles-grid-{{ ai_gen_id }} > .ai-feature-tile-{{ ai_gen_id }}{
+      flex: 0 0 86%;
+      scroll-snap-align: start;
+
+      /* same value as scroll-padding-top */
+      scroll-margin-top: 96px;
+
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Touch widths: don't "lift" on tap/focus (reduces perceived clipping) */
+    .ai-feature-tile-{{ ai_gen_id }}:hover,
+    .ai-feature-tile-{{ ai_gen_id }}:active,
+    .ai-feature-tile-{{ ai_gen_id }}:focus-within{
+      transform: none;
+    }
+
+    /* optional: hide scrollbar but keep swipe */
+    .ai-feature-tiles-grid-{{ ai_gen_id }}{
+      scrollbar-width: none;
+    }
+    .ai-feature-tiles-grid-{{ ai_gen_id }}::-webkit-scrollbar{
+      display: none;
+    }
+
+    .ai-feature-tiles-heading-{{ ai_gen_id }}{
+      font-size: {{ block.settings.heading_size | times: 0.78 }}px;
+      letter-spacing: 0.06em;
+    }
+
+    .ai-feature-tiles-subheading-{{ ai_gen_id }}{
+      font-size: {{ block.settings.subheading_size | times: 0.95 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-feature-tiles-wrap-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-feature-tiles-inner-{{ ai_gen_id }}">
+    <div class="ai-feature-tiles-header-{{ ai_gen_id }}">
+      <h2 class="ai-feature-tiles-heading-{{ ai_gen_id }}">
+        {{ block.settings.heading_prefix }}
+        <span class="accent">{{ block.settings.heading_accent }}</span>
+        {{ block.settings.heading_suffix }}
+      </h2>
+
+      <p class="ai-feature-tiles-subheading-{{ ai_gen_id }}">
+        {{ block.settings.subheading }}
+      </p>
+    </div>
+
+    {% liquid
+      assign enabled_count = 0
+      for i in (1..6)
+        assign enabled_key = 'tile_' | append: i | append: '_enabled'
+        if block.settings[enabled_key]
+          assign enabled_count = enabled_count | plus: 1
+        endif
+      endfor
+    %}
+
+    <div class="ai-feature-tiles-grid-{{ ai_gen_id }}{% if enabled_count == 4 %} is-four-{{ ai_gen_id }}{% endif %}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign enabled_key = 'tile_' | append: i | append: '_enabled'
+          assign icon_key    = 'tile_' | append: i | append: '_icon'
+          assign heading_key = 'tile_' | append: i | append: '_heading'
+          assign text_key    = 'tile_' | append: i | append: '_text'
+
+          assign enabled = block.settings[enabled_key]
+          assign icon    = block.settings[icon_key]
+          assign heading = block.settings[heading_key]
+          assign text    = block.settings[text_key]
+        %}
+
+        {% if enabled %}
+          <div class="ai-feature-tile-{{ ai_gen_id }}">
+            <div class="ai-feature-tile-icon-wrap-{{ ai_gen_id }}">
+              <div class="ai-feature-tile-icon-{{ ai_gen_id }}">
+                {% case icon %}
+                  {% when 'zap' %}<svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  {% when 'shield' %}<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  {% when 'clock' %}<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  {% when 'award' %}<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                  {% when 'thumbs_up' %}<svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3z"/></svg>
+                  {% else %}<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+                {% endcase %}
+              </div>
+            </div>
+
+            {% if heading != blank %}
+              <h3 class="ai-feature-tile-heading-{{ ai_gen_id }}">{{ heading }}</h3>
+            {% endif %}
+            {% if text != blank %}
+              <p class="ai-feature-tile-text-{{ ai_gen_id }}">{{ text }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature tiles (Valour)",
+  "settings": [
+    { "type": "color", "id": "section_bg", "label": "Background", "default": "#000000" },
+    { "type": "range", "id": "section_padding_y", "min": 40, "max": 140, "step": 10, "unit": "px", "label": "Vertical padding", "default": 90 },
+    { "type": "range", "id": "max_width", "min": 900, "max": 1400, "step": 50, "unit": "px", "label": "Max width", "default": 1200 },
+
+    { "type": "text", "id": "heading_prefix", "label": "Heading prefix", "default": "WHAT " },
+    { "type": "text", "id": "heading_accent", "label": "Heading accent", "default": "VALOUR" },
+    { "type": "text", "id": "heading_suffix", "label": "Heading suffix", "default": " STANDS FOR" },
+    { "type": "inline_richtext", "id": "subheading", "label": "Subheading", "default": "People don't buy performance — they buy intent." },
+
+    { "type": "range", "id": "heading_size", "min": 24, "max": 72, "step": 2, "unit": "px", "label": "Heading size", "default": 54 },
+    { "type": "range", "id": "subheading_size", "min": 12, "max": 26, "step": 1, "unit": "px", "label": "Subheading size", "default": 16 },
+
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" },
+    { "type": "color", "id": "accent_color", "label": "Accent color", "default": "#2ea7ff" },
+    { "type": "color", "id": "icon_color", "label": "Icon color", "default": "#2ea7ff" },
+
+    { "type": "range", "id": "grid_gap", "min": 16, "max": 40, "step": 2, "unit": "px", "label": "Grid gap", "default": 24 },
+
+    { "type": "color", "id": "tile_background", "label": "Tile background", "default": "rgba(255,255,255,0.03)" },
+    { "type": "color", "id": "tile_background_hover", "label": "Tile background hover", "default": "rgba(255,255,255,0.05)" },
+    { "type": "color", "id": "tile_border", "label": "Tile border", "default": "rgba(255,255,255,0.08)" },
+    { "type": "color", "id": "tile_border_hover", "label": "Tile border hover", "default": "rgba(46,167,255,0.35)" },
+
+    { "type": "range", "id": "tile_shadow_opacity", "min": 0, "max": 1, "step": 0.1, "label": "Tile shadow opacity", "default": 0.4 },
+    { "type": "range", "id": "tile_border_radius", "min": 0, "max": 32, "step": 2, "unit": "px", "label": "Tile radius", "default": 14 },
+
+    { "type": "range", "id": "tile_heading_size", "min": 14, "max": 28, "step": 1, "unit": "px", "label": "Tile heading size", "default": 18 },
+    { "type": "range", "id": "tile_text_size", "min": 12, "max": 18, "step": 1, "unit": "px", "label": "Tile text size", "default": 14 },
+
+    { "type": "range", "id": "icon_badge_size", "min": 40, "max": 72, "step": 4, "unit": "px", "label": "Icon badge size", "default": 52 },
+    { "type": "range", "id": "icon_badge_radius", "min": 6, "max": 20, "step": 1, "unit": "px", "label": "Icon badge radius", "default": 12 },
+    { "type": "color", "id": "icon_badge_bg", "label": "Icon badge background", "default": "rgba(46,167,255,0.08)" },
+    { "type": "color", "id": "icon_badge_border", "label": "Icon badge border", "default": "rgba(46,167,255,0.18)" },
+    { "type": "range", "id": "icon_size", "min": 18, "max": 40, "step": 2, "unit": "px", "label": "Icon size", "default": 26 },
+
+    { "type": "header", "content": "Tile 1" },
+    { "type": "checkbox", "id": "tile_1_enabled", "label": "Enable tile 1", "default": true },
+    { "type": "select", "id": "tile_1_icon", "label": "Icon", "options": [
+      { "value": "zap", "label": "Lightning" },
+      { "value": "shield", "label": "Shield" },
+      { "value": "clock", "label": "Clock" },
+      { "value": "award", "label": "Award" },
+      { "value": "thumbs_up", "label": "Thumbs up" }
+    ], "default": "zap" },
+    { "type": "text", "id": "tile_1_heading", "label": "Heading", "default": "Performance-First Design" },
+    { "type": "textarea", "id": "tile_1_text", "label": "Text", "default": "Power, torque, and stability before marketing fluff." },
+
+    { "type": "header", "content": "Tile 2" },
+    { "type": "checkbox", "id": "tile_2_enabled", "label": "Enable tile 2", "default": true },
+    { "type": "select", "id": "tile_2_icon", "label": "Icon", "options": [
+      { "value": "zap", "label": "Lightning" },
+      { "value": "shield", "label": "Shield" },
+      { "value": "clock", "label": "Clock" },
+      { "value": "award", "label": "Award" },
+      { "value": "thumbs_up", "label": "Thumbs up" }
+    ], "default": "shield" },
+    { "type": "text", "id": "tile_2_heading", "label": "Heading", "default": "Overbuilt, Not Overhyped" },
+    { "type": "textarea", "id": "tile_2_text", "label": "Text", "default": "Frames, components, and geometry designed to last." },
+
+    { "type": "header", "content": "Tile 3" },
+    { "type": "checkbox", "id": "tile_3_enabled", "label": "Enable tile 3", "default": true },
+    { "type": "select", "id": "tile_3_icon", "label": "Icon", "options": [
+      { "value": "zap", "label": "Lightning" },
+      { "value": "shield", "label": "Shield" },
+      { "value": "clock", "label": "Clock" },
+      { "value": "award", "label": "Award" },
+      { "value": "thumbs_up", "label": "Thumbs up" }
+    ], "default": "clock" },
+    { "type": "text", "id": "tile_3_heading", "label": "Heading", "default": "Rider Confidence at Speed" },
+    { "type": "textarea", "id": "tile_3_text", "label": "Text", "default": "Braking, suspension, and control matter more than top speed numbers." },
+
+    { "type": "header", "content": "Tile 4" },
+    { "type": "checkbox", "id": "tile_4_enabled", "label": "Enable tile 4", "default": false },
+    { "type": "select", "id": "tile_4_icon", "label": "Icon", "options": [
+      { "value": "zap", "label": "Lightning" },
+      { "value": "shield", "label": "Shield" },
+      { "value": "clock", "label": "Clock" },
+      { "value": "award", "label": "Award" },
+      { "value": "thumbs_up", "label": "Thumbs up" }
+    ], "default": "award" },
+    { "type": "text", "id": "tile_4_heading", "label": "Heading", "default": "Limited, Intentional Models" },
+    { "type": "textarea", "id": "tile_4_text", "label": "Text", "default": "We don’t flood the range. Every Valour scooter earns its place." },
+
+    { "type": "header", "content": "Tile 5" },
+    { "type": "checkbox", "id": "tile_5_enabled", "label": "Enable tile 5", "default": false },
+    { "type": "select", "id": "tile_5_icon", "label": "Icon", "options": [
+      { "value": "zap", "label": "Lightning" },
+      { "value": "shield", "label": "Shield" },
+      { "value": "clock", "label": "Clock" },
+      { "value": "award", "label": "Award" },
+      { "value": "thumbs_up", "label": "Thumbs up" }
+    ], "default": "thumbs_up" },
+    { "type": "text", "id": "tile_5_heading", "label": "Heading", "default": "Australian-First Support" },
+    { "type": "textarea", "id": "tile_5_text", "label": "Text", "default": "Sold, serviced, and backed locally." },
+
+    { "type": "header", "content": "Tile 6" },
+    { "type": "checkbox", "id": "tile_6_enabled", "label": "Enable tile 6", "default": false },
+    { "type": "select", "id": "tile_6_icon", "label": "Icon", "options": [
+      { "value": "zap", "label": "Lightning" },
+      { "value": "shield", "label": "Shield" },
+      { "value": "clock", "label": "Clock" },
+      { "value": "award", "label": "Award" },
+      { "value": "thumbs_up", "label": "Thumbs up" }
+    ], "default": "shield" },
+    { "type": "text", "id": "tile_6_heading", "label": "Heading", "default": "Built for Real Roads" },
+    { "type": "textarea", "id": "tile_6_text", "label": "Text", "default": "Dialled for stability, durability, and control — not just specs." },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+        { "value": "dark", "label": "Dark (Valour)" },
+        { "value": "light", "label": "Light" }
+      ],
+      "default": "dark"
+    },
+  ],
+  "presets": [
+    { "name": "Feature tiles (Valour)" }
+  ]
+}
+{% endschema %}

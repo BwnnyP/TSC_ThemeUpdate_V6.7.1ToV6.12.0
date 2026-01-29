@@ -1,0 +1,419 @@
+{% doc %}
+  @prompt
+    Valour Future section (block):
+    Eyebrow pill, large heading with gold accent word, subtitle,
+    4 feature cards in a row, then a wide callout card.
+    Valour dark + gold styling. No nested blocks.
+{% enddoc %}
+
+{% assign id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+/* =========================
+   Valour - Future Tiles (Block)
+   ========================= */
+feature-tiles-{{ id }}.vft-{{ id }}{
+  display:block;
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  padding: 88px 20px 96px;
+  background: radial-gradient(ellipse at center,
+    #0b1a24 0%,
+    #05080c 45%,
+    #000000 78%,
+    #000000 100%
+  ) !important;
+  overflow:hidden;
+}
+
+feature-tiles-{{ id }}.vft-{{ id }}::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background: radial-gradient(ellipse at center,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.30) 58%,
+    rgba(0,0,0,0.90) 100%
+  );
+}
+
+feature-tiles-{{ id }} .vft-inner-{{ id }}{
+  position:relative;
+  z-index:1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+feature-tiles-{{ id }} .vft-head-{{ id }}{
+  text-align:center;
+  margin-bottom: 44px;
+}
+
+feature-tiles-{{ id }} .vft-eyebrow-{{ id }}{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 209, 102, 0.92);
+  background: rgba(255, 209, 102, 0.08);
+  border: 1px solid rgba(255, 209, 102, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+  margin-bottom: 18px;
+}
+
+feature-tiles-{{ id }} .vft-title-{{ id }}{
+  margin:0;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(34px, 4.8vw, 58px);
+  color: rgba(255,255,255,0.94);
+}
+
+feature-tiles-{{ id }} .vft-title-{{ id }} .accent-{{ id }}{
+  color: rgba(255, 197, 74, 0.98);
+  font-weight: 700;
+}
+
+feature-tiles-{{ id }} .vft-sub-{{ id }}{
+  margin-top: 14px;
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Grid */
+feature-tiles-{{ id }} .vft-grid-{{ id }}{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  justify-items: stretch;
+  margin-top: 30px;
+}
+
+@media (min-width: 860px){
+  feature-tiles-{{ id }} .vft-grid-{{ id }}{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Cards */
+feature-tiles-{{ id }} .vft-card-{{ id }}{
+  position:relative;
+  border-radius: 14px;
+  padding: 22px 18px 18px;
+  background: rgba(10, 18, 26, 0.62);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 16px 55px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  text-align:center;
+  min-height: 138px;
+}
+
+feature-tiles-{{ id }} .vft-card-{{ id }}:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255, 209, 102, 0.28);
+  box-shadow:
+    0 22px 70px rgba(0,0,0,0.60),
+    0 0 35px rgba(255, 209, 102, 0.07);
+}
+
+feature-tiles-{{ id }} .vft-iconbox-{{ id }}{
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255, 209, 102, 0.10);
+  border: 1px solid rgba(255, 209, 102, 0.26);
+  color: rgba(255, 209, 102, 0.95);
+}
+
+feature-tiles-{{ id }} .vft-iconbox-{{ id }} svg{
+  width: 20px;
+  height: 20px;
+}
+
+feature-tiles-{{ id }} .vft-card-title-{{ id }}{
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+}
+
+feature-tiles-{{ id }} .vft-card-text-{{ id }}{
+  margin:0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Wide callout */
+feature-tiles-{{ id }} .vft-callout-{{ id }}{
+  margin-top: 34px;
+  border-radius: 16px;
+  padding: 34px 22px;
+  text-align:center;
+  background: rgba(12, 12, 12, 0.45);
+  border: 1px solid rgba(255, 209, 102, 0.24);
+  box-shadow:
+    0 20px 65px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+feature-tiles-{{ id }} .vft-callout-{{ id }} .line1-{{ id }}{
+  margin:0;
+  color: rgba(255,255,255,0.90);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+feature-tiles-{{ id }} .vft-callout-{{ id }} .line2-{{ id }}{
+  margin: 10px 0 0;
+  color: rgba(255, 209, 102, 0.92);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Callout CTA */
+feature-tiles-{{ id }} .vft-cta-wrap-{{ id }}{
+  margin-top: 22px;
+  text-align: center;
+}
+
+feature-tiles-{{ id }} .vft-cta-btn-{{ id }}{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 209, 102, 0.95);
+  background: rgba(255, 209, 102, 0.08);
+  border: 1px solid rgba(255, 209, 102, 0.35);
+  text-decoration: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 10px 30px rgba(0,0,0,0.45);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+feature-tiles-{{ id }} .vft-cta-btn-{{ id }}:hover{
+  transform: translateY(-2px);
+  background: rgba(255, 209, 102, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.10),
+    0 16px 45px rgba(0,0,0,0.55);
+}
+
+/* Responsive tweaks */
+@media (max-width: 859px){
+  feature-tiles-{{ id }} .vft-card-{{ id }}{
+    text-align:left;
+    padding: 18px 18px 16px;
+  }
+  feature-tiles-{{ id }} .vft-iconbox-{{ id }}{
+    margin: 0 0 10px 0;
+  }
+}
+{% endstyle %}
+
+<feature-tiles-{{ id }} class="vft-{{ id }}" {{ block.shopify_attributes }}>
+  <div class="vft-inner-{{ id }}">
+    <div class="vft-head-{{ id }}">
+      <div class="vft-eyebrow-{{ id }}">{{ block.settings.eyebrow }}</div>
+
+      <h2 class="vft-title-{{ id }}">
+        {{ block.settings.title_prefix }}
+        <span class="accent-{{ id }}">{{ block.settings.title_accent }}</span>
+      </h2>
+
+      <div class="vft-sub-{{ id }}">{{ block.settings.subtitle }}</div>
+    </div>
+
+    <div class="vft-grid-{{ id }}">
+      {% for i in (1..4) %}
+        {% liquid
+          assign t_key = 'tile_' | append: i | append: '_title'
+          assign p_key = 'tile_' | append: i | append: '_text'
+          assign icon_key = 'tile_' | append: i | append: '_icon'
+          assign t = block.settings[t_key]
+          assign p = block.settings[p_key]
+          assign ico = block.settings[icon_key]
+        %}
+
+        <div class="vft-card-{{ id }}">
+          <div class="vft-iconbox-{{ id }}" aria-hidden="true">
+            {% case ico %}
+              {% when 'trend' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 17l6-6 4 4 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 8h6v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {% when 'lock' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 11V8a5 5 0 0110 0v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M6 11h12v10H6V11z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                </svg>
+              {% when 'badge' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2l3 5 5 1-3.5 4 1 6-5.5-2-5.5 2 1-6L4 8l5-1 3-5z" stroke="currentColor" stroke-width="2.0" stroke-linejoin="round"/>
+                </svg>
+              {% when 'rocket' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M14 10l-4 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M5 19c4-1 7-4 9-9 1-3 1-6 1-6s-3 0-6 1c-5 2-8 5-9 9 0 0 2 2 5 5z" stroke="currentColor" stroke-width="2.0" stroke-linejoin="round"/>
+                  <path d="M9 21l2-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+              {% else %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            {% endcase %}
+          </div>
+
+          <h3 class="vft-card-title-{{ id }}">{{ t }}</h3>
+          <p class="vft-card-text-{{ id }}">{{ p }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="vft-callout-{{ id }}">
+      <p class="line1-{{ id }}">{{ block.settings.callout_line_1 }}</p>
+      <p class="line2-{{ id }}">{{ block.settings.callout_line_2 }}</p>
+
+      {% if block.settings.cta_label != blank and block.settings.cta_link != blank %}
+        <div class="vft-cta-wrap-{{ id }}">
+          <a
+            href="{{ block.settings.cta_link }}"
+            class="vft-cta-btn-{{ id }}"
+          >
+            {{ block.settings.cta_label }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</feature-tiles-{{ id }}>
+
+<script>
+  (function () {
+    class FeatureTiles{{ id }} extends HTMLElement {}
+    customElements.define('feature-tiles-{{ id }}', FeatureTiles{{ id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Valour - Future tiles",
+  "tag": null,
+  "settings": [
+    { "type": "header", "content": "Header" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE ROAD AHEAD" },
+
+    { "type": "text", "id": "title_prefix", "label": "Title (prefix)", "default": "THE FUTURE OF " },
+    { "type": "text", "id": "title_accent", "label": "Title (accent)", "default": "VALOUR" },
+
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>Buy into a platform, not a one-off.</p>"
+    },
+
+    { "type": "header", "content": "Tiles" },
+
+    {
+      "type": "select",
+      "id": "tile_1_icon",
+      "label": "Tile 1 icon",
+      "options": [
+        { "value": "trend", "label": "Trend" },
+        { "value": "lock", "label": "Lock" },
+        { "value": "badge", "label": "Badge" },
+        { "value": "rocket", "label": "Rocket" }
+      ],
+      "default": "trend"
+    },
+    { "type": "text", "id": "tile_1_title", "label": "Tile 1 title", "default": "Growing Lineup" },
+    { "type": "text", "id": "tile_1_text", "label": "Tile 1 text", "default": "Valour is a growing performance lineup." },
+
+    {
+      "type": "select",
+      "id": "tile_2_icon",
+      "label": "Tile 2 icon",
+      "options": [
+        { "value": "trend", "label": "Trend" },
+        { "value": "lock", "label": "Lock" },
+        { "value": "badge", "label": "Badge" },
+        { "value": "rocket", "label": "Rocket" }
+      ],
+      "default": "lock"
+    },
+    { "type": "text", "id": "tile_2_title", "label": "Tile 2 title", "default": "Same Philosophy" },
+    { "type": "text", "id": "tile_2_text", "label": "Tile 2 text", "default": "Future models will follow the same philosophy." },
+
+    {
+      "type": "select",
+      "id": "tile_3_icon",
+      "label": "Tile 3 icon",
+      "options": [
+        { "value": "trend", "label": "Trend" },
+        { "value": "lock", "label": "Lock" },
+        { "value": "badge", "label": "Badge" },
+        { "value": "rocket", "label": "Rocket" }
+      ],
+      "default": "lock"
+    },
+    { "type": "text", "id": "tile_3_title", "label": "Tile 3 title", "default": "No Dilution" },
+    { "type": "text", "id": "tile_3_text", "label": "Tile 3 text", "default": "No mass-market dilution." },
+
+    {
+      "type": "select",
+      "id": "tile_4_icon",
+      "label": "Tile 4 icon",
+      "options": [
+        { "value": "trend", "label": "Trend" },
+        { "value": "lock", "label": "Lock" },
+        { "value": "badge", "label": "Badge" },
+        { "value": "rocket", "label": "Rocket" }
+      ],
+      "default": "badge"
+    },
+    { "type": "text", "id": "tile_4_title", "label": "Tile 4 title", "default": "Earned Badge" },
+    { "type": "text", "id": "tile_4_text", "label": "Tile 4 text", "default": "Each model must justify the badge." },
+
+    { "type": "header", "content": "Callout" },
+    { "type": "text", "id": "callout_line_1", "label": "Callout line 1", "default": "When you buy a Valour scooter, you’re not just buying hardware." },
+    { "type": "text", "id": "callout_line_2", "label": "Callout line 2", "default": "You’re joining a performance community that’s just getting started." },
+
+    { "type": "header", "content": "Callout CTA" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Explore the Valour lineup" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" }
+  ],
+  "presets": [
+    { "name": "Valour - Future tiles" }
+  ]
+}
+{% endschema %}

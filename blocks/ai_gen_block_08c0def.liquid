@@ -1,0 +1,682 @@
+{% doc %}
+  @prompt
+    Prompt:
+    Create a full-width section with two columns.
+    Layout:
+    
+    Left column: Headline, subheadline, and two buttons
+    Right column: Space for an image (I'll upload my own)
+    
+    Content placeholders:
+    
+    Headline: [HEADLINE TEXT]
+    Subheadline: [SUBHEADLINE TEXT]
+    Button 1 (secondary style): [BUTTON 1 TEXT]
+    Button 2 (primary style): [BUTTON 2 TEXT]
+    
+    Styling:
+    
+    Use theme settings for colours, typography, and spacing
+    Both buttons should be the same width
+    Mobile: Stack vertically with image above text, buttons full-width, Allow to have differnt padding and different image for mobile and desktop
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-two-column-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top_mobile }}px {{ block.settings.section_padding_horizontal_mobile }}px {{ block.settings.section_padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top_desktop }}px {{ block.settings.section_padding_horizontal_desktop }}px {{ block.settings.section_padding_bottom_desktop }}px;
+    }
+  }
+
+  .ai-two-column-container-{{ ai_gen_id }} {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-two-column-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: {{ block.settings.column_gap_mobile }}px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr 1fr;
+      gap: {{ block.settings.column_gap_desktop }}px;
+    }
+  }
+
+  .ai-two-column-content-{{ ai_gen_id }} {
+    order: 2;
+    padding: {{ block.settings.content_padding_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-content-{{ ai_gen_id }} {
+      order: 1;
+      padding: {{ block.settings.content_padding_desktop }}px;
+    }
+  }
+
+  .ai-two-column-image-wrapper-{{ ai_gen_id }} {
+    order: 1;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-image-wrapper-{{ ai_gen_id }} {
+      order: 2;
+    }
+  }
+
+  .ai-two-column-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-two-column-image-mobile-{{ ai_gen_id }} {
+    display: block;
+  }
+
+  .ai-two-column-image-desktop-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-image-mobile-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-two-column-image-desktop-{{ ai_gen_id }} {
+      display: block;
+    }
+  }
+
+  .ai-two-column-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-two-column-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-two-column-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-two-column-headline-{{ ai_gen_id }} {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    font-style: var(--heading-font-style);
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size_mobile }}px;
+    line-height: 1.2;
+    margin: 0 0 {{ block.settings.heading_spacing }}px 0;
+    letter-spacing: {{ block.settings.heading_letter_spacing }}%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-headline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size_desktop }}px;
+    }
+  }
+
+  .ai-two-column-subheadline-{{ ai_gen_id }} {
+    font-family: var(--text-font-family);
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size_mobile }}px;
+    line-height: 1.6;
+    margin: 0 0 {{ block.settings.subheading_spacing }}px 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-subheadline-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_desktop }}px;
+    }
+  }
+
+  .ai-two-column-buttons-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.button_gap }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-buttons-{{ ai_gen_id }} {
+      flex-direction: row;
+    }
+  }
+
+  .ai-two-column-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-family: var(--text-font-family);
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-two-column-button-{{ ai_gen_id }} {
+      width: auto;
+      min-width: {{ block.settings.button_min_width }}px;
+    }
+  }
+
+  .ai-two-column-button-primary-{{ ai_gen_id }} {
+    background-color: {{ block.settings.primary_button_bg }};
+    color: {{ block.settings.primary_button_text }};
+    border-color: {{ block.settings.primary_button_bg }};
+  }
+
+  .ai-two-column-button-primary-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.primary_button_bg | color_darken: 10 }};
+    border-color: {{ block.settings.primary_button_bg | color_darken: 10 }};
+  }
+
+  .ai-two-column-button-secondary-{{ ai_gen_id }} {
+    background-color: {{ block.settings.secondary_button_bg }};
+    color: {{ block.settings.secondary_button_text }};
+    border-color: {{ block.settings.secondary_button_border }};
+  }
+
+  .ai-two-column-button-secondary-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.secondary_button_bg | color_darken: 5 }};
+    border-color: {{ block.settings.secondary_button_border | color_darken: 10 }};
+  }
+{% endstyle %}
+
+<div class="ai-two-column-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-two-column-container-{{ ai_gen_id }}">
+    <div class="ai-two-column-grid-{{ ai_gen_id }}">
+      <div class="ai-two-column-content-{{ ai_gen_id }}">
+        {% if block.settings.headline != blank %}
+          <h2 class="ai-two-column-headline-{{ ai_gen_id }}">
+            {{ block.settings.headline }}
+          </h2>
+        {% endif %}
+
+        {% if block.settings.subheadline != blank %}
+          <div class="ai-two-column-subheadline-{{ ai_gen_id }}">
+            {{ block.settings.subheadline }}
+          </div>
+        {% endif %}
+
+        <div class="ai-two-column-buttons-{{ ai_gen_id }}">
+          {% if block.settings.button_1_text != blank %}
+            <a
+              href="{{ block.settings.button_1_link }}"
+              class="ai-two-column-button-{{ ai_gen_id }} ai-two-column-button-secondary-{{ ai_gen_id }}"
+            >
+              {{ block.settings.button_1_text }}
+            </a>
+          {% endif %}
+
+          {% if block.settings.button_2_text != blank %}
+            <a
+              href="{{ block.settings.button_2_link }}"
+              class="ai-two-column-button-{{ ai_gen_id }} ai-two-column-button-primary-{{ ai_gen_id }}"
+            >
+              {{ block.settings.button_2_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="ai-two-column-image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.image_mobile or block.settings.image_desktop %}
+          {% if block.settings.image_mobile %}
+            <img
+              src="{{ block.settings.image_mobile | image_url: width: 800 }}"
+              alt="{{ block.settings.image_mobile.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.image_mobile.width }}"
+              height="{{ block.settings.image_mobile.height }}"
+              class="ai-two-column-image-{{ ai_gen_id }} ai-two-column-image-mobile-{{ ai_gen_id }}"
+            >
+          {% endif %}
+
+          {% if block.settings.image_desktop %}
+            <img
+              src="{{ block.settings.image_desktop | image_url: width: 1200 }}"
+              alt="{{ block.settings.image_desktop.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.image_desktop.width }}"
+              height="{{ block.settings.image_desktop.height }}"
+              class="ai-two-column-image-{{ ai_gen_id }} ai-two-column-image-desktop-{{ ai_gen_id }}"
+            >
+          {% endif %}
+        {% else %}
+          <div class="ai-two-column-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-two-column-empty-state-{{ ai_gen_id }}">
+              Next, add images for mobile and desktop
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Two column section",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "headline",
+      "label": "Headline",
+      "default": "<p>HEADLINE TEXT</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "<p>SUBHEADLINE TEXT</p>"
+    },
+    {
+      "type": "header",
+      "content": "Button 1 (secondary)"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Text",
+      "default": "BUTTON 1 TEXT"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 2 (primary)"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Text",
+      "default": "BUTTON 2 TEXT"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Headline",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Subheadline",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_bg",
+      "label": "Primary button background",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_text",
+      "label": "Primary button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_bg",
+      "label": "Secondary button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_text",
+      "label": "Secondary button text",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_border",
+      "label": "Secondary button border",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Headline size (mobile)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Headline size (desktop)",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "min": -5,
+      "max": 10,
+      "step": 0.5,
+      "unit": "%",
+      "label": "Headline letter spacing",
+      "default": -2
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheadline size (mobile)",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheadline size (desktop)",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top (mobile)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom (mobile)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal (mobile)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Top (desktop)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom (desktop)",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Horizontal (desktop)",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Content padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Content area (mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "content_padding_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Content area (desktop)",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Column spacing"
+    },
+    {
+      "type": "range",
+      "id": "column_gap_mobile",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap (mobile)",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "column_gap_desktop",
+      "min": 30,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Gap (desktop)",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Headline bottom spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "subheading_spacing",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Subheadline bottom spacing",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner radius",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "button_gap",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between buttons",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_min_width",
+      "min": 100,
+      "max": 250,
+      "step": 10,
+      "unit": "px",
+      "label": "Minimum width (desktop)",
+      "default": 180
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two column section"
+    }
+  ]
+}
+{% endschema %}

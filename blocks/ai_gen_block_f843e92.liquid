@@ -1,0 +1,1202 @@
+{% doc %}
+  @prompt
+    What I need is a comparison table. Firstly, there will be a central heading, with a paragraph underneath, and then a 'compare' button under that. 
+    
+    Under the compare button will be up to 5 products. You can select up to two at a time. When selected, it will be outlined in red. The products will have their image, maybe able to add an app's trust badges, the name of the product, the price, a little description, some stats next to eachother (column-like), and a learn more button. 
+    
+    When at least one scooter is selected, when you click the compare button, a table will show up underneath.
+    
+    Maybe to select there is a button in the top left of the product card.
+    
+    The table will have up to 10 fields and be based on the product. At the bottom of the table, there will be buttons to learn more about the scooter
+    
+    Don't use the whole width of the page. Keep a bit of padding. Also, make the table fit for mobile. Also, if at least one scooter is selected when on mobile, have a hovering button that the location can be chosen to create the compare table. When that button is clicked, scroll to the table
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-comparison-table-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-comparison-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-comparison-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 16px;
+    font-weight: 700;
+  }
+
+  .ai-comparison-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 24px;
+    opacity: 0.8;
+  }
+
+  .ai-comparison-compare-btn-{{ ai_gen_id }} {
+    background-color: {{ block.settings.compare_button_color }};
+    color: {{ block.settings.compare_button_text_color }};
+    border: none;
+    padding: 12px 24px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .ai-comparison-compare-btn-{{ ai_gen_id }}.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .ai-comparison-compare-btn-{{ ai_gen_id }}:hover.active {
+    background-color: {{ block.settings.compare_button_hover_color }};
+  }
+
+  .ai-comparison-products-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .ai-comparison-product-card-{{ ai_gen_id }} {
+    position: relative;
+    background: {{ block.settings.card_background_color }};
+    border: 2px solid transparent;
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .ai-comparison-product-card-{{ ai_gen_id }}.selected {
+    border-color: {{ block.settings.selection_color }};
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+  }
+
+  .ai-comparison-select-btn-{{ ai_gen_id }} {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid {{ block.settings.selection_color }};
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .ai-comparison-select-btn-{{ ai_gen_id }}.selected {
+    background: {{ block.settings.selection_color }};
+  }
+
+  .ai-comparison-select-btn-{{ ai_gen_id }}.selected::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .ai-comparison-product-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 16px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-comparison-product-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-comparison-product-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-comparison-product-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60px;
+    height: 60px;
+    opacity: 0.3;
+  }
+
+  .ai-comparison-trust-badges-{{ ai_gen_id }} {
+    margin: 12px 0;
+    min-height: 20px;
+  }
+
+  .ai-comparison-product-title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 8px;
+  }
+
+  .ai-comparison-product-price-{{ ai_gen_id }} {
+    font-size: 20px;
+    font-weight: 700;
+    color: {{ block.settings.price_color }};
+    margin: 0 0 12px;
+  }
+
+  .ai-comparison-product-description-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.8;
+    margin: 0 0 16px;
+    line-height: 1.4;
+  }
+
+  .ai-comparison-product-stats-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .ai-comparison-stat-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+  }
+
+  .ai-comparison-stat-label-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+
+  .ai-comparison-stat-value-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 600;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-comparison-learn-more-btn-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: {{ block.settings.learn_more_button_color }};
+    color: {{ block.settings.learn_more_button_text_color }};
+    border: none;
+    padding: 10px 16px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+  }
+
+  .ai-comparison-learn-more-btn-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.learn_more_button_hover_color }};
+  }
+
+  .ai-comparison-table-container-{{ ai_gen_id }} {
+    margin-top: 40px;
+    display: none;
+  }
+
+  .ai-comparison-table-container-{{ ai_gen_id }}.visible {
+    display: block;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} {
+    width: 100%;
+    border-collapse: collapse;
+    background: {{ block.settings.table_background_color }};
+    border-radius: {{ block.settings.table_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} th,
+  .ai-comparison-table-{{ ai_gen_id }} td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} th {
+    background-color: {{ block.settings.table_header_color }};
+    color: {{ block.settings.table_header_text_color }};
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} td {
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} .product-image-cell {
+    text-align: center;
+  }
+
+  .ai-comparison-table-{{ ai_gen_id }} .product-image-cell img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .ai-comparison-table-actions-{{ ai_gen_id }} {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .ai-comparison-floating-btn-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: {{ block.settings.compare_button_color }};
+    color: {{ block.settings.compare_button_text_color }};
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .ai-comparison-floating-btn-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.compare_button_hover_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-comparison-products-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-comparison-table-{{ ai_gen_id }} {
+      font-size: 12px;
+    }
+
+    .ai-comparison-table-{{ ai_gen_id }} th,
+    .ai-comparison-table-{{ ai_gen_id }} td {
+      padding: 12px 8px;
+    }
+
+    .ai-comparison-floating-btn-{{ ai_gen_id }}.show {
+      display: block;
+    }
+
+    .ai-comparison-compare-btn-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .ai-comparison-floating-btn-{{ ai_gen_id }} {
+      display: none !important;
+    }
+  }
+{% endstyle %}
+
+<product-comparison-{{ ai_gen_id }}
+  class="ai-comparison-table-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-comparison-header-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-comparison-title-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+    
+    {% if block.settings.description != blank %}
+      <div class="ai-comparison-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+    {% endif %}
+    
+    <button class="ai-comparison-compare-btn-{{ ai_gen_id }}" data-compare-btn>
+      {{ block.settings.compare_button_text }}
+    </button>
+  </div>
+
+  <div class="ai-comparison-products-{{ ai_gen_id }}">
+    {% for i in (1..5) %}
+      {% liquid
+        assign product_key = 'product_' | append: i
+        assign product = block.settings[product_key]
+        assign stat1_label_key = 'product_' | append: i | append: '_stat1_label'
+        assign stat1_value_key = 'product_' | append: i | append: '_stat1_value'
+        assign stat2_label_key = 'product_' | append: i | append: '_stat2_label'
+        assign stat2_value_key = 'product_' | append: i | append: '_stat2_value'
+        assign stat3_label_key = 'product_' | append: i | append: '_stat3_label'
+        assign stat3_value_key = 'product_' | append: i | append: '_stat3_value'
+        assign stat4_label_key = 'product_' | append: i | append: '_stat4_label'
+        assign stat4_value_key = 'product_' | append: i | append: '_stat4_value'
+        assign description_key = 'product_' | append: i | append: '_description'
+        assign trust_badges_key = 'product_' | append: i | append: '_trust_badges'
+      %}
+
+      {% if product != blank %}
+        <div class="ai-comparison-product-card-{{ ai_gen_id }}" data-product-id="{{ product.id }}">
+          <button class="ai-comparison-select-btn-{{ ai_gen_id }}" data-select-btn></button>
+          
+          <div class="ai-comparison-product-image-{{ ai_gen_id }}">
+            {% if product.featured_image %}
+              <img
+                src="{{ product.featured_image | image_url: width: 400 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <div class="ai-comparison-product-image-placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if block.settings[trust_badges_key] != blank %}
+            <div class="ai-comparison-trust-badges-{{ ai_gen_id }}">
+              {{ block.settings[trust_badges_key] }}
+            </div>
+          {% endif %}
+
+          <h3 class="ai-comparison-product-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+          
+          <div class="ai-comparison-product-price-{{ ai_gen_id }}">
+            {{ product.price | money }}
+          </div>
+
+          {% if block.settings[description_key] != blank %}
+            <div class="ai-comparison-product-description-{{ ai_gen_id }}">
+              {{ block.settings[description_key] }}
+            </div>
+          {% endif %}
+
+          <div class="ai-comparison-product-stats-{{ ai_gen_id }}">
+            {% if block.settings[stat1_label_key] != blank and block.settings[stat1_value_key] != blank %}
+              <div class="ai-comparison-stat-{{ ai_gen_id }}">
+                <div class="ai-comparison-stat-label-{{ ai_gen_id }}">{{ block.settings[stat1_label_key] }}</div>
+                <div class="ai-comparison-stat-value-{{ ai_gen_id }}">{{ block.settings[stat1_value_key] }}</div>
+              </div>
+            {% endif %}
+            
+            {% if block.settings[stat2_label_key] != blank and block.settings[stat2_value_key] != blank %}
+              <div class="ai-comparison-stat-{{ ai_gen_id }}">
+                <div class="ai-comparison-stat-label-{{ ai_gen_id }}">{{ block.settings[stat2_label_key] }}</div>
+                <div class="ai-comparison-stat-value-{{ ai_gen_id }}">{{ block.settings[stat2_value_key] }}</div>
+              </div>
+            {% endif %}
+            
+            {% if block.settings[stat3_label_key] != blank and block.settings[stat3_value_key] != blank %}
+              <div class="ai-comparison-stat-{{ ai_gen_id }}">
+                <div class="ai-comparison-stat-label-{{ ai_gen_id }}">{{ block.settings[stat3_label_key] }}</div>
+                <div class="ai-comparison-stat-value-{{ ai_gen_id }}">{{ block.settings[stat3_value_key] }}</div>
+              </div>
+            {% endif %}
+            
+            {% if block.settings[stat4_label_key] != blank and block.settings[stat4_value_key] != blank %}
+              <div class="ai-comparison-stat-{{ ai_gen_id }}">
+                <div class="ai-comparison-stat-label-{{ ai_gen_id }}">{{ block.settings[stat4_label_key] }}</div>
+                <div class="ai-comparison-stat-value-{{ ai_gen_id }}">{{ block.settings[stat4_value_key] }}</div>
+              </div>
+            {% endif %}
+          </div>
+
+          <a href="{{ product.url }}" class="ai-comparison-learn-more-btn-{{ ai_gen_id }}">
+            {{ block.settings.learn_more_text }}
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <button class="ai-comparison-floating-btn-{{ ai_gen_id }}" data-floating-compare>
+    {{ block.settings.compare_button_text }}
+  </button>
+
+  <div class="ai-comparison-table-container-{{ ai_gen_id }}" data-table-container>
+    <table class="ai-comparison-table-{{ ai_gen_id }}" data-comparison-table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Product</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Price</strong></td>
+        </tr>
+        {% for i in (1..10) %}
+          {% liquid
+            assign field_key = 'comparison_field_' | append: i
+            assign field_label = block.settings[field_key]
+          %}
+          {% if field_label != blank %}
+            <tr>
+              <td><strong>{{ field_label }}</strong></td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+    
+    <div class="ai-comparison-table-actions-{{ ai_gen_id }}" data-table-actions>
+    </div>
+  </div>
+</product-comparison-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ProductComparison{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.selectedProducts = new Set();
+        this.maxSelections = 2;
+        this.productData = new Map();
+      }
+
+      connectedCallback() {
+        this.initializeElements();
+        this.setupEventListeners();
+        this.collectProductData();
+      }
+
+      initializeElements() {
+        this.compareBtn = this.querySelector('[data-compare-btn]');
+        this.floatingBtn = this.querySelector('[data-floating-compare]');
+        this.tableContainer = this.querySelector('[data-table-container]');
+        this.comparisonTable = this.querySelector('[data-comparison-table]');
+        this.tableActions = this.querySelector('[data-table-actions]');
+        this.productCards = this.querySelectorAll('.ai-comparison-product-card-{{ ai_gen_id }}');
+        this.selectBtns = this.querySelectorAll('[data-select-btn]');
+      }
+
+      setupEventListeners() {
+        this.productCards.forEach((card, index) => {
+          const selectBtn = card.querySelector('[data-select-btn]');
+          
+          card.addEventListener('click', (e) => {
+            if (e.target.closest('a') || e.target.closest('[data-select-btn]')) return;
+            this.toggleSelection(card);
+          });
+          
+          selectBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleSelection(card);
+          });
+        });
+
+        this.compareBtn.addEventListener('click', () => {
+          this.showComparison();
+        });
+
+        this.floatingBtn.addEventListener('click', () => {
+          this.showComparison();
+          this.scrollToTable();
+        });
+
+        window.addEventListener('resize', () => {
+          this.updateFloatingButton();
+        });
+      }
+
+      collectProductData() {
+        this.productCards.forEach(card => {
+          const productId = card.dataset.productId;
+          const title = card.querySelector('.ai-comparison-product-title-{{ ai_gen_id }}').textContent;
+          const price = card.querySelector('.ai-comparison-product-price-{{ ai_gen_id }}').textContent;
+          const image = card.querySelector('.ai-comparison-product-image-{{ ai_gen_id }} img');
+          const stats = Array.from(card.querySelectorAll('.ai-comparison-stat-{{ ai_gen_id }}')).map(stat => ({
+            label: stat.querySelector('.ai-comparison-stat-label-{{ ai_gen_id }}').textContent,
+            value: stat.querySelector('.ai-comparison-stat-value-{{ ai_gen_id }}').textContent
+          }));
+          const learnMoreBtn = card.querySelector('.ai-comparison-learn-more-btn-{{ ai_gen_id }}');
+
+          this.productData.set(productId, {
+            title,
+            price,
+            image: image ? image.src : null,
+            imageAlt: image ? image.alt : '',
+            stats,
+            url: learnMoreBtn.href
+          });
+        });
+      }
+
+      toggleSelection(card) {
+        const productId = card.dataset.productId;
+        const selectBtn = card.querySelector('[data-select-btn]');
+
+        if (this.selectedProducts.has(productId)) {
+          this.selectedProducts.delete(productId);
+          card.classList.remove('selected');
+          selectBtn.classList.remove('selected');
+        } else if (this.selectedProducts.size < this.maxSelections) {
+          this.selectedProducts.add(productId);
+          card.classList.add('selected');
+          selectBtn.classList.add('selected');
+        }
+
+        this.updateCompareButton();
+        this.updateFloatingButton();
+      }
+
+      updateCompareButton() {
+        if (this.selectedProducts.size > 0) {
+          this.compareBtn.classList.add('active');
+        } else {
+          this.compareBtn.classList.remove('active');
+        }
+      }
+
+      updateFloatingButton() {
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile && this.selectedProducts.size > 0) {
+          this.floatingBtn.classList.add('show');
+        } else {
+          this.floatingBtn.classList.remove('show');
+        }
+      }
+
+      showComparison() {
+        if (this.selectedProducts.size === 0) return;
+
+        this.buildComparisonTable();
+        this.tableContainer.classList.add('visible');
+      }
+
+      buildComparisonTable() {
+        const selectedProductsArray = Array.from(this.selectedProducts);
+        const thead = this.comparisonTable.querySelector('thead tr');
+        const tbody = this.comparisonTable.querySelector('tbody');
+
+        thead.innerHTML = '<th>Feature</th>';
+        selectedProductsArray.forEach(productId => {
+          const th = document.createElement('th');
+          th.textContent = this.productData.get(productId).title;
+          thead.appendChild(th);
+        });
+
+        const rows = tbody.querySelectorAll('tr');
+        
+        rows[0].innerHTML = '<td><strong>Product</strong></td>';
+        selectedProductsArray.forEach(productId => {
+          const data = this.productData.get(productId);
+          const td = document.createElement('td');
+          td.className = 'product-image-cell';
+          if (data.image) {
+            td.innerHTML = `<img src="${data.image}" alt="${data.imageAlt}" width="60" height="60">`;
+          }
+          rows[0].appendChild(td);
+        });
+
+        rows[1].innerHTML = '<td><strong>Price</strong></td>';
+        selectedProductsArray.forEach(productId => {
+          const td = document.createElement('td');
+          td.textContent = this.productData.get(productId).price;
+          rows[1].appendChild(td);
+        });
+
+        const comparisonFields = [
+          {% for i in (1..10) %}
+            {% liquid
+              assign field_key = 'comparison_field_' | append: i
+              assign field_label = block.settings[field_key]
+            %}
+            {% if field_label != blank %}
+              "{{ field_label | escape }}",
+            {% endif %}
+          {% endfor %}
+        ];
+
+        let rowIndex = 2;
+        comparisonFields.forEach(fieldLabel => {
+          if (rows[rowIndex]) {
+            rows[rowIndex].innerHTML = `<td><strong>${fieldLabel}</strong></td>`;
+            selectedProductsArray.forEach(productId => {
+              const data = this.productData.get(productId);
+              const td = document.createElement('td');
+              
+              const matchingStat = data.stats.find(stat => 
+                stat.label.toLowerCase().includes(fieldLabel.toLowerCase()) ||
+                fieldLabel.toLowerCase().includes(stat.label.toLowerCase())
+              );
+              
+              td.textContent = matchingStat ? matchingStat.value : '-';
+              rows[rowIndex].appendChild(td);
+            });
+            rowIndex++;
+          }
+        });
+
+        this.tableActions.innerHTML = '';
+        selectedProductsArray.forEach(productId => {
+          const data = this.productData.get(productId);
+          const btn = document.createElement('a');
+          btn.href = data.url;
+          btn.className = 'ai-comparison-learn-more-btn-{{ ai_gen_id }}';
+          btn.textContent = `{{ block.settings.learn_more_text }} - ${data.title}`;
+          this.tableActions.appendChild(btn);
+        });
+      }
+
+      scrollToTable() {
+        this.tableContainer.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+
+    customElements.define('product-comparison-{{ ai_gen_id }}', ProductComparison{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Product comparison table",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Compare Products"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Select up to 2 products to compare their features side by side."
+    },
+    {
+      "type": "text",
+      "id": "compare_button_text",
+      "label": "Compare button text",
+      "default": "Compare Selected"
+    },
+    {
+      "type": "text",
+      "id": "learn_more_text",
+      "label": "Learn more button text",
+      "default": "Learn More"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Product 1"
+    },
+    {
+      "type": "textarea",
+      "id": "product_1_description",
+      "label": "Product 1 description"
+    },
+    {
+      "type": "html",
+      "id": "product_1_trust_badges",
+      "label": "Product 1 trust badges"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat1_label",
+      "label": "Product 1 stat 1 label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat1_value",
+      "label": "Product 1 stat 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat2_label",
+      "label": "Product 1 stat 2 label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat2_value",
+      "label": "Product 1 stat 2 value"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat3_label",
+      "label": "Product 1 stat 3 label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat3_value",
+      "label": "Product 1 stat 3 value"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat4_label",
+      "label": "Product 1 stat 4 label"
+    },
+    {
+      "type": "text",
+      "id": "product_1_stat4_value",
+      "label": "Product 1 stat 4 value"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Product 2"
+    },
+    {
+      "type": "textarea",
+      "id": "product_2_description",
+      "label": "Product 2 description"
+    },
+    {
+      "type": "html",
+      "id": "product_2_trust_badges",
+      "label": "Product 2 trust badges"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat1_label",
+      "label": "Product 2 stat 1 label"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat1_value",
+      "label": "Product 2 stat 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat2_label",
+      "label": "Product 2 stat 2 label"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat2_value",
+      "label": "Product 2 stat 2 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat3_label",
+      "label": "Product 2 stat 3 label"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat3_value",
+      "label": "Product 2 stat 3 value"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat4_label",
+      "label": "Product 2 stat 4 label"
+    },
+    {
+      "type": "text",
+      "id": "product_2_stat4_value",
+      "label": "Product 2 stat 4 value"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Product 3"
+    },
+    {
+      "type": "textarea",
+      "id": "product_3_description",
+      "label": "Product 3 description"
+    },
+    {
+      "type": "html",
+      "id": "product_3_trust_badges",
+      "label": "Product 3 trust badges"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat1_label",
+      "label": "Product 3 stat 1 label"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat1_value",
+      "label": "Product 3 stat 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat2_label",
+      "label": "Product 3 stat 2 label"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat2_value",
+      "label": "Product 3 stat 2 value"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat3_label",
+      "label": "Product 3 stat 3 label"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat3_value",
+      "label": "Product 3 stat 3 value"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat4_label",
+      "label": "Product 3 stat 4 label"
+    },
+    {
+      "type": "text",
+      "id": "product_3_stat4_value",
+      "label": "Product 3 stat 4 value"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Product 4"
+    },
+    {
+      "type": "textarea",
+      "id": "product_4_description",
+      "label": "Product 4 description"
+    },
+    {
+      "type": "html",
+      "id": "product_4_trust_badges",
+      "label": "Product 4 trust badges"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat1_label",
+      "label": "Product 4 stat 1 label"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat1_value",
+      "label": "Product 4 stat 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat2_label",
+      "label": "Product 4 stat 2 label"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat2_value",
+      "label": "Product 4 stat 2 value"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat3_label",
+      "label": "Product 4 stat 3 label"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat3_value",
+      "label": "Product 4 stat 3 value"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat4_label",
+      "label": "Product 4 stat 4 label"
+    },
+    {
+      "type": "text",
+      "id": "product_4_stat4_value",
+      "label": "Product 4 stat 4 value"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "Product 5"
+    },
+    {
+      "type": "textarea",
+      "id": "product_5_description",
+      "label": "Product 5 description"
+    },
+    {
+      "type": "html",
+      "id": "product_5_trust_badges",
+      "label": "Product 5 trust badges"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat1_label",
+      "label": "Product 5 stat 1 label"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat1_value",
+      "label": "Product 5 stat 1 value"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat2_label",
+      "label": "Product 5 stat 2 label"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat2_value",
+      "label": "Product 5 stat 2 value"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat3_label",
+      "label": "Product 5 stat 3 label"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat3_value",
+      "label": "Product 5 stat 3 value"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat4_label",
+      "label": "Product 5 stat 4 label"
+    },
+    {
+      "type": "text",
+      "id": "product_5_stat4_value",
+      "label": "Product 5 stat 4 value"
+    },
+    {
+      "type": "header",
+      "content": "Comparison table fields"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_1",
+      "label": "Field 1",
+      "default": "Range"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_2",
+      "label": "Field 2",
+      "default": "Top Speed"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_3",
+      "label": "Field 3",
+      "default": "Weight"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_4",
+      "label": "Field 4",
+      "default": "Battery"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_5",
+      "label": "Field 5"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_6",
+      "label": "Field 6"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_7",
+      "label": "Field 7"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_8",
+      "label": "Field 8"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_9",
+      "label": "Field 9"
+    },
+    {
+      "type": "text",
+      "id": "comparison_field_10",
+      "label": "Field 10"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "table_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Table border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "selection_color",
+      "label": "Selection color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "compare_button_color",
+      "label": "Compare button color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "compare_button_text_color",
+      "label": "Compare button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "compare_button_hover_color",
+      "label": "Compare button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "learn_more_button_color",
+      "label": "Learn more button color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "learn_more_button_text_color",
+      "label": "Learn more button text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "learn_more_button_hover_color",
+      "label": "Learn more button hover color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "table_background_color",
+      "label": "Table background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "table_header_color",
+      "label": "Table header color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "table_header_text_color",
+      "label": "Table header text color",
+      "default": "#1a1a1a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product comparison table"
+    }
+  ]
+}
+{% endschema %}

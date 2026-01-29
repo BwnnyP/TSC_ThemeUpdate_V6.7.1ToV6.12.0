@@ -1,0 +1,1026 @@
+{% doc %}
+  @prompt
+    Troubleshooting page section with model tiles (Kaiju, Aurora, Edgerunner).
+    Each model’s troubleshooting data is entered in a textarea where each line is either:
+      - "## Group title" (starts a new group heading)
+      - "CODE|Title|Meta|Pill|Description|Try 1;Try 2;Try 3"
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-troubleshoot-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .ai-troubleshoot-container-{{ ai_gen_id }} {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .ai-troubleshoot-header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: 28px;
+  }
+
+  .ai-troubleshoot-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .ai-troubleshoot-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ===== Model tiles ===== */
+  .ai-troubleshoot-tiles-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 18px 0 22px;
+  }
+
+  .ai-troubleshoot-tile-{{ ai_gen_id }} {
+    border-radius: 14px;
+    border: 1px solid {{ block.settings.item_border_color }};
+    background: {{ block.settings.item_background }};
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    padding: 14px 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  }
+
+  .ai-troubleshoot-tile-{{ ai_gen_id }}:hover {
+    border-color: {{ block.settings.item_hover_border_color }};
+    box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+  }
+
+  .ai-troubleshoot-tile-{{ ai_gen_id }}.is-active {
+    border-color: {{ block.settings.item_hover_border_color }};
+    box-shadow: 0 0 0 1px {{ block.settings.item_hover_border_color }};
+  }
+
+  .ai-troubleshoot-tile-title-{{ ai_gen_id }} {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: {{ block.settings.question_color }};
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+  }
+
+  .ai-troubleshoot-tile-sub-{{ ai_gen_id }} {
+    font-size: 0.88rem;
+    color: {{ block.settings.answer_color }};
+    margin: 0;
+    line-height: 1.45;
+    opacity: 0.95;
+  }
+
+  /* ===== Panels ===== */
+  .ai-troubleshoot-panel-{{ ai_gen_id }} {
+    display: none;
+  }
+  .ai-troubleshoot-panel-{{ ai_gen_id }}.is-active {
+    display: block;
+  }
+
+  .ai-troubleshoot-panel-heading-{{ ai_gen_id }} {
+    margin: 0 0 10px 0;
+    font-size: 1.15rem;
+    color: {{ block.settings.title_color }};
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .ai-troubleshoot-panel-sub-{{ ai_gen_id }} {
+    margin: 0 0 18px 0;
+    font-size: 0.9rem;
+    color: {{ block.settings.subtitle_color }};
+    line-height: 1.5;
+  }
+
+  /* Group titles */
+  .ai-troubleshoot-group-{{ ai_gen_id }} {
+    margin: 18px 0 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: {{ block.settings.subtitle_color }};
+    opacity: 0.9;
+  }
+
+  /* Cards */
+  .ai-troubleshoot-list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-troubleshoot-item-{{ ai_gen_id }} {
+    background-color: {{ block.settings.item_background }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    overflow: hidden;
+    border: 1px solid {{ block.settings.item_border_color }};
+    transition: border-color 0.2s ease;
+  }
+
+  .ai-troubleshoot-item-{{ ai_gen_id }}:hover {
+    border-color: {{ block.settings.item_hover_border_color }};
+  }
+
+  .ai-troubleshoot-button-{{ ai_gen_id }} {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: {{ block.settings.item_padding }}px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 14px;
+  }
+
+  .ai-troubleshoot-button-content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ai-troubleshoot-badge-{{ ai_gen_id }} {
+    min-width: 44px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.84rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem;
+    background: #111;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .ai-troubleshoot-qwrap-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .ai-troubleshoot-question-{{ ai_gen_id }} {
+    font-size: {{ block.settings.question_size }}px;
+    color: {{ block.settings.question_color }};
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .ai-troubleshoot-meta-{{ ai_gen_id }} {
+    font-size: 0.82rem;
+    color: {{ block.settings.answer_color }};
+    opacity: 0.9;
+    margin-top: 2px;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .ai-troubleshoot-pill-{{ ai_gen_id }} {
+    font-size: 0.75rem;
+    border-radius: 999px;
+    padding: 0.18rem 0.55rem;
+    background: #f3f3f3;
+    border: 1px solid #e2e2e2;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: {{ block.settings.question_color }};
+    opacity: 0.95;
+  }
+
+  .ai-troubleshoot-chevron-{{ ai_gen_id }} {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    stroke: {{ block.settings.chevron_color }};
+  }
+
+  .ai-troubleshoot-item-{{ ai_gen_id }}.active .ai-troubleshoot-chevron-{{ ai_gen_id }} {
+    transform: rotate(180deg);
+  }
+
+  .ai-troubleshoot-answer-{{ ai_gen_id }} {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .ai-troubleshoot-answer-content-{{ ai_gen_id }} {
+    padding: 0 {{ block.settings.item_padding }}px {{ block.settings.item_padding }}px;
+    color: {{ block.settings.answer_color }};
+    font-size: {{ block.settings.answer_size }}px;
+    line-height: 1.6;
+  }
+
+  .ai-troubleshoot-answer-content-{{ ai_gen_id }} p {
+    margin: 0 0 10px 0;
+  }
+
+  .ai-troubleshoot-answer-content-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-troubleshoot-answer-content-{{ ai_gen_id }} ul {
+    margin: 8px 0 0 0;
+    padding-left: 18px;
+  }
+
+  .ai-troubleshoot-answer-content-{{ ai_gen_id }} li {
+    margin-bottom: 6px;
+  }
+
+  .ai-troubleshoot-answer-content-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+  }
+
+  .ai-troubleshoot-empty-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 54px 18px;
+    color: #999;
+    font-style: italic;
+  }
+
+  @media screen and (min-width: 680px) {
+    .ai-troubleshoot-tiles-{{ ai_gen_id }} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-troubleshoot-{{ ai_gen_id }} {
+      padding: 30px 16px;
+    }
+
+    .ai-troubleshoot-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+
+    .ai-troubleshoot-subtitle-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.subtitle_size }}px * 0.9);
+    }
+
+    .ai-troubleshoot-question-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.question_size }}px * 0.92);
+    }
+
+    .ai-troubleshoot-pill-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+{%- comment -%}
+  Helper: render a model textarea into grouped accordions.
+  Line formats:
+    ## Group title
+    CODE|Title|Meta|Pill|Description|Try 1;Try 2;Try 3
+{%- endcomment -%}
+
+<troubleshoot-tiles-{{ ai_gen_id }} class="ai-troubleshoot-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-troubleshoot-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.subtitle != blank %}
+      <div class="ai-troubleshoot-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-troubleshoot-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <div class="ai-troubleshoot-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-troubleshoot-tiles-{{ ai_gen_id }}" data-tiles>
+      <button type="button"
+        class="ai-troubleshoot-tile-{{ ai_gen_id }} {% if block.settings.default_model == 'kaiju' %}is-active{% endif %}"
+        data-model="kaiju">
+        <div class="ai-troubleshoot-tile-title-{{ ai_gen_id }}">{{ block.settings.tile_kaiju_title }}</div>
+        <p class="ai-troubleshoot-tile-sub-{{ ai_gen_id }}">{{ block.settings.tile_kaiju_sub }}</p>
+      </button>
+
+      <button type="button"
+        class="ai-troubleshoot-tile-{{ ai_gen_id }} {% if block.settings.default_model == 'aurora' %}is-active{% endif %}"
+        data-model="aurora">
+        <div class="ai-troubleshoot-tile-title-{{ ai_gen_id }}">{{ block.settings.tile_aurora_title }}</div>
+        <p class="ai-troubleshoot-tile-sub-{{ ai_gen_id }}">{{ block.settings.tile_aurora_sub }}</p>
+      </button>
+
+      <button type="button"
+        class="ai-troubleshoot-tile-{{ ai_gen_id }} {% if block.settings.default_model == 'edgerunner' %}is-active{% endif %}"
+        data-model="edgerunner">
+        <div class="ai-troubleshoot-tile-title-{{ ai_gen_id }}">{{ block.settings.tile_edgerunner_title }}</div>
+        <p class="ai-troubleshoot-tile-sub-{{ ai_gen_id }}">{{ block.settings.tile_edgerunner_sub }}</p>
+      </button>
+    </div>
+
+    {%- assign active_default = block.settings.default_model -%}
+    {%- if active_default == blank -%}{%- assign active_default = 'kaiju' -%}{%- endif -%}
+
+    <!-- ===================== KAIJU PANEL ===================== -->
+    <div class="ai-troubleshoot-panel-{{ ai_gen_id }} {% if active_default == 'kaiju' %}is-active{% endif %}" data-panel="kaiju">
+      <h3 class="ai-troubleshoot-panel-heading-{{ ai_gen_id }}">{{ block.settings.panel_kaiju_heading }}</h3>
+      <p class="ai-troubleshoot-panel-sub-{{ ai_gen_id }}">{{ block.settings.panel_kaiju_sub }}</p>
+
+      {% assign lines = block.settings.data_kaiju | newline_to_br | split: '<br />' %}
+      {% assign has_any = false %}
+      {% for line in lines %}
+        {% assign l = line | strip %}
+        {% if l != blank %}
+          {% assign has_any = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if has_any %}
+        <div class="ai-troubleshoot-list-{{ ai_gen_id }}">
+          {% for line in lines %}
+            {% assign l = line | strip %}
+            {% if l == blank %}
+              {% continue %}
+            {% endif %}
+
+            {% if l contains '##' %}
+              {% assign group = l | remove_first: '##' | strip %}
+              {% if group != blank %}
+                <div class="ai-troubleshoot-group-{{ ai_gen_id }}">{{ group }}</div>
+              {% endif %}
+            {% else %}
+              {% assign parts = l | split: '|' %}
+              {% assign code = parts[0] | default: '' | strip %}
+              {% assign title = parts[1] | default: '' | strip %}
+              {% assign meta = parts[2] | default: '' | strip %}
+              {% assign pill = parts[3] | default: '' | strip %}
+              {% assign desc = parts[4] | default: '' | strip %}
+              {% assign tries_raw = parts[5] | default: '' | strip %}
+              {% assign tries = tries_raw | split: ';' %}
+
+              <div class="ai-troubleshoot-item-{{ ai_gen_id }}" data-accordion-item>
+                <button class="ai-troubleshoot-button-{{ ai_gen_id }}" aria-expanded="false">
+                  <div class="ai-troubleshoot-button-content-{{ ai_gen_id }}">
+                    <div class="ai-troubleshoot-badge-{{ ai_gen_id }}">{{ code }}</div>
+                    <div class="ai-troubleshoot-qwrap-{{ ai_gen_id }}">
+                      <div class="ai-troubleshoot-question-{{ ai_gen_id }}">{{ title }}</div>
+                      {% if meta != blank %}
+                        <div class="ai-troubleshoot-meta-{{ ai_gen_id }}">{{ meta }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  {% if pill != blank %}
+                    <span class="ai-troubleshoot-pill-{{ ai_gen_id }}">{{ pill }}</span>
+                  {% endif %}
+
+                  <svg class="ai-troubleshoot-chevron-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                <div class="ai-troubleshoot-answer-{{ ai_gen_id }}">
+                  <div class="ai-troubleshoot-answer-content-{{ ai_gen_id }}">
+                    {% if desc != blank %}
+                      <p><strong>Description</strong><br/>{{ desc }}</p>
+                    {% endif %}
+
+                    {% assign has_tries = false %}
+                    {% for t in tries %}
+                      {% assign tt = t | strip %}
+                      {% if tt != blank %}
+                        {% assign has_tries = true %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if has_tries %}
+                      <p><strong>What to try</strong></p>
+                      <ul>
+                        {% for t in tries %}
+                          {% assign tt = t | strip %}
+                          {% if tt != blank %}
+                            <li>{{ tt }}</li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="ai-troubleshoot-empty-{{ ai_gen_id }}">
+          Add Kaiju troubleshooting lines in the settings panel.
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- ===================== AURORA PANEL ===================== -->
+    <div class="ai-troubleshoot-panel-{{ ai_gen_id }} {% if active_default == 'aurora' %}is-active{% endif %}" data-panel="aurora">
+      <h3 class="ai-troubleshoot-panel-heading-{{ ai_gen_id }}">{{ block.settings.panel_aurora_heading }}</h3>
+      <p class="ai-troubleshoot-panel-sub-{{ ai_gen_id }}">{{ block.settings.panel_aurora_sub }}</p>
+
+      {% assign lines = block.settings.data_aurora | newline_to_br | split: '<br />' %}
+      {% assign has_any = false %}
+      {% for line in lines %}
+        {% assign l = line | strip %}
+        {% if l != blank %}
+          {% assign has_any = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if has_any %}
+        <div class="ai-troubleshoot-list-{{ ai_gen_id }}">
+          {% for line in lines %}
+            {% assign l = line | strip %}
+            {% if l == blank %}
+              {% continue %}
+            {% endif %}
+
+            {% if l contains '##' %}
+              {% assign group = l | remove_first: '##' | strip %}
+              {% if group != blank %}
+                <div class="ai-troubleshoot-group-{{ ai_gen_id }}">{{ group }}</div>
+              {% endif %}
+            {% else %}
+              {% assign parts = l | split: '|' %}
+              {% assign code = parts[0] | default: '' | strip %}
+              {% assign title = parts[1] | default: '' | strip %}
+              {% assign meta = parts[2] | default: '' | strip %}
+              {% assign pill = parts[3] | default: '' | strip %}
+              {% assign desc = parts[4] | default: '' | strip %}
+              {% assign tries_raw = parts[5] | default: '' | strip %}
+              {% assign tries = tries_raw | split: ';' %}
+
+              <div class="ai-troubleshoot-item-{{ ai_gen_id }}" data-accordion-item>
+                <button class="ai-troubleshoot-button-{{ ai_gen_id }}" aria-expanded="false">
+                  <div class="ai-troubleshoot-button-content-{{ ai_gen_id }}">
+                    <div class="ai-troubleshoot-badge-{{ ai_gen_id }}">{{ code }}</div>
+                    <div class="ai-troubleshoot-qwrap-{{ ai_gen_id }}">
+                      <div class="ai-troubleshoot-question-{{ ai_gen_id }}">{{ title }}</div>
+                      {% if meta != blank %}
+                        <div class="ai-troubleshoot-meta-{{ ai_gen_id }}">{{ meta }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  {% if pill != blank %}
+                    <span class="ai-troubleshoot-pill-{{ ai_gen_id }}">{{ pill }}</span>
+                  {% endif %}
+
+                  <svg class="ai-troubleshoot-chevron-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                <div class="ai-troubleshoot-answer-{{ ai_gen_id }}">
+                  <div class="ai-troubleshoot-answer-content-{{ ai_gen_id }}">
+                    {% if desc != blank %}
+                      <p><strong>Description</strong><br/>{{ desc }}</p>
+                    {% endif %}
+
+                    {% assign has_tries = false %}
+                    {% for t in tries %}
+                      {% assign tt = t | strip %}
+                      {% if tt != blank %}
+                        {% assign has_tries = true %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if has_tries %}
+                      <p><strong>What to try</strong></p>
+                      <ul>
+                        {% for t in tries %}
+                          {% assign tt = t | strip %}
+                          {% if tt != blank %}
+                            <li>{{ tt }}</li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="ai-troubleshoot-empty-{{ ai_gen_id }}">
+          Add Aurora troubleshooting lines in the settings panel.
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- ===================== EDGERUNNER PANEL ===================== -->
+    <div class="ai-troubleshoot-panel-{{ ai_gen_id }} {% if active_default == 'edgerunner' %}is-active{% endif %}" data-panel="edgerunner">
+      <h3 class="ai-troubleshoot-panel-heading-{{ ai_gen_id }}">{{ block.settings.panel_edgerunner_heading }}</h3>
+      <p class="ai-troubleshoot-panel-sub-{{ ai_gen_id }}">{{ block.settings.panel_edgerunner_sub }}</p>
+
+      {% assign lines = block.settings.data_edgerunner | newline_to_br | split: '<br />' %}
+      {% assign has_any = false %}
+      {% for line in lines %}
+        {% assign l = line | strip %}
+        {% if l != blank %}
+          {% assign has_any = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if has_any %}
+        <div class="ai-troubleshoot-list-{{ ai_gen_id }}">
+          {% for line in lines %}
+            {% assign l = line | strip %}
+            {% if l == blank %}
+              {% continue %}
+            {% endif %}
+
+            {% if l contains '##' %}
+              {% assign group = l | remove_first: '##' | strip %}
+              {% if group != blank %}
+                <div class="ai-troubleshoot-group-{{ ai_gen_id }}">{{ group }}</div>
+              {% endif %}
+            {% else %}
+              {% assign parts = l | split: '|' %}
+              {% assign code = parts[0] | default: '' | strip %}
+              {% assign title = parts[1] | default: '' | strip %}
+              {% assign meta = parts[2] | default: '' | strip %}
+              {% assign pill = parts[3] | default: '' | strip %}
+              {% assign desc = parts[4] | default: '' | strip %}
+              {% assign tries_raw = parts[5] | default: '' | strip %}
+              {% assign tries = tries_raw | split: ';' %}
+
+              <div class="ai-troubleshoot-item-{{ ai_gen_id }}" data-accordion-item>
+                <button class="ai-troubleshoot-button-{{ ai_gen_id }}" aria-expanded="false">
+                  <div class="ai-troubleshoot-button-content-{{ ai_gen_id }}">
+                    <div class="ai-troubleshoot-badge-{{ ai_gen_id }}">{{ code }}</div>
+                    <div class="ai-troubleshoot-qwrap-{{ ai_gen_id }}">
+                      <div class="ai-troubleshoot-question-{{ ai_gen_id }}">{{ title }}</div>
+                      {% if meta != blank %}
+                        <div class="ai-troubleshoot-meta-{{ ai_gen_id }}">{{ meta }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  {% if pill != blank %}
+                    <span class="ai-troubleshoot-pill-{{ ai_gen_id }}">{{ pill }}</span>
+                  {% endif %}
+
+                  <svg class="ai-troubleshoot-chevron-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                <div class="ai-troubleshoot-answer-{{ ai_gen_id }}">
+                  <div class="ai-troubleshoot-answer-content-{{ ai_gen_id }}">
+                    {% if desc != blank %}
+                      <p><strong>Description</strong><br/>{{ desc }}</p>
+                    {% endif %}
+
+                    {% assign has_tries = false %}
+                    {% for t in tries %}
+                      {% assign tt = t | strip %}
+                      {% if tt != blank %}
+                        {% assign has_tries = true %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if has_tries %}
+                      <p><strong>What to try</strong></p>
+                      <ul>
+                        {% for t in tries %}
+                          {% assign tt = t | strip %}
+                          {% if tt != blank %}
+                            <li>{{ tt }}</li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="ai-troubleshoot-empty-{{ ai_gen_id }}">
+          Add Edgerunner troubleshooting lines in the settings panel.
+        </div>
+      {% endif %}
+    </div>
+
+    {% if block.settings.footer_note != blank %}
+      <div style="margin-top:18px;font-size:0.85rem;opacity:0.85;color:{{ block.settings.subtitle_color }};">
+        {{ block.settings.footer_note }}
+      </div>
+    {% endif %}
+  </div>
+</troubleshoot-tiles-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TroubleTiles{{ ai_gen_id }} extends HTMLElement {
+      connectedCallback() {
+        this.tiles = this.querySelectorAll('[data-tiles] [data-model]');
+        this.panels = this.querySelectorAll('[data-panel]');
+        this.bindTiles();
+        this.bindAccordions();
+      }
+
+      bindTiles() {
+        this.tiles.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const model = btn.getAttribute('data-model');
+
+            this.tiles.forEach((b) => b.classList.toggle('is-active', b === btn));
+            this.panels.forEach((p) => p.classList.toggle('is-active', p.getAttribute('data-panel') === model));
+
+            // Close all accordions when switching models (prevents weird maxHeight carry-over)
+            this.querySelectorAll('.ai-troubleshoot-item-{{ ai_gen_id }}.active').forEach((item) => {
+              item.classList.remove('active');
+              const ans = item.querySelector('.ai-troubleshoot-answer-{{ ai_gen_id }}');
+              const header = item.querySelector('.ai-troubleshoot-button-{{ ai_gen_id }}');
+              if (ans) ans.style.maxHeight = '0';
+              if (header) header.setAttribute('aria-expanded', 'false');
+            });
+          });
+        });
+      }
+
+      bindAccordions() {
+        this.querySelectorAll('.ai-troubleshoot-item-{{ ai_gen_id }}').forEach((item) => {
+          const button = item.querySelector('.ai-troubleshoot-button-{{ ai_gen_id }}');
+          const answer = item.querySelector('.ai-troubleshoot-answer-{{ ai_gen_id }}');
+          const answerContent = item.querySelector('.ai-troubleshoot-answer-content-{{ ai_gen_id }}');
+
+          if (!button || !answer || !answerContent) return;
+
+          button.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // close siblings within the same visible panel only
+            const panel = item.closest('.ai-troubleshoot-panel-{{ ai_gen_id }}');
+            if (panel) {
+              panel.querySelectorAll('.ai-troubleshoot-item-{{ ai_gen_id }}').forEach((sib) => {
+                if (sib === item) return;
+                sib.classList.remove('active');
+                const sibAnswer = sib.querySelector('.ai-troubleshoot-answer-{{ ai_gen_id }}');
+                const sibBtn = sib.querySelector('.ai-troubleshoot-button-{{ ai_gen_id }}');
+                if (sibAnswer) sibAnswer.style.maxHeight = '0';
+                if (sibBtn) sibBtn.setAttribute('aria-expanded', 'false');
+              });
+            }
+
+            if (isActive) {
+              item.classList.remove('active');
+              answer.style.maxHeight = '0';
+              button.setAttribute('aria-expanded', 'false');
+            } else {
+              item.classList.add('active');
+              answer.style.maxHeight = answerContent.scrollHeight + 'px';
+              button.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+      }
+    }
+
+    customElements.define('troubleshoot-tiles-{{ ai_gen_id }}', TroubleTiles{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Troubleshooting",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Electric Scooter Troubleshooting"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Select your scooter below and tap an error code to see what it means and what to try next."
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
+    },
+
+    {
+      "type": "header",
+      "content": "Tiles"
+    },
+    {
+      "type": "select",
+      "id": "default_model",
+      "label": "Default selected model",
+      "options": [
+        { "value": "kaiju", "label": "Kaiju" },
+        { "value": "aurora", "label": "Aurora" },
+        { "value": "edgerunner", "label": "Edgerunner" }
+      ],
+      "default": "kaiju"
+    },
+    {
+      "type": "text",
+      "id": "tile_kaiju_title",
+      "label": "Kaiju tile title",
+      "default": "Kaiju"
+    },
+    {
+      "type": "text",
+      "id": "tile_kaiju_sub",
+      "label": "Kaiju tile subtitle",
+      "default": "Common error codes and fixes."
+    },
+    {
+      "type": "text",
+      "id": "tile_aurora_title",
+      "label": "Aurora tile title",
+      "default": "Aurora"
+    },
+    {
+      "type": "text",
+      "id": "tile_aurora_sub",
+      "label": "Aurora tile subtitle",
+      "default": "Common error codes and fixes."
+    },
+    {
+      "type": "text",
+      "id": "tile_edgerunner_title",
+      "label": "Edgerunner tile title",
+      "default": "Edgerunner"
+    },
+    {
+      "type": "text",
+      "id": "tile_edgerunner_sub",
+      "label": "Edgerunner tile subtitle",
+      "default": "Settings-menu controller error codes."
+    },
+
+    {
+      "type": "header",
+      "content": "Panel headings"
+    },
+    {
+      "type": "text",
+      "id": "panel_kaiju_heading",
+      "label": "Kaiju panel heading",
+      "default": "Kaiju: Error Codes & Solutions"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "panel_kaiju_sub",
+      "label": "Kaiju panel intro",
+      "default": "Tap an error to view the description and what to try."
+    },
+    {
+      "type": "text",
+      "id": "panel_aurora_heading",
+      "label": "Aurora panel heading",
+      "default": "Aurora: Error Codes & Solutions"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "panel_aurora_sub",
+      "label": "Aurora panel intro",
+      "default": "Tap an error to view the description and what to try."
+    },
+    {
+      "type": "text",
+      "id": "panel_edgerunner_heading",
+      "label": "Edgerunner panel heading",
+      "default": "Edgerunner: Error Codes & Solutions"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "panel_edgerunner_sub",
+      "label": "Edgerunner panel intro",
+      "default": "These codes are from the Edgerunner settings-menu controller/display."
+    },
+
+    {
+      "type": "header",
+      "content": "Data format"
+    },
+    {
+      "type": "paragraph",
+      "content": "One line per item. Group headings start with ##. Items use: CODE|Title|Meta|Pill|Description|Try 1;Try 2;Try 3"
+    },
+
+    {
+      "type": "header",
+      "content": "Kaiju data"
+    },
+    {
+      "type": "textarea",
+      "id": "data_kaiju",
+      "label": "Kaiju troubleshooting lines",
+      "default": "## Communication\nbA|Rear Drive Communication Failure|Controller not communicating with rear drive|Communication|The display/controller is not communicating properly with the rear drive.|Inspect the comms cable between controller and rear drive; Reseat all connectors; Check for bent pins or damaged wiring\nFA|Front Drive Communication Failure|Controller not communicating with front drive|Communication|The display/controller is not communicating properly with the front drive.|Inspect wiring to the front drive; Reseat connectors; Check for corrosion or damaged pins\n## Battery / Voltage\nE|Under-Voltage Alarm|Battery voltage too low|Battery|The controller detects low battery voltage and protects the pack.|Charge the scooter fully; Test again after a full charge; If it returns, contact support\n## Controller\nFF|Front Controller Overcurrent Alarm|Possible MOSFET short or overload|Controller|The front controller detected excessive current.|Power cycle the scooter; Wait 30–60 seconds; If it returns, stop riding and contact support"
+    },
+
+    {
+      "type": "header",
+      "content": "Aurora data"
+    },
+    {
+      "type": "textarea",
+      "id": "data_aurora",
+      "label": "Aurora troubleshooting lines",
+      "default": "## Communication\nA|Communication Failure|Display/controller not talking to controller|Communication|The scooter detects a fault on the main communication line.|Inspect wiring between display and controller; Check for loose plugs or moisture; Reseat connectors\n## Throttle\nb|Acceleration Dial Failure|Finger throttle fault|Throttle|Throttle signal is out of expected range.|Check throttle connector and wiring; Ensure plugs are fully seated; Replace throttle if needed\n## Battery / Voltage\nE / E0|Undervoltage Alarm|Battery voltage too low|Battery|Battery voltage is low and the system is protecting itself.|Fully charge the scooter; Test with another battery if available; Contact support if it persists"
+    },
+
+    {
+      "type": "header",
+      "content": "Edgerunner data"
+    },
+    {
+      "type": "textarea",
+      "id": "data_edgerunner",
+      "label": "Edgerunner troubleshooting lines",
+      "default": "## Status / Power\nE00|Normal status|No issue detected|Status|System is operating normally.|-\n## Battery / Voltage\nE06|Battery undervoltage|Battery voltage below safe threshold|Battery|Battery voltage is too low; power may be limited or disabled to protect the pack.|Charge the scooter fully; Inspect battery connector; If it persists, stop riding and contact support\n## Motor / Sensors\nE07|Motor Hall fault|Hall sensor signal issue|Motor|Controller is not receiving correct Hall sensor signals from the motor.|Check motor sensor wiring; Reseat motor connector; If it persists, service is required\n## Throttle\nE08|Throttle malfunction|Throttle signal abnormal|Throttle|The throttle input is not within expected range or not detected.|Check throttle cable/connector; Ensure throttle returns freely; Replace throttle if needed\n## Controller / Current\nE09|Overcurrent protection / Controller malfunction|Controller detected excessive current|Controller|Overcurrent detected or controller fault. Often triggered by a jammed wheel or internal controller issue.|Power cycle the scooter; Check wheels spin freely; If it returns, stop riding and arrange service\n## Communication\nE10|No controller signal received|Display not receiving controller signal|Communication|The instrument/display is not receiving a signal from the controller.|Check comms wiring; Reseat connectors; Inspect for moisture/corrosion\nE11|No instrument signal received|Controller not receiving display signal|Communication|The controller is not receiving a signal from the instrument/display.|Check comms wiring; Reseat display connector; Inspect for damaged pins"
+    },
+
+    {
+      "type": "header",
+      "content": "Footer note"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_note",
+      "label": "Footer note",
+      "default": "<p><strong>Still stuck?</strong> If the error persists after trying these steps, stop riding and <a href=\"/pages/contact-us\">contact our support team</a> so we can help or arrange a repair.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "question_size",
+      "label": "Title size (card)",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "answer_size",
+      "label": "Body size (card)",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Space between items",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "label": "Item padding",
+      "min": 16,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "label": "Item corner radius",
+      "min": 0,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "item_background",
+      "label": "Item background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_border_color",
+      "label": "Item border",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "item_hover_border_color",
+      "label": "Item hover border",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Card title",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Card text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "chevron_color",
+      "label": "Chevron",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#1a1a1a"
+    }
+  ],
+  "presets": [
+    { "name": "Troubleshooting – model tiles" }
+  ]
+}
+{% endschema %}

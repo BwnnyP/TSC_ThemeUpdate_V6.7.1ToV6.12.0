@@ -1,0 +1,834 @@
+{% doc %}
+  @prompt
+    TSC – Customise Your Ride (3-tile selector)
+    - Heading + subtitle + tag pills
+    - 3 big tiles (Kaiju/Aurora, Edgerunner, Astro App)
+    - Clicking a tile switches the visible content
+    - Kaiju/Aurora: access steps + accordion settings
+    - Edgerunner: access steps + table settings
+    - Astro: app download block with smart device detection
+    - No images next to tiles (cleaner), kicker sits above title, sub sits below
+    - Safe defaults (no blank defaults); '-' treated as empty in steps
+{% enddoc %}
+
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .tsc-customise-{{ ai_gen_id }}{
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 1rem;
+  }
+
+  .tsc-customise-{{ ai_gen_id }} h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .tsc-customise__subtitle-{{ ai_gen_id }}{
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 0 auto 1.25rem;
+    line-height: 1.5;
+    max-width: 780px;
+    opacity: 0.9;
+  }
+
+  .tsc-customise__tags-{{ ai_gen_id }}{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.1rem;
+  }
+
+  .tsc-customise__tag-{{ ai_gen_id }}{
+    font-size: 0.8rem;
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    background: #f5f5f5;
+    border: 1px solid #e2e2e2;
+    white-space: nowrap;
+  }
+
+  /* ===== Model selector tiles ===== */
+  .tsc-customise__model-grid-{{ ai_gen_id }}{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 8px 0 18px;
+  }
+
+  @media (min-width: 700px){
+    .tsc-customise__model-grid-{{ ai_gen_id }}{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .tsc-model-tile-{{ ai_gen_id }}{
+    border-radius: 16px;
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    cursor: pointer;
+    text-align: left;
+    padding: 14px 16px;
+    display: block;
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+
+  .tsc-model-tile-{{ ai_gen_id }}:hover{
+    transform: translateY(-1px);
+  }
+
+  .tsc-model-tile-{{ ai_gen_id }}.is-active{
+    border-color: rgba(46,167,255,.55);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+  }
+
+  .tsc-model-tile__kicker-{{ ai_gen_id }}{
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin: 0 0 6px;
+  }
+
+  .tsc-model-tile__title-{{ ai_gen_id }}{
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 0 0 4px;
+  }
+
+  .tsc-model-tile__sub-{{ ai_gen_id }}{
+    font-size: 0.85rem;
+    opacity: 0.78;
+    margin: 0;
+    line-height: 1.35;
+  }
+
+  /* View switching */
+  .tsc-customise-{{ ai_gen_id }} [data-view]{
+    display: none;
+  }
+  .tsc-customise-{{ ai_gen_id }}[data-active-view="ka"] [data-view="ka"],
+  .tsc-customise-{{ ai_gen_id }}[data-active-view="er"] [data-view="er"],
+  .tsc-customise-{{ ai_gen_id }}[data-active-view="as"] [data-view="as"]{
+    display: block;
+  }
+
+  /* How-to strip */
+  .tsc-customise__steps-{{ ai_gen_id }}{
+    border-radius: 0.9rem;
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    margin-bottom: 1.6rem;
+  }
+
+  .tsc-customise__steps-title-{{ ai_gen_id }}{
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .tsc-customise__steps-sub-{{ ai_gen_id }}{
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 0.7rem;
+  }
+
+  .tsc-customise__steps-list-{{ ai_gen_id }}{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tsc-customise__steps-list-{{ ai_gen_id }} li{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .tsc-customise__steps-badge-{{ ai_gen_id }}{
+    min-width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+  }
+
+  .tsc-customise__steps-text-{{ ai_gen_id }}{
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  /* Section titles */
+  .tsc-customise__section-title-{{ ai_gen_id }}{
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+  }
+
+  .tsc-customise__section-sub-{{ ai_gen_id }}{
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0 0 1rem;
+  }
+
+  /* Accordion cards */
+  .tsc-custom-card-{{ ai_gen_id }}{
+    border-radius: 0.9rem;
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    overflow: hidden;
+  }
+
+  .tsc-custom-card__header-{{ ai_gen_id }}{
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0.9rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .tsc-custom-card__badge-{{ ai_gen_id }}{
+    min-width: 42px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem;
+    background: #111;
+    color: #fff;
+  }
+
+  .tsc-custom-card__title-wrap-{{ ai_gen_id }}{ flex: 1; }
+  .tsc-custom-card__title-{{ ai_gen_id }}{ font-size: 0.98rem; font-weight: 700; }
+  .tsc-custom-card__meta-{{ ai_gen_id }}{ font-size: 0.8rem; opacity: 0.75; }
+
+  .tsc-custom-card__pill-{{ ai_gen_id }}{
+    font-size: 0.75rem;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    background: #f3f3f3;
+    border: 1px solid #e2e2e2;
+    white-space: nowrap;
+  }
+
+  .tsc-custom-card__chevron-{{ ai_gen_id }}{
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #999;
+    border-bottom: 2px solid #999;
+    transform: rotate(45deg);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .tsc-custom-card-{{ ai_gen_id }}.is-open .tsc-custom-card__chevron-{{ ai_gen_id }}{
+    transform: rotate(-135deg);
+    border-color: #111;
+  }
+
+  .tsc-custom-card__body-{{ ai_gen_id }}{
+    display: none;
+    padding: 0 1rem 0.9rem;
+    border-top: 1px solid #eee;
+    background: #fcfcfc;
+  }
+
+  .tsc-custom-card-{{ ai_gen_id }}.is-open .tsc-custom-card__body-{{ ai_gen_id }}{
+    display: block;
+  }
+
+  .tsc-custom-card__subtitle-{{ ai_gen_id }}{
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.6rem;
+    margin-bottom: 0.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+  }
+
+  .tsc-custom-card__body-{{ ai_gen_id }} p,
+  .tsc-custom-card__body-{{ ai_gen_id }} ul{
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0.15rem 0;
+  }
+
+  .tsc-custom-card__body-{{ ai_gen_id }} ul{
+    padding-left: 1.1rem;
+    margin-top: 0.25rem;
+  }
+
+  /* Tables (alignment fixes) */
+  .tsc-custom-card__table-{{ ai_gen_id }}{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.6rem 0 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .tsc-custom-card__table-{{ ai_gen_id }} th,
+  .tsc-custom-card__table-{{ ai_gen_id }} td{
+    padding: 0.45rem 0.6rem;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .tsc-custom-card__table-{{ ai_gen_id }} th{
+    font-weight: 900;
+    background: #f6f6f6;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  /* Edgerunner table */
+  .tsc-edgerunner__panel-{{ ai_gen_id }}{
+    border-radius: 0.9rem;
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    overflow: hidden;
+  }
+
+  .tsc-edgerunner__table-wrap-{{ ai_gen_id }}{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tsc-edgerunner__table-{{ ai_gen_id }}{
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+
+  .tsc-edgerunner__table-{{ ai_gen_id }} th,
+  .tsc-edgerunner__table-{{ ai_gen_id }} td{
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .tsc-edgerunner__table-{{ ai_gen_id }} th{
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #f6f6f6;
+    color: #222;
+  }
+
+  .tsc-edgerunner__setting-{{ ai_gen_id }}{
+    font-weight: 900;
+    color: #111;
+    white-space: nowrap;
+  }
+
+  .tsc-edgerunner__warning-{{ ai_gen_id }}{
+    padding: 0.9rem 1rem;
+    background: #fff7f2;
+    border-top: 1px solid #ffe3d1;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .tsc-edgerunner__warning-{{ ai_gen_id }} strong{ color: #8a2a00; }
+
+  /* Astro view panel */
+  .tsc-astro__panel-{{ ai_gen_id }}{
+    border-radius: 0.9rem;
+    border: 1px solid #d7e3ff;
+    background: #f5f7ff;
+    padding: 1rem 1.1rem;
+  }
+
+  .tsc-astro__title-{{ ai_gen_id }}{
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 0 0 0.25rem;
+  }
+
+  .tsc-astro__sub-{{ ai_gen_id }}{
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin: 0 0 0.65rem;
+    line-height: 1.45;
+  }
+
+  .tsc-astro__actions-{{ ai_gen_id }}{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .tsc-customise__note-{{ ai_gen_id }}{
+    font-size: 0.8rem;
+    margin-top: 1.25rem;
+    opacity: 0.8;
+  }
+
+  @media (min-width: 700px){
+    .tsc-customise-{{ ai_gen_id }}{ padding: 2rem 0; }
+  }
+
+  @media (max-width: 600px){
+    .tsc-customise-{{ ai_gen_id }}{ padding: 0.75rem 0.8rem 2.5rem; }
+    .tsc-customise-{{ ai_gen_id }} h1{ font-size: 1.6rem; }
+    .tsc-customise__subtitle-{{ ai_gen_id }}{ font-size: 0.9rem; }
+    .tsc-custom-card__pill-{{ ai_gen_id }}{ display: none; }
+  }
+{% endstyle %}
+
+<div class="tsc-customise-{{ ai_gen_id }}" data-active-view="{{ block.settings.default_view }}" {{ block.shopify_attributes }}>
+  {% if block.settings.heading != blank %}
+    <h1>{{ block.settings.heading }}</h1>
+  {% endif %}
+
+  {% if block.settings.subtitle != blank %}
+    <p class="tsc-customise__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+  {% endif %}
+
+  {% if block.settings.tags != blank %}
+    {% assign tags = block.settings.tags | split: '|' %}
+    <div class="tsc-customise__tags-{{ ai_gen_id }}">
+      {% for t in tags %}
+        {% assign t_clean = t | strip %}
+        {% if t_clean != blank %}
+          <span class="tsc-customise__tag-{{ ai_gen_id }}">{{ t_clean }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- 3-way selector -->
+  <div class="tsc-customise__model-grid-{{ ai_gen_id }}">
+    <button type="button" class="tsc-model-tile-{{ ai_gen_id }}" data-switch="ka">
+      <div class="tsc-model-tile__kicker-{{ ai_gen_id }}">{{ block.settings.ka_tile_kicker }}</div>
+      <div class="tsc-model-tile__title-{{ ai_gen_id }}">{{ block.settings.ka_tile_title }}</div>
+      <p class="tsc-model-tile__sub-{{ ai_gen_id }}">{{ block.settings.ka_tile_sub }}</p>
+    </button>
+
+    <button type="button" class="tsc-model-tile-{{ ai_gen_id }}" data-switch="er">
+      <div class="tsc-model-tile__kicker-{{ ai_gen_id }}">{{ block.settings.er_tile_kicker }}</div>
+      <div class="tsc-model-tile__title-{{ ai_gen_id }}">{{ block.settings.er_tile_title }}</div>
+      <p class="tsc-model-tile__sub-{{ ai_gen_id }}">{{ block.settings.er_tile_sub }}</p>
+    </button>
+
+    <button type="button" class="tsc-model-tile-{{ ai_gen_id }}" data-switch="as">
+      <div class="tsc-model-tile__kicker-{{ ai_gen_id }}">{{ block.settings.astro_tile_kicker }}</div>
+      <div class="tsc-model-tile__title-{{ ai_gen_id }}">{{ block.settings.astro_tile_title }}</div>
+      <p class="tsc-model-tile__sub-{{ ai_gen_id }}">{{ block.settings.astro_tile_sub }}</p>
+    </button>
+  </div>
+
+  <!-- Steps: Kaiju/Aurora -->
+  <section class="tsc-customise__steps-{{ ai_gen_id }}" data-view="ka">
+    <div class="tsc-customise__steps-title-{{ ai_gen_id }}">{{ block.settings.steps_title_ka }}</div>
+    <div class="tsc-customise__steps-sub-{{ ai_gen_id }}">{{ block.settings.steps_subtitle_ka }}</div>
+
+    <ol class="tsc-customise__steps-list-{{ ai_gen_id }}">
+      {% for i in (1..8) %}
+        {% assign k = 'ka_step_' | append: i %}
+        {% assign step_val = block.settings[k] | strip %}
+        {% if step_val == '-' %}{% assign step_val = '' %}{% endif %}
+        {% if step_val != blank %}
+          <li>
+            <span class="tsc-customise__steps-badge-{{ ai_gen_id }}">{{ i }}</span>
+            <span class="tsc-customise__steps-text-{{ ai_gen_id }}">{{ step_val }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </section>
+
+  <!-- Steps: Edgerunner -->
+  <section class="tsc-customise__steps-{{ ai_gen_id }}" data-view="er">
+    <div class="tsc-customise__steps-title-{{ ai_gen_id }}">{{ block.settings.steps_title_er }}</div>
+    <div class="tsc-customise__steps-sub-{{ ai_gen_id }}">{{ block.settings.steps_subtitle_er }}</div>
+
+    <ol class="tsc-customise__steps-list-{{ ai_gen_id }}">
+      {% for i in (1..8) %}
+        {% assign k = 'er_step_' | append: i %}
+        {% assign step_val = block.settings[k] | strip %}
+        {% if step_val == '-' %}{% assign step_val = '' %}{% endif %}
+        {% if step_val != blank %}
+          <li>
+            <span class="tsc-customise__steps-badge-{{ ai_gen_id }}">{{ i }}</span>
+            <span class="tsc-customise__steps-text-{{ ai_gen_id }}">{{ step_val }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </section>
+
+  <!-- Kaiju & Aurora settings -->
+  <section data-view="ka">
+    <div class="tsc-customise__section-title-{{ ai_gen_id }}">{{ block.settings.ka_title }}</div>
+    <div class="tsc-customise__section-sub-{{ ai_gen_id }}">{{ block.settings.ka_sub }}</div>
+
+    {% assign ka_lines = block.settings.ka_data | newline_to_br | split: '<br />' %}
+    {% for line in ka_lines %}
+      {% assign raw = line | strip %}
+      {% if raw == blank %}{% continue %}{% endif %}
+
+      {% assign parts = raw | split: ';' %}
+      {% assign code = parts[0] | default: '' | strip %}
+      {% assign title = parts[1] | default: '' | strip %}
+      {% assign meta = parts[2] | default: '' | strip %}
+      {% assign pill = parts[3] | default: '' | strip %}
+      {% assign body = parts[4] | default: '' | strip %}
+      {% assign table_headers_raw = parts[5] | default: '' | strip %}
+      {% assign rows_raw = parts[6] | default: '' | strip %}
+      {% assign note_title = parts[7] | default: '' | strip %}
+      {% assign note_bullets_raw = parts[8] | default: '' | strip %}
+
+      <div class="tsc-custom-card-{{ ai_gen_id }}">
+        <button class="tsc-custom-card__header-{{ ai_gen_id }}" type="button">
+          <span class="tsc-custom-card__badge-{{ ai_gen_id }}">{{ code }}</span>
+
+          <div class="tsc-custom-card__title-wrap-{{ ai_gen_id }}">
+            <div class="tsc-custom-card__title-{{ ai_gen_id }}">{{ title }}</div>
+            {% if meta != blank %}
+              <div class="tsc-custom-card__meta-{{ ai_gen_id }}">{{ meta }}</div>
+            {% endif %}
+          </div>
+
+          {% if pill != blank %}
+            <span class="tsc-custom-card__pill-{{ ai_gen_id }}">{{ pill }}</span>
+          {% endif %}
+          <span class="tsc-custom-card__chevron-{{ ai_gen_id }}"></span>
+        </button>
+
+        <div class="tsc-custom-card__body-{{ ai_gen_id }}">
+          {% if body != blank %}
+            <p>{{ body }}</p>
+          {% endif %}
+
+          {% if table_headers_raw != blank %}
+            {% assign ths = table_headers_raw | split: '|' %}
+            <table class="tsc-custom-card__table-{{ ai_gen_id }}">
+              <tr>
+                {% for th in ths %}
+                  <th>{{ th | strip }}</th>
+                {% endfor %}
+              </tr>
+
+              {% if rows_raw != blank %}
+                {% assign row_list = rows_raw | split: '||' %}
+                {% for r in row_list %}
+                  {% assign r_clean = r | strip %}
+                  {% if r_clean == blank %}{% continue %}{% endif %}
+                  {% assign cells = r_clean | split: '|' %}
+                  <tr>
+                    {% for c in cells %}
+                      <td>{{ c | strip }}</td>
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              {% endif %}
+            </table>
+          {% endif %}
+
+          {% if note_title != blank %}
+            <p class="tsc-custom-card__subtitle-{{ ai_gen_id }}">{{ note_title }}</p>
+          {% endif %}
+
+          {% if note_bullets_raw != blank %}
+            {% assign bullets = note_bullets_raw | split: '||' %}
+            <ul>
+              {% for b in bullets %}
+                {% assign b_clean = b | strip %}
+                {% if b_clean == blank %}{% continue %}{% endif %}
+                <li>{{ b_clean }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <!-- Edgerunner settings -->
+  <section data-view="er">
+    <div class="tsc-customise__section-title-{{ ai_gen_id }}">{{ block.settings.er_title }}</div>
+    <div class="tsc-customise__section-sub-{{ ai_gen_id }}">{{ block.settings.er_sub }}</div>
+
+    <div class="tsc-edgerunner__panel-{{ ai_gen_id }}">
+      <div class="tsc-edgerunner__table-wrap-{{ ai_gen_id }}">
+        <table class="tsc-edgerunner__table-{{ ai_gen_id }}">
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Function</th>
+              <th>Range</th>
+              <th>Default / Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% assign er_lines = block.settings.er_data | newline_to_br | split: '<br />' %}
+            {% for line in er_lines %}
+              {% assign raw = line | strip %}
+              {% if raw == blank %}{% continue %}{% endif %}
+
+              {% assign parts = raw | split: ';' %}
+              {% assign setting = parts[0] | default: '' | strip %}
+              {% assign fn = parts[1] | default: '' | strip %}
+              {% assign range = parts[2] | default: '' | strip %}
+              {% assign comments = parts[3] | default: '' | strip %}
+
+              <tr>
+                <td class="tsc-edgerunner__setting-{{ ai_gen_id }}">{{ setting }}</td>
+                <td>{{ fn }}</td>
+                <td>{{ range }}</td>
+                <td>{{ comments }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      {% if block.settings.er_warning != blank %}
+        <div class="tsc-edgerunner__warning-{{ ai_gen_id }}">
+          {{ block.settings.er_warning }}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Astro view -->
+  <section data-view="as">
+    <div class="tsc-astro__panel-{{ ai_gen_id }}">
+      <div class="tsc-astro__title-{{ ai_gen_id }}">{{ block.settings.astro_title }}</div>
+      <div class="tsc-astro__sub-{{ ai_gen_id }}">{{ block.settings.astro_sub }}</div>
+
+      {% if block.settings.astro_text != blank %}
+        <p style="font-size:0.85rem;margin:0.2rem 0 0.4rem;opacity:.9;">{{ block.settings.astro_text }}</p>
+      {% endif %}
+
+      <div class="tsc-astro__actions-{{ ai_gen_id }}">
+        <a id="greendrive-app-link-{{ ai_gen_id }}" href="#" style="display:inline-block;">
+          {% if block.settings.astro_image != blank %}
+            <img
+              src="{{ block.settings.astro_image | image_url: width: 230 }}"
+              alt="{{ block.settings.astro_image_alt | escape }}"
+              width="100"
+              height="100"
+              style="height:100px;width:100px;border-radius:16px;margin-top:4px;display:block;"
+              loading="lazy"
+            >
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {% if block.settings.footer_note != blank %}
+    <p class="tsc-customise__note-{{ ai_gen_id }}">{{ block.settings.footer_note }}</p>
+  {% endif %}
+</div>
+
+<script>
+  (function() {
+    var root = document.querySelector('.tsc-customise-{{ ai_gen_id }}');
+    if (!root) return;
+
+    function setActive(view) {
+      root.setAttribute('data-active-view', view);
+
+      root.querySelectorAll('.tsc-model-tile-{{ ai_gen_id }}').forEach(function(btn){
+        btn.classList.toggle('is-active', btn.getAttribute('data-switch') === view);
+      });
+    }
+
+    setActive(root.getAttribute('data-active-view') || 'ka');
+
+    root.querySelectorAll('.tsc-model-tile-{{ ai_gen_id }}').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        setActive(btn.getAttribute('data-switch'));
+      });
+    });
+
+    root.querySelectorAll('.tsc-custom-card__header-{{ ai_gen_id }}').forEach(function(header) {
+      header.addEventListener('click', function() {
+        header.closest('.tsc-custom-card-{{ ai_gen_id }}').classList.toggle('is-open');
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    var appLink = document.getElementById('greendrive-app-link-{{ ai_gen_id }}');
+    if (!appLink) return;
+
+    var androidUrl = {{ block.settings.astro_android_url | json }};
+    var iosUrl = {{ block.settings.astro_ios_url | json }};
+    var fallbackUrl = {{ block.settings.astro_fallback_url | json }};
+
+    if (/android/i.test(userAgent)) {
+      appLink.href = androidUrl;
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      appLink.href = iosUrl;
+    } else {
+      appLink.href = fallbackUrl;
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "TSC – Customise Your Ride",
+  "tag": null,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Customise Your Ride" },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Set up speed units, cruise control, kick-to-start and drivetrain behaviour so your scooter feels exactly how you like to ride."
+    },
+    {
+      "type": "text",
+      "id": "tags",
+      "label": "Tag pills (separate with |)",
+      "default": "Kaiju & Aurora – P Settings | Edgerunner – Settings Menu | Astro – App Control | Cruise Control | Kick-to-Start | Dual / Single Motor"
+    },
+
+    { "type": "header", "content": "Default view" },
+    {
+      "type": "select",
+      "id": "default_view",
+      "label": "Default selection",
+      "options": [
+        { "value": "ka", "label": "Kaiju & Aurora" },
+        { "value": "er", "label": "Edgerunner" },
+        { "value": "as", "label": "Astro App" }
+      ],
+      "default": "ka"
+    },
+
+    { "type": "header", "content": "Selector tiles" },
+    { "type": "text", "id": "ka_tile_kicker", "label": "Kaiju tile kicker", "default": "Kaiju & Aurora" },
+    { "type": "text", "id": "ka_tile_title", "label": "Kaiju tile title", "default": "P Settings" },
+    { "type": "text", "id": "ka_tile_sub", "label": "Kaiju tile subtitle", "default": "Settings menu (units, cruise, kick-to-start, drivetrain)" },
+
+    { "type": "text", "id": "er_tile_kicker", "label": "Edgerunner tile kicker", "default": "Edgerunner" },
+    { "type": "text", "id": "er_tile_title", "label": "Edgerunner tile title", "default": "Settings Menu" },
+    { "type": "text", "id": "er_tile_sub", "label": "Edgerunner tile subtitle", "default": "Menu with a wider range of options" },
+
+    { "type": "text", "id": "astro_tile_kicker", "label": "Astro tile kicker", "default": "Astro" },
+    { "type": "text", "id": "astro_tile_title", "label": "Astro tile title", "default": "App Download" },
+    { "type": "text", "id": "astro_tile_sub", "label": "Astro tile subtitle", "default": "GreenDrive to control settings" },
+
+    { "type": "header", "content": "How to access (Kaiju & Aurora)" },
+    { "type": "text", "id": "steps_title_ka", "label": "Kaiju steps title", "default": "How to Access the P Settings Menu" },
+    { "type": "text", "id": "steps_subtitle_ka", "label": "Kaiju steps subtitle", "default": "These steps apply to scooters that use the P-menu (Kaiju & Aurora)." },
+
+    { "type": "text", "id": "ka_step_1", "label": "Kaiju Step 1", "default": "Power on your scooter." },
+    { "type": "text", "id": "ka_step_2", "label": "Kaiju Step 2", "default": "Hold Power + Function until you see P0." },
+    { "type": "text", "id": "ka_step_3", "label": "Kaiju Step 3", "default": "Use the buttons to scroll through P0, P1, P2, P3…" },
+    { "type": "text", "id": "ka_step_4", "label": "Kaiju Step 4", "default": "Press Function to change a value." },
+    { "type": "text", "id": "ka_step_5", "label": "Kaiju Step 5", "default": "Press Power once to go back." },
+    { "type": "text", "id": "ka_step_6", "label": "Kaiju Step 6", "default": "Hold Power + Function again to save & exit." },
+    { "type": "text", "id": "ka_step_7", "label": "Kaiju Step 7", "default": "-" },
+    { "type": "text", "id": "ka_step_8", "label": "Kaiju Step 8", "default": "-" },
+
+    { "type": "header", "content": "How to access (Edgerunner)" },
+    { "type": "text", "id": "steps_title_er", "label": "Edgerunner steps title", "default": "How to Access the Settings Menu" },
+    { "type": "text", "id": "steps_subtitle_er", "label": "Edgerunner steps subtitle", "default": "These steps apply to Edgerunner’s on-display settings menu." },
+
+    { "type": "text", "id": "er_step_1", "label": "Edgerunner Step 1", "default": "Power on your scooter." },
+    { "type": "text", "id": "er_step_2", "label": "Edgerunner Step 2", "default": "Hold the top and bottom buttons on the gear selector until the settings menu appears." },
+    { "type": "text", "id": "er_step_3", "label": "Edgerunner Step 3", "default": "Use the selector to scroll through settings." },
+    { "type": "text", "id": "er_step_4", "label": "Edgerunner Step 4", "default": "Change values using the selector/buttons (depending on the option)." },
+    { "type": "text", "id": "er_step_5", "label": "Edgerunner Step 5", "default": "Repeat the button hold to save & exit (if required)." },
+    { "type": "text", "id": "er_step_6", "label": "Edgerunner Step 6", "default": "-" },
+    { "type": "text", "id": "er_step_7", "label": "Edgerunner Step 7", "default": "-" },
+    { "type": "text", "id": "er_step_8", "label": "Edgerunner Step 8", "default": "-" },
+
+    { "type": "header", "content": "Kaiju & Aurora – settings data" },
+    { "type": "text", "id": "ka_title", "label": "Kaiju section title", "default": "Kaiju & Aurora – P Settings" },
+    { "type": "text", "id": "ka_sub", "label": "Kaiju section subtitle", "default": "Tap a setting to expand." },
+    {
+      "type": "textarea",
+      "id": "ka_data",
+      "label": "Kaiju settings (one per line, ; separated)",
+      "default": "P0;Speed Units (km/h or mph);Toggle between km/h and mph.;Display;Change how speed is displayed on your screen.;Value|Effect;0|km/h (metric)||1|mph (imperial);Tip;This only changes what’s shown on the display — it doesn’t change the scooter’s power output.\nP1;Cruise Control;Holds your speed automatically.;Comfort;Allows the scooter to maintain a constant speed after holding the throttle steady.;Value|Effect;1 (default)|Cruise control ON.||0|Cruise control OFF.;How to change it;Go to P1 in the menu.||Select 0 or 1.\nP2;Startup Mode;Zero-start or kick-to-start.;Safety;Controls whether the scooter can accelerate from standstill (zero-start) or needs a light push first (kick-to-start).;Value|Effect;0|Zero-start enabled.||1 (default)|Kick-to-start enabled.;;\nP3;Drivetrain Mode (Kaiju Only);Single or dual motor.;Kaiju;Controls which motors drive the scooter.;Value|Motor Mode;d|Dual motor||f|Front motor only||b|Rear motor only;Important;Single motor mode reduces performance.||Extra strain on one motor — use for range emergencies only."
+    },
+    {
+      "type": "paragraph",
+      "content": "Format per line: CODE;TITLE;META;PILL;BODY;TABLE_HEADERS;ROWS;NOTE_TITLE;NOTE_BULLETS. Rows use '||' between rows and '|' between columns."
+    },
+
+    { "type": "header", "content": "Edgerunner – settings data" },
+    { "type": "text", "id": "er_title", "label": "Edgerrunner section title", "default": "Edgerunner – Settings" },
+    {
+      "type": "textarea",
+      "id": "er_sub",
+      "label": "Edgerunner section subtitle",
+      "default": "The Edgerunner uses a similar on-display settings menu, but with a wider range of options. Use the table below as a reference."
+    },
+    {
+      "type": "textarea",
+      "id": "er_data",
+      "label": "Edgerunner rows (one per line, ; separated)",
+      "default": "P01;Display brightness;1 (darkest) → 3 (brightest);2\nP02;Imperial vs. metric units;0 = kilometres / 1 = miles;0\nP03;Battery voltage;Min: 24V / Max: 72V;52V\nP04;Auto shut-off timer;Min: 1 minute / Max: 60 minutes;5 minutes\nP05;Gear setting;0-3, 0-5, 0-9, 1-3, 1-5, 1-9;1-3\nP06;Wheel diameter (inches);N/A;10 inches\nP07;Motor magnet count;Min: 1 / Max: 100;30\nP08;Performance limiter;Min: 5% / Max: 100%;25\nP09;Kick start vs. instant start;0 = instant start / 1 = kick start;0\nP10;Not currently used;—;—\nP11;Electric brake strength;Min: 0 / Max: 3;1 (Warning: Level 3 is extremely powerful — test lightly at low speeds first.)\nP12;Acceleration strength;Min: 1 / Max: 5;3\nP13;Not currently used;—;—\nP14;Not currently used;—;—\nP15;Controller cutoff voltage;Unit: 0.1V;450\nP16;Odometer reset;N/A;Press gear up or gear down for 2 seconds to reset odometer\nP17;Cruise control;0 = off / 1 = on;Maintain constant speed for 5 seconds to activate cruise control"
+    },
+    {
+      "type": "textarea",
+      "id": "er_warning",
+      "label": "Edgerunner warning text (HTML allowed)",
+      "default": "<strong>Heads up:</strong> If you’re unsure about any setting (especially braking and acceleration), message our team before changing it."
+    },
+
+    { "type": "header", "content": "Astro – app block (Astro view)" },
+    { "type": "text", "id": "astro_title", "label": "Astro title", "default": "Using the App (Astro)" },
+    { "type": "textarea", "id": "astro_sub", "label": "Astro subtitle", "default": "The Astro uses the GreenDrive app for all riding and performance settings." },
+    { "type": "text", "id": "astro_text", "label": "Astro helper text", "default": "Click below to download the app." },
+    { "type": "image_picker", "id": "astro_image", "label": "Astro app image" },
+    { "type": "text", "id": "astro_image_alt", "label": "Astro image alt text", "default": "GreenDrive App" },
+
+    { "type": "text", "id": "astro_android_url", "label": "Android URL", "default": "https://play.google.com/store/apps/details?id=com.greendrive.google&hl=en_AU" },
+    { "type": "text", "id": "astro_ios_url", "label": "iOS URL", "default": "https://apps.apple.com/us/app/green-drive/id1087299214" },
+    { "type": "text", "id": "astro_fallback_url", "label": "Fallback URL", "default": "https://thesimplecommute.com.au" },
+
+    { "type": "header", "content": "Footer note" },
+    {
+      "type": "textarea",
+      "id": "footer_note",
+      "label": "Footer note (HTML allowed)",
+      "default": "Not sure which settings suit your riding style? <a href=\"/pages/contact-us\">Contact our support team</a> and we’ll help you tune it perfectly."
+    }
+  ],
+  "presets": [
+    { "name": "TSC – Customise Your Ride" }
+  ]
+}
+{% endschema %}

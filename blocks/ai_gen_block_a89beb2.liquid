@@ -1,0 +1,891 @@
+{% doc %}
+  @prompt
+    I want to have tabs to show different states (Such as victoria, NSW), and then in those tabs, to have maps to show the locations of things
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-state-tabs-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    padding: {{ block.settings.padding }}px;
+    max-width: 100%;
+  }
+
+  .ai-state-tabs__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .ai-state-tabs__title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+
+  .ai-state-tabs__subtitle-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.subtitle_size }}px;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .ai-state-tabs__nav-{{ ai_gen_id }} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  .ai-state-tabs__tab-button-{{ ai_gen_id }} {
+    padding: 12px 24px;
+    background-color: {{ block.settings.tab_inactive_bg }};
+    color: {{ block.settings.tab_inactive_text }};
+    border: 2px solid {{ block.settings.tab_inactive_bg }};
+    border-radius: {{ block.settings.tab_border_radius }}px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .ai-state-tabs__tab-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.tab_hover_bg }};
+    color: {{ block.settings.tab_hover_text }};
+    border-color: {{ block.settings.tab_hover_bg }};
+  }
+
+  .ai-state-tabs__tab-button-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.tab_active_bg }};
+    color: {{ block.settings.tab_active_text }};
+    border-color: {{ block.settings.tab_active_bg }};
+  }
+
+  .ai-state-tabs__content-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-state-tabs__panel-{{ ai_gen_id }} {
+    display: none;
+    animation: ai-state-tabs-fade-in-{{ ai_gen_id }} 0.3s ease-in-out;
+  }
+
+  .ai-state-tabs__panel-{{ ai_gen_id }}.active {
+    display: block;
+  }
+
+  .ai-state-tabs__map-container-{{ ai_gen_id }} {
+    background-color: {{ block.settings.map_bg_color }};
+    border-radius: {{ block.settings.map_border_radius }}px;
+    padding: 30px;
+    text-align: center;
+    min-height: {{ block.settings.map_height }}px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid {{ block.settings.map_border_color }};
+  }
+
+  .ai-state-tabs__map-title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px;
+  }
+
+  .ai-state-tabs__map-description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 16px;
+    margin: 0 0 25px;
+    opacity: 0.8;
+    max-width: 600px;
+  }
+
+  .ai-state-tabs__locations-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .ai-state-tabs__location-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.location_card_bg }};
+    border-radius: {{ block.settings.location_card_radius }}px;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid {{ block.settings.location_card_border }};
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .ai-state-tabs__location-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-state-tabs__location-name-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  .ai-state-tabs__location-address-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+    margin: 0 0 12px;
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  .ai-state-tabs__location-link-{{ ai_gen_id }} {
+    color: {{ block.settings.link_color }};
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .ai-state-tabs__location-link-{{ ai_gen_id }}:hover {
+    text-decoration: underline;
+  }
+
+  .ai-state-tabs__empty-state-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: 16px;
+    opacity: 0.6;
+    font-style: italic;
+  }
+
+  @keyframes ai-state-tabs-fade-in-{{ ai_gen_id }} {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-state-tabs__nav-{{ ai_gen_id }} {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+
+    .ai-state-tabs__tab-button-{{ ai_gen_id }} {
+      flex-shrink: 0;
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+
+    .ai-state-tabs__map-container-{{ ai_gen_id }} {
+      padding: 20px;
+      min-height: {{ block.settings.map_height | times: 0.8 }}px;
+    }
+
+    .ai-state-tabs__locations-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<state-tabs-{{ ai_gen_id }}
+  class="ai-state-tabs-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.title != blank or block.settings.subtitle != blank %}
+    <div class="ai-state-tabs__header-{{ ai_gen_id }}">
+      {% if block.settings.title != blank %}
+        <h2 class="ai-state-tabs__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+      {% endif %}
+      {% if block.settings.subtitle != blank %}
+        <p class="ai-state-tabs__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="ai-state-tabs__nav-{{ ai_gen_id }}">
+    {% if block.settings.show_victoria %}
+      <button
+        class="ai-state-tabs__tab-button-{{ ai_gen_id }} active"
+        data-tab="victoria"
+        aria-selected="true"
+        role="tab"
+      >
+        Victoria
+      </button>
+    {% endif %}
+    {% if block.settings.show_nsw %}
+      <button
+        class="ai-state-tabs__tab-button-{{ ai_gen_id }}{% unless block.settings.show_victoria %} active{% endunless %}"
+        data-tab="nsw"
+        aria-selected="{% if block.settings.show_victoria %}false{% else %}true{% endif %}"
+        role="tab"
+      >
+        New South Wales
+      </button>
+    {% endif %}
+    {% if block.settings.show_queensland %}
+      <button
+        class="ai-state-tabs__tab-button-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw %} active{% endunless %}"
+        data-tab="queensland"
+        aria-selected="{% if block.settings.show_victoria or block.settings.show_nsw %}false{% else %}true{% endif %}"
+        role="tab"
+      >
+        Queensland
+      </button>
+    {% endif %}
+    {% if block.settings.show_wa %}
+      <button
+        class="ai-state-tabs__tab-button-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland %} active{% endunless %}"
+        data-tab="wa"
+        aria-selected="{% if block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland %}false{% else %}true{% endif %}"
+        role="tab"
+      >
+        Western Australia
+      </button>
+    {% endif %}
+    {% if block.settings.show_sa %}
+      <button
+        class="ai-state-tabs__tab-button-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland or block.settings.show_wa %} active{% endunless %}"
+        data-tab="sa"
+        aria-selected="{% if block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland or block.settings.show_wa %}false{% else %}true{% endif %}"
+        role="tab"
+      >
+        South Australia
+      </button>
+    {% endif %}
+    {% if block.settings.show_tasmania %}
+      <button
+        class="ai-state-tabs__tab-button-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland or block.settings.show_wa or block.settings.show_sa %} active{% endunless %}"
+        data-tab="tasmania"
+        aria-selected="{% if block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland or block.settings.show_wa or block.settings.show_sa %}false{% else %}true{% endif %}"
+        role="tab"
+      >
+        Tasmania
+      </button>
+    {% endif %}
+  </div>
+
+  <div class="ai-state-tabs__content-{{ ai_gen_id }}" role="tabpanel">
+    {% if block.settings.show_victoria %}
+      <div class="ai-state-tabs__panel-{{ ai_gen_id }} active" data-panel="victoria">
+        <div class="ai-state-tabs__map-container-{{ ai_gen_id }}">
+          <h3 class="ai-state-tabs__map-title-{{ ai_gen_id }}">Victoria Locations</h3>
+          <p class="ai-state-tabs__map-description-{{ ai_gen_id }}">{{ block.settings.victoria_description }}</p>
+          
+          {% if block.settings.victoria_locations != blank %}
+            <div class="ai-state-tabs__locations-grid-{{ ai_gen_id }}">
+              {% assign locations = block.settings.victoria_locations | split: '|' %}
+              {% for location in locations %}
+                {% assign location_parts = location | split: ';' %}
+                {% if location_parts.size >= 2 %}
+                  <div class="ai-state-tabs__location-card-{{ ai_gen_id }}">
+                    <h4 class="ai-state-tabs__location-name-{{ ai_gen_id }}">{{ location_parts[0] | strip }}</h4>
+                    <p class="ai-state-tabs__location-address-{{ ai_gen_id }}">{{ location_parts[1] | strip }}</p>
+                    {% if location_parts.size >= 3 and location_parts[2] != blank %}
+                      <a href="{{ location_parts[2] | strip }}" class="ai-state-tabs__location-link-{{ ai_gen_id }}" target="_blank">
+                        View on map
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="m7 17 10-10"></path>
+                          <path d="M17 7v10"></path>
+                          <path d="M7 7h10"></path>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="ai-state-tabs__empty-state-{{ ai_gen_id }}">No locations configured for Victoria yet.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_nsw %}
+      <div class="ai-state-tabs__panel-{{ ai_gen_id }}{% unless block.settings.show_victoria %} active{% endunless %}" data-panel="nsw">
+        <div class="ai-state-tabs__map-container-{{ ai_gen_id }}">
+          <h3 class="ai-state-tabs__map-title-{{ ai_gen_id }}">New South Wales Locations</h3>
+          <p class="ai-state-tabs__map-description-{{ ai_gen_id }}">{{ block.settings.nsw_description }}</p>
+          
+          {% if block.settings.nsw_locations != blank %}
+            <div class="ai-state-tabs__locations-grid-{{ ai_gen_id }}">
+              {% assign locations = block.settings.nsw_locations | split: '|' %}
+              {% for location in locations %}
+                {% assign location_parts = location | split: ';' %}
+                {% if location_parts.size >= 2 %}
+                  <div class="ai-state-tabs__location-card-{{ ai_gen_id }}">
+                    <h4 class="ai-state-tabs__location-name-{{ ai_gen_id }}">{{ location_parts[0] | strip }}</h4>
+                    <p class="ai-state-tabs__location-address-{{ ai_gen_id }}">{{ location_parts[1] | strip }}</p>
+                    {% if location_parts.size >= 3 and location_parts[2] != blank %}
+                      <a href="{{ location_parts[2] | strip }}" class="ai-state-tabs__location-link-{{ ai_gen_id }}" target="_blank">
+                        View on map
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="m7 17 10-10"></path>
+                          <path d="M17 7v10"></path>
+                          <path d="M7 7h10"></path>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="ai-state-tabs__empty-state-{{ ai_gen_id }}">No locations configured for NSW yet.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_queensland %}
+      <div class="ai-state-tabs__panel-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw %} active{% endunless %}" data-panel="queensland">
+        <div class="ai-state-tabs__map-container-{{ ai_gen_id }}">
+          <h3 class="ai-state-tabs__map-title-{{ ai_gen_id }}">Queensland Locations</h3>
+          <p class="ai-state-tabs__map-description-{{ ai_gen_id }}">{{ block.settings.queensland_description }}</p>
+          
+          {% if block.settings.queensland_locations != blank %}
+            <div class="ai-state-tabs__locations-grid-{{ ai_gen_id }}">
+              {% assign locations = block.settings.queensland_locations | split: '|' %}
+              {% for location in locations %}
+                {% assign location_parts = location | split: ';' %}
+                {% if location_parts.size >= 2 %}
+                  <div class="ai-state-tabs__location-card-{{ ai_gen_id }}">
+                    <h4 class="ai-state-tabs__location-name-{{ ai_gen_id }}">{{ location_parts[0] | strip }}</h4>
+                    <p class="ai-state-tabs__location-address-{{ ai_gen_id }}">{{ location_parts[1] | strip }}</p>
+                    {% if location_parts.size >= 3 and location_parts[2] != blank %}
+                      <a href="{{ location_parts[2] | strip }}" class="ai-state-tabs__location-link-{{ ai_gen_id }}" target="_blank">
+                        View on map
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="m7 17 10-10"></path>
+                          <path d="M17 7v10"></path>
+                          <path d="M7 7h10"></path>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="ai-state-tabs__empty-state-{{ ai_gen_id }}">No locations configured for Queensland yet.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_wa %}
+      <div class="ai-state-tabs__panel-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland %} active{% endunless %}" data-panel="wa">
+        <div class="ai-state-tabs__map-container-{{ ai_gen_id }}">
+          <h3 class="ai-state-tabs__map-title-{{ ai_gen_id }}">Western Australia Locations</h3>
+          <p class="ai-state-tabs__map-description-{{ ai_gen_id }}">{{ block.settings.wa_description }}</p>
+          
+          {% if block.settings.wa_locations != blank %}
+            <div class="ai-state-tabs__locations-grid-{{ ai_gen_id }}">
+              {% assign locations = block.settings.wa_locations | split: '|' %}
+              {% for location in locations %}
+                {% assign location_parts = location | split: ';' %}
+                {% if location_parts.size >= 2 %}
+                  <div class="ai-state-tabs__location-card-{{ ai_gen_id }}">
+                    <h4 class="ai-state-tabs__location-name-{{ ai_gen_id }}">{{ location_parts[0] | strip }}</h4>
+                    <p class="ai-state-tabs__location-address-{{ ai_gen_id }}">{{ location_parts[1] | strip }}</p>
+                    {% if location_parts.size >= 3 and location_parts[2] != blank %}
+                      <a href="{{ location_parts[2] | strip }}" class="ai-state-tabs__location-link-{{ ai_gen_id }}" target="_blank">
+                        View on map
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="m7 17 10-10"></path>
+                          <path d="M17 7v10"></path>
+                          <path d="M7 7h10"></path>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="ai-state-tabs__empty-state-{{ ai_gen_id }}">No locations configured for Western Australia yet.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_sa %}
+      <div class="ai-state-tabs__panel-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland or block.settings.show_wa %} active{% endunless %}" data-panel="sa">
+        <div class="ai-state-tabs__map-container-{{ ai_gen_id }}">
+          <h3 class="ai-state-tabs__map-title-{{ ai_gen_id }}">South Australia Locations</h3>
+          <p class="ai-state-tabs__map-description-{{ ai_gen_id }}">{{ block.settings.sa_description }}</p>
+          
+          {% if block.settings.sa_locations != blank %}
+            <div class="ai-state-tabs__locations-grid-{{ ai_gen_id }}">
+              {% assign locations = block.settings.sa_locations | split: '|' %}
+              {% for location in locations %}
+                {% assign location_parts = location | split: ';' %}
+                {% if location_parts.size >= 2 %}
+                  <div class="ai-state-tabs__location-card-{{ ai_gen_id }}">
+                    <h4 class="ai-state-tabs__location-name-{{ ai_gen_id }}">{{ location_parts[0] | strip }}</h4>
+                    <p class="ai-state-tabs__location-address-{{ ai_gen_id }}">{{ location_parts[1] | strip }}</p>
+                    {% if location_parts.size >= 3 and location_parts[2] != blank %}
+                      <a href="{{ location_parts[2] | strip }}" class="ai-state-tabs__location-link-{{ ai_gen_id }}" target="_blank">
+                        View on map
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="m7 17 10-10"></path>
+                          <path d="M17 7v10"></path>
+                          <path d="M7 7h10"></path>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="ai-state-tabs__empty-state-{{ ai_gen_id }}">No locations configured for South Australia yet.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_tasmania %}
+      <div class="ai-state-tabs__panel-{{ ai_gen_id }}{% unless block.settings.show_victoria or block.settings.show_nsw or block.settings.show_queensland or block.settings.show_wa or block.settings.show_sa %} active{% endunless %}" data-panel="tasmania">
+        <div class="ai-state-tabs__map-container-{{ ai_gen_id }}">
+          <h3 class="ai-state-tabs__map-title-{{ ai_gen_id }}">Tasmania Locations</h3>
+          <p class="ai-state-tabs__map-description-{{ ai_gen_id }}">{{ block.settings.tasmania_description }}</p>
+          
+          {% if block.settings.tasmania_locations != blank %}
+            <div class="ai-state-tabs__locations-grid-{{ ai_gen_id }}">
+              {% assign locations = block.settings.tasmania_locations | split: '|' %}
+              {% for location in locations %}
+                {% assign location_parts = location | split: ';' %}
+                {% if location_parts.size >= 2 %}
+                  <div class="ai-state-tabs__location-card-{{ ai_gen_id }}">
+                    <h4 class="ai-state-tabs__location-name-{{ ai_gen_id }}">{{ location_parts[0] | strip }}</h4>
+                    <p class="ai-state-tabs__location-address-{{ ai_gen_id }}">{{ location_parts[1] | strip }}</p>
+                    {% if location_parts.size >= 3 and location_parts[2] != blank %}
+                      <a href="{{ location_parts[2] | strip }}" class="ai-state-tabs__location-link-{{ ai_gen_id }}" target="_blank">
+                        View on map
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="m7 17 10-10"></path>
+                          <path d="M17 7v10"></path>
+                          <path d="M7 7h10"></path>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="ai-state-tabs__empty-state-{{ ai_gen_id }}">No locations configured for Tasmania yet.</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</state-tabs-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class StateTabs{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.tabButtons = this.querySelectorAll('.ai-state-tabs__tab-button-{{ ai_gen_id }}');
+        this.tabPanels = this.querySelectorAll('.ai-state-tabs__panel-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.tabButtons.forEach((button) => {
+          button.addEventListener('click', (e) => {
+            const targetTab = e.target.getAttribute('data-tab');
+            this.switchTab(targetTab);
+          });
+
+          button.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const targetTab = e.target.getAttribute('data-tab');
+              this.switchTab(targetTab);
+            }
+          });
+        });
+      }
+
+      switchTab(targetTab) {
+        this.tabButtons.forEach((button) => {
+          const isActive = button.getAttribute('data-tab') === targetTab;
+          button.classList.toggle('active', isActive);
+          button.setAttribute('aria-selected', isActive);
+        });
+
+        this.tabPanels.forEach((panel) => {
+          const isActive = panel.getAttribute('data-panel') === targetTab;
+          panel.classList.toggle('active', isActive);
+        });
+      }
+    }
+
+    customElements.define('state-tabs-{{ ai_gen_id }}', StateTabs{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "State location tabs",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our Locations"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Find us across Australia"
+    },
+    {
+      "type": "header",
+      "content": "States to show"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_victoria",
+      "label": "Show Victoria",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nsw",
+      "label": "Show New South Wales",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_queensland",
+      "label": "Show Queensland",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wa",
+      "label": "Show Western Australia",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sa",
+      "label": "Show South Australia",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tasmania",
+      "label": "Show Tasmania",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Victoria"
+    },
+    {
+      "type": "text",
+      "id": "victoria_description",
+      "label": "Description",
+      "default": "Discover our locations throughout Victoria"
+    },
+    {
+      "type": "textarea",
+      "id": "victoria_locations",
+      "label": "Locations",
+      "info": "Format: Name;Address;Map URL | Name;Address;Map URL (separate locations with |)",
+      "placeholder": "Melbourne Store;123 Collins St, Melbourne VIC 3000;https://maps.google.com | Geelong Store;456 Moorabool St, Geelong VIC 3220;https://maps.google.com"
+    },
+    {
+      "type": "header",
+      "content": "New South Wales"
+    },
+    {
+      "type": "text",
+      "id": "nsw_description",
+      "label": "Description",
+      "default": "Find us across New South Wales"
+    },
+    {
+      "type": "textarea",
+      "id": "nsw_locations",
+      "label": "Locations",
+      "info": "Format: Name;Address;Map URL | Name;Address;Map URL (separate locations with |)",
+      "placeholder": "Sydney Store;789 George St, Sydney NSW 2000;https://maps.google.com | Newcastle Store;321 Hunter St, Newcastle NSW 2300;https://maps.google.com"
+    },
+    {
+      "type": "header",
+      "content": "Queensland"
+    },
+    {
+      "type": "text",
+      "id": "queensland_description",
+      "label": "Description",
+      "default": "Visit our Queensland locations"
+    },
+    {
+      "type": "textarea",
+      "id": "queensland_locations",
+      "label": "Locations",
+      "info": "Format: Name;Address;Map URL | Name;Address;Map URL (separate locations with |)",
+      "placeholder": "Brisbane Store;147 Queen St, Brisbane QLD 4000;https://maps.google.com | Gold Coast Store;258 Surfers Paradise Blvd, Surfers Paradise QLD 4217;https://maps.google.com"
+    },
+    {
+      "type": "header",
+      "content": "Western Australia"
+    },
+    {
+      "type": "text",
+      "id": "wa_description",
+      "label": "Description",
+      "default": "Explore our Western Australia locations"
+    },
+    {
+      "type": "textarea",
+      "id": "wa_locations",
+      "label": "Locations",
+      "info": "Format: Name;Address;Map URL | Name;Address;Map URL (separate locations with |)",
+      "placeholder": "Perth Store;369 Murray St, Perth WA 6000;https://maps.google.com"
+    },
+    {
+      "type": "header",
+      "content": "South Australia"
+    },
+    {
+      "type": "text",
+      "id": "sa_description",
+      "label": "Description",
+      "default": "Check out our South Australia locations"
+    },
+    {
+      "type": "textarea",
+      "id": "sa_locations",
+      "label": "Locations",
+      "info": "Format: Name;Address;Map URL | Name;Address;Map URL (separate locations with |)",
+      "placeholder": "Adelaide Store;741 Rundle Mall, Adelaide SA 5000;https://maps.google.com"
+    },
+    {
+      "type": "header",
+      "content": "Tasmania"
+    },
+    {
+      "type": "text",
+      "id": "tasmania_description",
+      "label": "Description",
+      "default": "Find us in Tasmania"
+    },
+    {
+      "type": "textarea",
+      "id": "tasmania_locations",
+      "label": "Locations",
+      "info": "Format: Name;Address;Map URL | Name;Address;Map URL (separate locations with |)",
+      "placeholder": "Hobart Store;852 Elizabeth St, Hobart TAS 7000;https://maps.google.com"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Tab style"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_bg",
+      "label": "Active background",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_text",
+      "label": "Active text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "tab_inactive_bg",
+      "label": "Inactive background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "tab_inactive_text",
+      "label": "Inactive text",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_bg",
+      "label": "Hover background",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_text",
+      "label": "Hover text",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "tab_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab border radius",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Map area"
+    },
+    {
+      "type": "color",
+      "id": "map_bg_color",
+      "label": "Map background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "map_border_color",
+      "label": "Map border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "map_height",
+      "min": 300,
+      "max": 600,
+      "step": 20,
+      "unit": "px",
+      "label": "Map area height",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "map_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Map border radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Location cards"
+    },
+    {
+      "type": "color",
+      "id": "location_card_bg",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "location_card_border",
+      "label": "Card border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "range",
+      "id": "location_card_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "State location tabs"
+    }
+  ]
+}
+{% endschema %}

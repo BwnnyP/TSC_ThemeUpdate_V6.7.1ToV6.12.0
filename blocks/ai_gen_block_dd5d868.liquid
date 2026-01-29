@@ -1,0 +1,649 @@
+{% doc %}
+  @prompt
+    Create a tabs section where clicking each tab changes the image displayed above. 3 tabs, each with a title, short description, and corresponding image. , Add arrows for mobile layout instead of stacking it that lets you scroll between tabs
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-tabs-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-image-tabs-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.desktop_width_percent }}%;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .ai-image-tabs-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-image-tabs-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .ai-image-tabs-image-{{ ai_gen_id }}.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  .ai-image-tabs-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-image-tabs-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .ai-image-tabs-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-image-tabs-tabs-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.tab_spacing }}px;
+    border-bottom: 2px solid {{ block.settings.tab_border_color }};
+    margin-bottom: 30px;
+  }
+
+  .ai-image-tabs-tab-{{ ai_gen_id }} {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 20px 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+
+  .ai-image-tabs-tab-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: {{ block.settings.active_tab_color }};
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .ai-image-tabs-tab-{{ ai_gen_id }}.active::after {
+    transform: scaleX(1);
+  }
+
+  .ai-image-tabs-tab-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.tab_title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.tab_text_color }};
+    margin: 0 0 8px 0;
+    transition: color 0.3s ease;
+  }
+
+  .ai-image-tabs-tab-{{ ai_gen_id }}.active .ai-image-tabs-tab-title-{{ ai_gen_id }} {
+    color: {{ block.settings.active_tab_color }};
+  }
+
+  .ai-image-tabs-tab-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.tab_description_size }}px;
+    color: {{ block.settings.tab_description_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ai-image-tabs-mobile-wrapper-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .ai-image-tabs-arrow-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: {{ block.settings.arrow_background_color }};
+    border: none;
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .ai-image-tabs-arrow-{{ ai_gen_id }}:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .ai-image-tabs-arrow-{{ ai_gen_id }}:not(:disabled):hover {
+    background-color: {{ block.settings.arrow_hover_color }};
+  }
+
+  .ai-image-tabs-arrow-prev-{{ ai_gen_id }} {
+    left: 16px;
+  }
+
+  .ai-image-tabs-arrow-next-{{ ai_gen_id }} {
+    right: 16px;
+  }
+
+  .ai-image-tabs-arrow-{{ ai_gen_id }} svg {
+    width: calc({{ block.settings.arrow_size }}px * 0.5);
+    height: calc({{ block.settings.arrow_size }}px * 0.5);
+    stroke: {{ block.settings.arrow_icon_color }};
+  }
+
+  .ai-image-tabs-mobile-content-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 0 60px;
+  }
+
+  .ai-image-tabs-mobile-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.tab_title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.tab_text_color }};
+    margin: 0 0 12px 0;
+  }
+
+  .ai-image-tabs-mobile-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.tab_description_size }}px;
+    color: {{ block.settings.tab_description_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ai-image-tabs-dots-{{ ai_gen_id }} {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .ai-image-tabs-dot-{{ ai_gen_id }} {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: {{ block.settings.tab_border_color }};
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-image-tabs-dot-{{ ai_gen_id }}.active {
+    background-color: {{ block.settings.active_tab_color }};
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-tabs-container-{{ ai_gen_id }} {
+      max-width: 100%;
+      padding: 20px 16px;
+    }
+
+    .ai-image-tabs-tabs-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-image-tabs-mobile-wrapper-{{ ai_gen_id }} {
+      display: block;
+      position: relative;
+    }
+
+    .ai-image-tabs-dots-{{ ai_gen_id }} {
+      display: flex;
+    }
+
+    .ai-image-tabs-image-wrapper-{{ ai_gen_id }} {
+      margin-bottom: 24px;
+    }
+  }
+{% endstyle %}
+
+<image-tabs-{{ ai_gen_id }} class="ai-image-tabs-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-tabs-container-{{ ai_gen_id }}">
+    <div class="ai-image-tabs-image-wrapper-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign image_key = 'tab_' | append: i | append: '_image'
+          assign tab_image = block.settings[image_key]
+        %}
+        
+        {% if tab_image %}
+          <img
+            src="{{ tab_image | image_url: width: 1600 }}"
+            alt="{{ tab_image.alt | escape }}"
+            loading="lazy"
+            width="{{ tab_image.width }}"
+            height="{{ tab_image.height }}"
+            class="ai-image-tabs-image-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+            data-tab-index="{{ i }}"
+          >
+        {% elsif forloop.first %}
+          <div class="ai-image-tabs-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-image-tabs-empty-state-{{ ai_gen_id }}">
+              Add images to each tab
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="ai-image-tabs-tabs-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign title_key = 'tab_' | append: i | append: '_title'
+          assign description_key = 'tab_' | append: i | append: '_description'
+          assign tab_title = block.settings[title_key]
+          assign tab_description = block.settings[description_key]
+        %}
+        
+        <button
+          class="ai-image-tabs-tab-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+          data-tab-index="{{ i }}"
+          aria-label="View {{ tab_title }}"
+        >
+          <h3 class="ai-image-tabs-tab-title-{{ ai_gen_id }}">{{ tab_title }}</h3>
+          <p class="ai-image-tabs-tab-description-{{ ai_gen_id }}">{{ tab_description }}</p>
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="ai-image-tabs-mobile-wrapper-{{ ai_gen_id }}">
+      <button
+        class="ai-image-tabs-arrow-{{ ai_gen_id }} ai-image-tabs-arrow-prev-{{ ai_gen_id }}"
+        aria-label="Previous tab"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <button
+        class="ai-image-tabs-arrow-{{ ai_gen_id }} ai-image-tabs-arrow-next-{{ ai_gen_id }}"
+        aria-label="Next tab"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="ai-image-tabs-mobile-content-{{ ai_gen_id }}">
+        {% for i in (1..3) %}
+          {% liquid
+            assign title_key = 'tab_' | append: i | append: '_title'
+            assign description_key = 'tab_' | append: i | append: '_description'
+            assign tab_title = block.settings[title_key]
+            assign tab_description = block.settings[description_key]
+          %}
+          
+          <div
+            class="ai-image-tabs-mobile-tab-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+            data-tab-index="{{ i }}"
+            style="{% if forloop.first == false %}display: none;{% endif %}"
+          >
+            <h3 class="ai-image-tabs-mobile-title-{{ ai_gen_id }}">{{ tab_title }}</h3>
+            <p class="ai-image-tabs-mobile-description-{{ ai_gen_id }}">{{ tab_description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="ai-image-tabs-dots-{{ ai_gen_id }}">
+        {% for i in (1..3) %}
+          <button
+            class="ai-image-tabs-dot-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+            data-tab-index="{{ i }}"
+            aria-label="Go to tab {{ i }}"
+          ></button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</image-tabs-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ImageTabs{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentIndex = 1;
+        this.totalTabs = 3;
+      }
+
+      connectedCallback() {
+        this.tabs = this.querySelectorAll('.ai-image-tabs-tab-{{ ai_gen_id }}');
+        this.images = this.querySelectorAll('.ai-image-tabs-image-{{ ai_gen_id }}');
+        this.mobileContent = this.querySelectorAll('.ai-image-tabs-mobile-tab-{{ ai_gen_id }}');
+        this.dots = this.querySelectorAll('.ai-image-tabs-dot-{{ ai_gen_id }}');
+        this.prevButton = this.querySelector('.ai-image-tabs-arrow-prev-{{ ai_gen_id }}');
+        this.nextButton = this.querySelector('.ai-image-tabs-arrow-next-{{ ai_gen_id }}');
+        
+        this.setupEventListeners();
+        this.updateArrowStates();
+      }
+
+      setupEventListeners() {
+        this.tabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            const tabIndex = parseInt(tab.getAttribute('data-tab-index'));
+            this.switchTab(tabIndex);
+          });
+        });
+
+        this.dots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            const tabIndex = parseInt(dot.getAttribute('data-tab-index'));
+            this.switchTab(tabIndex);
+          });
+        });
+
+        if (this.prevButton) {
+          this.prevButton.addEventListener('click', () => {
+            this.navigateTabs(-1);
+          });
+        }
+
+        if (this.nextButton) {
+          this.nextButton.addEventListener('click', () => {
+            this.navigateTabs(1);
+          });
+        }
+      }
+
+      navigateTabs(direction) {
+        let newIndex = this.currentIndex + direction;
+        
+        if (newIndex < 1) {
+          newIndex = 1;
+        } else if (newIndex > this.totalTabs) {
+          newIndex = this.totalTabs;
+        }
+        
+        this.switchTab(newIndex);
+      }
+
+      switchTab(index) {
+        this.currentIndex = index;
+
+        this.tabs.forEach((tab) => {
+          tab.classList.remove('active');
+        });
+
+        this.images.forEach((image) => {
+          image.classList.remove('active');
+        });
+
+        this.mobileContent.forEach((content) => {
+          content.style.display = 'none';
+        });
+
+        this.dots.forEach((dot) => {
+          dot.classList.remove('active');
+        });
+
+        const activeTab = this.querySelector(`.ai-image-tabs-tab-{{ ai_gen_id }}[data-tab-index="${index}"]`);
+        const activeImage = this.querySelector(`.ai-image-tabs-image-{{ ai_gen_id }}[data-tab-index="${index}"]`);
+        const activeMobileContent = this.querySelector(`.ai-image-tabs-mobile-tab-{{ ai_gen_id }}[data-tab-index="${index}"]`);
+        const activeDot = this.querySelector(`.ai-image-tabs-dot-{{ ai_gen_id }}[data-tab-index="${index}"]`);
+
+        if (activeTab) {
+          activeTab.classList.add('active');
+        }
+
+        if (activeImage) {
+          activeImage.classList.add('active');
+        }
+
+        if (activeMobileContent) {
+          activeMobileContent.style.display = 'block';
+        }
+
+        if (activeDot) {
+          activeDot.classList.add('active');
+        }
+
+        this.updateArrowStates();
+      }
+
+      updateArrowStates() {
+        if (this.prevButton) {
+          this.prevButton.disabled = this.currentIndex === 1;
+        }
+
+        if (this.nextButton) {
+          this.nextButton.disabled = this.currentIndex === this.totalTabs;
+        }
+      }
+    }
+
+    customElements.define('image-tabs-{{ ai_gen_id }}', ImageTabs{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Image tabs",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Tab 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_title",
+      "label": "Title",
+      "default": "Feature one"
+    },
+    {
+      "type": "textarea",
+      "id": "tab_1_description",
+      "label": "Description",
+      "default": "Highlight your product's key features and benefits"
+    },
+    {
+      "type": "header",
+      "content": "Tab 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_title",
+      "label": "Title",
+      "default": "Feature two"
+    },
+    {
+      "type": "textarea",
+      "id": "tab_2_description",
+      "label": "Description",
+      "default": "Showcase what makes your product stand out"
+    },
+    {
+      "type": "header",
+      "content": "Tab 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tab_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_title",
+      "label": "Title",
+      "default": "Feature three"
+    },
+    {
+      "type": "textarea",
+      "id": "tab_3_description",
+      "label": "Description",
+      "default": "Explain the value your product delivers"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "tab_spacing",
+      "label": "Tab spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "tab_title_size",
+      "label": "Tab title size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "tab_description_size",
+      "label": "Tab description size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Mobile arrows"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Arrow size",
+      "min": 32,
+      "max": 56,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "arrow_background_color",
+      "label": "Arrow background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "arrow_hover_color",
+      "label": "Arrow hover background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "arrow_icon_color",
+      "label": "Arrow icon",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "tab_text_color",
+      "label": "Tab text",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "tab_description_color",
+      "label": "Description text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "active_tab_color",
+      "label": "Active tab",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "tab_border_color",
+      "label": "Border",
+      "default": "#e0e0e0"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image tabs"
+    }
+  ]
+}
+{% endschema %}

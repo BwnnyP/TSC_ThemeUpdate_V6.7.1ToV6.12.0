@@ -1,0 +1,581 @@
+{% doc %}
+  @prompt
+    I need three tiles that will each have an image, title, paragraph, and button
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-three-tiles-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: {{ block.settings.tile_spacing }}px;
+    padding: {{ block.settings.section_padding }}px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .ai-tile-{{ ai_gen_id }} {
+    background-color: {{ block.settings.tile_background_color }};
+    border-radius: {{ block.settings.tile_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 {{ block.settings.tile_shadow_vertical }}px {{ block.settings.tile_shadow_blur }}px rgba(0, 0, 0, {{ block.settings.tile_shadow_opacity | divided_by: 100.0 }});
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-tile-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 {{ block.settings.tile_shadow_vertical | plus: 8 }}px {{ block.settings.tile_shadow_blur | plus: 10 }}px rgba(0, 0, 0, {{ block.settings.tile_shadow_opacity | divided_by: 100.0 | times: 1.5 }});
+  }
+
+  .ai-tile-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    overflow: hidden;
+  }
+
+  .ai-tile-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-tile-{{ ai_gen_id }}:hover .ai-tile-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-tile-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-tile-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-tile-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-tile-content-{{ ai_gen_id }} {
+    padding: {{ block.settings.content_padding }}px;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_spacing }}px;
+    height: calc(100% - {{ block.settings.image_height }}px);
+  }
+
+  .ai-tile-title-{{ ai_gen_id }} {
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    font-family: {{ block.settings.title_font.family }}, {{ block.settings.title_font.fallback_families }};
+    font-weight: {{ block.settings.title_font.weight }};
+    font-style: {{ block.settings.title_font.style }};
+  }
+
+  .ai-tile-paragraph-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+    font-family: {{ block.settings.text_font.family }}, {{ block.settings.text_font.fallback_families }};
+    font-weight: {{ block.settings.text_font.weight }};
+    font-style: {{ block.settings.text_font.style }};
+  }
+
+  .ai-tile-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid {{ block.settings.button_background_color }};
+    align-self: flex-start;
+    font-family: {{ block.settings.button_font.family }}, {{ block.settings.button_font.fallback_families }};
+    font-weight: {{ block.settings.button_font.weight }};
+    font-style: {{ block.settings.button_font.style }};
+  }
+
+  .ai-tile-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_background_color }};
+    transform: translateY(-2px);
+  }
+
+  {% comment %}
+    Mobile carousel: extra side padding + no odd gutter color
+    - Use flex with gap:0. We control spacing via card margins.
+    - Give the scroller the same background as the cards to hide parent bleed.
+    - Pseudo-elements create left/right gutters so the first/last slides aren't flush.
+  {% endcomment %}
+  @media screen and (max-width: 749px) {
+    .ai-three-tiles-{{ ai_gen_id }} {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+
+      width: 100%;
+      margin: 0;
+      padding: 0;                  /* no internal padding; we add spacers */
+      gap: 0;                      /* avoid background showing through */
+      background: {{ block.settings.tile_background_color }};
+      scrollbar-width: none;       /* Firefox */
+      scroll-padding-left: 24px;   /* better snap feel with our spacers */
+      scroll-padding-right: 24px;
+    }
+    .ai-three-tiles-{{ ai_gen_id }}::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+    .ai-three-tiles-{{ ai_gen_id }}::before,
+    .ai-three-tiles-{{ ai_gen_id }}::after {
+      content: "";
+      flex: 0 0 24px;              /* side gutters — tweak to taste */
+    }
+
+    .ai-tile-{{ ai_gen_id }} {
+      scroll-snap-align: start;
+      flex: 0 0 85%;
+      max-width: 480px;
+      margin-right: {{ block.settings.tile_spacing | times: 0.75 }}px; /* inter-card spacing */
+      background-color: {{ block.settings.tile_background_color }};
+    }
+    .ai-tile-{{ ai_gen_id }}:last-child {
+      margin-right: 24px;          /* match end gutter */
+    }
+
+    .ai-tile-content-{{ ai_gen_id }} {
+      padding: {{ block.settings.content_padding | times: 0.75 }}px;
+    }
+
+    .ai-tile-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.9 }}px;
+    }
+
+    .ai-tile-paragraph-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-three-tiles-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% for i in (1..3) %}
+    {% liquid
+      assign image_key = 'tile_' | append: i | append: '_image'
+      assign title_key = 'tile_' | append: i | append: '_title'
+      assign paragraph_key = 'tile_' | append: i | append: '_paragraph'
+      assign button_text_key = 'tile_' | append: i | append: '_button_text'
+      assign button_link_key = 'tile_' | append: i | append: '_button_link'
+
+      assign tile_image = block.settings[image_key]
+      assign tile_title = block.settings[title_key]
+      assign tile_paragraph = block.settings[paragraph_key]
+      assign tile_button_text = block.settings[button_text_key]
+      assign tile_button_link = block.settings[button_link_key]
+    %}
+
+    <div class="ai-tile-{{ ai_gen_id }}">
+      <div class="ai-tile-image-wrapper-{{ ai_gen_id }}">
+        {% if tile_image %}
+          <img
+            src="{{ tile_image | image_url: width: 600 }}"
+            alt="{{ tile_image.alt | escape }}"
+            loading="lazy"
+            width="{{ tile_image.width }}"
+            height="{{ tile_image.height }}"
+            class="ai-tile-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-tile-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-tile-empty-state-{{ ai_gen_id }}">
+              Add image for tile {{ i }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-tile-content-{{ ai_gen_id }}">
+        {% if tile_title != blank %}
+          <h3 class="ai-tile-title-{{ ai_gen_id }}">{{ tile_title }}</h3>
+        {% endif %}
+
+        {% if tile_paragraph != blank %}
+          <div class="ai-tile-paragraph-{{ ai_gen_id }}">{{ tile_paragraph }}</div>
+        {% endif %}
+
+        {% if tile_button_text != blank %}
+          <a
+            href="{{ tile_button_link | default: '#' }}"
+            class="ai-tile-button-{{ ai_gen_id }}"
+          >
+            {{ tile_button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Three tiles",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "tile_spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Space between tiles",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 150,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Image height",
+      "default": 250
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Content padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Content spacing",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Tile style"
+    },
+    {
+      "type": "color",
+      "id": "tile_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "tile_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "tile_shadow_opacity",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "%",
+      "label": "Shadow opacity",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "tile_shadow_vertical",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow vertical offset",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "tile_shadow_blur",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Shadow blur",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "title_font",
+      "label": "Title font",
+      "default": "din_next_n7"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "font_picker",
+      "id": "text_font",
+      "label": "Text font",
+      "default": "montserrat_n4"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "font_picker",
+      "id": "button_font",
+      "label": "Button font",
+      "default": "montserrat_n4"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Button horizontal padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Tile 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tile_1_title",
+      "label": "Title",
+      "default": "First tile"
+    },
+    {
+      "type": "richtext",
+      "id": "tile_1_paragraph",
+      "label": "Description",
+      "default": "<p>Add a compelling description for your first tile that will engage your customers.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tile_1_button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "tile_1_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Tile 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tile_2_title",
+      "label": "Title",
+      "default": "Second tile"
+    },
+    {
+      "type": "richtext",
+      "id": "tile_2_paragraph",
+      "label": "Description",
+      "default": "<p>Add a compelling description for your second tile that will engage your customers.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tile_2_button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "tile_2_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Tile 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "tile_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tile_3_title",
+      "label": "Title",
+      "default": "Third tile"
+    },
+    {
+      "type": "richtext",
+      "id": "tile_3_paragraph",
+      "label": "Description",
+      "default": "<p>Add a compelling description for your third tile that will engage your customers.</p>"
+    },
+    {
+      "type": "text",
+      "id": "tile_3_button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "tile_3_button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three tiles"
+    }
+  ]
+}
+{% endschema %}
