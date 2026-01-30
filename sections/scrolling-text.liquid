@@ -130,7 +130,8 @@
       "step": 1,
       "unit": "s",
       "label": "Automatic scrolling speed",
-      "default": 10
+      "default": 10,
+      "visible_if": "{{ section.settings.scrolling_mode == 'auto' }}"
     },
     {
       "type": "header",
@@ -160,7 +161,8 @@
   ],
   "presets": [
     {
-      "name": "Scrolling text"
+      "name": "Scrolling text",
+      "category": "Content"
     }
   ]
 }

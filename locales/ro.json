@@ -78,6 +78,7 @@
       "sold_out_button": "Stoc epuizat",
       "unavailable_button": "Indisponibil",
       "added_to_cart": "Adăugat în coș!",
+      "added_to_cart_with_title": "{{ product_title }} a fost adăugat în coș.",
       "sold_out_badge": "Stoc epuizat",
       "on_sale_badge": "Reducere",
       "discount_badge_html": "Economisește {{ savings }}",
@@ -352,6 +353,10 @@
       "one_result": "Există un singur tarif de livrare pentru adresa ta:",
       "multiple_results": "Există mai multe tarife de livrare pentru adresa ta:",
       "error": "La preluarea tarifelor de livrare au survenit una sau mai multe erori:"
+    },
+    "discount": {
+      "label": "Cod de reducere",
+      "error": "Introduceți un cod de reducere valid"
     }
   },
   "404": {
@@ -368,7 +373,7 @@
       "products": "Produse",
       "suggestions": "Sugestii",
       "collections": "Colecții",
-      "posts": "Postări pe blog",
+      "articles": "Postări pe blog",
       "pages": "Pagini",
       "clear": "Șterge",
       "view_all": "Vezi tot",

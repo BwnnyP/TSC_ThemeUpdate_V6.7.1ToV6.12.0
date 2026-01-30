@@ -1,4 +1,4 @@
-{%- if section.settings.liquid != blank -%}
+{%- if section.blocks.size > 0 -%}
   {%- render 'section-spacing-collapsing' -%}
 
   <style>
@@ -9,14 +9,14 @@
   </style>
 
   <div {% render 'section-properties' %}>
-    {{ section.settings.liquid }}
+    {% content_for 'blocks' %}
   </div>
 {%- endif -%}
 
 {% schema %}
 {
-  "name": "Custom Liquid",
-  "class": "shopify-section--custom-liquid",
+  "name": "Custom section",
+  "class": "shopify-section--blocks",
   "tag": "section",
   "disabled_on": {
     "groups": ["custom.overlay"]
@@ -41,13 +41,6 @@
       "default": false
     },
     {
-      "type": "liquid",
-      "id": "liquid",
-      "label": "Liquid",
-      "info": "Add app snippets or other Liquid code to create advanced customizations.",
-      "default": "<p style=\"text-align: center\">Write or copy/paste Liquid code</p>"
-    },
-    {
       "type": "header",
       "content": "Colors",
       "info": "Gradient replaces solid colors when set."
@@ -68,9 +61,17 @@
       "label": "Text"
     }
   ],
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
   "presets": [
     {
-      "name": "Custom Liquid",
+      "name": "Custom section",
       "category": "Layout"
     }
   ]

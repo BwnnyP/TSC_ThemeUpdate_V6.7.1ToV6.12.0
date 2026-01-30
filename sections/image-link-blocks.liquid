@@ -183,7 +183,8 @@ LIQUID
           "type": "color",
           "id": "overlay_color",
           "label": "Overlay",
-          "default": "#000000"
+          "default": "#000000",
+          "visible_if": "{{ block.settings.stretch_image }}"
         },
         {
           "type": "range",
@@ -193,7 +194,8 @@ LIQUID
           "max": 100,
           "step": 1,
           "unit": "%",
-          "default": 0
+          "default": 0,
+          "visible_if": "{{ block.settings.stretch_image }}"
         }
       ]
     }
@@ -284,6 +286,7 @@ LIQUID
   "presets": [
     {
       "name": "Image link blocks",
+      "category": "Media",
       "blocks": [
         {
           "type": "item"

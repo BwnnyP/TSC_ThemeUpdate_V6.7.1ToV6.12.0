@@ -227,58 +227,172 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
-    { "type": "checkbox", "id": "full_width", "label": "Full width", "default": true },
-    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Contact Us" },
-    { "type": "text", "id": "title", "label": "Heading", "default": "Do you have any question?" },
-    { "type": "richtext", "id": "content", "label": "Content" },
     {
-      "type": "select", "id": "text_position", "label": "Text position",
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Contact Us"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Do you have any question?"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
       "options": [
-        { "value": "start", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "end", "label": "Right" }
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
       ],
       "default": "start"
     },
     {
-      "type": "select", "id": "contact_form_size", "label": "Contact form size",
+      "type": "select",
+      "id": "contact_form_size",
+      "label": "Contact form size",
       "options": [
-        { "value": "small", "label": "Small" },
-        { "value": "large", "label": "Large" }
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
       ],
       "default": "large"
     },
-    { "type": "header", "content": "Section colors", "info": "Gradient replaces solid colors when set." },
-    { "type": "color", "id": "background", "label": "Background" },
-    { "type": "color_background", "id": "background_gradient", "label": "Background gradient" },
-    { "type": "color", "id": "text_color", "label": "Text" },
-    { "type": "color", "id": "heading_color", "label": "Heading color" },
-    { "type": "color_background", "id": "heading_gradient", "label": "Heading gradient" },
-    { "type": "header", "content": "Contact block colors", "info": "Gradient replaces solid colors when set." },
-    { "type": "color", "id": "contact_background", "label": "Background" },
-    { "type": "color", "id": "contact_text_color", "label": "Text" },
-    { "type": "color", "id": "button_background", "label": "Button background" },
-    { "type": "color", "id": "button_text_color", "label": "Button text" }
+    {
+      "type": "header",
+      "content": "Section colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "color_background",
+      "id": "heading_gradient",
+      "label": "Heading gradient"
+    },
+    {
+      "type": "header",
+      "content": "Contact block colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color",
+      "id": "contact_background",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "contact_text_color",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text"
+    }
   ],
   "blocks": [
     {
-      "type": "text", "name": "Text field",
+      "type": "text",
+      "name": "Text field",
       "settings": [
-        { "type": "text", "id": "title", "label": "Name", "default": "Custom field" },
-        { "type": "checkbox", "id": "use_long_text", "label": "Use long text", "default": false },
-        { "type": "checkbox", "id": "required", "label": "Required", "default": false }
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_long_text",
+          "label": "Use long text",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Required",
+          "default": false
+        }
       ]
     },
     {
-      "type": "dropdown", "name": "Dropdown",
+      "type": "dropdown",
+      "name": "Dropdown",
       "settings": [
-        { "type": "text", "id": "title", "label": "Name", "default": "Custom field" },
-        { "type": "text", "id": "values", "label": "Values", "info": "Separate each value by a comma.", "default": "value 1, value 2, value 3" }
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name",
+          "default": "Custom field"
+        },
+        {
+          "type": "text",
+          "id": "values",
+          "label": "Values",
+          "info": "Separate each value by a comma.",
+          "default": "value 1, value 2, value 3"
+        }
       ]
     }
   ],
   "presets": [
-    { "name": "Contact form", "settings": {} }
+    {
+      "name": "Contact form",
+      "category": "Call to action",
+      "settings": {}
+    }
   ]
 }
 {% endschema %}

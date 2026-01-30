@@ -78,6 +78,7 @@
       "sold_out_button": "已售罄",
       "unavailable_button": "暂不可用",
       "added_to_cart": "已添加到购物车！",
+      "added_to_cart_with_title": "{{ product_title }} 已加入购物车。",
       "sold_out_badge": "已售罄",
       "on_sale_badge": "特价",
       "discount_badge_html": "节省 {{ savings }}",
@@ -350,6 +351,10 @@
       "one_result": "您的地址有一种运费：",
       "multiple_results": "您的地址有多种运费：",
       "error": "检索运费时出现一个或多个错误："
+    },
+    "discount": {
+      "label": "折扣码",
+      "error": "请输入有效的折扣码"
     }
   },
   "404": {
@@ -366,7 +371,7 @@
       "products": "产品",
       "suggestions": "建议",
       "collections": "产品系列",
-      "posts": "博客文章",
+      "articles": "博客文章",
       "pages": "页面",
       "clear": "清除",
       "view_all": "查看全部",

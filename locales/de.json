@@ -78,6 +78,7 @@
       "sold_out_button": "Ausverkauft",
       "unavailable_button": "Nicht verfügbar",
       "added_to_cart": "Zum Warenkorb hinzugefügt!",
+      "added_to_cart_with_title": "{{ product_title }} wurde dem Warenkorb hinzugefügt.",
       "sold_out_badge": "Ausverkauft",
       "on_sale_badge": "Sale",
       "discount_badge_html": "Spare {{ savings }}",
@@ -351,6 +352,10 @@
       "one_result": "Für deine Adresse gibt es einen Versandtarif:",
       "multiple_results": "Für deine Adresse gibt es mehrere Versandtarife:",
       "error": "Beim Berechnen der Versandkosten ist ein Fehler aufgetreten:"
+    },
+    "discount": {
+      "label": "Rabattcode",
+      "error": "Bitte einen gültigen Rabattcode eingeben"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "Produkte",
       "suggestions": "Anregungen",
       "collections": "Kategorien",
-      "posts": "Blog-Artikel",
+      "articles": "Blog-Artikel",
       "pages": "Seiten",
       "clear": "Zurücksetzen",
       "view_all": "Alle Treffer anzeigen",

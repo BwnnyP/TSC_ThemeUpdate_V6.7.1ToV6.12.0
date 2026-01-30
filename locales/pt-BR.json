@@ -78,6 +78,7 @@
       "sold_out_button": "Esgotado",
       "unavailable_button": "Unavailable",
       "added_to_cart": "Adicionado ao carrinho!",
+      "added_to_cart_with_title": "{{ product_title }} foi adicionado ao carrinho.",
       "sold_out_badge": "Esgotado",
       "on_sale_badge": "Promoção",
       "discount_badge_html": "Economize {{ savings }}",
@@ -351,6 +352,10 @@
       "one_result": "Temos um método de envio para o seu endereço:",
       "multiple_results": "Temos diversos métodos de envio para o seu endereço:",
       "error": "Um ou mais erros aconteceram durante a estimativa de frete:"
+    },
+    "discount": {
+      "label": "Código de desconto",
+      "error": "Insira um código de desconto válido"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "Produtos",
       "suggestions": "Sugestões",
       "collections": "Coleções",
-      "posts": "Posts de blog",
+      "articles": "Posts de blog",
       "pages": "Páginas",
       "clear": "Limpar",
       "view_all": "Ver tudo",

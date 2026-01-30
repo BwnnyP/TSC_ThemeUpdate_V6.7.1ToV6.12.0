@@ -440,13 +440,14 @@
         {
           "type": "color",
           "id": "icon_background",
-          "label": "Icon background"
+          "label": "Icon background",
+          "visible_if": "{{ block.settings.icon_background_type != 'none' }}"
         },
         {
           "type": "color",
           "id": "icon_color",
           "label": "Icon color",
-          "info": "Do not have effect when using custom icon."
+          "visible_if": "{{ block.settings.custom_icon == blank }}"
         },
         {
           "type": "text",
@@ -577,6 +578,7 @@
   "presets": [
     {
       "name": "Text with icons",
+      "category": "Trust & social proof",
       "blocks": [
         {
           "type": "item",

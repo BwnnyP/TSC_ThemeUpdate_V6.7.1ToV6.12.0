@@ -178,7 +178,7 @@
           {%- endif -%}
 
           <div class="footer__copyright v-stack gap-1">
-            <p class="text-sm text-subdued">© {{ 'now' | date: '%Y' }}, {{ shop.name }}. {{ powered_by_link }}</p>
+            <p class="text-sm text-subdued">© {{ 'now' | date: '%Y' }}, {{ shop.name }}. {% if section.settings.show_powered_by_shopify %}{{ powered_by_link }}{%-endif %}</p>
 
             {%- if section.settings.show_policy_links and shop.policies.size > 0 -%}
               <ul class="footer__policy-links unstyled-list">
@@ -302,34 +302,120 @@
   "tag": "footer",
   "max_blocks": 5,
   "settings": [
-    { "type": "checkbox", "id": "show_social_media", "label": "Show social media", "info": "To configure social media, go to your social media settings.", "default": true },
-    { "type": "checkbox", "id": "show_payment_icons", "label": "Show payment icons", "default": true },
-    { "type": "checkbox", "id": "show_policy_links", "label": "Show policy links", "info": "To add store policies, go to your [policy settings](/admin/settings/legal)." },
-    { "type": "header", "content": "Country/region selector", "info": "To add a country/region, go to your [markets settings.](/admin/settings/markets)" },
-    { "type": "checkbox", "id": "show_country_selector", "label": "Show country/region selector", "default": true },
-    { "type": "checkbox", "id": "show_country_flag", "label": "Show country flag", "default": true },
-    { "type": "checkbox", "id": "show_country_name", "label": "Show country name", "default": true },
-    { "type": "header", "content": "Language selector", "info": "To add a language, go to your [language settings.](/admin/settings/languages)" },
-    { "type": "checkbox", "id": "show_locale_selector", "label": "Show language selector", "default": true }
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "info": "To configure social media, go to your social media settings.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_powered_by_shopify",
+      "label": "Show \"Powered by Shopify\"",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_policy_links",
+      "label": "Show policy links",
+      "info": "To add store policies, go to your [policy settings](/admin/settings/legal)."
+    },
+    {
+      "type": "header",
+      "content": "Country/region selector",
+      "info": "To add a country/region, go to your [markets settings.](/admin/settings/markets)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "Show country/region selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_flag",
+      "label": "Show country flag",
+      "default": true,
+      "visible_if": "{{ section.settings.show_country_selector }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_name",
+      "label": "Show country name",
+      "default": true,
+      "visible_if": "{{ section.settings.show_country_selector }}"
+    },
+    {
+      "type": "header",
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    }
   ],
   "blocks": [
-    { "type": "@app" },
+    {
+      "type": "@app"
+    },
     {
       "type": "text",
       "name": "Text",
       "settings": [
-        { "type": "text", "id": "title", "label": "Heading", "default": "About our store" },
-        { "type": "richtext", "id": "content", "label": "Content", "default": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>" },
-        { "type": "checkbox", "id": "enable_follow_on_shop", "label": "Show Follow on Shop", "info": "To allow customers to follow your store on the Shop app, Shop Pay must be enabled.", "default": true }
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "About our store"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_follow_on_shop",
+          "label": "Show Follow on Shop",
+          "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)",
+          "default": true
+        }
       ]
     },
     {
       "type": "links",
       "name": "Links",
       "settings": [
-        { "type": "link_list", "id": "menu", "label": "Menu", "info": "This menu won't show dropdown items.", "default": "footer" },
-        { "type": "checkbox", "id": "show_menu_title", "label": "Show menu title", "default": true },
-        { "type": "inline_richtext", "id": "menu_title", "label": "Menu title", "info": "Replaces the default menu title" }
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "This menu won't show dropdown items.",
+          "default": "footer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_menu_title",
+          "label": "Show menu title",
+          "default": true
+        },
+        {
+          "type": "inline_richtext",
+          "id": "menu_title",
+          "label": "Menu title",
+          "info": "Replaces the default menu title"
+        }
       ]
     },
     {
@@ -337,12 +423,61 @@
       "name": "Newsletter",
       "limit": 1,
       "settings": [
-        { "type": "paragraph", "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)." },
-        { "type": "image_picker", "id": "image", "label": "Image", "info": "600 x 600px .png recommended" },
-        { "type": "range", "id": "image_width", "min": 50, "max": 300, "step": 10, "unit": "px", "label": "Image width", "default": 150 },
-        { "type": "select", "id": "heading_size", "label": "Title size", "options": [ { "value": "h3", "label": "H3" }, { "value": "h4", "label": "H4" }, { "value": "h5", "label": "H5" }, { "value": "h6", "label": "H6" } ], "default": "h3" },
-        { "type": "text", "id": "title", "label": "Title", "default": "Sign up to our newsletter" },
-        { "type": "richtext", "id": "content", "label": "Content" }
+        {
+          "type": "paragraph",
+          "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "600 x 600px .png recommended"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 300,
+          "step": 10,
+          "unit": "px",
+          "label": "Image width",
+          "default": 150
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Title size",
+          "options": [
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Sign up to our newsletter"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
       ]
     }
   ]

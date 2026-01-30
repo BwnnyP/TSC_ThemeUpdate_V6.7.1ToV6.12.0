@@ -364,13 +364,14 @@
     {
       "type": "color",
       "id": "background",
-      "label": "Background"
+      "label": "Background",
+      "visible_if": "{{ block.settings.background_style != 'none' }}"
     },
     {
       "type": "color",
       "id": "color",
       "label": "Color",
-      "info": "Ignored for custom icon."
+      "visible_if": "{{ block.settings.custom_icon == blank }}"
     }
   ],
   "presets": [

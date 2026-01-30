@@ -175,7 +175,8 @@ LIQUID
       "type": "checkbox",
       "id": "show_progress_bar",
       "label": "Show carousel progress bar",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.stack_collections == false }}"
     },
     {
       "type": "text",
@@ -376,6 +377,7 @@ LIQUID
   "presets": [
     {
       "name": "Collection list",
+      "category": "Collections",
       "blocks": [
         {
           "type": "collection"

@@ -78,6 +78,7 @@
       "sold_out_button": "Tükendi",
       "unavailable_button": "Mevcut değil",
       "added_to_cart": "Sepetinize eklendi!",
+      "added_to_cart_with_title": "{{ product_title }} sepete eklendi.",
       "sold_out_badge": "Tükendi",
       "on_sale_badge": "İndirimde",
       "discount_badge_html": "{{ savings }} tasarruf edin",
@@ -350,6 +351,10 @@
       "one_result": "Adresiniz için bir gönderi seçeneği bulunuyor:",
       "multiple_results": "Adresiniz için birden çok gönderi seçeneği bulunuyor:",
       "error": "Gönderi seçenekleri getirilirken bir veya daha fazla hata oluştu:"
+    },
+    "discount": {
+      "label": "İndirim Kodu",
+      "error": "Geçerli bir indirim kodu girin"
     }
   },
   "404": {
@@ -366,7 +371,7 @@
       "products": "Ürünler",
       "suggestions": "Öneriler",
       "collections": "Koleksiyonlar",
-      "posts": "Blog gönderileri",
+      "articles": "Blog gönderileri",
       "pages": "Sayfalar",
       "clear": "Temizle",
       "view_all": "Tümünü görüntüle",

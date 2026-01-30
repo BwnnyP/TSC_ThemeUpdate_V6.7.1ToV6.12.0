@@ -115,7 +115,8 @@ LIQUID
       "type": "checkbox",
       "id": "show_progress_bar",
       "label": "Show carousel progress bar",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.stack_products == false }}"
     },
     {
       "type": "select",
@@ -200,7 +201,8 @@ LIQUID
   ],
   "presets": [
     {
-      "name": "Recently viewed products"
+      "name": "Recently viewed products",
+      "category": "Products"
     }
   ]
 }

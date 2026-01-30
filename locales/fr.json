@@ -74,6 +74,7 @@
       "quick_add": "+ Ajouter",
       "add_to_cart_short": "+ Ajouter",
       "add_to_cart_button": "Ajouter au panier",
+      "added_to_cart_with_title": "{{ product_title }} a été ajouté au panier.",
       "pre_order_button": "Pré-commander",
       "sold_out_button": "En rupture",
       "unavailable_button": "Indisponible",
@@ -351,6 +352,10 @@
       "one_result": "Il y a un résultat pour votre adresse :",
       "multiple_results": "Il y a plusieurs résultats pour votre adresse :",
       "error": "Impossible d'estimer les frais de livraison :"
+    },
+    "discount": {
+      "label": "Code de réduction",
+      "error": "Saisissez un code de réduction valide"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "Produits",
       "suggestions": "Suggestions",
       "collections": "Collections",
-      "posts": "Blog posts",
+      "articles": "Blog posts",
       "pages": "Pages",
       "clear": "Effacer",
       "view_all": "Voir tout",

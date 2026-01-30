@@ -637,7 +637,6 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       "type": "product_variations",
       "name": "Product variations",
-      "limit": 1,
       "settings": [
         {
           "type": "paragraph",
@@ -728,18 +727,20 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           "type": "header",
           "content": "Text",
-          "info": "Only applicable for line item property of type Text."
+          "visible_if": "{{ block.settings.type == 'text' }}"
         },
         {
           "type": "checkbox",
           "id": "allow_long_text",
           "label": "Allow long text",
-          "default": false
+          "default": false,
+          "visible_if": "{{ block.settings.type == 'text' }}"
         },
         {
           "type": "number",
           "id": "max_length",
-          "label": "Maximum number of characters"
+          "label": "Maximum number of characters",
+          "visible_if": "{{ block.settings.type == 'text' }}"
         }
       ]
     },
@@ -1834,7 +1835,8 @@ document.addEventListener('DOMContentLoaded', function() {
       "max": 4,
       "step": 0.5,
       "label": "Max zoom level",
-      "default": 3
+      "default": 3,
+      "visible_if": "{{ section.settings.enable_image_zoom }}"
     },
     {
       "type": "header",
