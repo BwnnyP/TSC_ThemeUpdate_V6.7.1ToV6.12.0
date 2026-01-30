@@ -1,6 +1,6 @@
 .country-flags {
-  background: -webkit-image-set(url("//thesimplecommute.com.au/cdn/shop/t/55/assets/country-flags.png?v=37230036826556269641769466960") 1x, url("//thesimplecommute.com.au/cdn/shop/t/55/assets/country-flags-2x.png?v=119388446682176363021769466960") 2x) no-repeat top left;
-  background: image-set(url("//thesimplecommute.com.au/cdn/shop/t/55/assets/country-flags.png?v=37230036826556269641769466960") 1x, url("//thesimplecommute.com.au/cdn/shop/t/55/assets/country-flags-2x.png?v=119388446682176363021769466960") 2x) no-repeat top left;
+  background: -webkit-image-set(url("//thesimplecommute.com.au/cdn/shop/t/56/assets/country-flags.png?v=37230036826556269641769657024") 1x, url("//thesimplecommute.com.au/cdn/shop/t/56/assets/country-flags-2x.png?v=119388446682176363021769657024") 2x) no-repeat top left;
+  background: image-set(url("//thesimplecommute.com.au/cdn/shop/t/56/assets/country-flags.png?v=37230036826556269641769657024") 1x, url("//thesimplecommute.com.au/cdn/shop/t/56/assets/country-flags-2x.png?v=119388446682176363021769657024") 2x) no-repeat top left;
   width: 20px;
   height: 20px;
   flex-shrink: 0;
