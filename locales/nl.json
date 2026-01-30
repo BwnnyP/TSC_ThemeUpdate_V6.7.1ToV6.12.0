@@ -78,6 +78,7 @@
       "sold_out_button": "Uitverkocht",
       "unavailable_button": "Niet beschikbaar",
       "added_to_cart": "Toegevoegd aan je winkelwagen!",
+      "added_to_cart_with_title": "{{ product_title }} is toegevoegd aan je winkelwagen.",
       "sold_out_badge": "Uitverkocht",
       "on_sale_badge": "Aanbieding",
       "discount_badge_html": "Bespaar {{ savings }}",
@@ -351,6 +352,10 @@
       "one_result": "Er is één verzendtarief voor je adres:",
       "multiple_results": "Er zijn meerdere verzendtarieven voor je adres:",
       "error": "Er zijn een of meer fouten opgetreden bij het ophalen van de verzendtarieven:"
+    },
+    "discount": {
+      "label": "Kortingscode",
+      "error": "Voer een geldige kortingscode in"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "Producten",
       "suggestions": "Suggesties",
       "collections": "Collecties",
-      "posts": "Blogberichten",
+      "articles": "Blogberichten",
       "pages": "Pagina's",
       "clear": "Wissen",
       "view_all": "Alles weergeven",

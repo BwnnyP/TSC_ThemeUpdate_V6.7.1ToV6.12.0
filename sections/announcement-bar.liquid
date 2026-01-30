@@ -122,11 +122,27 @@
       "default": false
     },
     {
+      "type": "select",
+      "id": "navigation_mode",
+      "label": "Multiple message navigation",
+      "options": [
+        {
+          "value": "arrows",
+          "label": "Arrows"
+        },
+        {
+          "value": "scrolling",
+          "label": "Auto-scrolling"
+        }
+      ],
+      "default": "arrows"
+    },
+    {
       "type": "checkbox",
       "id": "autoplay",
       "label": "Auto rotate between messages",
-      "info": "Ignored when using auto-scrolling.",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.navigation_mode == 'arrows' }}"
     },
     {
       "type": "range",
@@ -136,7 +152,18 @@
       "step": 1,
       "unit": "sec",
       "label": "Change messages every",
-      "default": 6
+      "default": 6,
+      "visible_if": "{{ section.settings.navigation_mode == 'arrows' and section.settings.autoplay }}"
+    },
+    {
+      "type": "range",
+      "id": "scrolling_speed",
+      "label": "Scrolling speed",
+      "min": 10,
+      "max": 30,
+      "unit": "s",
+      "default": 20,
+      "visible_if": "{{ section.settings.navigation_mode == 'scrolling' }}"
     },
     {
       "type": "select",
@@ -161,31 +188,6 @@
         }
       ],
       "default": "text-xs"
-    },
-    {
-      "type": "select",
-      "id": "navigation_mode",
-      "label": "Multiple message navigation",
-      "options": [
-        {
-          "value": "arrows",
-          "label": "Arrows"
-        },
-        {
-          "value": "scrolling",
-          "label": "Auto-scrolling"
-        }
-      ],
-      "default": "arrows"
-    },
-    {
-      "type": "range",
-      "id": "scrolling_speed",
-      "label": "Scrolling speed",
-      "min": 10,
-      "max": 30,
-      "unit": "s",
-      "default": 20
     },
     {
       "type": "header",

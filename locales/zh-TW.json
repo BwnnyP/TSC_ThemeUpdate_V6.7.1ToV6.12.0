@@ -78,6 +78,7 @@
       "sold_out_button": "已售完",
       "unavailable_button": "暫不提供",
       "added_to_cart": "已加入購物車！",
+      "added_to_cart_with_title": "{{ product_title }} 已加入購物車。",
       "sold_out_badge": "已售完",
       "on_sale_badge": "特價",
       "discount_badge_html": "省下 {{ savings }}",
@@ -350,6 +351,10 @@
       "one_result": "配送至您的地址有一種運費：",
       "multiple_results": "配送至您的地址有數種運費：",
       "error": "檢索運費時出現一個或多個錯誤："
+    },
+    "discount": {
+      "label": "折扣碼",
+      "error": "請輸入有效的折扣碼"
     }
   },
   "404": {
@@ -366,7 +371,7 @@
       "products": "產品",
       "suggestions": "建議",
       "collections": "系列",
-      "posts": "部落格文章",
+      "articles": "部落格文章",
       "pages": "頁面",
       "clear": "清除",
       "view_all": "查看全部",

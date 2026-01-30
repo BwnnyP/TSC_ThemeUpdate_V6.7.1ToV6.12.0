@@ -174,8 +174,8 @@ LIQUID
       "type": "checkbox",
       "id": "expand_image",
       "label": "Expand image",
-      "info": "Only applicable when text position is set to center.",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.text_position == 'center' }}"
     },
     {
       "type": "select",
@@ -281,7 +281,8 @@ LIQUID
   ],
   "presets": [
     {
-      "name": "Before/after image"
+      "name": "Before/after image",
+      "category": "Media"
     }
   ]
 }

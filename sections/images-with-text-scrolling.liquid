@@ -85,9 +85,9 @@
             {%- endif -%}
 
             {%- if block.settings.title != blank -%}
-              <h1 {% if settings.heading_apparition != 'none' %}reveal-on-scroll="true"{% endif %}>
+              <p class="h1" {% if settings.heading_apparition != 'none' %}reveal-on-scroll="true"{% endif %}>
                 {%- render 'styled-text', content: block.settings.title, text_color: section.settings.heading_color, gradient: section.settings.heading_gradient, apparition_effect: true -%}
-              </h1>
+              </p>
             {%- endif -%}
 
             {{- block.settings.content -}}
@@ -513,6 +513,7 @@
   "presets": [
     {
       "name": "Images and text scrolling",
+      "category": "Media",
       "blocks": [
         {
           "type": "item",

@@ -54,7 +54,7 @@ Supported variables
     {%- endcapture -%}
 
     {%- assign sort_by_label = 'collection.faceting.sort_by' | t -%}
-    {%- render 'accordion', title: sort_by_label, content: accordion_content, open: open_accordion, id: 'accordion-sort-by' -%}
+    {%- render 'accordion', title: sort_by_label, content: accordion_content, open: open_accordion, id: 'accordion-sort-by', class: 'md:hidden' -%}
   {%- elsif results.sort_by != blank -%}
     <input type="hidden" name="sort_by" value="{{ results.sort_by }}">
   {%- endif -%}

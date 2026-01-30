@@ -78,6 +78,7 @@
       "sold_out_button": "매진",
       "unavailable_button": "이용 불가",
       "added_to_cart": "장바구니에 추가되었습니다!",
+      "added_to_cart_with_title": "{{ product_title }}이(가) 장바구니에 추가되었습니다.",
       "sold_out_badge": "매진",
       "on_sale_badge": "할인",
       "discount_badge_html": "{{ savings }} 할인",
@@ -350,6 +351,10 @@
       "one_result": "귀하의 주소에는 한 가지 배송 옵션이 있습니다:",
       "multiple_results": "귀하의 주소에는 여러 개의 배송 옵션이 있습니다:",
       "error": "배송 옵션을 불러오던 중 한 개 이상의 오류가 발생했습니다:"
+    },
+    "discount": {
+      "label": "할인 코드",
+      "error": "유효한 할인 코드를 입력하세요"
     }
   },
   "404": {
@@ -366,7 +371,7 @@
       "products": "상품",
       "suggestions": "제안",
       "collections": "컬렉션",
-      "posts": "블로그 게시물",
+      "articles": "블로그 게시물",
       "pages": "페이지",
       "clear": "지우기",
       "view_all": "모두 보기",

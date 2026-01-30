@@ -146,7 +146,7 @@ LIQUID
 
                     {%- if section.settings.view_product != blank -%}
                       <div class="feature-chart__view-button-container hidden justify-self-start md:block">
-                        {%- render 'button', href: chart_product.url, content: section.settings.view_product, background: product_column.settings.view_button_background, text_color: product_column].settings.view_button_text_color, subdued: true -%}
+                        {%- render 'button', href: chart_product.url, content: section.settings.view_product, background: product_column.settings.view_button_background, text_color: product_column.settings.view_button_text_color, subdued: true -%}
                       </div>
                     {%- endif -%}
                   </div>
@@ -160,19 +160,21 @@ LIQUID
                     </div>
                   {%- endif -%}
 
-                  <div class="v-stack gap-5">
-                    <div class="v-stack gap-2">
-                      <div class="v-stack sm:gap-0.5">
-                        <span class="bold line-clamp">{{ 'general.on_boarding.product_title' | t }}</span>
+                  {%- if section.settings.show_product_info -%}
+                    <div class="v-stack gap-5">
+                      <div class="v-stack gap-2">
+                        <div class="v-stack sm:gap-0.5">
+                          <span class="bold line-clamp">{{ 'general.on_boarding.product_title' | t }}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  {%- endif -%}
                 </div>
               {%- endif -%}
             {%- endfor -%}
           {%- endcapture -%}
 
-          {%- if section.settings.show_product_info -%}
+          {%- if section.settings.show_product_info or section.settings.show_product_image -%}
             <div class="feature-chart__table-row feature-chart__table-row--product">
               {{- product_row -}}
             </div>
@@ -192,7 +194,7 @@ LIQUID
 
             {%- comment -%}We only output the line if at least one value is defined{%- endcomment -%}
             {%- if heading_value != blank and values_blocks[0].settings[value_key] != blank or values_blocks[1].settings[value_key] != blank or values_blocks[2].settings[value_key] != blank -%}
-              <div class="feature-chart__table-row" {% if outputted_count > section.settings.max_rows %}hidden{% endif %}>
+              <div class="feature-chart__table-row" {% if outputted_count >= section.settings.max_rows %}hidden{% else %}{% endif %}>
                 {%- if heading_value != blank -%}
                   <div class="feature-chart__heading bold" {% if outputted_count == 0 %}{{ headings_block.shopify_attributes }}{% endif %}>{{ heading_value }}</div>
                 {%- endif -%}
@@ -653,6 +655,7 @@ LIQUID
   "presets": [
     {
       "name": "Comparison table",
+      "category": "Products",
       "blocks": [
         {
           "type": "headings",

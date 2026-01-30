@@ -78,6 +78,7 @@
       "sold_out_button": "אזל מהמלאי",
       "unavailable_button": "לא זמין",
       "added_to_cart": "התווסף לעגלת הקניות שלך!",
+      "added_to_cart_with_title": ".נוסף לעגלת הקניות {{ product_title }}",
       "sold_out_badge": "אזל מהמלאי",
       "on_sale_badge": "במבצע",
       "discount_badge_html": "חסוך {{ savings }}",
@@ -351,6 +352,10 @@
       "one_result": "יש תעריף משלוח אחד עבור הכתובת שלך:",
       "multiple_results": "יש כמה תעריפי משלוח עבור הכתובת שלך:",
       "error": "אירעה שגיאה אחת או יותר בעת אחזור תעריפי המשלוח:"
+    },
+    "discount": {
+      "label": "קוד הנחה",
+      "error": "הזן קוד הנחה תקף"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "מוצרים",
       "suggestions": "הצעות",
       "collections": "אוספים",
-      "posts": "פרסומי בלוגים",
+      "articles": "פרסומי בלוגים",
       "pages": "עמודים",
       "clear": "ניקוי",
       "view_all": "הצג הכל",

@@ -141,7 +141,8 @@
           "max": 5,
           "id": "rating",
           "label": "Rating",
-          "default": 4
+          "default": 4,
+          "visible_if": "{{ block.settings.show_rating }}"
         },
         {
           "type": "text",
@@ -246,6 +247,7 @@
   "presets": [
     {
       "name": "Testimonials",
+      "category": "Trust & social proof",
       "blocks": [
         {
           "type": "testimonial",

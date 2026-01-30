@@ -196,7 +196,8 @@
       "type": "image_picker",
       "id": "poster",
       "label": "Poster image",
-      "info": "3200 x 1600px .jpg recommended. Poster is not visible when autoplay is enabled."
+      "info": "3200 x 1600px .jpg recommended.",
+      "visible_if": "{{ section.settings.autoplay == false }}"
     },
     {
       "type": "header",
@@ -381,6 +382,7 @@
   "presets": [
     {
       "name": "Video",
+      "category": "Media",
       "blocks": [
         {
           "type": "play"

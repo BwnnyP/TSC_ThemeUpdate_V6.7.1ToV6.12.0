@@ -78,6 +78,7 @@
       "sold_out_button": "Išparduota",
       "unavailable_button": "Neprieinama",
       "added_to_cart": "Įdėta į jūsų krepšelį!",
+      "added_to_cart_with_title": "Į krepšelį pridėta: {{ product_title }}.",
       "sold_out_badge": "Išparduota",
       "on_sale_badge": "Išpardavimas",
       "discount_badge_html": "Sutaupykite {{ savings }}",
@@ -357,6 +358,10 @@
       "one_result": "Jūsų adresui taikomas vienas siuntimo tarifas:",
       "multiple_results": "Jūsų adresui taikomi keli siuntimo tarifai:",
       "error": "Nuskaitant siuntimo tarifus įvyko viena arba daugiau klaidų:"
+    },
+    "discount": {
+      "label": "Nuolaidos kodas",
+      "error": "Įveskite galiojantį nuolaidos kodą"
     }
   },
   "404": {
@@ -373,7 +378,7 @@
       "products": "Prekės",
       "suggestions": "Pasiūlymai",
       "collections": "Rinkiniai",
-      "posts": "Tinklaraščio įrašai",
+      "articles": "Tinklaraščio įrašai",
       "pages": "Puslapiai",
       "clear": "Išvalyti",
       "view_all": "Peržiūrėti visus",

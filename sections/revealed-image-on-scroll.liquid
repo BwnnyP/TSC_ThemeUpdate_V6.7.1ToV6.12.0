@@ -19,7 +19,7 @@ LIQUID
             {{- section.settings.mobile_image | image_url: width: section.settings.mobile_image.width | image_tag: widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600', class: 'md:hidden' -}}
           {%- endif -%}
         {%- else -%}
-          {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg preserveAspectRatio="xMinYMin slice"' -}}
+          {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder' | replace: '<svg', '<svg height="100%" width="100%" preserveAspectRatio="xMinYMin slice"' -}}
         {%- endif -%}
       </div>
 
@@ -102,7 +102,8 @@ LIQUID
   ],
   "presets": [
     {
-      "name": "Revealed image on scroll"
+      "name": "Revealed image on scroll",
+      "category": "Banners"
     }
   ]
 }

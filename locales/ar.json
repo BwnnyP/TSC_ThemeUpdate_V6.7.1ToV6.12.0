@@ -78,6 +78,7 @@
       "sold_out_button": "نفد من المخزون",
       "unavailable_button": "غير متوفر",
       "added_to_cart": "تمت الإضافة إلى سلة التسوق!",
+      "added_to_cart_with_title": ".تمت إضافة {{ product_title }} إلى سلة التسوق",
       "sold_out_badge": "نفد من المخزون",
       "on_sale_badge": "تخفيض",
       "discount_badge_html": "وفِّر {{ savings }}",
@@ -355,6 +356,10 @@
       "one_result": "هناك سعر شحن واحد لعنوانك:",
       "multiple_results": "هناك أسعار شحن متعددة لعنوانك:",
       "error": "حدث خطأ واحد أو أكثر في أثناء استرداد أسعار الشحن:"
+    },
+    "discount": {
+      "label": "رمز الخصم",
+      "error": "أدخل رمز خصم صالحًا"
     }
   },
   "404": {
@@ -371,7 +376,7 @@
       "products": "المنتجات",
       "suggestions": "اقتراحات",
       "collections": "التشكيلات",
-      "posts": "منشورات المدونة",
+      "articles": "منشورات المدونة",
       "pages": "الصفحات",
       "clear": "مسح",
       "view_all": "عرض الكل",

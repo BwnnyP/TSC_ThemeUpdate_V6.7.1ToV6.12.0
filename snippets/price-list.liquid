@@ -192,13 +192,7 @@ Supported variables
 
     {%- if unit_price_item.unit_price -%}
       <unit-price class="{{ unit_price_classes }}">
-        {%- assign unit_price_measurement = unit_price_item.unit_price_measurement -%}
-
-        {%- if unit_price_measurement.reference_value != 1 -%}
-          {%- assign reference_value = unit_price_measurement.reference_value -%}
-        {%- endif -%}
-
-        ({{ unit_price_item.unit_price | money }}/{{ reference_value }}{{ unit_price_measurement.reference_unit }})
+        ({{- unit_price_item.unit_price | unit_price_with_measurement: unit_price_item.unit_price_measurement -}})
       </unit-price>
     {%- endif -%}
   {%- endunless -%}

@@ -78,6 +78,7 @@
       "sold_out_button": "Loppuunmyyty",
       "unavailable_button": "Ei saatavilla",
       "added_to_cart": "Lisätty ostoskoriin!",
+      "added_to_cart_with_title": "{{ product_title }} lisättiin ostoskoriin.",
       "sold_out_badge": "Loppuunmyyty",
       "on_sale_badge": "Alennuksessa",
       "discount_badge_html": "Säästä {{ savings }}",
@@ -351,6 +352,10 @@
       "one_result": "Osoitteeseesi on yksi toimituskulu:",
       "multiple_results": "Osoitteeseesi on useita toimituskuluja:",
       "error": "Virhe noudettaessa toimituskuluja:"
+    },
+    "discount": {
+      "label": "Alennuskoodi",
+      "error": "Anna voimassa oleva alennuskoodi"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "Tuotteet",
       "suggestions": "Ehdotukset",
       "collections": "Kokoelmat",
-      "posts": "Blogiartikkelit",
+      "articles": "Blogiartikkelit",
       "pages": "Sivut",
       "clear": "Tyhjennä",
       "view_all": "Näytä kaikki",

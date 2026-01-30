@@ -166,8 +166,8 @@ LIQUID
       "type": "checkbox",
       "id": "full_width",
       "label": "Full width",
-      "info": "Only has effect when spacing is set to none.",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.spacing == 'none' }}"
     },
     {
       "type": "checkbox",
@@ -651,7 +651,7 @@ LIQUID
           "type": "image_picker",
           "id": "poster_image",
           "label": "Poster image",
-          "info": "Only used when autoplay is disabled."
+          "visible_if": "{{ block.settings.autoplay == false }}"
         },
         {
           "type": "checkbox",
@@ -1083,6 +1083,7 @@ LIQUID
   "presets": [
     {
       "name": "Media with text",
+      "category": "Media",
       "blocks": [
         {
           "type": "image"

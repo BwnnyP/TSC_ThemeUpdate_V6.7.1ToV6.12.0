@@ -306,7 +306,8 @@ LIQUID
       "unit": "sec",
       "label": "Change slides every",
       "info": "When using a video, the video duration is used instead.",
-      "default": 6
+      "default": 6,
+      "visible_if": "{{ section.settings.autoplay }}"
     },
     {
       "type": "header",
@@ -781,6 +782,7 @@ LIQUID
   "presets": [
     {
       "name": "Slideshow",
+      "category": "Banners",
       "blocks": [
         {
           "type": "image",

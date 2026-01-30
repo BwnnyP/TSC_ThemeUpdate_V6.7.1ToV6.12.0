@@ -78,6 +78,7 @@
       "sold_out_button": "Agotado",
       "unavailable_button": "No disponible",
       "added_to_cart": "Añadido a la cesta",
+      "added_to_cart_with_title": "{{ product_title }} se ha añadido al carrito.",
       "sold_out_badge": "Agotado",
       "on_sale_badge": "Oferta",
       "discount_badge_html": "Ahorra {{ savings }}",
@@ -351,6 +352,10 @@
       "one_result": "Hay una tarifa de gastos de envío para tu dirección:",
       "multiple_results": "Hay varias tarifas de gastos de envío para tu dirección:",
       "error": "Se produjo un error al recuperar las tarifas de gastos de envío:"
+    },
+    "discount": {
+      "label": "Código de descuento",
+      "error": "Introduce un código de descuento válido"
     }
   },
   "404": {
@@ -367,7 +372,7 @@
       "products": "Productos",
       "suggestions": "Sugerencias",
       "collections": "Colecciones",
-      "posts": "Entradas de blog",
+      "articles": "Entradas de blog",
       "pages": "Páginas",
       "clear": "Borrar",
       "view_all": "Ver todo",

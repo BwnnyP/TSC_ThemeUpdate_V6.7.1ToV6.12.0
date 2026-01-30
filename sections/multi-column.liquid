@@ -194,7 +194,8 @@
           "type": "checkbox",
           "id": "show_controls",
           "label": "Show video controls",
-          "default": false
+          "default": false,
+          "visible_if": "{{ block.settings.video != blank }}"
         },
         {
           "type": "select",
@@ -330,6 +331,7 @@
   "presets": [
     {
       "name": "Multi-column",
+      "category": "Storytelling",
       "blocks": [
         {
           "type": "item",

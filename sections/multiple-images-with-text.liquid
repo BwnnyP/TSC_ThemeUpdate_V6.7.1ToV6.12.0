@@ -65,7 +65,7 @@ LIQUID
   <multiple-images-with-text class="multiple-images-with-text">
     <multiple-images-with-text-image-list reversed swipeable="false" layout="{{ section.settings.images_layout }}" class="multiple-images-with-text__image-list">
       {%- if visible_images_count == 0 -%}
-        {{- 'collection-1' | placeholder_svg_tag: 'placeholder' -}}
+        {{- 'collection-1' | placeholder_svg_tag: 'placeholder rounded-sm shadow-sm' -}}
       {%- else -%}
         {%- comment -%}We have to reverse the images when they are stacked so that the image of the first block appears at the top of the stack{%- endcomment -%}
         {%- if section.settings.images_layout == 'stacked' -%}
@@ -242,8 +242,8 @@ LIQUID
           "step": 0.5,
           "unit": "deg",
           "label": "Image rotation",
-          "info": "Only applicable when images layout is set to \"Scattered\".",
-          "default": 0
+          "default": 0,
+          "visible_if": "{{ section.settings.images_layout == 'scattered' }}"
         },
         {
           "type": "text",
@@ -278,6 +278,7 @@ LIQUID
   "presets": [
     {
       "name": "Multiple images with text",
+      "category": "Media",
       "blocks": [
         {
           "type": "item",

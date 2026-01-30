@@ -161,12 +161,10 @@ the underlying logic of the menu.
             {%- render 'icon' with 'hamburger' -%}
           </button>
 
-          {%- comment -%}
           <a href="{{ routes.search_url }}" class="tap-area sm:hidden" aria-controls="search-drawer">
             <span class="sr-only">{{ 'header.general.search' | t }}</span>
             {%- render 'icon' with 'search' -%}
           </a>
-          {%- endcomment -%}
 
           {%- if section.settings.layout != 'drawer' and section.settings.menu.links.size > 0 -%}
             <nav class="header__link-list {% if section.settings.layout == 'logo_left_navigation_center' %}justify-center{% endif %} wrap" role="navigation">
@@ -233,7 +231,7 @@ the underlying logic of the menu.
                                     <details class="relative" is="dropdown-disclosure" trigger="{{ section.settings.menu_open_trigger | escape }}">
                                       <summary class="dropdown-menu__item group" {% if sub_link.url != '#' %}data-url="{{ sub_link.url | escape }}"{% endif %}>
                                         <span><span class="reversed-link">{{- sub_link.title -}}</span></span>
-                                        {%- render 'icon' with 'chevron-right' -%}
+                                        {%- render 'icon' with 'chevron-right', direction_aware: true -%}
                                       </summary>
 
                                       <div class="dropdown-menu">
@@ -283,6 +281,7 @@ the underlying logic of the menu.
           {%- if section.settings.logo -%}
             <a href="{{ routes.root_url }}" class="header__logo" aria-label="{{ shop.name }}">
               <span class="sr-only">{{ shop.name }}</span>
+              {%- assign alt_text = section.settings.logo.alt | default: shop.name -%}
               {{- section.settings.logo
                 | image_url: width: section.settings.logo.width
                 | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image' -}}
@@ -317,9 +316,13 @@ the underlying logic of the menu.
         </span>
       {%- endcapture -%}
 
-      <div class="header__logo header__logo-wrapper">
-        {{- logo_content -}}
-      </div>
+      {%- if request.page_type == 'index' -%}
+        <h1 class="header__logo">
+          <a href="{{ routes.root_url }}">{{ logo_content }}</a>
+        </h1>
+      {% else %}
+        <a href="{{ routes.root_url }}" class="header__logo">{{ logo_content }}</a>
+      {% endif %}
 
       {%- comment -%}
       --------------------------------------------------------------------------------------------------------------------
@@ -328,7 +331,7 @@ the underlying logic of the menu.
       {%- endcomment -%}
 
       <div class="header__secondary-nav">
-        {%- if section.settings.header != 'drawer' and section.settings.secondary_menu.links.size > 0 -%}
+        {%- if section.settings.layout != 'drawer' and section.settings.secondary_menu.links.size > 0 -%}
           <nav class="header__link-list" role="navigation">
             <ul class="contents">
               {%- for link in section.settings.secondary_menu.links -%}
@@ -359,7 +362,7 @@ the underlying logic of the menu.
               {%- render 'icon' with 'search' -%}
             </a>
           </li>
-
+          
           {%- if shop.customer_accounts_enabled -%}
             <li>
               <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="hidden tap-area sm:block">
@@ -647,13 +650,32 @@ the underlying logic of the menu.
       "type": "checkbox",
       "id": "show_country_flag",
       "label": "Show country flag",
-      "default": true
+      "default": true,
+      "visible_if": "{{ section.settings.show_country_selector }}"
     },
     {
       "type": "checkbox",
       "id": "show_country_name",
       "label": "Show country name",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.show_country_selector }}"
+    },
+    {
+      "type": "header",
+      "content": "Transparent header",
+      "info": "Add a section on first position which allows transparent header such as slideshow or image with text overlay."
+    },
+    {
+      "type": "color",
+      "id": "transparent_header_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "transparent_logo",
+      "label": "Logo image",
+      "info": "Use the same dimensions as main logo."
     },
     {
       "type": "header",
@@ -683,7 +705,8 @@ the underlying logic of the menu.
       "step": 2,
       "unit": "px",
       "label": "Background blur radius",
-      "default": 4
+      "default": 4,
+      "visible_if": "{{ section.settings.background_opacity < 100 }}"
     }
   ],
   "blocks": [

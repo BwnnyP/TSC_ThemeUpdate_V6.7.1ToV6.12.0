@@ -8,8 +8,6 @@
 
 {%- capture search_form -%}
   <form class="main-search-form" action="{{ routes.search_url }}" method="get" role="search">
-    <input type="hidden" name="type" value="product">
-
     <div class="v-stack gap-6 sm:gap-12">
       <div class="search-input">
         <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.general.search_placeholder' | t }}" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="{{ 'search.general.title' | t | escape }}">
@@ -30,7 +28,7 @@
   {%- assign card_blends = false -%}
 
   {%- unless settings.background != 'rgba(0,0,0,0)' and settings.product_card_background != 'rgba(0,0,0,0)' and settings.background != settings.product_card_background -%}
-    {%- assign card_blends = true -%}
+  {%- assign card_blends = true -%}
   {%- endunless -%}
 
   #shopify-section-{{ section.id }} {
@@ -67,87 +65,172 @@
   }
 </style>
 
-<div class="container">
-  {%- if search.performed and search.results_count > 0 or active_filters.size > 0 -%}
-    <div class="page-spacer">
-      <div class="v-stack gap-6 sm:gap-8">
-        <h1 class="h2 text-center">{{- 'search.results_count' | t: count: search.results_count, terms: search.terms -}}</h1>
-        {{- search_form -}}
-      </div>
+{%- if search.performed and search.results_count > 0 or active_filters.size > 0 -%}
+  <div class="search-banner v-stack gap-6 sm:gap-8 bg-secondary">
+    <h1 class="h2 text-center">{{- 'search.results_count' | t: count: search.results_count, terms: search.terms -}}</h1>
+    {{- search_form -}}
 
-      {%- paginate search.results by section.settings.products_per_page -%}
-        <div class="collection {% if show_filters %}collection--filters-{{ section.settings.filter_layout | escape }}{% endif %}">
-          {%- if show_filters or section.settings.show_sort_by -%}
-            {%- comment -%}
-              IMPLEMENTATION NOTE: we have to output the drawer no matter what, as it is used on mobile (all the time) or desktop (when in drawer mode)
-            {%- endcomment -%}
+    <x-tabs class="nav-categories h-stack justify-center" external-panels>
+      <template shadowroot="open">
+        <slot role="tablist" part="tab-list" name="title"></slot>
+      </template>
 
-            <facet-drawer header-bordered id="facets-drawer" class="facets-drawer drawer" open-from="left">
-              <h5 slot="title">{{ 'collection.faceting.filters' | t }}</h5>
-              {%- render 'facets-vertical', results: search, show_filters: true, show_sort_by: section.settings.show_sort_by, update_on_change: false -%}
-            </facet-drawer>
+      {%- for search_type in search.types reversed -%}
+        <button slot="title" class="link-reversed subheading" aria-selected="{{ forloop.first }}" controlled-panel="main-search-results-{{ search_type }}">
+          {%- assign translation_key = 'search.general.' | append: search_type | append: 's' -%}
+          {{- translation_key | t }} {% if search.types.size == 1 %}({{ search.results_count }}){% endif %}
+        </button>
+      {%- endfor -%}
+    </x-tabs>
+  </div>
 
-            {%- if section.settings.filter_layout == 'horizontal' -%}
-              {%- render 'collection-top-bar', results: search, show_filters: show_filters, show_active_filters: show_filters, show_sort_by: section.settings.show_sort_by -%}
-            {%- else -%}
-              {%- render 'collection-top-bar', results: search, show_filters: false, show_active_filters: show_filters, show_sort_by: section.settings.show_sort_by -%}
-            {%- endif -%}
+  <div class="container">
+    {%- comment -%}If there is only one type of resources and that those are products, then we can show the results directly{%- endcomment -%}
 
-            {%- comment -%}We also need to render the button, that is floating on mobile{%- endcomment -%}
-            <facet-floating-filter class="facets__floating-filter md:hidden">
-              {%- assign filter_label = 'collection.faceting.filter_and_sort' | t -%}
-              {%- render 'button', size: 'xl', content: filter_label, icon: 'filter', style: 'fill', background: settings.text_color, text_color: settings.background, aria_controls: 'facets-drawer' -%}
-            </facet-floating-filter>
-          {%- endif -%}
+    {%- if search.types.size == 1 -%}
+      <search-result-panel id="main-search-results-{{ search.types.first | escape }}">
+        {%- case search.types.first -%}
+          {%- when 'product' -%}
+            {%- paginate search.results by section.settings.products_per_page -%}
+              <div class="collection {% if show_filters %}collection--filters-{{ section.settings.filter_layout | escape }}{% endif %}">
+                {%- if show_filters or section.settings.show_sort_by -%}
+                  {%- comment -%}
+                    IMPLEMENTATION NOTE: we have to output the drawer no matter what, as it is used on mobile (all the time) or desktop (when in drawer mode)
+                  {%- endcomment -%}
 
-          {%- if show_filters and section.settings.filter_layout == 'sidebar' -%}
-            <div class="collection__facets">
-              <safe-sticky class="collection__facets-scroller">
-                {%- render 'facets-vertical', results: search, show_filters: true, show_sort_by: false, update_on_change: true -%}
-              </safe-sticky>
-            </div>
-          {%- endif -%}
+                  <facet-drawer header-bordered id="facets-drawer" class="facets-drawer drawer" open-from="left">
+                    <h5 slot="title">{{ 'collection.faceting.filters' | t }}</h5>
+                    {%- render 'facets-vertical', results: search, show_filters: show_filters, show_sort_by: section.settings.show_sort_by, update_on_change: false -%}
+                  </facet-drawer>
 
-          <div class="collection__results">
-            {%- if search.results_count == 0 -%}
-              <div class="empty-state">
-                <div class="empty-state__icon-wrapper">
-                  {%- render 'icon' with 'picto-stop', width: 32, height: 32, stroke_width: 1 -%}
-                  <span class="count-bubble count-bubble--lg">0</span>
+                  {%- if section.settings.filter_layout == 'horizontal' -%}
+                    {%- render 'collection-top-bar', results: search, show_filters: show_filters, show_active_filters: show_filters, show_sort_by: section.settings.show_sort_by -%}
+                  {%- else -%}
+                    {%- render 'collection-top-bar', results: search, show_filters: false, show_active_filters: show_filters, show_sort_by: section.settings.show_sort_by -%}
+                  {%- endif -%}
+
+                  {%- comment -%}We also need to render the button, that is floating on mobile{%- endcomment -%}
+                  <facet-floating-filter class="facets__floating-filter md:hidden">
+                    {%- capture content_key -%}
+                      {%- if show_filters and section.settings.show_sort_by -%}
+                        collection.faceting.filter_and_sort
+                      {%- elsif show_filters and section.settings.show_sort_by == false -%}
+                        collection.faceting.filter_button
+                      {%- elsif show_filters == false and section.settings.show_sort_by -%}
+                        collection.faceting.sort_by
+                      {%- endif -%}
+                    {%- endcapture -%}
+
+                    {%- assign filter_label = content_key | t -%}
+                    {%- render 'button', size: 'xl', content: filter_label, icon: 'filter', style: 'fill', background: settings.text_color, text_color: settings.background, aria_controls: 'facets-drawer' -%}
+                  </facet-floating-filter>
+                {%- endif -%}
+
+                {%- if show_filters and section.settings.filter_layout == 'sidebar' -%}
+                  <div class="collection__facets">
+                    <safe-sticky class="collection__facets-scroller">
+                      {%- render 'facets-vertical', results: search, show_filters: show_filters, show_sort_by: false, update_on_change: true -%}
+                    </safe-sticky>
+                  </div>
+                {%- endif -%}
+
+                <div class="collection__results">
+                  {%- if search.results_count == 0 -%}
+                    <div class="empty-state">
+                      <div class="empty-state__icon-wrapper">
+                        {%- render 'icon' with 'picto-stop', width: 32, height: 32, stroke_width: 1 -%}
+                        <span class="count-bubble count-bubble--lg">0</span>
+                      </div>
+
+                      <div class="prose">
+                        <h5>{{ 'collection.faceting.no_results' | t }}</h5>
+
+                        {%- assign button_content = 'collection.faceting.clear_filters' | t -%}
+                        {%- assign url = routes.search_url | append: '?q=' | append:  search.terms | append: '&sort_by=' | append: search.sort_by | append: '&type=product' -%}
+                        {%- render 'button', href: url, is: 'facet-link', size: 'xl', content: button_content -%}
+                      </div>
+                    </div>
+                  {%- else -%}
+                    <div class="v-stack gap-6">
+                      <div class="v-stack gap-4 md:hidden">
+                        {%- comment -%}We have to duplicate some information on mobile and tablet here{%- endcomment -%}
+                        {%- render 'active-facets', results: search -%}
+                      </div>
+
+                      <reveal-items selector=".product-list > *">
+                        <product-list class="product-list" role="region" aria-live="polite">
+                          {%- assign product_results = search.results | where: 'object_type', 'product' -%}
+
+                          {%- for item in product_results -%}
+                            {%- if item.object_type == 'product' -%}
+                              {%- render 'product-card', product: item, stacked: true, position: forloop.index, show_badges: true -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </product-list>
+                      </reveal-items>
+                    </div>
+                  {%- endif -%}
                 </div>
 
-                <div class="prose">
-                  <h5>{{ 'collection.faceting.no_results' | t }}</h5>
-
-                  {%- assign button_content = 'collection.faceting.clear_filters' | t -%}
-                  {%- render 'button', href: collection.url, is: 'facet-link', size: 'xl', content: button_content -%}
-                </div>
+                {%- render 'pagination', paginate: paginate, facet: true, class: 'collection__pagination' -%}
               </div>
-            {%- else -%}
-              <div class="v-stack gap-6">
-                <div class="v-stack gap-4 md:hidden">
-                  {%- comment -%}We have to duplicate some information on mobile and tablet here{%- endcomment -%}
-                  {%- render 'active-facets', results: search -%}
-                </div>
+            {%- endpaginate -%}
 
-                <reveal-items selector=".product-list > *">
-                  <product-list class="product-list" role="region" aria-live="polite">
-                    {%- assign product_results = search.results | where: 'object_type', 'product' -%}
-
-                    {%- for product in product_results -%}
-                      {%- render 'product-card', product: product, stacked: true, position: forloop.index, show_badges: true -%}
-                    {%- endfor -%}
-                  </product-list>
-                </reveal-items>
+          {%- when 'article' -%}
+            {%- paginate search.results by 48 -%}
+              <div class="blog-posts__container">
+                <blog-post-list class="blog-posts">
+                  {%- for item in search.results -%}
+                    {%- if item.object_type == 'article' -%}
+                      {%- render 'blog-post-card',
+                          article: item,
+                          heading_size: 'h5',
+                          show_category: section.settings.show_category,
+                          show_date: section.settings.show_date,
+                          show_reading_time: false,
+                          show_excerpt: section.settings.show_excerpt,
+                          position: forloop.index
+                      -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </blog-post-list>
               </div>
-            {%- endif -%}
-          </div>
+            {%- endpaginate -%}
 
-          {%- render 'pagination', paginate: paginate, facet: true, class: 'collection__pagination' -%}
-        </div>
-      {%- endpaginate -%}
-    </div>
-  {%- else -%}
+          {%- when 'page' -%}
+            {%- paginate search.results by 48 -%}
+              <div class="container container--narrow">
+                <ul class="unstyled-list v-stack gap-3 text-center">
+                  {%- for item in search.results -%}
+                    {%- if item.object_type == 'page' -%}
+                      <li>
+                        <a href="{{ item.url }}" class="bold">
+                          <span class="reversed-link hover:show">{{- item.title -}}</span>
+                          {%- render 'icon' with 'big-arrow-right', width: 10, direction_aware: true -%}
+                        </a>
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endpaginate -%}
+
+        {%- endcase -%}
+      </search-result-panel>
+
+    {%- else -%}
+      {%- comment -%}Otherwise, we have to do different Ajax requests for each resource type{%- endcomment -%}
+      {%- for type in search.types reversed -%}
+        {%- assign search_url_for_type = routes.search_url | append: '?type=' | append: type | append: '&q=' | append: search.terms -%}
+
+        <search-result-panel role="tabpanel" aria-labelledby="main-search-results-{{ type | escape }}" id="main-search-results-{{ type | escape }}" load-from-url="{{ search_url_for_type | escape }}" hidden>
+        </search-result-panel>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+
+{%- else -%}
+  <div class="container">
     <div class="empty-state">
       <h1 class="h2">
         {%- if search.performed -%}
@@ -159,8 +242,8 @@
 
       {{- search_form -}}
     </div>
-  {%- endif -%}
-</div>
+  </div>
+{%- endif -%}
 
 {% schema %}
 {
